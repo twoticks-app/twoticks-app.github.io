@@ -1,0 +1,19 @@
+{
+  "read": "2026-11-20",
+  "average": 5,
+  "count": 1,
+  "reviews": [
+    {
+      "author": "Orhun B.",
+      "rating": 5,
+      "date": "2026-11-19",
+      "text": "Excellent extension! It works smoothly and does exactly what I need. Very useful, easy to use, and saves me a lot of time when using WhatsApp Web. I’m really happy with it and highly recommend it to anyone looking for a reliable WhatsApp Web extension. Keep up the great work!"
+    },
+    {
+      "author": "Tuna B.",
+      "rating": 5,
+      "date": "2026-11-17",
+      "text": "This extension offers fantastic features! The Privacy Screen feature is especially useful when working in the office or sharing your screen. It works flawlessly and makes a real difference. Many thanks to the developers for creating such a useful extension!"
+    }
+  ]
+}

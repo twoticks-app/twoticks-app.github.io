@@ -18,6 +18,9 @@
     "version": "1.1.0",
     "show": false
   },
+  "reviews": {
+    "show": false
+  },
   "tools": [
     {
       "slug": "privacy-screen",

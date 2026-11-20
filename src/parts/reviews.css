@@ -1,0 +1,65 @@
+/* TwoTicks site. Copyright (c) 2026 Osman Bodur. All rights reserved.
+   The reviews section (src/reviews.mjs): the average and every review from the Chrome Web Store, in the site's own
+   look: square corners, the slate ink, frames of 2px, the heading of the other sections (.sec-head). Its stars are
+   drawn in the ink colour, as the store draws them; in Arabic they fill from the right. Load it after styles.css,
+   which defines the colours, so that it follows the light and the dark scheme. */
+
+.reviews { padding-block: var(--section); border-block-end: 1px solid var(--line); background: var(--paper); }
+
+/* The average: a large number, its stars, the number of ratings. */
+.rv-score { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; }
+.rv-avg { font-size: clamp(3.4rem, 8vw, 5rem); font-weight: 700; font-stretch: 85%; line-height: 0.85; font-variant-numeric: lining-nums tabular-nums; }
+.rv-score-side { display: grid; justify-items: start; gap: 8px; }
+.rv-summary { margin: 0; color: var(--muted); font-weight: 500; }
+.rv-note { max-width: 46em; margin: 20px 0 0; color: var(--muted); font-size: 0.95rem; }
+
+/* The stars: filled ones in ink, empty ones a light shade of it. */
+.rv-stars { display: block; flex: none; width: 96px; height: auto; }
+.rv-stars-big { width: clamp(156px, 17vw, 196px); }
+.rv-on { fill: var(--ink); }
+.rv-off { fill: color-mix(in srgb, var(--ink) 20%, transparent); }
+[dir="rtl"] .rv-stars { transform: scaleX(-1); }
+
+/* The reviews: cards in rows of up to three; one or two share the width. */
+.rv-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+  gap: clamp(16px, 2vw, 24px);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.rv-item { display: flex; min-width: 0; max-width: 720px; }
+.rv-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  margin: 0;
+  padding: clamp(20px, 2.4vw, 28px);
+  border: 2px solid var(--line-strong);
+  background: var(--surface);
+}
+.rv-quote { margin: 0; }
+.rv-quote p { margin: 0; font-size: 1.06rem; white-space: pre-line; overflow-wrap: anywhere; }
+.rv-by {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 2px 14px;
+  margin-block-start: auto;
+  padding-block-start: 14px;
+  border-block-start: 1px solid var(--line);
+}
+.rv-author { font-weight: 700; }
+.rv-date { color: var(--muted); font-size: 0.95rem; }
+
+/* The way to all reviews in the store, and how to see every language there. */
+.rv-foot { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 28px; margin-block-start: clamp(28px, 4vw, 44px); }
+.rv-hint { flex: 1 1 300px; max-width: 46em; margin: 0; color: var(--muted); font-size: 0.95rem; }
+
+/* Windows high contrast: filled stars solid, empty ones as outlines. */
+@media (forced-colors: active) {
+  .rv-on { fill: CanvasText; }
+  .rv-off { fill: Canvas; stroke: CanvasText; stroke-width: 1px; }
+}

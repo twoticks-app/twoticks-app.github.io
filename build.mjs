@@ -10,6 +10,7 @@ import crypto from 'node:crypto';
 import { fileURLToPath } from 'node:url';
 import { render, renderTool, esc, flag } from './src/page.mjs';
 import { renderWhatsNew } from './src/whatsnew.mjs';
+import { renderReviews } from './src/reviews.mjs';
 
 const ROOT = path.dirname(fileURLToPath(import.meta.url));
 const OUT = path.join(ROOT, 'dist');
@@ -140,6 +141,9 @@ const enDict = JSON.parse(read('i18n/en.json'));
 // What's new: the changes of one version on the home pages, when site.config.json shows them (tools/new-version.mjs
 // switches them on with --whats-new).
 const whatsNew = cfg.whatsNew && cfg.whatsNew.show ? JSON.parse(read(`content/whatsnew/${cfg.whatsNew.version}.json`)) : null;
+// The reviews of the Chrome Web Store (read by tools/reviews.mjs) on the home pages, when site.config.json shows them.
+const reviewData = cfg.reviews && cfg.reviews.show ? JSON.parse(read('content/reviews.json')) : null;
+const reviewTexts = reviewData ? JSON.parse(read('content/reviews-i18n.json')) : null;
 const pageRels = ['', ...cfg.tools.map((tool) => `tools/${tool.slug}/`)];
 const pages = [];
 for (const lang of cfg.languages) {
@@ -181,7 +185,11 @@ for (const lang of cfg.languages) {
     };
   };
   const depth = lang.path.split('/').filter(Boolean).length;
-  const home = render({ ...context(depth), whatsNewHtml: renderWhatsNew({ data: whatsNew, code: lang.code, esc }) });
+  const reviewsHtml = reviewData ? renderReviews({
+    data: reviewData, code: lang.code, esc, texts: reviewTexts[lang.code], storeName: dict['store.name'], locale: lang.intl,
+    reviewsUrl: `${cfg.storeUrl}/reviews?hl=${lang.code}&utm_source=${encodeURIComponent(new URL(cfg.siteUrl).host)}&utm_medium=website&utm_campaign=site&utm_content=reviews-${lang.code.toLowerCase()}`,
+  }) : '';
+  const home = render({ ...context(depth), whatsNewHtml: renderWhatsNew({ data: whatsNew, code: lang.code, esc }), reviewsHtml });
   check(home, lang.code);
   writePage(lang.path, home);
   let toolBytes = 0;

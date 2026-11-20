@@ -1,0 +1,110 @@
+{
+  "en": {
+    "title": "Reviews",
+    "summary": { "one": "{count} rating in the {store}", "other": "{count} ratings in the {store}" },
+    "stars": "{n} out of 5 stars",
+    "all": "All reviews in the {store}",
+    "note": "All reviews from the {store} as of {date}, unchanged. Names are shortened.",
+    "hint": "In the store, choose {allLanguages} in the {language} menu to see the reviews in every language.",
+    "labels": { "language": "Language", "allLanguages": "All languages" }
+  },
+  "de": {
+    "title": "Rezensionen",
+    "summary": { "one": "{count} Bewertung im {store}", "other": "{count} Bewertungen im {store}" },
+    "stars": "{n} von 5 Sternen",
+    "all": "Alle Rezensionen im {store}",
+    "note": "Alle Rezensionen aus dem {store}, Stand {date}, unverändert. Namen sind gekürzt.",
+    "hint": "Wählen Sie im Store unter {language} die Option {allLanguages}, um die Rezensionen in allen Sprachen zu sehen.",
+    "labels": { "language": "Sprache", "allLanguages": "Alle Sprachen" }
+  },
+  "es": {
+    "title": "Reseñas",
+    "summary": { "one": "{count} valoración en la {store}", "other": "{count} valoraciones en la {store}" },
+    "stars": "{n} de 5 estrellas",
+    "all": "Todas las reseñas en la {store}",
+    "note": "Todas las reseñas de la {store} hasta el {date}, sin cambios. Los nombres están abreviados.",
+    "hint": "En la tienda, elige {allLanguages} en el menú {language} para ver las reseñas en todos los idiomas.",
+    "labels": { "language": "Idioma", "allLanguages": "Todos los idiomas" }
+  },
+  "fr": {
+    "title": "Avis",
+    "summary": "{count} avis sur le {store}",
+    "stars": { "one": "{n} étoile sur 5", "other": "{n} étoiles sur 5" },
+    "all": "Tous les avis sur le {store}",
+    "note": "Tous les avis du {store} au {date}, sans modification. Les noms sont abrégés.",
+    "hint": "Sur le {store}, choisissez {allLanguages} dans le menu {language} pour voir les avis dans toutes les langues.",
+    "labels": { "language": "Langue", "allLanguages": "Toutes les langues" }
+  },
+  "it": {
+    "title": "Recensioni",
+    "summary": { "one": "{count} valutazione nel {store}", "other": "{count} valutazioni nel {store}" },
+    "stars": { "one": "{n} stella su 5", "other": "{n} stelle su 5" },
+    "all": "Tutte le recensioni nel {store}",
+    "note": "Tutte le recensioni del {store} al {date}, senza modifiche. I nomi sono abbreviati.",
+    "hint": "Nel {store}, scegli {allLanguages} nel menu {language} per vedere le recensioni in tutte le lingue.",
+    "labels": { "language": "Lingua", "allLanguages": "Tutte le lingue" }
+  },
+  "pt-BR": {
+    "title": "Avaliações",
+    "summary": { "one": "{count} nota na {store}", "other": "{count} notas na {store}" },
+    "stars": { "one": "{n} estrela de 5", "other": "{n} estrelas de 5" },
+    "all": "Todas as avaliações na {store}",
+    "note": "Todas as avaliações da {store} até {date}, sem alterações. Os nomes estão abreviados.",
+    "hint": "Na {store}, escolha {allLanguages} no menu {language} para ver as avaliações em todos os idiomas.",
+    "labels": { "language": "Idioma", "allLanguages": "Todos os idiomas" }
+  },
+  "pt-PT": {
+    "title": "Avaliações",
+    "summary": { "one": "{count} classificação na {store}", "other": "{count} classificações na {store}" },
+    "stars": { "one": "{n} estrela em 5", "other": "{n} estrelas em 5" },
+    "all": "Todas as avaliações na {store}",
+    "note": "Todas as avaliações da {store} até {date}, sem alterações. Os nomes estão abreviados.",
+    "hint": "Na {store}, escolha {allLanguages} no menu {language} para ver as avaliações em todos os idiomas.",
+    "labels": { "language": "Idioma", "allLanguages": "Todos os idiomas" }
+  },
+  "tr": {
+    "title": "Yorumlar",
+    "summary": "Chrome Web Mağazası'nda {count} puan",
+    "stars": "5 üzerinden {n} yıldız",
+    "all": "Chrome Web Mağazası'ndaki tüm yorumlar",
+    "note": "{date} itibarıyla Chrome Web Mağazası'ndaki tüm yorumlar, olduğu gibi. İsimler kısaltılmıştır.",
+    "hint": "Tüm dillerdeki yorumları görmek için mağazada {language} menüsünden {allLanguages} seçeneğini seçin.",
+    "labels": { "language": "Dil", "allLanguages": "Tüm diller" }
+  },
+  "ru": {
+    "title": "Отзывы",
+    "summary": { "one": "{count} оценка в Интернет-магазине Chrome", "few": "{count} оценки в Интернет-магазине Chrome", "many": "{count} оценок в Интернет-магазине Chrome", "other": "{count} оценки в Интернет-магазине Chrome" },
+    "stars": "{n} из 5 звёзд",
+    "all": "Все отзывы в Интернет-магазине Chrome",
+    "note": "Все отзывы из Интернет-магазина Chrome на {date}, без изменений. Имена сокращены.",
+    "hint": "Чтобы увидеть отзывы на всех языках, выберите в магазине {allLanguages} в меню {language}.",
+    "labels": { "language": "Язык", "allLanguages": "Все языки" }
+  },
+  "ar": {
+    "title": "المراجعات",
+    "summary": { "zero": "لا تقييمات في {store}", "one": "تقييم واحد في {store}", "two": "تقييمان في {store}", "few": "{count} تقييمات في {store}", "many": "{count} تقييمًا في {store}", "other": "{count} تقييم في {store}" },
+    "stars": "{n} من 5 نجوم",
+    "all": "كل المراجعات في {store}",
+    "note": "كل المراجعات من {store} حتى {date}، دون تعديل. الأسماء مختصرة.",
+    "hint": "لعرض المراجعات بكل اللغات، اختر {allLanguages} من قائمة {language} في المتجر.",
+    "labels": { "language": "اللغة", "allLanguages": "جميع اللغات" }
+  },
+  "hi": {
+    "title": "समीक्षाएं",
+    "summary": "{store} में {count} रेटिंग",
+    "stars": "5 में से {n} स्टार",
+    "all": "{store} में सभी समीक्षाएं",
+    "note": "{date} तक {store} की सभी समीक्षाएं, बिना बदलाव के। नाम छोटे किए गए हैं।",
+    "hint": "सभी भाषाओं की समीक्षाएं देखने के लिए स्टोर में {language} मेन्यू से {allLanguages} चुनें।",
+    "labels": { "language": "भाषा", "allLanguages": "सभी भाषाएं" }
+  },
+  "id": {
+    "title": "Ulasan",
+    "summary": "{count} rating di {store}",
+    "stars": "{n} dari 5 bintang",
+    "all": "Semua ulasan di {store}",
+    "note": "Semua ulasan dari {store} per {date}, tanpa diubah. Nama disingkat.",
+    "hint": "Untuk melihat ulasan dalam semua bahasa, pilih {allLanguages} di menu {language} pada {store}.",
+    "labels": { "language": "Bahasa", "allLanguages": "Semua bahasa" }
+  }
+}
