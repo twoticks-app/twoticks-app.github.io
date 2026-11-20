@@ -13,7 +13,36 @@
     "channel": "https://www.youtube.com/@twoticks-app",
     "film": "2LWm8V0Utks",
     "filmTitle": "One day, thirteen tools",
-    "seconds": 153
+    "seconds": 153,
+    "more": [
+      {
+        "id": "5-FYggT6LfY",
+        "title": "Getting started, step by step",
+        "seconds": 105,
+        "thumb": "tl01"
+      },
+      {
+        "id": "-8JkEaYwQsg",
+        "title": "Thirteen tools, one panel",
+        "seconds": 144
+      },
+      {
+        "id": "5ICmdJ6bM9c",
+        "title": "Before and after",
+        "seconds": 78
+      },
+      {
+        "id": "bTN6Qac__zE",
+        "title": "Separate window",
+        "seconds": 82
+      },
+      {
+        "id": "Q62NyjNYKKY",
+        "title": "Separate window, step by step",
+        "seconds": 104,
+        "thumb": "tl16"
+      }
+    ]
   },
   "whatsNew": {
     "version": "1.1.0",
@@ -33,7 +62,25 @@
         "seconds": 68
       },
       "shot": "1-privacy-screen",
-      "shotAlt": "shot.privacy"
+      "shotAlt": "shot.privacy",
+      "steps": {
+        "id": "AIt5K9Y0Dn4",
+        "title": "Privacy screen, step by step",
+        "seconds": 108,
+        "thumb": "tl14"
+      },
+      "stories": [
+        {
+          "id": "-IOPy1K1D7k",
+          "title": "The surprise",
+          "seconds": 48
+        },
+        {
+          "id": "ZliKWVA8NGM",
+          "title": "The shop",
+          "seconds": 53
+        }
+      ]
     },
     {
       "slug": "unanswered-chats",
@@ -45,7 +92,25 @@
         "seconds": 66
       },
       "shot": "2-unanswered",
-      "shotAlt": "shot.unanswered"
+      "shotAlt": "shot.unanswered",
+      "steps": {
+        "id": "VNWywlwXie8",
+        "title": "Unanswered chats, step by step",
+        "seconds": 110,
+        "thumb": "tl06"
+      },
+      "stories": [
+        {
+          "id": "_G1HOxfTCKU",
+          "title": "Mentioned in a busy group",
+          "seconds": 56
+        },
+        {
+          "id": "xVwGB7W1_4E",
+          "title": "Before you switch off",
+          "seconds": 51
+        }
+      ]
     },
     {
       "slug": "quick-replies",
@@ -57,7 +122,25 @@
         "seconds": 67
       },
       "shot": "3-quick-replies",
-      "shotAlt": "shot.quickReplies"
+      "shotAlt": "shot.quickReplies",
+      "steps": {
+        "id": "XCGlXF271ss",
+        "title": "Quick replies, step by step",
+        "seconds": 107,
+        "thumb": "tl10"
+      },
+      "stories": [
+        {
+          "id": "MnF-knMNxBs",
+          "title": "Viewing confirmed",
+          "seconds": 54
+        },
+        {
+          "id": "K2RtimMs6SI",
+          "title": "Where do we park?",
+          "seconds": 53
+        }
+      ]
     },
     {
       "slug": "ai-assistant",
@@ -73,10 +156,34 @@
           "id": "7huZFl9Am0Y",
           "title": "AI setup",
           "seconds": 139
+        },
+        {
+          "id": "09oqMhSMDyk",
+          "title": "AI setup, step by step",
+          "seconds": 108,
+          "thumb": "tl07"
         }
       ],
       "shot": "4-ai-assistant",
-      "shotAlt": "shot.ai"
+      "shotAlt": "shot.ai",
+      "steps": {
+        "id": "iMwdRQjIPxI",
+        "title": "AI assistant, step by step",
+        "seconds": 108,
+        "thumb": "tl08"
+      },
+      "stories": [
+        {
+          "id": "-MVz_yChG_M",
+          "title": "Ask the chat",
+          "seconds": 59
+        },
+        {
+          "id": "qujS2x9_5Qg",
+          "title": "A calm reply",
+          "seconds": 59
+        }
+      ]
     },
     {
       "slug": "chat-analysis",
@@ -86,7 +193,25 @@
         "id": "80fLo9oZqvk",
         "title": "Chat analysis",
         "seconds": 73
-      }
+      },
+      "steps": {
+        "id": "MxfcjbwJpSs",
+        "title": "Chat analysis, step by step",
+        "seconds": 111,
+        "thumb": "tl05"
+      },
+      "stories": [
+        {
+          "id": "m2bZ1LDMLhA",
+          "title": "The wedding group",
+          "seconds": 58
+        },
+        {
+          "id": "dy-VSdmUbc0",
+          "title": "The school trip",
+          "seconds": 59
+        }
+      ]
     },
     {
       "slug": "scheduler",
@@ -102,6 +227,30 @@
           "id": "W9LedLoyGds",
           "title": "Sending in the background",
           "seconds": 128
+        },
+        {
+          "id": "otiB62h4UVs",
+          "title": "Sending in the background, step by step",
+          "seconds": 108,
+          "thumb": "tl17"
+        }
+      ],
+      "steps": {
+        "id": "_GVSHYH3cZU",
+        "title": "Scheduler, step by step",
+        "seconds": 109,
+        "thumb": "tl11"
+      },
+      "stories": [
+        {
+          "id": "YNYwbS9TV_4",
+          "title": "Nine in New York",
+          "seconds": 59
+        },
+        {
+          "id": "L598jgY19SQ",
+          "title": "Good luck on exam day",
+          "seconds": 60
         }
       ]
     },
@@ -113,7 +262,20 @@
         "id": "HIpwXAk9Rk8",
         "title": "Direct message",
         "seconds": 73
-      }
+      },
+      "steps": {
+        "id": "BJ1YCNMrESA",
+        "title": "Direct message, step by step",
+        "seconds": 107,
+        "thumb": "tl09"
+      },
+      "stories": [
+        {
+          "id": "my8FpolIJI8",
+          "title": "Selling the bike",
+          "seconds": 56
+        }
+      ]
     },
     {
       "slug": "compliments",
@@ -123,7 +285,20 @@
         "id": "sib5ONrpWz4",
         "title": "Compliments",
         "seconds": 140
-      }
+      },
+      "steps": {
+        "id": "ncmyGvWMP3g",
+        "title": "Compliments, step by step",
+        "seconds": 109,
+        "thumb": "tl12"
+      },
+      "stories": [
+        {
+          "id": "nKoXz6RFCmw",
+          "title": "Three weeks abroad",
+          "seconds": 58
+        }
+      ]
     },
     {
       "slug": "several-chats",
@@ -133,7 +308,25 @@
         "id": "Uq1zegckSh4",
         "title": "Several chats",
         "seconds": 110
-      }
+      },
+      "steps": {
+        "id": "aLY9XK4iEDk",
+        "title": "Several chats, step by step",
+        "seconds": 108,
+        "thumb": "tl13"
+      },
+      "stories": [
+        {
+          "id": "FieUxhUlGfA",
+          "title": "Thank you, volunteers",
+          "seconds": 59
+        },
+        {
+          "id": "iKyngt6zCw4",
+          "title": "Dinner on Saturday",
+          "seconds": 59
+        }
+      ]
     },
     {
       "slug": "export-chats",
@@ -145,7 +338,20 @@
         "seconds": 66
       },
       "shot": "5-export-chats",
-      "shotAlt": "shot.export"
+      "shotAlt": "shot.export",
+      "steps": {
+        "id": "g2rCmZSxTa0",
+        "title": "Export chats, step by step",
+        "seconds": 105,
+        "thumb": "tl02"
+      },
+      "stories": [
+        {
+          "id": "HGiPAligqqY",
+          "title": "The project archive",
+          "seconds": 58
+        }
+      ]
     },
     {
       "slug": "export-contacts",
@@ -155,7 +361,20 @@
         "id": "ZQd-omVrdCA",
         "title": "Export contacts",
         "seconds": 68
-      }
+      },
+      "steps": {
+        "id": "4E59GVUOK74",
+        "title": "Export contacts, step by step",
+        "seconds": 99,
+        "thumb": "tl03"
+      },
+      "stories": [
+        {
+          "id": "rI0F1MbR140",
+          "title": "Customers not saved yet",
+          "seconds": 57
+        }
+      ]
     },
     {
       "slug": "download-media",
@@ -165,7 +384,20 @@
         "id": "p6_S5tS-44o",
         "title": "Download media",
         "seconds": 71
-      }
+      },
+      "steps": {
+        "id": "t7cD2IgxDVo",
+        "title": "Download media, step by step",
+        "seconds": 92,
+        "thumb": "tl04"
+      },
+      "stories": [
+        {
+          "id": "6zA7fo9yIT8",
+          "title": "Every document from the accountant",
+          "seconds": 52
+        }
+      ]
     },
     {
       "slug": "deleted-messages",
@@ -175,7 +407,20 @@
         "id": "V76zEIok0oY",
         "title": "Deleted and edited messages",
         "seconds": 85
-      }
+      },
+      "steps": {
+        "id": "SKWaXkueYwA",
+        "title": "Deleted and edited messages, step by step",
+        "seconds": 104,
+        "thumb": "tl15"
+      },
+      "stories": [
+        {
+          "id": "eGk9BiGoqbM",
+          "title": "The meeting point",
+          "seconds": 59
+        }
+      ]
     }
   ],
   "shots": [

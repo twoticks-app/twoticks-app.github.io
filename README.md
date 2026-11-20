@@ -13,7 +13,7 @@ TwoTicks is installed only from its page in the Chrome Web Store: https://chrome
 | Where | What |
 |---|---|
 | `src/page.mjs` | The pages (the home page and the page of a tool), as templates for every language |
-| `site.config.json` | The addresses, the languages, and the tools with their films and screenshots |
+| `site.config.json` | The addresses, the languages, and the tools with their screenshots and films: the tool's film, its step-by-step film (`steps`), its everyday stories (`stories`) and further films (`more`); the home page's further films (`youtube.more`) |
 | `src/styles.css`, `src/app.js` | Its look and its script (the ticks of the install steps, the notice for other browsers, the language menu, the film) |
 | `i18n/<language>.json` | The site's own texts in each language |
 | `content/listing/<language>.txt` | The Chrome Web Store description in each language (copied from `store/listing/1.1.0/` of the extension): the tools, the price, the permissions, the support line |

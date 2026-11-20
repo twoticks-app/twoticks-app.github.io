@@ -19,8 +19,12 @@ const cfg = JSON.parse(read('site.config.json'));
 const chromeUi = JSON.parse(read('content/chrome-ui.json')).labels;
 const webstore = JSON.parse(read('content/webstore.json')).labels;
 const panelTexts = JSON.parse(read('content/panel.json')).texts;
-// The films that have their poster in src/img (made by tools/film-frames.py).
-const frames = new Set(fs.readdirSync(path.join(ROOT, 'src', 'img')).map((f) => /^film-(.+)-1280\.webp$/.exec(f)).filter(Boolean).map((m) => m[1]));
+// The films that have their poster in src/img (made by tools/film-frames.py): every one in 640 pixels (frames), the
+// films shown large also in 1280 (bigFrames).
+const images = fs.readdirSync(path.join(ROOT, 'src', 'img'));
+const posters = (width) => new Set(images.map((f) => new RegExp(`^film-(.+)-${width}\\.webp$`).exec(f)).filter(Boolean).map((m) => m[1]));
+const frames = posters(640);
+const bigFrames = posters(1280);
 const sha = (data, enc = 'hex') => String(crypto.createHash('sha256').update(data).digest(enc));
 
 // --- texts ---------------------------------------------------------------------------------------------------------
@@ -193,7 +197,7 @@ for (const lang of cfg.languages) {
   const context = (depth) => {
     const base = '../'.repeat(depth);
     return {
-      t, ta, ui, uiAlt, listing: list, panel, cfg, lang, langs: cfg.languages, base, ogImage, frames, hasVersions: versions.length > 0,
+      t, ta, ui, uiAlt, listing: list, panel, cfg, lang, langs: cfg.languages, base, ogImage, frames, bigFrames, hasVersions: versions.length > 0,
       css: cssRef, js: jsRef,
       preloads: fonts.map((f) => `<link rel="preload" href="${base}assets/fonts/${f}" as="font" type="font/woff2" crossorigin>`).join('\n'),
       redirect: english ? REDIRECT : '',

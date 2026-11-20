@@ -94,11 +94,19 @@ function common(c) {
 // The poster of a film: its own YouTube thumbnail, served by the site (tools/film-frames.py), so that nothing loads
 // from YouTube before a click.
 function poster(c, id, sizes) {
+  // Films shown large have their poster in 640 and 1280 pixels, films shown small in a list only in 640.
+  const widths = c.bigFrames.has(id) ? [640, 1280] : [640];
   const src = (w, f) => `${c.base}assets/img/film-${id}-${w}.${f}`;
+  const set = (f) => widths.map((w) => `${src(w, f)} ${w}w`).join(', ');
   return `<picture>
-            <source type="image/avif" srcset="${src(640, 'avif')} 640w, ${src(1280, 'avif')} 1280w" sizes="${sizes}" width="1280" height="720">
-            <img src="${src(1280, 'webp')}" srcset="${src(640, 'webp')} 640w, ${src(1280, 'webp')} 1280w" sizes="${sizes}" width="1280" height="720" alt="" loading="lazy" decoding="async">
+            <source type="image/avif" srcset="${set('avif')}" sizes="${sizes}" width="1280" height="720">
+            <img src="${src(widths[widths.length - 1], 'webp')}" srcset="${set('webp')}" sizes="${sizes}" width="1280" height="720" alt="" loading="lazy" decoding="async">
           </picture>`;
+}
+
+// Further films, each a small poster beside its title and length; they open on YouTube.
+function alsoItems(c, x, films) {
+  return films.map((f) => `<li><a class="also-link" href="https://youtu.be/${f.id}">${c.frames.has(f.id) ? poster(c, f.id, '144px') : ''}<span><span class="also-name" lang="en">${esc(f.title)}</span><span class="also-meta">${x.T('video.meta', { duration: esc(minSec(f.seconds)) })}</span></span></a></li>`).join('');
 }
 
 // A film: the poster with a play button; a click puts YouTube's player in its place (src/app.js). Where a film has
@@ -391,6 +399,8 @@ ${toolGroups(c, x, (tool) => `tools/${tool.slug}/`)}
           <p class="film-meta">${T('video.meta', { duration: esc(minSec(cfg.youtube.seconds)) })}</p>
           <p class="film-note">${T('video.note')} <a href="${esc(cfg.youtube.channel)}">${T('video.channel')}</a></p>`,
           '(min-width: 1240px) 680px, (min-width: 900px) 60vw, 92vw')}
+        ${(cfg.youtube.more || []).length ? `<p class="also-k">${T('tool.alsoFilm')}</p>
+        <ul class="also also-wide">${alsoItems(c, x, cfg.youtube.more)}</ul>` : ''}
       </div>
     </div>
   </section>
@@ -428,7 +438,8 @@ export function renderTool(c, tool) {
   if (tool.slug === 'several-chats') extra.push(`<p class="tool-note">${esc(listing.several)}</p>`);
   if (tool.slug === 'ai-assistant') extra.push(`<p class="tool-note"><b>${esc(listing.privacy[2].name)}:</b> ${esc(listing.privacy[2].text)}</p>`);
   const meta = (f) => T('video.meta', { duration: esc(minSec(f.seconds)) });
-  const more = (tool.more || []).map((f) => `<li><a class="also-link" href="https://youtu.be/${f.id}">${c.frames.has(f.id) ? poster(c, f.id, '144px') : ''}<span><span class="also-name" lang="en">${esc(f.title)}</span><span class="also-meta">${meta(f)}</span></span></a></li>`).join('');
+  // The tool's everyday stories, then its further films.
+  const more = alsoItems(c, x, [...(tool.stories || []), ...(tool.more || [])]);
 
   const main = `  <section class="hero tool-hero" aria-labelledby="tool-title">
     <div class="wrap hero-in tool-hero-in">
@@ -464,6 +475,8 @@ export function renderTool(c, tool) {
         ${extra.join('\n')}
         <h2>${T('tool.howTitle')}</h2>
         <p>${T('tool.how', { keys: keys('Alt+Shift+H'), panelTool: `<span class="ui">${braces(esc(p.title))}</span>` })}</p>
+        ${tool.steps ? filmFig(c, x, tool.steps, `<p><span class="film-name" lang="en">${esc(tool.steps.title)}</span> <span class="film-meta">${meta(tool.steps)}</span></p>`,
+          '(min-width: 1240px) 500px, (min-width: 980px) 44vw, 92vw') : ''}
       </div>
       <div class="tool-col">
         <h2>${T('tool.film')}</h2>
