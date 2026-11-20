@@ -48,7 +48,22 @@
   background: var(--read);
 }
 
+.wn-more { margin: 16px 0 0; font-weight: 600; }
+
+/* The version history (renderVersions in src/page.mjs): each version as a band like What's new, the newest first,
+   with its date and, on the newest, a label in the read-tick blue. */
+.versions { padding-block: clamp(48px, 7vw, 88px) var(--section); background: var(--surface); }
+.ver { display: grid; gap: 18px clamp(28px, 5vw, 64px); }
+.ver + .ver { margin-block-start: clamp(40px, 6vw, 64px); padding-block-start: clamp(32px, 5vw, 48px); border-block-start: 1px solid var(--line); }
+@media (min-width: 900px) {
+  .ver { grid-template-columns: minmax(200px, 1fr) minmax(0, 2.6fr); align-items: start; }
+}
+.ver h2 { margin: 0; font-size: clamp(1.6rem, 3vw, 2.25rem); }
+.ver-date { margin: 8px 0 0; color: var(--muted); }
+.ver-now { display: inline-block; margin: 14px 0 0; padding: 3px 10px; background: var(--read); color: var(--deep); font-size: 0.9rem; font-weight: 600; }
+
 /* Windows high contrast: the bar and the squares keep their shape in the text colour. */
 @media (forced-colors: active) {
   .whats-new h2::before, .wn-list li::before { background: CanvasText; }
+  .ver-now { border: 1px solid CanvasText; }
 }

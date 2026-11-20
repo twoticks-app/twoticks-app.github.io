@@ -206,6 +206,7 @@ ${page.main}
     <nav class="foot-links" aria-label="TwoTicks">
       <ul>
         <li><a href="${esc(x.storeLink(page.place || 'footer'))}">${x.T('store.name')}</a></li>
+        ${c.hasVersions ? `<li><a href="${x.home}versions/">${x.T('versions.title')}</a></li>` : ''}
         <li><a href="${esc(cfg.privacyUrl)}" hreflang="en">${x.T('footer.privacy')}</a></li>
         <li><a href="${esc(cfg.youtube.channel)}">YouTube</a></li>
       </ul>
@@ -493,6 +494,68 @@ ${toolGroups(c, x, (tl) => `../${tl.slug}/`, tool.slug)}
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'TwoTicks', item: `${cfg.siteUrl}${lang.path}` },
         { '@type': 'ListItem', position: 2, name: item.name, item: `${cfg.siteUrl}${lang.path}${rel}` },
+      ],
+    },
+  });
+}
+
+// --- the version history -----------------------------------------------------------------------------------------
+// versions: the published versions (content/whatsnew/<version>.json with a date), newest first, each with the items
+// of this page's language: [{ version, date, items }].
+export function renderVersions(c, versions) {
+  const { ta, cfg, lang } = c;
+  const x = common(c);
+  const { T, newTab, storeLink, home } = x;
+  const rel = 'versions/';
+  const day = new Intl.DateTimeFormat(lang.intl, { dateStyle: 'long', timeZone: 'UTC' });
+  const blocks = versions.map((v, i) => {
+    const id = `v-${v.version.replace(/\./g, '-')}`;
+    const date = `<time datetime="${v.date}">${esc(day.format(new Date(`${v.date}T00:00:00Z`)))}</time>`;
+    return `      <section class="ver" aria-labelledby="${id}">
+        <header class="ver-head">
+          <h2 id="${id}">TwoTicks ${esc(v.version)}</h2>
+          <p class="ver-date">${T('versions.date', { date })}</p>${i === 0 ? `
+          <p class="ver-now">${T('versions.current')}</p>` : ''}
+        </header>
+        <ul class="wn-list">
+${v.items.map((s) => `          <li>${esc(s)}</li>`).join('\n')}
+        </ul>
+      </section>`;
+  }).join('\n');
+
+  const main = `  <section class="hero tool-hero" aria-labelledby="versions-title">
+    <div class="wrap hero-in tool-hero-in">
+      <nav class="crumbs" aria-label="${ta('versions.title')}">
+        <ol><li><a href="${home}">TwoTicks</a></li><li aria-current="page">${T('versions.title')}</li></ol>
+      </nav>
+      <div class="hero-text">
+        <h1 id="versions-title" class="tool-h1">${T('versions.title')}</h1>
+        <p class="lead">${T('versions.intro')}</p>
+        <div class="cta">
+          <a class="btn btn-hero btn-store" href="${esc(storeLink('versions'))}" target="_blank" rel="noopener" data-complete="1">
+            ${I.store}<span class="btn-two"><span class="btn-label">${T('hero.cta')}</span><span class="btn-meta">${T('hero.ctaMeta')}</span></span>${newTab}
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">${ticks('hero-ticks')}</div>
+  </section>
+
+  <div class="versions">
+    <div class="wrap">
+${blocks}
+    </div>
+  </div>`;
+
+  return shell(c, x, {
+    rel, skip: '#main', main, place: 'versions',
+    title: `${ta('versions.title')}: TwoTicks`,
+    description: ta('versions.description'),
+    jsonLd: {
+      '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'TwoTicks', item: `${cfg.siteUrl}${lang.path}` },
+        { '@type': 'ListItem', position: 2, name: c.t.raw('versions.title'), item: `${cfg.siteUrl}${lang.path}${rel}` },
       ],
     },
   });

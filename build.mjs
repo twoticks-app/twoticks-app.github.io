@@ -1,14 +1,14 @@
 // Copyright (c) 2026 Osman Bodur. All rights reserved.
 // Builds the site of TwoTicks into dist/: per language (English at the root, the others in their folders) the home
-// page and one page for each tool (tools/<slug>/), the stylesheet with the fonts, the script, the pictures,
-// 404.html, robots.txt and sitemap.xml.
+// page, one page for each tool (tools/<slug>/) and the version history (versions/); the stylesheet with the fonts,
+// the script, the pictures, 404.html, robots.txt and sitemap.xml.
 // TwoTicks is installed from the Chrome Web Store; the site guides there and through Chrome's own steps.
 // Usage: node build.mjs
 import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
 import { fileURLToPath } from 'node:url';
-import { render, renderTool, esc, flag } from './src/page.mjs';
+import { render, renderTool, renderVersions, esc, flag } from './src/page.mjs';
 import { renderWhatsNew } from './src/whatsnew.mjs';
 import { renderReviews } from './src/reviews.mjs';
 
@@ -144,7 +144,24 @@ const whatsNew = cfg.whatsNew && cfg.whatsNew.show ? JSON.parse(read(`content/wh
 // The reviews of the Chrome Web Store (read by tools/reviews.mjs) on the home pages, when site.config.json shows them.
 const reviewData = cfg.reviews && cfg.reviews.show ? JSON.parse(read('content/reviews.json')) : null;
 const reviewTexts = reviewData ? JSON.parse(read('content/reviews-i18n.json')) : null;
-const pageRels = ['', ...cfg.tools.map((tool) => `tools/${tool.slug}/`)];
+// The version history: every content/whatsnew/<version>.json with the day the store published it ("date"), newest
+// first. A version that is not out yet has no date and waits.
+const semver = (v) => v.split('.').map(Number);
+const newer = (a, b) => { const x = semver(a); const y = semver(b); for (let i = 0; i < Math.max(x.length, y.length); i++) { const d = (y[i] || 0) - (x[i] || 0); if (d) return d; } return 0; };
+const versions = fs.readdirSync(path.join(ROOT, 'content', 'whatsnew')).filter((f) => /^\d+(\.\d+){1,3}\.json$/.test(f))
+  .map((f) => ({ f, data: JSON.parse(read(`content/whatsnew/${f}`)) }))
+  .filter(({ data }) => data.date)
+  .map(({ f, data }) => {
+    if (`${data.version}.json` !== f) throw new Error(`content/whatsnew/${f}: "version" is ${data.version}`);
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(data.date)) throw new Error(`content/whatsnew/${f}: "date" is ${data.date}, not YYYY-MM-DD`);
+    for (const l of cfg.languages) {
+      const items = data.texts && data.texts[l.code] && data.texts[l.code].items;
+      if (!Array.isArray(items) || !items.length || items.some((s) => typeof s !== 'string' || !s.trim())) throw new Error(`content/whatsnew/${f}: no items for ${l.code}`);
+    }
+    return data;
+  })
+  .sort((a, b) => newer(a.version, b.version));
+const pageRels = ['', ...cfg.tools.map((tool) => `tools/${tool.slug}/`), ...(versions.length ? ['versions/'] : [])];
 const pages = [];
 for (const lang of cfg.languages) {
   const dict = JSON.parse(read(`i18n/${lang.code}.json`));
@@ -176,7 +193,7 @@ for (const lang of cfg.languages) {
   const context = (depth) => {
     const base = '../'.repeat(depth);
     return {
-      t, ta, ui, uiAlt, listing: list, panel, cfg, lang, langs: cfg.languages, base, ogImage, frames,
+      t, ta, ui, uiAlt, listing: list, panel, cfg, lang, langs: cfg.languages, base, ogImage, frames, hasVersions: versions.length > 0,
       css: cssRef, js: jsRef,
       preloads: fonts.map((f) => `<link rel="preload" href="${base}assets/fonts/${f}" as="font" type="font/woff2" crossorigin>`).join('\n'),
       redirect: english ? REDIRECT : '',
@@ -189,9 +206,15 @@ for (const lang of cfg.languages) {
     data: reviewData, code: lang.code, esc, texts: reviewTexts[lang.code], storeName: dict['store.name'], locale: lang.intl,
     reviewsUrl: `${cfg.storeUrl}/reviews?hl=${lang.code}&utm_source=${encodeURIComponent(new URL(cfg.siteUrl).host)}&utm_medium=website&utm_campaign=site&utm_content=reviews-${lang.code.toLowerCase()}`,
   }) : '';
-  const home = render({ ...context(depth), whatsNewHtml: renderWhatsNew({ data: whatsNew, code: lang.code, esc }), reviewsHtml });
+  const more = versions.length ? { href: 'versions/', text: dict['versions.all'] } : null;
+  const home = render({ ...context(depth), whatsNewHtml: renderWhatsNew({ data: whatsNew, code: lang.code, esc, more }), reviewsHtml });
   check(home, lang.code);
   writePage(lang.path, home);
+  if (versions.length) {
+    const html = renderVersions(context(depth + 1), versions.map((v) => ({ version: v.version, date: v.date, items: v.texts[lang.code].items })));
+    check(html, `${lang.code} versions`);
+    writePage(`${lang.path}versions/`, html);
+  }
   let toolBytes = 0;
   for (const tool of cfg.tools) {
     const html = renderTool(context(depth + 2), tool);
@@ -239,6 +262,6 @@ fs.writeFileSync(path.join(OUT, 'robots.txt'), `User-agent: *\nAllow: /\nSitemap
 fs.writeFileSync(path.join(OUT, '.nojekyll'), '');
 
 const kb = (n) => `${Math.round(n / 1024)} KB`;
-console.log(`Built ${pages.length * pageRels.length} pages in dist/ for ${cfg.siteUrl}: ${pages.length} languages, each with its home page and ${cfg.tools.length} tool pages`);
+console.log(`Built ${pages.length * pageRels.length} pages in dist/ for ${cfg.siteUrl}: ${pages.length} languages, each with its home page, ${cfg.tools.length} tool pages${versions.length ? ` and the history of ${versions.length} versions` : ''}`);
 for (const p of pages) console.log(`  ${(p.lang.path || '(root)').padEnd(8)} ${p.lang.code.padEnd(6)} home ${kb(p.bytes)}, tools ${kb(p.toolBytes)}`);
 console.log(`  assets: site.css ${kb(Buffer.byteLength(css))}, app.js ${kb(Buffer.byteLength(js))}`);

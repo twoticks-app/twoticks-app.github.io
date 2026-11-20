@@ -8,7 +8,7 @@ TwoTicks is installed only from its page in the Chrome Web Store: https://chrome
 
 ## How the site is made
 
-`node build.mjs` writes the site into `dist/`: in each language the home page and a page for each of the thirteen tools (`tools/<tool>/`, for example `tools/scheduler/` or `tr/tools/scheduler/`), with the tool's film, its screenshot where there is one, the store's words for it and the panel's. GitHub Actions (`.github/workflows/pages.yml`) runs it on every push to `main` and publishes `dist/` on GitHub Pages. The site needs no packages: Node 22 or newer is enough.
+`node build.mjs` writes the site into `dist/`: in each language the home page, the version history (`versions/`) and a page for each of the thirteen tools (`tools/<tool>/`, for example `tools/scheduler/` or `tr/tools/scheduler/`), with the tool's film, its screenshot where there is one, the store's words for it and the panel's. GitHub Actions (`.github/workflows/pages.yml`) runs it on every push to `main` and publishes `dist/` on GitHub Pages. The site needs no packages: Node 22 or newer is enough.
 
 | Where | What |
 |---|---|
@@ -20,7 +20,7 @@ TwoTicks is installed only from its page in the Chrome Web Store: https://chrome
 | `content/panel.json` | The panel's own words for each tool in each language (title, text, hint), read from the extension by `tools/panel-texts.cjs` |
 | `content/chrome-ui.json` | Chrome's own words in each language ('Add "$1"?', "Add extension", "Pin", "Remove from Chrome" and more), read from Chrome by `tools/chrome-ui.cjs` |
 | `content/webstore.json` | The Chrome Web Store's words in each language ("Add to Chrome" and the store's name), read from the store's page |
-| `content/whatsnew/<version>.json`, `src/whatsnew.mjs` | What's new in a version, in each language, shown on the home pages while `"whatsNew"` in `site.config.json` says so |
+| `content/whatsnew/<version>.json`, `src/whatsnew.mjs` | What's new in each version, in each language, with the day the store published it (`"date"`): the latest on the home pages while `"whatsNew"` in `site.config.json` says so, all of them on the version history page (`versions/`) |
 | `content/reviews.json`, `content/reviews-i18n.json`, `src/reviews.mjs` | The reviews of TwoTicks in the Chrome Web Store, read by `tools/reviews.mjs` (names shortened), with their words in each language; shown on the home pages while `"reviews"` in `site.config.json` says so |
 | `src/parts/*.css` | The look of such parts, added to the stylesheet after `src/styles.css` |
 | `src/fonts/`, `src/fonts.css` | IBM Plex, served from the site itself (`tools/fonts.mjs`; licence in `licenses/`) |
@@ -47,7 +47,7 @@ When the extension has the new version's store descriptions (`store/listing/<ver
 node tools/new-version.mjs <version> [--whats-new] [--publish]
 ```
 
-It first checks that all twelve descriptions have the structure `build.mjs` reads, and stops before changing anything when one does not. Then it copies them to `content/listing/` (`pt_BR` and `pt_PT` become `pt-BR` and `pt-PT`), reads the panel's texts again into `content/panel.json`, builds the site and shows what changed. With `--whats-new` the home pages show the version's changes from `content/whatsnew/<version>.json` (write that file first, like `content/whatsnew/1.1.0.json`); `"whatsNew"` in `site.config.json` switches them on and off. With `--publish` it commits and pushes, and GitHub Actions publishes the site.
+It first checks that all twelve descriptions have the structure `build.mjs` reads, and stops before changing anything when one does not. Then it copies them to `content/listing/` (`pt_BR` and `pt_PT` become `pt-BR` and `pt-PT`), reads the panel's texts again into `content/panel.json`, builds the site and shows what changed. With `--whats-new` the home pages show the version's changes from `content/whatsnew/<version>.json` (write that file first, like `content/whatsnew/1.1.0.json`), and the command writes the day into it, so the version history lists the version too; `"whatsNew"` in `site.config.json` switches the home pages' part on and off. With `--publish` it commits and pushes, and GitHub Actions publishes the site.
 
 The page sets no cookies and has no analytics. The film loads from YouTube (youtube-nocookie.com) only when someone presses play.
 

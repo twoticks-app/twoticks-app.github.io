@@ -1,0 +1,126 @@
+{
+  "version": "1.0.1",
+  "date": "2026-11-18",
+  "texts": {
+    "en": {
+      "title": "What's new in TwoTicks 1.0.1",
+      "items": [
+        "After an update of WhatsApp Web, messages to groups and to some chats could not be sent: the Scheduler, Compliments, Several chats and Direct message send them again.",
+        "Unanswered chats shows the messages that mention you again.",
+        "A message that WhatsApp refuses now counts as failed, with WhatsApp's answer, instead of as sent.",
+        "The Privacy screen blurs every message again, received and sent, with emoji and previews, and pointing at one shows it.",
+        "A quick reply of several lines now goes into the message box whole, not only its first line."
+      ]
+    },
+    "de": {
+      "title": "Neu in TwoTicks 1.0.1",
+      "items": [
+        "Nach einem Update von WhatsApp Web ließen sich Nachrichten an Gruppen und an manche Chats nicht senden: Zeitplaner, Komplimente, Mehrere Chats und Direktnachricht senden sie wieder.",
+        "Unbeantwortete Chats zeigt wieder die Nachrichten, die Sie erwähnen.",
+        "Eine Nachricht, die WhatsApp ablehnt, gilt jetzt als fehlgeschlagen, mit der Antwort von WhatsApp, statt als gesendet.",
+        "Der Sichtschutz macht wieder jede Nachricht unscharf, empfangene und gesendete, mit Emoji und Vorschauen; zeigen Sie auf eine, wird sie lesbar.",
+        "Eine Schnellantwort mit mehreren Zeilen kommt jetzt vollständig ins Nachrichtenfeld, nicht nur ihre erste Zeile."
+      ]
+    },
+    "es": {
+      "title": "Novedades de TwoTicks 1.0.1",
+      "items": [
+        "Tras una actualización de WhatsApp Web, los mensajes a grupos y a algunos chats no se podían enviar: Programador, Cumplidos, Varios chats y Mensaje directo vuelven a enviarlos.",
+        "Chats sin responder vuelve a mostrar los mensajes que te mencionan.",
+        "Un mensaje que WhatsApp rechaza ahora cuenta como fallido, con la respuesta de WhatsApp, en lugar de como enviado.",
+        "Privacidad en pantalla vuelve a difuminar todos los mensajes, recibidos y enviados, con emojis y vistas previas, y al señalar uno se ve.",
+        "Una respuesta rápida de varias líneas llega ahora entera al cuadro de mensaje, no solo su primera línea."
+      ]
+    },
+    "fr": {
+      "title": "Nouveautés de TwoTicks 1.0.1",
+      "items": [
+        "Après une mise à jour de WhatsApp Web, les messages vers des groupes et certaines discussions ne partaient plus : Programmation, Compliments, Plusieurs discussions et Message direct les envoient de nouveau.",
+        "Discussions sans réponse affiche de nouveau les messages qui vous mentionnent.",
+        "Un message que WhatsApp refuse compte désormais comme un échec, avec la réponse de WhatsApp, et non plus comme envoyé.",
+        "L’Écran de confidentialité floute de nouveau chaque message, reçu ou envoyé, avec les emoji et les aperçus ; pointez un message pour le voir.",
+        "Une réponse rapide de plusieurs lignes arrive désormais entière dans la zone de message, et pas seulement sa première ligne."
+      ]
+    },
+    "it": {
+      "title": "Novità di TwoTicks 1.0.1",
+      "items": [
+        "Dopo un aggiornamento di WhatsApp Web, i messaggi a gruppi e ad alcune chat non partivano: Programmazione, Complimenti, Più chat e Messaggio diretto li inviano di nuovo.",
+        "Chat senza risposta mostra di nuovo i messaggi che ti menzionano.",
+        "Un messaggio che WhatsApp rifiuta ora conta come non riuscito, con la risposta di WhatsApp, invece che come inviato.",
+        "Lo Schermo privacy sfoca di nuovo ogni messaggio, ricevuto e inviato, con emoji e anteprime, e puntandone uno lo mostra.",
+        "Una risposta rapida di più righe ora entra intera nella casella del messaggio, non solo la prima riga."
+      ]
+    },
+    "pt-BR": {
+      "title": "Novidades do TwoTicks 1.0.1",
+      "items": [
+        "Depois de uma atualização do WhatsApp Web, mensagens para grupos e algumas conversas não eram enviadas: Agendador, Elogios, Várias conversas e Mensagem direta voltam a enviá-las.",
+        "Conversas sem resposta volta a mostrar as mensagens que mencionam você.",
+        "Uma mensagem que o WhatsApp recusa agora conta como falha, com a resposta do WhatsApp, em vez de como enviada.",
+        "A Privacidade na tela volta a desfocar todas as mensagens, recebidas e enviadas, com emojis e prévias, e ao apontar para uma ela aparece.",
+        "Uma resposta rápida de várias linhas agora entra inteira na caixa de mensagem, não só a primeira linha."
+      ]
+    },
+    "pt-PT": {
+      "title": "Novidades do TwoTicks 1.0.1",
+      "items": [
+        "Depois de uma atualização do WhatsApp Web, as mensagens para grupos e algumas conversas não eram enviadas: Agendador, Elogios, Várias conversas e Mensagem direta voltam a enviá-las.",
+        "Conversas sem resposta volta a mostrar as mensagens que o mencionam.",
+        "Uma mensagem que o WhatsApp recusa conta agora como falhada, com a resposta do WhatsApp, em vez de enviada.",
+        "A Privacidade no ecrã volta a desfocar todas as mensagens, recebidas e enviadas, com emojis e pré-visualizações, e ao apontar para uma ela fica visível.",
+        "Uma resposta rápida de várias linhas entra agora inteira na caixa de mensagem, e não só a primeira linha."
+      ]
+    },
+    "tr": {
+      "title": "TwoTicks 1.0.1 ile gelen yenilikler",
+      "items": [
+        "WhatsApp Web'in bir güncellemesinden sonra gruplara ve bazı sohbetlere mesaj gönderilemiyordu: Zamanlayıcı, İltifatlar, Birkaç sohbet ve Direkt mesaj bu mesajları yeniden gönderir.",
+        "Cevapsız sohbetler, sizden bahseden mesajları yeniden gösterir.",
+        "WhatsApp'ın reddettiği bir mesaj artık gönderilmiş değil, WhatsApp'ın cevabıyla birlikte başarısız sayılır.",
+        "Gizlilik ekranı gelen ve giden her mesajı emojileri ve önizlemeleriyle yeniden bulanıklaştırır; üzerine gelince mesaj görünür.",
+        "Birkaç satırlık bir hızlı yanıt artık yalnızca ilk satırıyla değil, tamamıyla mesaj kutusuna girer."
+      ]
+    },
+    "ru": {
+      "title": "Что нового в TwoTicks 1.0.1",
+      "items": [
+        "После обновления WhatsApp Web сообщения в группы и некоторые чаты не отправлялись: Планировщик, Комплименты, Несколько чатов и Сообщение на номер снова их отправляют.",
+        "Чаты без ответа снова показывают сообщения, в которых вас упомянули.",
+        "Сообщение, которое WhatsApp отклоняет, теперь отмечается как неотправленное, с ответом WhatsApp, а не как отправленное.",
+        "Приватный экран снова размывает каждое сообщение, входящее и исходящее, вместе с эмодзи и превью; наведите на сообщение, чтобы его увидеть.",
+        "Быстрый ответ из нескольких строк теперь целиком попадает в поле сообщения, а не только его первая строка."
+      ]
+    },
+    "ar": {
+      "title": "الجديد في TwoTicks 1.0.1",
+      "items": [
+        "بعد تحديث لـ WhatsApp Web تعذّر إرسال الرسائل إلى المجموعات وإلى بعض الدردشات: الجدولة وكلمات طيبة وعدة محادثات ورسالة مباشرة ترسلها من جديد.",
+        "دردشات بلا رد تعرض من جديد الرسائل التي تذكرك.",
+        "الرسالة التي يرفضها WhatsApp تُحتسب الآن فاشلة، مع رد WhatsApp، بدلًا من أن تُحتسب مرسلة.",
+        "شاشة الخصوصية تموّه من جديد كل رسالة، واردة كانت أو صادرة، مع الرموز التعبيرية والمعاينات، وعند الإشارة إلى رسالة تظهر.",
+        "الرد السريع المكوّن من عدة أسطر يدخل الآن كاملًا في مربع الرسالة، لا سطره الأول فقط."
+      ]
+    },
+    "hi": {
+      "title": "TwoTicks 1.0.1 में नया क्या है",
+      "items": [
+        "WhatsApp Web के एक अपडेट के बाद ग्रुप और कुछ चैट में मैसेज नहीं जा पा रहे थे: शेड्यूलर, तारीफ़ें, कई चैट और डायरेक्ट मैसेज उन्हें फिर से भेजते हैं।",
+        "बिना जवाब वाली चैट फिर से वे मैसेज दिखाती है जिनमें आपका ज़िक्र है।",
+        "जिस मैसेज को WhatsApp ठुकरा देता है, वह अब भेजा हुआ नहीं, बल्कि WhatsApp के जवाब के साथ असफल गिना जाता है।",
+        "प्राइवेसी स्क्रीन फिर से हर मैसेज को धुंधला करती है, आया हुआ हो या भेजा हुआ, इमोजी और प्रीव्यू के साथ; उस पर पॉइंटर ले जाने पर वह दिखता है।",
+        "कई लाइनों वाला झटपट जवाब अब पूरा का पूरा मैसेज बॉक्स में जाता है, सिर्फ़ उसकी पहली लाइन नहीं।"
+      ]
+    },
+    "id": {
+      "title": "Yang baru di TwoTicks 1.0.1",
+      "items": [
+        "Setelah pembaruan WhatsApp Web, pesan ke grup dan beberapa chat tidak dapat dikirim: Penjadwal, Pujian, Beberapa chat, dan Pesan langsung kembali mengirimnya.",
+        "Chat yang belum dibalas kembali menampilkan pesan yang menyebut Anda.",
+        "Pesan yang ditolak WhatsApp kini dihitung gagal, dengan jawaban dari WhatsApp, bukan terkirim.",
+        "Layar privasi kembali mengaburkan setiap pesan, masuk maupun keluar, beserta emoji dan pratinjau; arahkan penunjuk ke pesan untuk melihatnya.",
+        "Balasan cepat beberapa baris kini masuk utuh ke kotak pesan, bukan hanya baris pertamanya."
+      ]
+    }
+  }
+}

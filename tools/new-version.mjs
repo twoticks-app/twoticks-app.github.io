@@ -8,7 +8,9 @@
 // Nothing is committed or pushed without --publish.
 // Usage: node tools/new-version.mjs <version> [--ext "<extension folder>"] [--whats-new] [--publish]
 //   --ext        the TwoTicks extension folder (default: the folder that holds this site's folder)
-//   --whats-new  sets "whatsNew": { "version": "<version>", "show": true } in site.config.json
+//   --whats-new  sets "whatsNew": { "version": "<version>", "show": true } in site.config.json, and writes today as
+//                the day of publication ("date") into content/whatsnew/<version>.json when it has none: from then
+//                on the version history (versions/) lists the version too. Use it on the day the store publishes it.
 //   --publish    afterwards: git add -A, git commit -m "chore: <version> magaza metinleri", git push
 import fs from 'node:fs';
 import path from 'node:path';
@@ -158,6 +160,14 @@ if (whatsNew) {
   }
   fs.writeFileSync(CONFIG, `${JSON.stringify(out, null, 2)}\n`);
   console.log(`\nsite.config.json: "whatsNew": { "version": "${version}", "show": true }`);
+  // The day the store published the version (this computer's date), right after "version".
+  const notes = JSON.parse(fs.readFileSync(whatsNewFile, 'utf8'));
+  if (!notes.date) {
+    const date = new Date().toLocaleDateString('sv-SE');
+    const { version: v, ...rest } = notes;
+    fs.writeFileSync(whatsNewFile, `${JSON.stringify({ version: v, date, ...rest }, null, 2)}\n`);
+    console.log(`${rel(whatsNewFile)}: "date": "${date}"`);
+  }
 }
 
 // --- 4. build, and what changed ------------------------------------------------------------------------------------

@@ -1,0 +1,102 @@
+{
+  "version": "1.0.0",
+  "date": "2026-11-16",
+  "texts": {
+    "en": {
+      "title": "What's new in TwoTicks 1.0.0",
+      "items": [
+        "The first version in the Chrome Web Store: thirteen tools in one panel, right inside WhatsApp Web.",
+        "Free for everyone: every tool, without limits and without an account.",
+        "Everything runs in your browser, in twelve languages, without any server in between."
+      ]
+    },
+    "de": {
+      "title": "Neu in TwoTicks 1.0.0",
+      "items": [
+        "Die erste Version im Chrome Web Store: dreizehn Werkzeuge in einem Panel, direkt in WhatsApp Web.",
+        "Kostenlos für alle: jedes Werkzeug, ohne Grenzen und ohne Konto.",
+        "Alles läuft in Ihrem Browser, in zwölf Sprachen, ohne einen Server dazwischen."
+      ]
+    },
+    "es": {
+      "title": "Novedades de TwoTicks 1.0.0",
+      "items": [
+        "La primera versión en la Chrome Web Store: trece herramientas en un solo panel, dentro de WhatsApp Web.",
+        "Gratis para todos: todas las herramientas, sin límites y sin cuenta.",
+        "Todo funciona en tu navegador, en doce idiomas, sin ningún servidor de por medio."
+      ]
+    },
+    "fr": {
+      "title": "Nouveautés de TwoTicks 1.0.0",
+      "items": [
+        "La première version sur le Chrome Web Store : treize outils dans un seul panneau, directement dans WhatsApp Web.",
+        "Gratuit pour tout le monde : tous les outils, sans limite et sans compte.",
+        "Tout fonctionne dans votre navigateur, en douze langues, sans aucun serveur entre les deux."
+      ]
+    },
+    "it": {
+      "title": "Novità di TwoTicks 1.0.0",
+      "items": [
+        "La prima versione nel Chrome Web Store: tredici strumenti in un solo pannello, direttamente in WhatsApp Web.",
+        "Gratis per tutti: ogni strumento, senza limiti e senza account.",
+        "Tutto funziona nel tuo browser, in dodici lingue, senza alcun server in mezzo."
+      ]
+    },
+    "pt-BR": {
+      "title": "Novidades do TwoTicks 1.0.0",
+      "items": [
+        "A primeira versão na Chrome Web Store: treze ferramentas em um só painel, dentro do WhatsApp Web.",
+        "Grátis para todos: todas as ferramentas, sem limites e sem conta.",
+        "Tudo funciona no seu navegador, em doze idiomas, sem nenhum servidor no meio."
+      ]
+    },
+    "pt-PT": {
+      "title": "Novidades do TwoTicks 1.0.0",
+      "items": [
+        "A primeira versão na Web Store do Chrome: treze ferramentas num só painel, dentro do WhatsApp Web.",
+        "Gratuito para todos: todas as ferramentas, sem limites e sem conta.",
+        "Tudo funciona no seu navegador, em doze idiomas, sem nenhum servidor pelo meio."
+      ]
+    },
+    "tr": {
+      "title": "TwoTicks 1.0.0 ile gelen yenilikler",
+      "items": [
+        "Chrome Web Mağazası'ndaki ilk sürüm: WhatsApp Web'in içinde, tek panelde on üç araç.",
+        "Herkes için ücretsiz: bütün araçlar, sınırsız ve hesap gerekmeden.",
+        "Her şey tarayıcınızda, on iki dilde ve arada hiçbir sunucu olmadan çalışır."
+      ]
+    },
+    "ru": {
+      "title": "Что нового в TwoTicks 1.0.0",
+      "items": [
+        "Первая версия в Интернет-магазине Chrome: тринадцать инструментов в одной панели, прямо в WhatsApp Web.",
+        "Бесплатно для всех: все инструменты, без ограничений и без регистрации.",
+        "Всё работает в вашем браузере, на двенадцати языках и без серверов посередине."
+      ]
+    },
+    "ar": {
+      "title": "الجديد في TwoTicks 1.0.0",
+      "items": [
+        "أول إصدار في سوق Chrome الإلكتروني: ثلاث عشرة أداة في لوحة واحدة، داخل WhatsApp Web مباشرة.",
+        "مجانية للجميع: كل الأدوات، بلا حدود وبلا حساب.",
+        "يعمل كل شيء في متصفحك، باثنتي عشرة لغة، دون أي خادم في المنتصف."
+      ]
+    },
+    "hi": {
+      "title": "TwoTicks 1.0.0 में नया क्या है",
+      "items": [
+        "Chrome वेब स्टोर में पहला वर्शन: एक ही पैनल में तेरह टूल, सीधे WhatsApp Web के अंदर।",
+        "सभी के लिए मुफ़्त: हर टूल, बिना किसी सीमा और बिना अकाउंट के।",
+        "सब कुछ आपके ब्राउज़र में, बारह भाषाओं में और बीच में किसी सर्वर के बिना चलता है।"
+      ]
+    },
+    "id": {
+      "title": "Yang baru di TwoTicks 1.0.0",
+      "items": [
+        "Versi pertama di Chrome Web Store: tiga belas alat dalam satu panel, langsung di dalam WhatsApp Web.",
+        "Gratis untuk semua orang: setiap alat, tanpa batas dan tanpa akun.",
+        "Semuanya berjalan di browser Anda, dalam dua belas bahasa, tanpa server apa pun di antaranya."
+      ]
+    }
+  }
+}
