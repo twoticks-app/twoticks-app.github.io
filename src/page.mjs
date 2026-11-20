@@ -70,7 +70,10 @@ export function render(c) {
   const T = (key, extra) => t(key, { ...vars, ...extra });
   const newTab = `<span class="vh"> ${t('a11y.newTab')}</span>`;
   const rtl = lang.dir === 'rtl';
-  const storeLink = `${cfg.storeUrl}${cfg.storeUrl.includes('?') ? '&' : '?'}hl=${lang.code}`;
+  // The store's page in the page's language, tagged so that the store's own statistics (and the Google Analytics
+  // property the Chrome Web Store keeps for TwoTicks) show visits and installs that came from this site, by language
+  // and by button. The site itself measures nothing.
+  const storeLink = (place) => `${cfg.storeUrl}?hl=${lang.code}&utm_source=${encodeURIComponent(new URL(cfg.siteUrl).host)}&utm_medium=website&utm_campaign=site&utm_content=${place}-${lang.code.toLowerCase()}`;
 
   const langList = (cls) => `<ul class="${cls}">${langs.map((l) => `<li><a href="${base}${l.path}" hreflang="${l.code}" lang="${l.code}" data-lang="${l.code}"${l.code === lang.code ? ' aria-current="page"' : ''}>${flag(l.code)}<span>${esc(l.native)}</span></a></li>`).join('')}</ul>`;
 
@@ -79,7 +82,7 @@ export function render(c) {
     {
       body: `<p>${T('step1.text')}</p>
         <div class="actions">
-          <a class="btn btn-store" href="${esc(storeLink)}" target="_blank" rel="noopener" data-complete="1">${I.store}<span>${T('step1.button')}</span>${newTab}</a>
+          <a class="btn btn-store" href="${esc(storeLink('step1'))}" target="_blank" rel="noopener" data-complete="1">${I.store}<span>${T('step1.button')}</span>${newTab}</a>
           ${doneBtn(1)}
         </div>`,
       fig: `<div class="mock mock-store">
@@ -253,7 +256,7 @@ ${c.redirect ? `<script>${c.redirect}</script>` : ''}
         <h1 id="hero-title" class="wordmark"><span class="word">TwoTicks</span><span class="slogan" lang="en">for WApp-Web</span></h1>
         <p class="lead">${esc(listing.intro)}</p>
         <div class="cta">
-          <a class="btn btn-hero btn-store" href="${esc(storeLink)}" target="_blank" rel="noopener" data-complete="1">
+          <a class="btn btn-hero btn-store" href="${esc(storeLink('hero'))}" target="_blank" rel="noopener" data-complete="1">
             ${I.store}<span class="btn-two"><span class="btn-label">${T('hero.cta')}</span><span class="btn-meta">${T('hero.ctaMeta')}</span></span>${newTab}
           </a>
           <a class="btn btn-hero btn-hero-alt" href="#features">${I.arrowDown}<span class="btn-label">${T('hero.tools')}</span></a>
@@ -333,7 +336,7 @@ ${faq}
     </div>
     <nav class="foot-links" aria-label="TwoTicks">
       <ul>
-        <li><a href="${esc(storeLink)}">${T('store.name')}</a></li>
+        <li><a href="${esc(storeLink('footer'))}">${T('store.name')}</a></li>
         <li><a href="${esc(cfg.privacyUrl)}" hreflang="en">${T('footer.privacy')}</a></li>
         <li><a href="${esc(cfg.youtube.channel)}">YouTube</a></li>
       </ul>
