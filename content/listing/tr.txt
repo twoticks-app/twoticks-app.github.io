@@ -1,0 +1,48 @@
+TwoTicks, WhatsApp Web'deki sohbetlerinizi ekranda gizli tutar ve onlarla daha hızlı başa çıkmanızı sağlar: tek bir panelde on üç araç, doğrudan WhatsApp Web'in içinde. Her şey tarayıcınızda çalışır, arada hiçbir sunucu yoktur.
+
+GİZLİLİK
+• Gizlilik ekranı: isimleri, profil fotoğraflarını, mesajları ve resimleri bulanıklaştırır; böylece yanınızdakiler ya da ekranınızı paylaştığınız kişiler okuyamaz. Görmek istediğinizin üzerine gelin ya da Alt+Shift+X'e basın.
+• Sohbetleriniz sizde kalır: TwoTicks'in kendi sunucusu yok; sohbetlerinizin, kişilerinizin ve anahtarlarınızın hiçbiri geliştiricisine ulaşmaz; analiz ya da izleme yoktur. TwoTicks yalnızca seçtiğiniz yapay zekâ hizmetine, başlattığınız istekler için bağlanır.
+• Yapay zekânın ne göreceğine siz karar verirsiniz: Varsayılan olarak her istekten önce tam olarak neyin gönderileceğini görürsünüz (resim, PDF dosyası ya da ses kaydı gidiyorsa her zaman); API anahtarınız bu tarayıcıda kalır.
+
+VERİMLİLİK
+• Cevapsız sohbetler: Son mesajı karşı tarafın yazdığı ve sizin henüz cevap vermediğiniz sohbetleri bulun; okuyup unuttuklarınız da dahil. Gruplarda sizden bahseden ya da size cevap veren mesajları görün. Sohbetin dilindeki cevap önerileri doğrudan WhatsApp'ın mesaj kutusuna gider, gönderilmeden. Tersine, "Siz bekliyorsunuz" görünümünde hâlâ cevap beklediğiniz sohbetleri görün.
+• Hızlı yanıtlar: Tekrar tekrar yazdığınız cevapları kaydedin ve Alt+Shift+Q ile kişinin adı doldurulmuş olarak herhangi bir sohbete ekleyin. Enter'a basmadan hiçbir şey gönderilmez.
+• Yapay zekâ asistanı: Özetler, görevler ve tarihler, cevap taslakları, çeviriler ya da bir sohbet hakkındaki kendi sorularınız; cevabı kendi bilgisayarınızda Chrome'un içindeki model (bilgisayarınız çalıştırabiliyorsa) ya da kendi anahtarınızla zaten kullandığınız yapay zekâ hizmeti verir. Seçerseniz sohbetin belgeleri, resimleri, PDF dosyaları ve sesli mesajları da birlikte gider. Varsayılan olarak her istekten önce tam olarak neyin gönderileceğini görürsünüz.
+• Sohbet analizi: Son mesajlardaki kararları, görevleri, tarihleri ve açık soruları cihazınızda görün. Bulunan bir tarih ya da görev tek tıkla bir takvim dosyasına ya da o sohbete gidecek bir mesaj olarak Zamanlayıcı'ya geçer. “Bugün”, son sohbetlerinize bakar: cevabınızı bekleyenler, verdiğiniz sözler ve yaklaşanlar.
+• Zamanlayıcı: Mesajı şimdi yazın, seçtiğiniz saatte gönderilsin; bir kez ya da her gün, hafta, ay veya yıl. Chrome açık ve bilgisayar uyanık olduğu sürece WhatsApp Web kapalıyken de gider: TwoTicks, WhatsApp Web'i kısa süre önce küçültülmüş bir pencerede açar ve gönderdikten sonra kapatır; arada hiçbir sunucu yoktur.
+• Direkt mesaj: Bir numarayı kişilerinize kaydetmeden sohbet açın ya da mesaj gönderin.
+• İltifatlar: Sevdiğiniz insanlara düzenli olarak güzel bir şey söyleyin. Kişiyi, günleri, saatleri ve haftada kaç tane olacağını (en çok 14) seçin: TwoTicks her iltifata bu saatler içinde farklı bir zaman verir ve bunu değiştirebileceğiniz bir planda gösterir. Size kendi listenizden gönderilmeye hazır bir iltifatla hatırlatır ya da sizin yerinize gönderir; istediğiniz an bir tane de gönderebilirsiniz. Fikriniz mi tükendi? Kendi yapay zekâ hizmetiniz sizin üslubunuzda ve dilinizde yenilerini önerir.
+• Birkaç sohbet: Sizden mesaj almayı kabul etmiş birkaç kişiye aynı kişisel mesajı, tam metni ve her alıcıyı onayladıktan sonra tek tek gönderin. TwoTicks iki mesaj arasında rastgele 15–60 saniye bekler ve 24 saatte en çok 30 mesaj gönderir.
+
+SOHBETLERİNİZ, DOSYALARINIZ
+• Sohbetleri dışa aktar: Seçtiğiniz sohbetleri, açık sohbeti ya da tüm sohbetleri istediğiniz tarih aralığı için, WhatsApp Web'in bilgisayarınızda tuttuğu mesajlardan, JSON veya TXT dosyası olarak kaydedin.
+• Kişileri dışa aktar: Rehberinizdeki kişileri ve yazıştığınız kişileri Excel tablosu ya da telefonunuza aktarabileceğiniz VCF kartları olarak indirin.
+• Medyayı indir: Bir sohbetin, birkaç sohbetin ya da tüm sohbetlerin sesli mesajlarını, fotoğraflarını, videolarını ve belgelerini, her sohbet için bir klasör ve türe göre sıralanmış dosyalarla tek bir ZIP dosyasında toplayın.
+• Silinen ve düzenlenen mesajlar: WhatsApp Web açıkken biri bir mesajı herkesten sildiğinde ya da düzenlediğinde orijinal metni saklayın. Bir düğmeyle kapatılabilir.
+
+• On bir dil: English, Deutsch, Español, Português, Italiano, Français, Türkçe, Русский, العربية, हिन्दी, Bahasa Indonesia.
+
+FİYAT
+TwoTicks ücretsizdir: tüm araçlar, sınırlama olmadan, hesap açmadan ve ödeme bilgisi vermeden. Yapay zekâ asistanı, seçtiğiniz yapay zekâ hizmetindeki kendi hesabınızı kullanır; kullanım ücretini o hizmet size fatura eder. İleriki bir sürümde ücretli planlar eklenebilir; o zamandan önce yapılmış bir kurulum, kurulu kaldığı sürece ücretsiz kalır.
+
+NASIL KULLANILIR
+1. web.whatsapp.com'u açın ve giriş yapın.
+2. Sağ alttaki iki tikli koyu düğmeye tıklayın, Alt+Shift+H'ye basın ya da araç çubuğundaki simgeyi kullanın.
+3. Soldan bir araç seçin, seçimlerinizi yapın ve alttaki çubuktaki düğmeyi kullanın. WhatsApp'ı yanında görmek için paneli üst çubuğundan sürükleyin, boyutunu kenarlarından değiştirin ya da "Kapat"ın yanındaki düğmeyle pencereyi doldurmasını sağlayın. İki ekranınız varsa yanındaki düğme TwoTicks'i ayrı bir pencerede açar: WhatsApp bir ekranda, TwoTicks diğerinde. WhatsApp Web ile TwoTicks'i bir uygulama gibi kendi penceresinde kullanmak için araç çubuğu menüsünde "Kendi penceresinde aç"ı seçin.
+
+İZİNLER
+• "web.whatsapp.com üzerindeki verilerinizi okuma ve değiştirme": Araçlar yalnızca WhatsApp Web'in içinde çalışır, başka hiçbir yerde değil.
+• Betik çalıştırma: Araç çubuğu menüsünün ve klavye kısayolunun paneli WhatsApp sekmenizde açmasını sağlar; TwoTicks bir pencereyi yerleştirmeden önce onun kendi paneli olduğunu da bununla denetler.
+• Alarmlar: Zamanlanmış bir mesajdan ya da otomatik bir iltifattan kısa süre önce TwoTicks'i uyandırır; WhatsApp Web kapalıysa açmak için.
+• Offscreen: PDF dosyası kabul etmeyen yapay zekâ hizmetleri için TwoTicks'in bir PDF dosyasının metnini bilgisayarınızda, kapalı bir sayfada okumasını sağlar.
+• İsteğe bağlı "arka plan", yalnızca ayarlarda işaretlerseniz: Son penceresi kapandıktan sonra Chrome'u çalışır tutar ve bilgisayarınızda oturum açtığınızda başlatır; böylece zamanlanmış mesajlar yine gider.
+• İsteğe bağlı, yalnızca kullandığınızda istenir: Seçtiğiniz yapay zekâ hizmetinin adresi.
+
+"Birkaç sohbet" aracı reklam için değildir. Yalnızca sizden mesaj almayı kabul etmiş kişilere yazın; izinsiz reklam çoğu ülkede yasaktır ve WhatsApp çok mesaj gönderen hesapları kısıtlayabilir.
+
+Bu eklentinin WhatsApp veya Meta ile hiçbir bağı yoktur; onlar tarafından onaylanmamış ya da desteklenmemiştir.
+
+DESTEK
+Sorular ya da sorunlar: mr.osmanbodur@gmail.com
+Kullanım şartları ve gizlilik politikası: eklentinin içinde, Ayarlar › Yardım ve belgeler bölümünde.

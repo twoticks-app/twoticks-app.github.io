@@ -1,0 +1,48 @@
+TwoTicks keeps your WhatsApp Web chats private on screen and helps you work through them faster: thirteen tools in one panel, right inside WhatsApp Web. Everything runs in your browser, without any server in between.
+
+PRIVACY
+• Privacy screen: blur names, photos, messages and pictures so people next to you or watching your shared screen cannot read along; point at something to see it, or press Alt+Shift+X.
+• Your chats stay with you: TwoTicks has no server of its own, and none of your chats, contacts or keys reach its developer; there is no analytics or tracking. TwoTicks contacts only the AI service you choose, for the requests you start.
+• You decide what an AI sees: by default you see exactly what is sent before each request (always when images, PDF files or voice recordings go along), and your API key stays in this browser.
+
+PRODUCTIVITY
+• Unanswered chats: find the chats where the other person wrote last and you have not replied, including the ones you read and forgot; in groups, the messages that mention you or reply to you. Reply suggestions in the chat's language go straight into WhatsApp's message box, unsent. The other way round, see where you are still waiting for an answer.
+• Quick replies: save the answers you write again and again and put them into any chat with Alt+Shift+Q, with the person's first name filled in. Nothing is sent until you press Enter.
+• AI assistant: summaries, tasks and dates, reply drafts, translations or your own questions about a chat, answered by the model built into Chrome on your own computer (where your computer can run it) or by the AI service you already use with your own key. If you choose them, documents, images, PDF files and voice messages of the chat go along. By default you see exactly what is sent before each request.
+• Chat analysis: see the decisions, tasks, dates and open questions in recent messages, on your device. A date or task it finds goes into a calendar file with one click, or into the Scheduler as a message to that chat. "Today" looks through your recent chats for what waits for your reply, what you promised and what is coming up.
+• Scheduler: write a message now and have it sent at the time you choose, once or every day, week, month or year. It goes out even when WhatsApp Web is closed, as long as Chrome is running and the computer is awake: TwoTicks opens WhatsApp Web in a minimised window shortly before and closes it after sending, with no server in between.
+• Direct message: open a chat or send a message to a number without saving it to your contacts.
+• Compliments: tell the people you love something kind, regularly. Choose the person, the days, the hours and how many a week (up to 14): TwoTicks gives each compliment a different time within those hours, in a plan you can change; TwoTicks reminds you with a compliment from your own list ready to send, or sends it for you; you can also send one whenever you like. Out of ideas? Your own AI service suggests new ones, in your words and your language.
+• Several chats: send the same personal message to a few people who agreed to hear from you, one at a time, after you confirm the exact text and every recipient. TwoTicks waits a random 15 to 60 seconds between two messages and sends at most 30 in 24 hours.
+
+YOUR CHATS, YOUR FILES
+• Export chats: save selected chats, the open chat or all chats as JSON or TXT files, for any date range, from the messages WhatsApp Web holds on your computer.
+• Export contacts: download the people in your address book and the people you have chatted with as an Excel sheet or as VCF cards for your phone.
+• Download media: collect the voice messages, photos, videos and documents of one chat, several chats or all of them into a ZIP file, with a folder per chat and the files sorted by type.
+• Deleted and edited messages: keep the original text when someone deletes a message for everyone or edits it, while WhatsApp Web is open. A switch turns it off.
+
+• Eleven languages: English, Deutsch, Español, Português, Italiano, Français, Türkçe, Русский, العربية, हिन्दी, Bahasa Indonesia.
+
+PRICE
+TwoTicks is free: every tool, without limits, without an account and without payment details. The AI assistant uses your own account with your AI service, which bills its usage to you. Paid plans may be added in a later version; an installation made before then stays free for as long as it remains installed.
+
+HOW TO USE
+1. Open web.whatsapp.com and sign in.
+2. Click the dark button with the two ticks at the bottom right, press Alt+Shift+H, or use the toolbar icon.
+3. Choose a tool on the left, make your choices and use the button in the bar at the bottom. Drag the panel by its top bar to keep WhatsApp in view beside it, drag its edges to resize it, or let it fill the window with the button beside "Close". With two screens, the button next to it opens TwoTicks in a separate window: WhatsApp on one screen, TwoTicks on the other. To keep WhatsApp Web and TwoTicks in a window of their own, like an app, choose "Open in its own window" in the toolbar popup.
+
+PERMISSIONS
+• "Read and change your data on web.whatsapp.com": the tools run inside WhatsApp Web and nowhere else.
+• Scripting: lets the toolbar popup and the keyboard shortcut open the panel in your WhatsApp tab, and lets TwoTicks check that a window is its own panel before placing it.
+• Alarms: wakes TwoTicks shortly before a scheduled message or an automatic compliment, to open WhatsApp Web if it is closed.
+• Offscreen: lets TwoTicks read the text out of a PDF file in a sealed page on your computer, for AI services that take no PDF files.
+• Optional "background", only if you tick it in the settings: keeps Chrome running after its last window closes and starts it when you sign in to your computer, so scheduled messages still go out.
+• Optional, asked for only when you use it: the address of the AI service you choose.
+
+The "Several chats" tool is not for advertising. Only message people who agreed to receive your messages; unsolicited advertising is illegal in most countries, and WhatsApp can restrict accounts that send many messages.
+
+This extension is not affiliated with, endorsed by or sponsored by WhatsApp or Meta.
+
+SUPPORT
+Questions or problems: mr.osmanbodur@gmail.com
+Terms of use and privacy policy: inside the extension, under Settings › Help and documents.

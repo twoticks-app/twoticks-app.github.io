@@ -1,0 +1,48 @@
+TwoTicks mantiene private sullo schermo le tue chat di WhatsApp Web e ti aiuta a gestirle più in fretta: tredici strumenti in un unico pannello, direttamente dentro WhatsApp Web. Tutto funziona nel tuo browser, senza alcun server in mezzo.
+
+PRIVACY
+• Schermo privacy: sfoca nomi, foto profilo, messaggi e immagini, così chi ti sta accanto o guarda il tuo schermo condiviso non può leggere; punta su qualcosa per vederlo, oppure premi Alt+Shift+X.
+• Le tue chat restano a te: TwoTicks non ha un proprio server, e al suo sviluppatore non arrivano né chat, né contatti, né chiavi; nessuna analisi, nessun tracciamento. TwoTicks si collega solo al servizio di IA che scegli, per le richieste che avvii.
+• Decidi tu cosa vede un’IA: di norma vedi esattamente cosa viene inviato prima di ogni richiesta (sempre quando vanno insieme immagini, file PDF o registrazioni vocali), e la tua chiave API resta in questo browser.
+
+PRODUTTIVITÀ
+• Chat senza risposta: trova le chat in cui l’altra persona ha scritto per ultima e tu non hai ancora risposto, anche quelle lette e dimenticate; nei gruppi, i messaggi che ti menzionano o ti rispondono. I suggerimenti di risposta nella lingua della chat finiscono direttamente nella casella di testo di WhatsApp, senza essere inviati. Al contrario, in «Aspetti tu» vedi dove stai ancora aspettando una risposta.
+• Risposte rapide: salva le risposte che scrivi di continuo e inseriscile in qualsiasi chat con Alt+Shift+Q, con il nome della persona già inserito. Non viene inviato nulla finché non premi Invio.
+• Assistente IA: riassunti, compiti e date, bozze di risposta, traduzioni o domande tue su una chat, a cui risponde il modello integrato in Chrome sul tuo computer (se il tuo computer può eseguirlo) o il servizio di IA che usi già con la tua chiave. Se li scegli, vanno insieme documenti, immagini, file PDF e messaggi vocali della chat. Di norma vedi esattamente cosa viene inviato prima di ogni richiesta.
+• Analisi della chat: vedi le decisioni, i compiti, le date e le domande aperte dei messaggi recenti, sul tuo dispositivo. Una data o un compito trovato passa con un clic in un file di calendario, o alla Programmazione come messaggio a quella chat. «Oggi» scorre le tue chat recenti: cosa aspetta la tua risposta, cosa hai promesso e cosa è in arrivo.
+• Programmazione: scrivi un messaggio adesso e fallo inviare all’ora che scegli, una volta oppure ogni giorno, settimana, mese o anno. Parte anche con WhatsApp Web chiuso, purché Chrome sia in esecuzione e il computer non sia in sospensione: TwoTicks apre WhatsApp Web in una finestra ridotta a icona poco prima e la chiude dopo l’invio, senza alcun server in mezzo.
+• Messaggio diretto: apri una chat o invia un messaggio a un numero senza salvarlo nei contatti.
+• Complimenti: di’ regolarmente qualcosa di gentile alle persone che ami. Scegli la persona, i giorni, le ore e quanti a settimana (fino a 14): TwoTicks dà a ogni complimento un orario diverso in quella fascia, in un piano che puoi modificare; ti ricorda con un complimento della tua lista pronto da inviare, oppure lo invia per te; puoi anche inviarne uno quando vuoi. Finite le idee? Il tuo servizio di IA ne propone di nuove, con le tue parole e nella tua lingua.
+• Più chat: invia lo stesso messaggio personale a poche persone che hanno accettato di ricevere tuoi messaggi, una alla volta, dopo aver confermato il testo esatto e ogni destinatario. TwoTicks attende a caso da 15 a 60 secondi tra due messaggi e ne invia al massimo 30 in 24 ore.
+
+LE TUE CHAT, I TUOI FILE
+• Esporta chat: salva le chat selezionate, la chat aperta o tutte le chat come file JSON o TXT, per qualsiasi periodo, dai messaggi che WhatsApp Web conserva sul tuo computer.
+• Esporta contatti: scarica le persone della tua rubrica e quelle con cui hai chattato come foglio Excel o come schede VCF per il telefono.
+• Scarica i media: raccogli messaggi vocali, foto, video e documenti di una chat, di più chat o di tutte in un file ZIP, con una cartella per chat e i file ordinati per tipo.
+• Messaggi eliminati e modificati: conserva il testo originale quando qualcuno elimina un messaggio per tutti o lo modifica, finché WhatsApp Web è aperto. Un interruttore lo disattiva.
+
+• Undici lingue: English, Deutsch, Español, Português, Italiano, Français, Türkçe, Русский, العربية, हिन्दी, Bahasa Indonesia.
+
+PREZZO
+TwoTicks è gratuito: tutti gli strumenti, senza limiti, senza account e senza dati di pagamento. L’assistente IA usa il tuo account presso il tuo servizio di IA, che ti addebita l’utilizzo. In una versione successiva potranno essere aggiunti piani a pagamento; un’installazione effettuata prima di allora resta gratuita finché rimane installata.
+
+COME SI USA
+1. Apri web.whatsapp.com ed effettua l’accesso.
+2. Fai clic sul pulsante scuro con le due spunte in basso a destra, premi Alt+Shift+H oppure usa l’icona nella barra degli strumenti.
+3. Scegli uno strumento a sinistra, fai le tue scelte e usa il pulsante nella barra in basso. Trascina il pannello dalla barra superiore per tenere WhatsApp visibile accanto, trascinane i bordi per ridimensionarlo, oppure fagli riempire la finestra con il pulsante accanto a «Chiudi». Con due schermi, il pulsante vicino apre TwoTicks in una finestra a parte: WhatsApp su uno schermo, TwoTicks sull’altro. Per avere WhatsApp Web e TwoTicks in una finestra propria, come un’app, scegli «Apri in una finestra a parte» nel menu della barra degli strumenti.
+
+AUTORIZZAZIONI
+• «Leggere e modificare i tuoi dati su web.whatsapp.com»: gli strumenti funzionano dentro WhatsApp Web e da nessun’altra parte.
+• Scripting: permette al menu della barra degli strumenti e alla scorciatoia da tastiera di aprire il pannello nella tua scheda di WhatsApp, e a TwoTicks di verificare che una finestra sia il suo pannello prima di posizionarla.
+• Sveglie: risveglia TwoTicks poco prima di un messaggio programmato o di un complimento automatico, per aprire WhatsApp Web se è chiuso.
+• Offscreen: permette a TwoTicks di leggere il testo di un file PDF in una pagina isolata sul tuo computer, per i servizi di IA che non accettano file PDF.
+• «In background», facoltativa, solo se la spunti nelle impostazioni: mantiene Chrome attivo dopo la chiusura dell’ultima finestra e lo avvia quando accedi al computer, così i messaggi programmati partono comunque.
+• Facoltativa, richiesta solo quando la usi: l’indirizzo del servizio di IA che scegli.
+
+Lo strumento «Più chat» non è per la pubblicità. Scrivi solo a persone che hanno accettato di ricevere i tuoi messaggi; la pubblicità non richiesta è illegale nella maggior parte dei paesi, e WhatsApp può limitare gli account che inviano molti messaggi.
+
+Questa estensione non è affiliata, approvata o sponsorizzata da WhatsApp o Meta.
+
+ASSISTENZA
+Domande o problemi: mr.osmanbodur@gmail.com
+Condizioni d’uso e informativa sulla privacy: nell’estensione, in Impostazioni › Aiuto e documenti.

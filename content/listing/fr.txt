@@ -1,0 +1,48 @@
+TwoTicks garde vos discussions WhatsApp Web privées à l’écran et vous aide à les traiter plus vite : treize outils dans un seul panneau, directement dans WhatsApp Web. Tout fonctionne dans votre navigateur, sans aucun serveur entre les deux.
+
+CONFIDENTIALITÉ
+• Écran de confidentialité : floute les noms, les photos de profil, les messages et les images pour que vos voisins ou les personnes qui regardent votre partage d’écran ne puissent pas lire ; pointez un élément pour le voir, ou appuyez sur Alt+Shift+X.
+• Vos discussions restent chez vous : TwoTicks n’a aucun serveur à lui, et ni vos discussions, ni vos contacts, ni vos clés ne parviennent à son développeur ; aucune mesure d’audience, aucun pistage. TwoTicks ne contacte que le service d’IA de votre choix, pour les demandes que vous lancez.
+• Vous décidez de ce qu’une IA voit : par défaut, vous voyez exactement ce qui est envoyé avant chaque demande (toujours lorsque des images, des fichiers PDF ou des enregistrements vocaux sont joints), et votre clé d’API reste dans ce navigateur.
+
+PRODUCTIVITÉ
+• Discussions sans réponse : retrouvez les discussions où l’autre personne a écrit en dernier et où vous n’avez pas encore répondu, y compris celles que vous avez lues puis oubliées ; dans les groupes, les messages qui vous mentionnent ou vous répondent. Les suggestions de réponse dans la langue de la discussion vont directement dans la zone de message de WhatsApp, sans être envoyées. Dans l’autre sens, « Vous attendez » montre où vous attendez encore une réponse.
+• Réponses rapides : enregistrez les réponses que vous écrivez sans cesse et insérez-les dans n’importe quelle discussion avec Alt+Shift+Q, avec le prénom de la personne déjà rempli. Rien n’est envoyé avant que vous appuyiez sur Entrée.
+• Assistant IA : résumés, tâches et dates, brouillons de réponse, traductions ou vos propres questions sur une discussion, traités par le modèle intégré à Chrome sur votre propre ordinateur (si votre ordinateur peut l’exécuter) ou par le service d’IA que vous utilisez déjà avec votre propre clé. Si vous les choisissez, des documents, images, fichiers PDF et messages vocaux de la discussion sont joints. Par défaut, vous voyez exactement ce qui est envoyé avant chaque demande.
+• Analyse de discussion : voyez les décisions, tâches, dates et questions ouvertes des messages récents, sur votre appareil. Une date ou une tâche trouvée passe en un clic dans un fichier de calendrier, ou dans la Programmation comme message à cette discussion. « Aujourd’hui » parcourt vos discussions récentes : ce qui attend votre réponse, ce que vous avez promis et ce qui approche.
+• Programmation : écrivez un message maintenant et faites-le envoyer à l’heure choisie, une fois ou chaque jour, semaine, mois ou année. Il part même quand WhatsApp Web est fermé, tant que Chrome tourne et que l’ordinateur n’est pas en veille : TwoTicks ouvre WhatsApp Web dans une fenêtre réduite peu avant et la ferme après l’envoi, sans aucun serveur entre les deux.
+• Message direct : ouvrez une discussion ou envoyez un message à un numéro sans l’enregistrer dans vos contacts.
+• Compliments : dites régulièrement quelque chose de gentil aux personnes que vous aimez. Choisissez la personne, les jours, les heures et combien par semaine (jusqu’à 14) : TwoTicks donne à chaque compliment une heure différente dans ces plages, dans un plan que vous pouvez modifier ; il vous rappelle avec un compliment de votre propre liste prêt à envoyer, ou l’envoie pour vous ; vous pouvez aussi en envoyer un quand vous voulez. À court d’idées ? Votre propre service d’IA en propose de nouveaux, avec vos mots et dans votre langue.
+• Plusieurs discussions : envoyez le même message personnel à quelques personnes qui ont accepté d’avoir de vos nouvelles, une par une, après avoir confirmé le texte exact et chaque destinataire. TwoTicks attend au hasard de 15 à 60 secondes entre deux messages et en envoie au plus 30 en 24 heures.
+
+VOS DISCUSSIONS, VOS FICHIERS
+• Exporter les discussions : enregistrez les discussions choisies, la discussion ouverte ou toutes les discussions en fichiers JSON ou TXT, pour n’importe quelle période, à partir des messages que WhatsApp Web conserve sur votre ordinateur.
+• Exporter les contacts : téléchargez les personnes de votre carnet d’adresses et celles avec qui vous avez discuté dans une feuille Excel ou sous forme de fiches VCF pour votre téléphone.
+• Télécharger les médias : rassemblez les messages vocaux, photos, vidéos et documents d’une discussion, de plusieurs ou de toutes dans un fichier ZIP, avec un dossier par discussion et les fichiers triés par type.
+• Messages supprimés et modifiés : conservez le texte d’origine quand quelqu’un supprime un message pour tous ou le modifie, tant que WhatsApp Web est ouvert. Un interrupteur permet de le désactiver.
+
+• Onze langues : English, Deutsch, Español, Português, Italiano, Français, Türkçe, Русский, العربية, हिन्दी, Bahasa Indonesia.
+
+PRIX
+TwoTicks est gratuit : tous les outils, sans limites, sans compte et sans moyen de paiement. L’assistant IA utilise votre propre compte auprès de votre service d’IA, qui vous facture son utilisation. Des formules payantes pourront être ajoutées dans une version ultérieure ; une installation effectuée auparavant reste gratuite tant qu’elle demeure installée.
+
+MODE D’EMPLOI
+1. Ouvrez web.whatsapp.com et connectez-vous.
+2. Cliquez sur le bouton sombre aux deux coches en bas à droite, appuyez sur Alt+Shift+H ou utilisez l’icône de la barre d’outils.
+3. Choisissez un outil à gauche, faites vos choix et utilisez le bouton de la barre du bas. Faites glisser le panneau par sa barre supérieure pour garder WhatsApp visible à côté, tirez sur ses bords pour le redimensionner, ou laissez-le remplir la fenêtre avec le bouton à côté de « Fermer ». Avec deux écrans, le bouton voisin ouvre TwoTicks dans une fenêtre séparée : WhatsApp sur un écran, TwoTicks sur l’autre. Pour avoir WhatsApp Web et TwoTicks dans leur propre fenêtre, comme une application, choisissez « Ouvrir dans sa propre fenêtre » dans le menu de la barre d’outils.
+
+AUTORISATIONS
+• « Lire et modifier vos données sur web.whatsapp.com » : les outils fonctionnent dans WhatsApp Web et nulle part ailleurs.
+• Scripts : permet au menu de la barre d’outils et au raccourci clavier d’ouvrir le panneau dans votre onglet WhatsApp, et à TwoTicks de vérifier qu’une fenêtre est bien son propre panneau avant de la placer.
+• Alarmes : réveille TwoTicks peu avant un message programmé ou un compliment automatique, pour ouvrir WhatsApp Web s’il est fermé.
+• Offscreen : permet à TwoTicks de lire le texte d’un fichier PDF dans une page isolée sur votre ordinateur, pour les services d’IA qui n’acceptent pas les fichiers PDF.
+• « Arrière-plan », facultatif, seulement si vous le cochez dans les paramètres : garde Chrome actif après la fermeture de sa dernière fenêtre et le lance quand vous ouvrez votre session, pour que les messages programmés partent quand même.
+• Facultative, demandée seulement quand vous l’utilisez : l’adresse du service d’IA de votre choix.
+
+L’outil « Plusieurs discussions » n’est pas destiné à la publicité. N’écrivez qu’aux personnes qui ont accepté de recevoir vos messages ; la publicité non sollicitée est illégale dans la plupart des pays, et WhatsApp peut restreindre les comptes qui envoient beaucoup de messages.
+
+Cette extension n’est ni affiliée à WhatsApp ou à Meta, ni approuvée ou parrainée par eux.
+
+ASSISTANCE
+Questions ou problèmes : mr.osmanbodur@gmail.com
+Conditions d’utilisation et politique de confidentialité : dans l’extension, sous Paramètres › Aide et documents.

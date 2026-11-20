@@ -1,0 +1,12 @@
+{
+  "name": "twoticks-site",
+  "private": true,
+  "description": "The site of the Chrome extension TwoTicks in twelve languages: what it does and how to add it from the Chrome Web Store. No dependencies.",
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "serve": "node tools/serve.mjs",
+    "labels": "node tools/chrome-ui.cjs --pak-only",
+    "fonts": "node tools/fonts.mjs"
+  }
+}

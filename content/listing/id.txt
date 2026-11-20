@@ -1,0 +1,48 @@
+TwoTicks menjaga chat WhatsApp Web Anda tetap privat di layar dan membantu Anda menyelesaikannya lebih cepat: tiga belas alat dalam satu panel, langsung di dalam WhatsApp Web. Semuanya berjalan di browser Anda, tanpa server apa pun di antaranya.
+
+PRIVASI
+• Layar privasi: memburamkan nama, foto profil, pesan, dan gambar agar orang di sebelah Anda atau yang melihat layar yang Anda bagikan tidak bisa ikut membaca; arahkan kursor untuk melihatnya, atau tekan Alt+Shift+X.
+• Chat Anda tetap milik Anda: TwoTicks tidak memiliki server sendiri, dan tidak ada chat, kontak, atau kunci Anda yang sampai ke pengembangnya; tidak ada analitik maupun pelacakan. TwoTicks hanya terhubung ke layanan AI pilihan Anda, untuk permintaan yang Anda mulai.
+• Anda yang menentukan apa yang dilihat AI: secara bawaan Anda melihat persis apa yang dikirim sebelum setiap permintaan (selalu jika gambar, file PDF, atau rekaman suara ikut dikirim), dan kunci API Anda tetap di browser ini.
+
+PRODUKTIVITAS
+• Chat yang belum dibalas: temukan chat yang terakhir ditulis oleh lawan bicara dan belum Anda balas, termasuk yang sudah dibaca lalu terlupa; di grup, pesan yang menyebut Anda atau membalas Anda. Saran balasan dalam bahasa chat langsung masuk ke kotak pesan WhatsApp, tanpa terkirim. Sebaliknya, di "Anda menunggu" Anda melihat di mana Anda masih menunggu jawaban.
+• Balasan cepat: simpan jawaban yang Anda tulis berulang kali dan masukkan ke chat mana pun dengan Alt+Shift+Q, lengkap dengan nama depan orangnya. Tidak ada yang terkirim sebelum Anda menekan Enter.
+• Asisten AI: ringkasan, tugas dan tanggal, draf balasan, terjemahan, atau pertanyaan Anda sendiri tentang sebuah chat, dijawab oleh model bawaan Chrome di komputer Anda sendiri (jika komputer Anda dapat menjalankannya) atau oleh layanan AI yang sudah Anda gunakan dengan kunci Anda sendiri. Jika Anda memilihnya, dokumen, gambar, file PDF, dan pesan suara dari chat ikut dikirim. Secara bawaan Anda melihat persis apa yang dikirim sebelum setiap permintaan.
+• Analisis chat: lihat keputusan, tugas, tanggal, dan pertanyaan terbuka dalam pesan terbaru, di perangkat Anda. Tanggal atau tugas yang ditemukan dapat dipindahkan dengan sekali klik ke file kalender, atau ke Penjadwal sebagai pesan ke chat tersebut. “Hari ini” menelusuri chat terbaru Anda: apa yang menunggu balasan Anda, apa yang Anda janjikan, dan apa yang akan datang.
+• Penjadwal: tulis pesan sekarang dan kirim pada waktu yang Anda pilih, sekali atau setiap hari, minggu, bulan, atau tahun. Pesan tetap terkirim meski WhatsApp Web tertutup, selama Chrome berjalan dan komputer tidak dalam mode tidur: TwoTicks membuka WhatsApp Web di jendela yang diminimalkan sesaat sebelumnya dan menutupnya setelah mengirim, tanpa server apa pun di antaranya.
+• Pesan langsung: buka chat atau kirim pesan ke sebuah nomor tanpa menyimpannya ke kontak.
+• Pujian: sampaikan sesuatu yang manis kepada orang-orang yang Anda sayangi secara rutin. Pilih orangnya, hari, jam, dan berapa kali seminggu (hingga 14): TwoTicks memberi setiap pujian waktu yang berbeda dalam rentang jam itu, dalam rencana yang bisa Anda ubah; TwoTicks mengingatkan Anda dengan pujian dari daftar Anda sendiri yang siap dikirim, atau mengirimkannya untuk Anda; Anda juga bisa mengirim satu kapan saja. Kehabisan ide? Layanan AI Anda sendiri menyarankan yang baru, dengan kata-kata dan bahasa Anda.
+• Beberapa chat: kirim pesan pribadi yang sama ke beberapa orang yang setuju menerima pesan dari Anda, satu per satu, setelah Anda mengonfirmasi teks persisnya dan setiap penerima. TwoTicks menunggu acak 15 sampai 60 detik di antara dua pesan dan mengirim paling banyak 30 dalam 24 jam.
+
+CHAT ANDA, FILE ANDA
+• Ekspor chat: simpan chat yang dipilih, chat yang sedang terbuka, atau semua chat sebagai file JSON atau TXT, untuk rentang tanggal apa pun, dari pesan yang disimpan WhatsApp Web di komputer Anda.
+• Ekspor kontak: unduh orang-orang di daftar kontak Anda dan orang yang pernah Anda ajak chat sebagai lembar Excel atau kartu VCF untuk ponsel Anda.
+• Unduh media: kumpulkan pesan suara, foto, video, dan dokumen dari satu chat, beberapa chat, atau semuanya ke dalam satu file ZIP, dengan satu folder per chat dan file yang diurutkan menurut jenis.
+• Pesan yang dihapus dan diedit: simpan teks aslinya ketika seseorang menghapus pesan untuk semua orang atau mengeditnya, selama WhatsApp Web terbuka. Sebuah sakelar bisa mematikannya.
+
+• Sebelas bahasa: English, Deutsch, Español, Português, Italiano, Français, Türkçe, Русский, العربية, हिन्दी, Bahasa Indonesia.
+
+HARGA
+TwoTicks gratis: semua alat, tanpa batasan, tanpa akun, dan tanpa data pembayaran. Asisten AI menggunakan akun Anda sendiri di layanan AI Anda, yang menagih penggunaannya kepada Anda. Paket berbayar mungkin akan ditambahkan di versi mendatang; pemasangan yang dilakukan sebelum itu tetap gratis selama ekstensi masih terpasang.
+
+CARA MENGGUNAKAN
+1. Buka web.whatsapp.com dan masuk.
+2. Klik tombol gelap dengan dua centang di kanan bawah, tekan Alt+Shift+H, atau gunakan ikon di bilah alat.
+3. Pilih alat di sebelah kiri, tentukan pilihan Anda, lalu gunakan tombol di bilah bawah. Seret panel pada bilah atasnya agar WhatsApp tetap terlihat di sampingnya, seret tepinya untuk mengubah ukuran, atau biarkan memenuhi jendela dengan tombol di samping "Tutup". Dengan dua layar, tombol di sebelahnya membuka TwoTicks di jendela terpisah: WhatsApp di satu layar, TwoTicks di layar lainnya. Agar WhatsApp Web dan TwoTicks berada di jendela tersendiri seperti aplikasi, pilih "Buka di jendela tersendiri" di menu bilah alat.
+
+IZIN
+• "Membaca dan mengubah data Anda di web.whatsapp.com": alat-alatnya berjalan di dalam WhatsApp Web dan tidak di tempat lain.
+• Skrip: memungkinkan menu bilah alat dan pintasan keyboard membuka panel di tab WhatsApp Anda, dan TwoTicks memeriksa dengan ini bahwa sebuah jendela adalah panelnya sendiri sebelum menempatkannya.
+• Alarm: membangunkan TwoTicks sesaat sebelum pesan terjadwal atau pujian otomatis, untuk membuka WhatsApp Web jika tertutup.
+• Offscreen: memungkinkan TwoTicks membaca teks file PDF di halaman terisolasi di komputer Anda, untuk layanan AI yang tidak menerima file PDF.
+• "Latar belakang", opsional, hanya jika Anda mencentangnya di pengaturan: menjaga Chrome tetap berjalan setelah jendela terakhirnya ditutup dan menjalankannya saat Anda masuk ke komputer, agar pesan terjadwal tetap terkirim.
+• Opsional, hanya diminta saat Anda menggunakannya: alamat layanan AI pilihan Anda.
+
+Alat "Beberapa chat" bukan untuk iklan. Kirim pesan hanya kepada orang yang setuju menerima pesan Anda; iklan yang tidak diminta melanggar hukum di sebagian besar negara, dan WhatsApp dapat membatasi akun yang mengirim banyak pesan.
+
+Ekstensi ini tidak berafiliasi dengan, didukung oleh, atau disponsori oleh WhatsApp maupun Meta.
+
+DUKUNGAN
+Pertanyaan atau masalah: mr.osmanbodur@gmail.com
+Ketentuan penggunaan dan kebijakan privasi: di dalam ekstensi, pada Setelan › Bantuan dan dokumen.

@@ -1,0 +1,170 @@
+{
+  "name": "TwoTicks for WApp-Web",
+  "owner": "twoticks-app",
+  "repo": "twoticks-app.github.io",
+  "siteUrl": "https://twoticks-app.github.io/",
+  "minChrome": 111,
+  "storeUrl": "https://chromewebstore.google.com/detail/twoticks-for-wapp-web/goajkkkmjngpbedafmgffkkhfnmkkgon",
+  "privacyUrl": "https://drosmanbodur.github.io/twoticks-privacy/",
+  "publisher": "Dr.techn. Osman Bodur",
+  "copyright": "© 2026 Osman Bodur.",
+  "youtube": {
+    "channel": "https://www.youtube.com/@twoticks-app",
+    "film": "2LWm8V0Utks",
+    "filmTitle": "One day, thirteen tools",
+    "seconds": 153
+  },
+  "films": {
+    "privacy": [
+      "HDmdlp-sfzo"
+    ],
+    "productivity": [
+      "sVao17MunHk",
+      "MRbtKQjpD7c",
+      "CqrC50ifNU8",
+      "80fLo9oZqvk",
+      "4abUvY3OyFw",
+      "HIpwXAk9Rk8",
+      "sib5ONrpWz4",
+      "Uq1zegckSh4"
+    ],
+    "files": [
+      "jfwA3KNnNTE",
+      "ZQd-omVrdCA",
+      "p6_S5tS-44o",
+      "V76zEIok0oY"
+    ]
+  },
+  "shots": [
+    {
+      "file": "1-privacy-screen",
+      "group": "privacy",
+      "index": 0,
+      "alt": "shot.privacy"
+    },
+    {
+      "file": "2-unanswered",
+      "group": "productivity",
+      "index": 0,
+      "alt": "shot.unanswered"
+    },
+    {
+      "file": "3-quick-replies",
+      "group": "productivity",
+      "index": 1,
+      "alt": "shot.quickReplies"
+    },
+    {
+      "file": "4-ai-assistant",
+      "group": "productivity",
+      "index": 2,
+      "alt": "shot.ai"
+    },
+    {
+      "file": "5-export-chats",
+      "group": "files",
+      "index": 0,
+      "alt": "shot.export"
+    }
+  ],
+  "languages": [
+    {
+      "code": "en",
+      "path": "",
+      "native": "English",
+      "og": "en_US",
+      "intl": "en-GB",
+      "chrome": "en"
+    },
+    {
+      "code": "de",
+      "path": "de/",
+      "native": "Deutsch",
+      "og": "de_DE",
+      "intl": "de-DE",
+      "chrome": "de"
+    },
+    {
+      "code": "es",
+      "path": "es/",
+      "native": "Español",
+      "og": "es_ES",
+      "intl": "es",
+      "chrome": "es-419",
+      "chromeAlt": "es"
+    },
+    {
+      "code": "fr",
+      "path": "fr/",
+      "native": "Français",
+      "og": "fr_FR",
+      "intl": "fr-FR",
+      "chrome": "fr"
+    },
+    {
+      "code": "it",
+      "path": "it/",
+      "native": "Italiano",
+      "og": "it_IT",
+      "intl": "it-IT",
+      "chrome": "it"
+    },
+    {
+      "code": "pt-BR",
+      "path": "pt-br/",
+      "native": "Português (Brasil)",
+      "og": "pt_BR",
+      "intl": "pt-BR",
+      "chrome": "pt-BR"
+    },
+    {
+      "code": "pt-PT",
+      "path": "pt-pt/",
+      "native": "Português (Portugal)",
+      "og": "pt_PT",
+      "intl": "pt-PT",
+      "chrome": "pt-PT"
+    },
+    {
+      "code": "tr",
+      "path": "tr/",
+      "native": "Türkçe",
+      "og": "tr_TR",
+      "intl": "tr-TR",
+      "chrome": "tr"
+    },
+    {
+      "code": "ru",
+      "path": "ru/",
+      "native": "Русский",
+      "og": "ru_RU",
+      "intl": "ru-RU",
+      "chrome": "ru"
+    },
+    {
+      "code": "ar",
+      "path": "ar/",
+      "native": "العربية",
+      "og": "ar_AR",
+      "intl": "ar-u-nu-latn",
+      "chrome": "ar",
+      "dir": "rtl"
+    },
+    {
+      "code": "hi",
+      "path": "hi/",
+      "native": "हिन्दी",
+      "og": "hi_IN",
+      "intl": "hi-IN",
+      "chrome": "hi"
+    },
+    {
+      "code": "id",
+      "path": "id/",
+      "native": "Bahasa Indonesia",
+      "og": "id_ID",
+      "intl": "id-ID",
+      "chrome": "id"
+    }
+  ]
+}

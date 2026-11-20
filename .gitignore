@@ -1,0 +1,6 @@
+# Build output (node build.mjs)
+dist/
+
+node_modules/
+Thumbs.db
+.DS_Store

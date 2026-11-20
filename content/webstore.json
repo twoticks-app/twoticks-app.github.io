@@ -1,0 +1,18 @@
+{
+  "note": "The Chrome Web Store's own words on TwoTicks' page, per site language: the install button and the store's name. Read on 2026-11-20 from https://chromewebstore.google.com/detail/twoticks-for-wapp-web/goajkkkmjngpbedafmgffkkhfnmkkgon?hl=<language> (the page's <button> texts and <title>). Spanish: 'es' is the store's Spanish of Spain, 'es-419' its Latin American Spanish.",
+  "labels": {
+    "en": { "addToChrome": "Add to Chrome", "store": "Chrome Web Store" },
+    "de": { "addToChrome": "Hinzufügen", "store": "Chrome Web Store" },
+    "es": { "addToChrome": "Añadir a Chrome", "store": "Chrome Web Store" },
+    "es-419": { "addToChrome": "Agregar a Chrome", "store": "Chrome Web Store" },
+    "fr": { "addToChrome": "Ajouter à Google Chrome", "store": "Chrome Web Store" },
+    "it": { "addToChrome": "Aggiungi", "store": "Chrome Web Store" },
+    "pt-BR": { "addToChrome": "Usar no Chrome", "store": "Chrome Web Store" },
+    "pt-PT": { "addToChrome": "Instalar", "store": "Web Store do Chrome" },
+    "ru": { "addToChrome": "Установить", "store": "Интернет-магазин Chrome" },
+    "tr": { "addToChrome": "Chrome'a ekle", "store": "Chrome Web Mağazası" },
+    "ar": { "addToChrome": "الإضافة إلى Chrome", "store": "سوق Chrome الإلكتروني" },
+    "hi": { "addToChrome": "Chrome में जोड़ें", "store": "Chrome वेब स्टोर" },
+    "id": { "addToChrome": "Tambahkan ke Chrome", "store": "Chrome Web Store" }
+  }
+}
