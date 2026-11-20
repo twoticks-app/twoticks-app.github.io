@@ -141,7 +141,7 @@ function shell(c, x, page) {
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Security-Policy" content="${c.csp}">
 <meta name="referrer" content="strict-origin-when-cross-origin">
-<title>${page.title}</title>
+${cfg.googleSiteVerification ? `<meta name="google-site-verification" content="${esc(cfg.googleSiteVerification)}">\n` : ''}<title>${page.title}</title>
 <meta name="description" content="${page.description}">
 <meta name="color-scheme" content="light dark">
 <meta name="theme-color" content="#16232d">
