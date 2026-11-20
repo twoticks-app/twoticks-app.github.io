@@ -14,27 +14,162 @@
     "filmTitle": "One day, thirteen tools",
     "seconds": 153
   },
-  "films": {
-    "privacy": [
-      "HDmdlp-sfzo"
-    ],
-    "productivity": [
-      "sVao17MunHk",
-      "MRbtKQjpD7c",
-      "CqrC50ifNU8",
-      "80fLo9oZqvk",
-      "4abUvY3OyFw",
-      "HIpwXAk9Rk8",
-      "sib5ONrpWz4",
-      "Uq1zegckSh4"
-    ],
-    "files": [
-      "jfwA3KNnNTE",
-      "ZQd-omVrdCA",
-      "p6_S5tS-44o",
-      "V76zEIok0oY"
-    ]
-  },
+  "tools": [
+    {
+      "slug": "privacy-screen",
+      "group": "privacy",
+      "index": 0,
+      "film": {
+        "id": "HDmdlp-sfzo",
+        "title": "Privacy screen",
+        "seconds": 68
+      },
+      "shot": "1-privacy-screen",
+      "shotAlt": "shot.privacy"
+    },
+    {
+      "slug": "unanswered-chats",
+      "group": "productivity",
+      "index": 0,
+      "film": {
+        "id": "sVao17MunHk",
+        "title": "Unanswered",
+        "seconds": 66
+      },
+      "shot": "2-unanswered",
+      "shotAlt": "shot.unanswered"
+    },
+    {
+      "slug": "quick-replies",
+      "group": "productivity",
+      "index": 1,
+      "film": {
+        "id": "MRbtKQjpD7c",
+        "title": "Quick replies",
+        "seconds": 67
+      },
+      "shot": "3-quick-replies",
+      "shotAlt": "shot.quickReplies"
+    },
+    {
+      "slug": "ai-assistant",
+      "group": "productivity",
+      "index": 2,
+      "film": {
+        "id": "CqrC50ifNU8",
+        "title": "AI assistant",
+        "seconds": 103
+      },
+      "more": [
+        {
+          "id": "7huZFl9Am0Y",
+          "title": "AI setup",
+          "seconds": 139
+        }
+      ],
+      "shot": "4-ai-assistant",
+      "shotAlt": "shot.ai"
+    },
+    {
+      "slug": "chat-analysis",
+      "group": "productivity",
+      "index": 3,
+      "film": {
+        "id": "80fLo9oZqvk",
+        "title": "Chat analysis",
+        "seconds": 73
+      }
+    },
+    {
+      "slug": "scheduler",
+      "group": "productivity",
+      "index": 4,
+      "film": {
+        "id": "4abUvY3OyFw",
+        "title": "Scheduler",
+        "seconds": 97
+      },
+      "more": [
+        {
+          "id": "W9LedLoyGds",
+          "title": "Sending in the background",
+          "seconds": 128
+        }
+      ]
+    },
+    {
+      "slug": "direct-message",
+      "group": "productivity",
+      "index": 5,
+      "film": {
+        "id": "HIpwXAk9Rk8",
+        "title": "Direct message",
+        "seconds": 73
+      }
+    },
+    {
+      "slug": "compliments",
+      "group": "productivity",
+      "index": 6,
+      "film": {
+        "id": "sib5ONrpWz4",
+        "title": "Compliments",
+        "seconds": 140
+      }
+    },
+    {
+      "slug": "several-chats",
+      "group": "productivity",
+      "index": 7,
+      "film": {
+        "id": "Uq1zegckSh4",
+        "title": "Several chats",
+        "seconds": 110
+      }
+    },
+    {
+      "slug": "export-chats",
+      "group": "files",
+      "index": 0,
+      "film": {
+        "id": "jfwA3KNnNTE",
+        "title": "Export chats",
+        "seconds": 66
+      },
+      "shot": "5-export-chats",
+      "shotAlt": "shot.export"
+    },
+    {
+      "slug": "export-contacts",
+      "group": "files",
+      "index": 1,
+      "film": {
+        "id": "ZQd-omVrdCA",
+        "title": "Export contacts",
+        "seconds": 68
+      }
+    },
+    {
+      "slug": "download-media",
+      "group": "files",
+      "index": 2,
+      "film": {
+        "id": "p6_S5tS-44o",
+        "title": "Download media",
+        "seconds": 71
+      }
+    },
+    {
+      "slug": "deleted-messages",
+      "group": "files",
+      "index": 3,
+      "film": {
+        "id": "V76zEIok0oY",
+        "title": "Deleted and edited messages",
+        "seconds": 85
+      }
+    }
+  ],
   "shots": [
     {
       "file": "1-privacy-screen",

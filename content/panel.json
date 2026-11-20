@@ -1,0 +1,744 @@
+{
+  "read": "2026-11-20",
+  "extensionVersion": "1.1.0",
+  "tools": [
+    {
+      "slug": "privacy-screen",
+      "key": "pv"
+    },
+    {
+      "slug": "unanswered-chats",
+      "key": "un"
+    },
+    {
+      "slug": "quick-replies",
+      "key": "qr"
+    },
+    {
+      "slug": "ai-assistant",
+      "key": "ai"
+    },
+    {
+      "slug": "chat-analysis",
+      "key": "an"
+    },
+    {
+      "slug": "scheduler",
+      "key": "sc"
+    },
+    {
+      "slug": "direct-message",
+      "key": "dm"
+    },
+    {
+      "slug": "compliments",
+      "key": "cp"
+    },
+    {
+      "slug": "several-chats",
+      "key": "bk"
+    },
+    {
+      "slug": "export-chats",
+      "key": "chats"
+    },
+    {
+      "slug": "export-contacts",
+      "key": "contacts"
+    },
+    {
+      "slug": "download-media",
+      "key": "media"
+    },
+    {
+      "slug": "deleted-messages",
+      "key": "del"
+    }
+  ],
+  "texts": {
+    "en": {
+      "privacy-screen": {
+        "title": "Privacy screen",
+        "desc": "Blurs names, photos and messages on WhatsApp Web, so people beside you or watching your shared screen cannot read along. Point at something to see it. Everything happens in your browser. TwoTicks’ own panel does not blur: close it or move it aside before you share your screen."
+      },
+      "unanswered-chats": {
+        "title": "Unanswered chats",
+        "desc": "Finds chats where the other person wrote last and you have not answered yet, including the ones you read and forgot, and the other way round: chats where you are still waiting for an answer. It runs on your device; nothing is sent and nothing is marked as read."
+      },
+      "quick-replies": {
+        "title": "Quick replies",
+        "desc": "Save the answers you write again and again, and put them into any chat with Alt+Shift+Q. {name} becomes the first name of the person you write to. Nothing is sent until you press Enter."
+      },
+      "ai-assistant": {
+        "title": "AI assistant",
+        "desc": "Ask your own AI service about a chat: a summary, the open tasks, a reply draft or anything else. It runs with your own API key, and nothing is sent before you confirm it."
+      },
+      "chat-analysis": {
+        "title": "Chat analysis",
+        "desc": "Picks out decisions, tasks, dates and questions from recent messages, right on your device. For a deeper analysis, paste the ready-made prompt into your AI assistant."
+      },
+      "scheduler": {
+        "title": "Schedule a message",
+        "desc": "Sends your message to the person or group you choose, at the time you choose: once, or every day, week, month or year.",
+        "hint": "Also sends when WhatsApp Web is closed, as long as Chrome is running: TwoTicks then opens it in a minimised window shortly before the time and closes it after sending. A time missed while Chrome was closed is not sent late; it shows as “Missed”, and a repeating message waits for the next time. While WhatsApp Web is locked with its own screen lock, nothing is sent."
+      },
+      "direct-message": {
+        "title": "Message without saving the number",
+        "desc": "Open a chat or send a message without adding the number to your contacts, for couriers, services or one-off conversations.",
+        "hint": "You can leave out the country code; the national prefix (a leading 0, or 8 in Russia and Kazakhstan, 06 in Hungary) is removed automatically."
+      },
+      "compliments": {
+        "title": "Compliments",
+        "desc": "Tell the people you love something kind, regularly. On the days you choose, each time at a different moment within your hours, TwoTicks reminds you with a compliment from your own list ready to send, or sends it for you."
+      },
+      "several-chats": {
+        "title": "One message to several chats",
+        "desc": "Sends a personalized message to each person you choose, one by one, with a pause in between."
+      },
+      "export-chats": {
+        "title": "Export chats",
+        "desc": "Saves messages to your computer as JSON (for AI tools and other programs) or TXT (for reading)."
+      },
+      "export-contacts": {
+        "title": "Export contacts",
+        "desc": "Saves the people in your address book and the people you have chatted with as an Excel sheet or as VCF cards you can import on your phone."
+      },
+      "download-media": {
+        "title": "Download media",
+        "desc": "Collects the voice messages, photos, videos and documents of one chat, several chats or all of them into a ZIP file, with a folder for each chat. Voice messages arrive as .ogg files ready for transcription; an index file lists each file’s sender and date.",
+        "hint": "Older files that WhatsApp no longer keeps on its servers are sent again by your phone, one by one; this takes time and uses the phone’s data. Files no longer on your phone may not download; the result says how many."
+      },
+      "deleted-messages": {
+        "title": "Deleted and edited messages",
+        "desc": "When someone deletes a message for everyone or edits it later, the original text is kept here. Records stay only in this browser."
+      }
+    },
+    "de": {
+      "privacy-screen": {
+        "title": "Sichtschutz",
+        "desc": "Macht Namen, Fotos und Nachrichten in WhatsApp Web unscharf, damit weder Personen neben Ihnen noch Zuschauer einer Bildschirmfreigabe mitlesen können. Zeigen Sie mit der Maus auf etwas, um es zu sehen. Alles geschieht in Ihrem Browser. Das Panel von TwoTicks selbst wird nicht unscharf: Schließen Sie es oder schieben Sie es beiseite, bevor Sie Ihren Bildschirm teilen."
+      },
+      "unanswered-chats": {
+        "title": "Unbeantwortete Chats",
+        "desc": "Findet Chats, in denen die andere Person zuletzt geschrieben hat und Sie noch nicht geantwortet haben, auch solche, die Sie gelesen und dann vergessen haben, und umgekehrt Chats, in denen Sie noch auf eine Antwort warten. Läuft auf Ihrem Gerät; nichts wird gesendet oder als gelesen markiert."
+      },
+      "quick-replies": {
+        "title": "Schnellantworten",
+        "desc": "Speichern Sie Antworten, die Sie immer wieder schreiben, und fügen Sie sie mit Alt+Shift+Q in jeden Chat ein. {name} wird durch den Vornamen der Person ersetzt, der Sie schreiben. Gesendet wird erst, wenn Sie Enter drücken."
+      },
+      "ai-assistant": {
+        "title": "KI-Assistent",
+        "desc": "Stellen Sie Ihrem eigenen KI-Dienst Fragen zu einem Chat: Zusammenfassung, offene Aufgaben, Antwortentwurf oder etwas anderes. Das läuft über Ihren eigenen API-Schlüssel, und nichts wird gesendet, bevor Sie es bestätigen."
+      },
+      "chat-analysis": {
+        "title": "Chat-Analyse",
+        "desc": "Findet Entscheidungen, Aufgaben, Termine und Fragen in den letzten Nachrichten, direkt auf Ihrem Gerät. Für eine tiefere Analyse fügen Sie den fertigen Prompt in Ihren KI-Assistenten ein."
+      },
+      "scheduler": {
+        "title": "Nachricht planen",
+        "desc": "Sendet Ihre Nachricht zur gewählten Zeit an die gewählte Person oder Gruppe: einmalig oder täglich, wöchentlich, monatlich oder jährlich.",
+        "hint": "Gesendet wird auch bei geschlossenem WhatsApp Web, solange Chrome läuft: TwoTicks öffnet es dann kurz vor dem Termin in einem minimierten Fenster und schließt es nach dem Senden wieder. Ein Termin, der verstreicht, während Chrome geschlossen ist, wird nicht nachträglich gesendet; er erscheint als „Verpasst“, und eine wiederkehrende Nachricht wartet auf den nächsten. Solange WhatsApp Web mit seiner eigenen Bildschirmsperre gesperrt ist, wird nichts gesendet."
+      },
+      "direct-message": {
+        "title": "Schreiben, ohne die Nummer zu speichern",
+        "desc": "Öffnen Sie einen Chat oder senden Sie eine Nachricht, ohne die Nummer in Ihre Kontakte aufzunehmen, etwa für Kuriere, Dienstleister oder einmalige Gespräche.",
+        "hint": "Sie können die Ländervorwahl weglassen; die nationale Vorwahl (eine führende 0, in Russland und Kasachstan 8, in Ungarn 06) wird automatisch entfernt."
+      },
+      "compliments": {
+        "title": "Komplimente",
+        "desc": "Sagen Sie den Menschen, die Sie lieben, regelmäßig etwas Schönes. An den Tagen Ihrer Wahl, jedes Mal zu einer anderen Zeit innerhalb Ihrer Stunden, erinnert TwoTicks Sie daran und hält ein Kompliment aus Ihrer eigenen Liste zum Senden bereit oder sendet es auf Wunsch gleich für Sie."
+      },
+      "several-chats": {
+        "title": "Eine Nachricht an mehrere Chats",
+        "desc": "Sendet jeder gewählten Person einzeln eine persönliche Nachricht, mit einer Pause dazwischen."
+      },
+      "export-chats": {
+        "title": "Chats exportieren",
+        "desc": "Speichert Nachrichten als JSON (für KI-Werkzeuge und andere Programme) oder als TXT (zum Lesen) auf Ihrem Computer."
+      },
+      "export-contacts": {
+        "title": "Kontakte exportieren",
+        "desc": "Speichert die Personen aus Ihrem Adressbuch und die Personen, mit denen Sie gechattet haben, als Excel-Tabelle oder als VCF-Karten für Ihr Telefon."
+      },
+      "download-media": {
+        "title": "Medien herunterladen",
+        "desc": "Sammelt Sprachnachrichten, Fotos, Videos und Dokumente eines Chats, mehrerer Chats oder aller Chats in einer ZIP-Datei, mit einem Ordner pro Chat. Sprachnachrichten kommen als .ogg-Dateien, bereit zur Transkription; eine Indexdatei nennt Absender und Datum jeder Datei.",
+        "hint": "Ältere Dateien, die WhatsApp nicht mehr auf seinen Servern hat, schickt Ihr Telefon einzeln erneut; das dauert und verbraucht seine Daten. Dateien, die nicht mehr auf Ihrem Telefon sind, lassen sich eventuell nicht laden; das Ergebnis nennt ihre Anzahl."
+      },
+      "deleted-messages": {
+        "title": "Gelöschte und bearbeitete Nachrichten",
+        "desc": "Löscht jemand eine Nachricht für alle oder bearbeitet sie später, bleibt der Originaltext hier erhalten. Die Einträge bleiben nur in diesem Browser."
+      }
+    },
+    "es": {
+      "privacy-screen": {
+        "title": "Privacidad en pantalla",
+        "desc": "Desenfoca los nombres, las fotos y los mensajes de WhatsApp Web para que ni quien está a tu lado ni quien ve tu pantalla compartida pueda leer nada. Pasa el ratón por encima de algo para verlo. Todo ocurre en tu navegador. El propio panel de TwoTicks no se difumina: ciérralo o apártalo antes de compartir tu pantalla."
+      },
+      "unanswered-chats": {
+        "title": "Chats sin responder",
+        "desc": "Encuentra los chats en los que la otra persona escribió la última y aún no has respondido, también los que leíste y olvidaste, y al revés: los chats en los que tú sigues esperando una respuesta. Funciona en tu dispositivo; no se envía nada ni se marca nada como leído."
+      },
+      "quick-replies": {
+        "title": "Respuestas rápidas",
+        "desc": "Guarda las respuestas que escribes una y otra vez y ponlas en cualquier chat con Alt+Shift+Q. {nombre} se sustituye por el nombre de la persona a la que escribes. No se envía nada hasta que pulses Intro."
+      },
+      "ai-assistant": {
+        "title": "Asistente de IA",
+        "desc": "Pregunta a tu propio servicio de IA sobre un chat: un resumen, las tareas pendientes, un borrador de respuesta o cualquier otra cosa. Funciona con tu propia clave de API y no se envía nada hasta que lo confirmes."
+      },
+      "chat-analysis": {
+        "title": "Análisis del chat",
+        "desc": "Detecta decisiones, tareas, fechas y preguntas en los mensajes recientes, en tu propio dispositivo. Para un análisis más profundo, pega el prompt preparado en tu asistente de IA."
+      },
+      "scheduler": {
+        "title": "Programar un mensaje",
+        "desc": "Envía tu mensaje a la persona o grupo que elijas, a la hora que elijas: una sola vez o cada día, semana, mes o año.",
+        "hint": "También se envía con WhatsApp Web cerrado, siempre que Chrome esté abierto: TwoTicks lo abre en una ventana minimizada poco antes de la hora y la cierra después de enviar. Una hora que pasa con Chrome cerrado no se envía con retraso; aparece como «Perdido», y un mensaje que se repite espera a la siguiente. Mientras WhatsApp Web esté bloqueado con su propio bloqueo de pantalla, no se envía nada."
+      },
+      "direct-message": {
+        "title": "Escribir sin guardar el número",
+        "desc": "Abre un chat o envía un mensaje sin añadir el número a tus contactos, para repartidores, servicios o conversaciones puntuales.",
+        "hint": "Puedes omitir el prefijo del país; el prefijo nacional (un 0 inicial, o 8 en Rusia y Kazajistán, 06 en Hungría) se quita automáticamente."
+      },
+      "compliments": {
+        "title": "Cumplidos",
+        "desc": "Diles algo bonito a las personas que quieres, con regularidad. Los días que elijas, cada vez en un momento distinto dentro de tu horario, TwoTicks te avisa con un cumplido de tu propia lista ya preparado, o lo envía por ti."
+      },
+      "several-chats": {
+        "title": "Un mensaje a varios chats",
+        "desc": "Envía un mensaje personalizado a cada persona que elijas, una por una, con una pausa entre envíos."
+      },
+      "export-chats": {
+        "title": "Exportar chats",
+        "desc": "Guarda los mensajes en tu ordenador como JSON (para herramientas de IA y otros programas) o TXT (para leer)."
+      },
+      "export-contacts": {
+        "title": "Exportar contactos",
+        "desc": "Guarda las personas de tu agenda y aquellas con las que has chateado como hoja de Excel o como tarjetas VCF para importar en tu teléfono."
+      },
+      "download-media": {
+        "title": "Descargar multimedia",
+        "desc": "Reúne en un ZIP los mensajes de voz, fotos, videos y documentos de un chat, de varios o de todos, con una carpeta por chat. Los mensajes de voz llegan como archivos .ogg listos para transcribir; un archivo de índice indica el remitente y la fecha de cada archivo.",
+        "hint": "Los archivos antiguos que WhatsApp ya no guarda en sus servidores los vuelve a enviar tu teléfono, uno a uno; esto lleva tiempo y gasta sus datos. Es posible que los archivos que ya no están en tu teléfono no se descarguen; el resultado indica cuántos."
+      },
+      "deleted-messages": {
+        "title": "Mensajes eliminados y editados",
+        "desc": "Cuando alguien elimina un mensaje para todos o lo edita después, aquí se guarda el texto original. Los registros solo se quedan en este navegador."
+      }
+    },
+    "fr": {
+      "privacy-screen": {
+        "title": "Écran de confidentialité",
+        "desc": "Floute les noms, les photos et les messages sur WhatsApp Web, pour que ni vos voisins ni les personnes qui regardent votre écran partagé ne puissent lire vos échanges. Survolez un élément pour l’afficher. Tout se passe dans votre navigateur. Le panneau de TwoTicks lui-même n’est pas flouté : fermez-le ou écartez-le avant de partager votre écran."
+      },
+      "unanswered-chats": {
+        "title": "Discussions sans réponse",
+        "desc": "Trouve les discussions où l’autre personne a écrit en dernier et où vous n’avez pas encore répondu, y compris celles que vous avez lues puis oubliées, et inversement celles où vous attendez encore une réponse. Tout se passe sur votre appareil ; rien n’est envoyé ni marqué comme lu."
+      },
+      "quick-replies": {
+        "title": "Réponses rapides",
+        "desc": "Enregistrez les réponses que vous écrivez sans cesse et insérez-les dans n’importe quelle discussion avec Alt+Shift+Q. {prénom} est remplacé par le prénom de la personne à qui vous écrivez. Rien n’est envoyé tant que vous n’appuyez pas sur Entrée."
+      },
+      "ai-assistant": {
+        "title": "Assistant IA",
+        "desc": "Interrogez votre propre service d’IA sur une discussion : résumé, tâches en suspens, brouillon de réponse ou autre chose. Tout passe par votre propre clé API, et rien n’est envoyé avant votre confirmation."
+      },
+      "chat-analysis": {
+        "title": "Analyse de discussion",
+        "desc": "Repère les décisions, tâches, dates et questions dans les messages récents, directement sur votre appareil. Pour une analyse plus poussée, collez le prompt préparé dans votre assistant IA."
+      },
+      "scheduler": {
+        "title": "Programmer un message",
+        "desc": "Envoyez votre message à la personne ou au groupe de votre choix, à l’heure de votre choix : une seule fois, ou chaque jour, semaine, mois ou année.",
+        "hint": "L’envoi se fait aussi quand WhatsApp Web est fermé, tant que Chrome est ouvert : TwoTicks l’ouvre alors dans une fenêtre réduite peu avant l’heure et la ferme après l’envoi. Une échéance passée pendant que Chrome était fermé n’est pas envoyée en retard ; elle apparaît comme « Manqué », et un message récurrent attend la suivante. Tant que WhatsApp Web est verrouillé par son propre verrouillage de l’écran, rien n’est envoyé."
+      },
+      "direct-message": {
+        "title": "Écrire sans enregistrer le numéro",
+        "desc": "Ouvrez une discussion ou envoyez un message sans ajouter le numéro à vos contacts, pour les livreurs, les services ou les échanges ponctuels.",
+        "hint": "Vous pouvez omettre l’indicatif du pays ; le préfixe national (un 0 initial, ou 8 en Russie et au Kazakhstan, 06 en Hongrie) est retiré automatiquement."
+      },
+      "compliments": {
+        "title": "Compliments",
+        "desc": "Dites régulièrement un mot gentil aux personnes que vous aimez. Aux jours de votre choix, chaque fois à un moment différent dans votre plage horaire, TwoTicks vous le rappelle avec un compliment de votre propre liste, prêt à envoyer, ou l’envoie à votre place."
+      },
+      "several-chats": {
+        "title": "Un message à plusieurs discussions",
+        "desc": "Envoyez un message personnalisé à chaque personne choisie, une par une, avec une pause entre chaque envoi."
+      },
+      "export-chats": {
+        "title": "Exporter les discussions",
+        "desc": "Enregistrez les messages sur votre ordinateur en JSON (pour les outils d’IA et d’autres programmes) ou en TXT (pour les lire)."
+      },
+      "export-contacts": {
+        "title": "Exporter les contacts",
+        "desc": "Enregistrez les personnes de votre carnet d’adresses et celles avec qui vous avez discuté dans une feuille Excel ou sous forme de fiches VCF à importer sur votre téléphone."
+      },
+      "download-media": {
+        "title": "Télécharger les médias",
+        "desc": "Rassemblez dans un ZIP les messages vocaux, photos, vidéos et documents d’une discussion, de plusieurs ou de toutes, avec un dossier par discussion. Les messages vocaux arrivent en fichiers .ogg prêts à transcrire ; un fichier d’index indique l’expéditeur et la date de chaque fichier.",
+        "hint": "Les anciens fichiers que WhatsApp ne garde plus sur ses serveurs sont renvoyés un par un par votre téléphone ; cela prend du temps et consomme ses données. Les fichiers qui ne sont plus sur votre téléphone peuvent ne pas se télécharger ; le résultat indique combien."
+      },
+      "deleted-messages": {
+        "title": "Messages supprimés et modifiés",
+        "desc": "Quand quelqu’un supprime un message pour tout le monde ou le modifie après coup, le texte d’origine est conservé ici. Les entrées restent uniquement dans ce navigateur."
+      }
+    },
+    "it": {
+      "privacy-screen": {
+        "title": "Schermo privacy",
+        "desc": "Sfoca nomi, foto e messaggi su WhatsApp Web, così chi ti sta accanto o guarda il tuo schermo condiviso non può sbirciare. Passa il puntatore su un elemento per vederlo. Tutto avviene nel tuo browser. Il pannello di TwoTicks non viene sfocato: chiudilo o spostalo prima di condividere lo schermo."
+      },
+      "unanswered-chats": {
+        "title": "Chat senza risposta",
+        "desc": "Trova le chat in cui l’altra persona ha scritto per ultima e tu non hai ancora risposto, comprese quelle che hai letto e dimenticato, e viceversa quelle in cui sei tu ad aspettare ancora una risposta. Funziona sul tuo dispositivo; non viene inviato nulla e nulla viene segnato come letto."
+      },
+      "quick-replies": {
+        "title": "Risposte rapide",
+        "desc": "Salva le risposte che scrivi di continuo e inseriscile in qualsiasi chat con Alt+Shift+Q. {nome} viene sostituito dal nome della persona a cui scrivi. Non viene inviato nulla finché non premi Invio."
+      },
+      "ai-assistant": {
+        "title": "Assistente IA",
+        "desc": "Chiedi al tuo servizio di IA qualcosa su una chat: un riassunto, le attività aperte, una bozza di risposta o qualsiasi altra cosa. Funziona con la tua chiave API e nulla viene inviato prima della tua conferma."
+      },
+      "chat-analysis": {
+        "title": "Analisi della chat",
+        "desc": "Trova decisioni, attività, date e domande nei messaggi recenti, direttamente sul tuo dispositivo. Per un’analisi più approfondita, incolla il prompt già pronto nel tuo assistente IA."
+      },
+      "scheduler": {
+        "title": "Programma un messaggio",
+        "desc": "Invia il tuo messaggio alla persona o al gruppo che scegli, all’ora che scegli: una volta sola oppure ogni giorno, settimana, mese o anno.",
+        "hint": "Invia anche con WhatsApp Web chiuso, purché Chrome sia aperto: TwoTicks lo apre in una finestra ridotta a icona poco prima dell’orario e la chiude dopo l’invio. Un orario passato a Chrome chiuso non viene inviato in ritardo; compare come «Saltato» e un messaggio ricorrente aspetta il successivo. Finché WhatsApp Web è bloccato dal suo blocco schermo, non viene inviato nulla."
+      },
+      "direct-message": {
+        "title": "Scrivi senza salvare il numero",
+        "desc": "Apri una chat o invia un messaggio senza aggiungere il numero ai tuoi contatti, per corrieri, servizi o conversazioni occasionali.",
+        "hint": "Puoi omettere il prefisso del paese; il prefisso nazionale (uno 0 iniziale, oppure 8 in Russia e Kazakistan, 06 in Ungheria) viene tolto automaticamente."
+      },
+      "compliments": {
+        "title": "Complimenti",
+        "desc": "Dedica regolarmente una parola gentile alle persone che ami. Nei giorni che scegli, ogni volta in un momento diverso nella tua fascia oraria, TwoTicks te lo ricorda con un complimento della tua lista già pronto da inviare, oppure lo invia al posto tuo."
+      },
+      "several-chats": {
+        "title": "Un messaggio a più chat",
+        "desc": "Invia un messaggio personalizzato a ogni persona scelta, una alla volta, con una pausa tra un invio e l’altro."
+      },
+      "export-chats": {
+        "title": "Esporta chat",
+        "desc": "Salva i messaggi sul computer come JSON (per strumenti di IA e altri programmi) o TXT (da leggere)."
+      },
+      "export-contacts": {
+        "title": "Esporta contatti",
+        "desc": "Salva le persone della tua rubrica e quelle con cui hai chattato come foglio Excel o come schede VCF da importare sul telefono."
+      },
+      "download-media": {
+        "title": "Scarica i media",
+        "desc": "Raccogli in un ZIP i messaggi vocali, le foto, i video e i documenti di una chat, di più chat o di tutte, con una cartella per ogni chat. I messaggi vocali arrivano come file .ogg pronti da trascrivere; un file indice indica il mittente e la data di ogni file.",
+        "hint": "I file vecchi che WhatsApp non conserva più sui suoi server vengono inviati di nuovo dal telefono, uno alla volta; ci vuole tempo e si consumano i suoi dati. I file che non sono più sul telefono potrebbero non essere scaricati; il risultato indica quanti."
+      },
+      "deleted-messages": {
+        "title": "Messaggi eliminati e modificati",
+        "desc": "Quando qualcuno elimina un messaggio per tutti o lo modifica in seguito, il testo originale viene salvato qui. Le voci restano solo in questo browser."
+      }
+    },
+    "pt-BR": {
+      "privacy-screen": {
+        "title": "Privacidade na tela",
+        "desc": "Desfoca nomes, fotos e mensagens no WhatsApp Web, para que ninguém ao seu lado nem quem vê sua tela compartilhada consiga ler. Passe o mouse sobre algo para ver. Tudo acontece no seu navegador. O próprio painel do TwoTicks não fica desfocado: feche-o ou afaste-o antes de compartilhar sua tela."
+      },
+      "unanswered-chats": {
+        "title": "Conversas sem resposta",
+        "desc": "Encontra as conversas em que a outra pessoa escreveu por último e você ainda não respondeu, inclusive as que você leu e esqueceu, e também o contrário: as conversas em que você ainda espera uma resposta. Funciona no seu dispositivo; nada é enviado e nada é marcado como lido."
+      },
+      "quick-replies": {
+        "title": "Respostas rápidas",
+        "desc": "Salve as respostas que você escreve toda hora e coloque-as em qualquer conversa com Alt+Shift+Q. {nome} é substituído pelo primeiro nome da pessoa para quem você escreve. Nada é enviado até você apertar Enter."
+      },
+      "ai-assistant": {
+        "title": "Assistente de IA",
+        "desc": "Pergunte ao seu próprio serviço de IA sobre uma conversa: um resumo, as tarefas pendentes, um rascunho de resposta ou qualquer outra coisa. Funciona com sua própria chave de API, e nada é enviado antes de você confirmar."
+      },
+      "chat-analysis": {
+        "title": "Análise da conversa",
+        "desc": "Encontra decisões, tarefas, datas e perguntas nas mensagens recentes, no seu próprio dispositivo. Para uma análise mais profunda, cole o prompt pronto no seu assistente de IA."
+      },
+      "scheduler": {
+        "title": "Agendar uma mensagem",
+        "desc": "Envie sua mensagem para a pessoa ou o grupo que você escolher, no horário que escolher: uma só vez ou a cada dia, semana, mês ou ano.",
+        "hint": "Também envia com o WhatsApp Web fechado, desde que o Chrome esteja aberto: o TwoTicks o abre numa janela minimizada pouco antes do horário e a fecha depois de enviar. Um horário perdido com o Chrome fechado não é enviado com atraso; ele aparece como “Perdida”, e uma mensagem recorrente espera o próximo. Enquanto o WhatsApp Web estiver bloqueado pelo próprio bloqueio de tela, nada é enviado."
+      },
+      "direct-message": {
+        "title": "Conversar sem salvar o número",
+        "desc": "Abra uma conversa ou envie uma mensagem sem adicionar o número aos seus contatos, para entregadores, serviços ou conversas pontuais.",
+        "hint": "Você pode omitir o código do país; o prefixo nacional (um 0 inicial, ou 8 na Rússia e no Cazaquistão, 06 na Hungria) é removido automaticamente."
+      },
+      "compliments": {
+        "title": "Elogios",
+        "desc": "Diga algo carinhoso às pessoas que você ama, com regularidade. Nos dias que você escolher, a cada vez em um momento diferente dentro do seu horário, o TwoTicks lembra você com um elogio da sua própria lista, pronto para enviar, ou envia por você."
+      },
+      "several-chats": {
+        "title": "Uma mensagem para várias conversas",
+        "desc": "Envie uma mensagem personalizada para cada pessoa escolhida, uma de cada vez, com uma pausa entre os envios."
+      },
+      "export-chats": {
+        "title": "Exportar conversas",
+        "desc": "Salve as mensagens no seu computador como JSON (para ferramentas de IA e outros programas) ou TXT (para ler)."
+      },
+      "export-contacts": {
+        "title": "Exportar contatos",
+        "desc": "Salve as pessoas da sua agenda e aquelas com quem você conversou como planilha do Excel ou como cartões VCF para importar no celular."
+      },
+      "download-media": {
+        "title": "Baixar mídia",
+        "desc": "Reúna em um ZIP as mensagens de voz, fotos, vídeos e documentos de uma conversa, de várias ou de todas, com uma pasta para cada conversa. As mensagens de voz chegam como arquivos .ogg prontos para transcrição; um arquivo de índice mostra o remetente e a data de cada arquivo.",
+        "hint": "Arquivos antigos que o WhatsApp não guarda mais nos servidores são enviados de novo pelo seu celular, um por um; isso leva tempo e usa os dados do celular. Arquivos que não estão mais no seu celular podem não ser baixados; o resultado diz quantos."
+      },
+      "deleted-messages": {
+        "title": "Mensagens apagadas e editadas",
+        "desc": "Quando alguém apaga uma mensagem para todos ou a edita depois, o texto original fica guardado aqui. Os registros ficam só neste navegador."
+      }
+    },
+    "pt-PT": {
+      "privacy-screen": {
+        "title": "Privacidade na tela",
+        "desc": "Desfoca nomes, fotos e mensagens no WhatsApp Web, para que ninguém ao seu lado nem quem vê sua tela compartilhada consiga ler. Passe o mouse sobre algo para ver. Tudo acontece no seu navegador. O próprio painel do TwoTicks não fica desfocado: feche-o ou afaste-o antes de compartilhar sua tela."
+      },
+      "unanswered-chats": {
+        "title": "Conversas sem resposta",
+        "desc": "Encontra as conversas em que a outra pessoa escreveu por último e você ainda não respondeu, inclusive as que você leu e esqueceu, e também o contrário: as conversas em que você ainda espera uma resposta. Funciona no seu dispositivo; nada é enviado e nada é marcado como lido."
+      },
+      "quick-replies": {
+        "title": "Respostas rápidas",
+        "desc": "Salve as respostas que você escreve toda hora e coloque-as em qualquer conversa com Alt+Shift+Q. {nome} é substituído pelo primeiro nome da pessoa para quem você escreve. Nada é enviado até você apertar Enter."
+      },
+      "ai-assistant": {
+        "title": "Assistente de IA",
+        "desc": "Pergunte ao seu próprio serviço de IA sobre uma conversa: um resumo, as tarefas pendentes, um rascunho de resposta ou qualquer outra coisa. Funciona com sua própria chave de API, e nada é enviado antes de você confirmar."
+      },
+      "chat-analysis": {
+        "title": "Análise da conversa",
+        "desc": "Encontra decisões, tarefas, datas e perguntas nas mensagens recentes, no seu próprio dispositivo. Para uma análise mais profunda, cole o prompt pronto no seu assistente de IA."
+      },
+      "scheduler": {
+        "title": "Agendar uma mensagem",
+        "desc": "Envie sua mensagem para a pessoa ou o grupo que você escolher, no horário que escolher: uma só vez ou a cada dia, semana, mês ou ano.",
+        "hint": "Também envia com o WhatsApp Web fechado, desde que o Chrome esteja aberto: o TwoTicks o abre numa janela minimizada pouco antes do horário e a fecha depois de enviar. Um horário perdido com o Chrome fechado não é enviado com atraso; ele aparece como “Perdida”, e uma mensagem recorrente espera o próximo. Enquanto o WhatsApp Web estiver bloqueado pelo próprio bloqueio de tela, nada é enviado."
+      },
+      "direct-message": {
+        "title": "Conversar sem salvar o número",
+        "desc": "Abra uma conversa ou envie uma mensagem sem adicionar o número aos seus contatos, para entregadores, serviços ou conversas pontuais.",
+        "hint": "Você pode omitir o código do país; o prefixo nacional (um 0 inicial, ou 8 na Rússia e no Cazaquistão, 06 na Hungria) é removido automaticamente."
+      },
+      "compliments": {
+        "title": "Elogios",
+        "desc": "Diga algo carinhoso às pessoas que você ama, com regularidade. Nos dias que você escolher, a cada vez em um momento diferente dentro do seu horário, o TwoTicks lembra você com um elogio da sua própria lista, pronto para enviar, ou envia por você."
+      },
+      "several-chats": {
+        "title": "Uma mensagem para várias conversas",
+        "desc": "Envie uma mensagem personalizada para cada pessoa escolhida, uma de cada vez, com uma pausa entre os envios."
+      },
+      "export-chats": {
+        "title": "Exportar conversas",
+        "desc": "Salve as mensagens no seu computador como JSON (para ferramentas de IA e outros programas) ou TXT (para ler)."
+      },
+      "export-contacts": {
+        "title": "Exportar contatos",
+        "desc": "Salve as pessoas da sua agenda e aquelas com quem você conversou como planilha do Excel ou como cartões VCF para importar no celular."
+      },
+      "download-media": {
+        "title": "Baixar mídia",
+        "desc": "Reúna em um ZIP as mensagens de voz, fotos, vídeos e documentos de uma conversa, de várias ou de todas, com uma pasta para cada conversa. As mensagens de voz chegam como arquivos .ogg prontos para transcrição; um arquivo de índice mostra o remetente e a data de cada arquivo.",
+        "hint": "Arquivos antigos que o WhatsApp não guarda mais nos servidores são enviados de novo pelo seu celular, um por um; isso leva tempo e usa os dados do celular. Arquivos que não estão mais no seu celular podem não ser baixados; o resultado diz quantos."
+      },
+      "deleted-messages": {
+        "title": "Mensagens apagadas e editadas",
+        "desc": "Quando alguém apaga uma mensagem para todos ou a edita depois, o texto original fica guardado aqui. Os registros ficam só neste navegador."
+      }
+    },
+    "tr": {
+      "privacy-screen": {
+        "title": "Gizlilik ekranı",
+        "desc": "WhatsApp Web’deki isimleri, fotoğrafları ve mesajları bulanıklaştırır; böylece yanınızdakiler ya da paylaştığınız ekranı izleyenler okuyamaz. Bir öğeyi görmek için fareyle üzerine gelin. Her şey tarayıcınızda gerçekleşir. TwoTicks’in kendi paneli bulanıklaşmaz: ekranınızı paylaşmadan önce kapatın ya da kenara çekin."
+      },
+      "unanswered-chats": {
+        "title": "Cevapsız sohbetler",
+        "desc": "Son mesajı karşı tarafın yazdığı ve henüz cevaplamadığınız sohbetleri bulur; okuyup unuttuklarınız da dahil. Tersini de yapar: hâlâ cevap beklediğiniz sohbetleri gösterir. Cihazınızda çalışır; hiçbir şey gönderilmez, hiçbir mesaj okundu olarak işaretlenmez."
+      },
+      "quick-replies": {
+        "title": "Hızlı yanıtlar",
+        "desc": "Sık sık yazdığınız yanıtları kaydedin ve Alt+Shift+Q ile istediğiniz sohbete ekleyin. {isim} yerine sohbet ettiğiniz kişinin ilk adı yazılır. Enter’a basmadıkça hiçbir şey gönderilmez."
+      },
+      "ai-assistant": {
+        "title": "Yapay zekâ asistanı",
+        "desc": "Bir sohbet hakkında kendi yapay zekâ hizmetinize sorun: özet, açık görevler, cevap taslağı ya da aklınıza gelen başka bir şey. Kendi API anahtarınızla çalışır ve siz onaylamadan hiçbir şey gönderilmez."
+      },
+      "chat-analysis": {
+        "title": "Sohbet analizi",
+        "desc": "Son mesajlardaki kararları, görevleri, tarihleri ve soruları cihazınızda ayıklar. Daha derin bir analiz için hazır istemi yapay zekâ asistanınıza yapıştırabilirsiniz."
+      },
+      "scheduler": {
+        "title": "Mesaj zamanla",
+        "desc": "Mesajınızı seçtiğiniz kişiye ya da gruba, seçtiğiniz zamanda gönderir: bir kez ya da her gün, hafta, ay veya yıl.",
+        "hint": "WhatsApp Web kapalıyken de gönderilir, yeter ki Chrome açık olsun: TwoTicks zamandan kısa süre önce onu küçültülmüş bir pencerede açar ve gönderdikten sonra kapatır. Chrome kapalıyken kaçırılan bir zaman geç gönderilmez; listede “Kaçırıldı” olarak görünür ve tekrarlanan bir mesaj bir sonrakini bekler. WhatsApp Web kendi ekran kilidiyle kilitliyken hiçbir şey gönderilmez."
+      },
+      "direct-message": {
+        "title": "Rehbere kaydetmeden yaz",
+        "desc": "Kurye, servis ya da tek seferlik görüşmeler için numarayı rehberinize eklemeden sohbet açın veya mesaj gönderin.",
+        "hint": "Ülke kodu olmadan da yazabilirsiniz; ulusal ön ek (baştaki 0, Rusya ve Kazakistan’da 8, Macaristan’da 06) otomatik atılır."
+      },
+      "compliments": {
+        "title": "İltifatlar",
+        "desc": "Sevdiklerinize düzenli olarak güzel bir söz söyleyin. Seçtiğiniz günlerde, belirlediğiniz saatler içinde her seferinde başka bir anda TwoTicks, kendi listenizden sıradaki iltifatı göndermeye hazır olarak size hatırlatır ya da sizin yerinize gönderir."
+      },
+      "several-chats": {
+        "title": "Birkaç sohbete aynı mesaj",
+        "desc": "Seçtiğiniz kişilere, aralarına bekleme koyarak tek tek kişiselleştirilmiş mesaj gönderir."
+      },
+      "export-chats": {
+        "title": "Sohbetleri dışa aktar",
+        "desc": "Mesajları JSON (yapay zekâ araçları ve diğer programlar için) ya da TXT (okumak için) dosyası olarak bilgisayarınıza kaydeder."
+      },
+      "export-contacts": {
+        "title": "Kişileri dışa aktar",
+        "desc": "Rehberinizdeki kişileri ve yazıştığınız kişileri Excel tablosu ya da telefona aktarılabilir VCF kartları olarak kaydeder."
+      },
+      "download-media": {
+        "title": "Medyayı indir",
+        "desc": "Bir sohbetin, birkaç sohbetin ya da hepsinin sesli mesajlarını, fotoğraflarını, videolarını ve belgelerini her sohbete ayrı bir klasörle bir ZIP dosyasında toplar. Sesli mesajlar yazıya dökmeye hazır .ogg dosyaları olarak iner; dizin dosyası her dosyanın göndereni ve tarihini içerir.",
+        "hint": "WhatsApp’ın sunucularında artık bulunmayan eski dosyaları telefonunuz tek tek yeniden gönderir; bu zaman alır ve telefonun internetini kullanır. Telefonunuzda artık bulunmayan dosyalar indirilemeyebilir; kaç tane olduğu sonuçta yazar."
+      },
+      "deleted-messages": {
+        "title": "Silinen ve düzenlenen mesajlar",
+        "desc": "Karşı taraf bir mesajı herkesten sildiğinde ya da sonradan düzenlediğinde orijinal metin burada saklanır. Kayıtlar yalnızca bu tarayıcıda tutulur."
+      }
+    },
+    "ru": {
+      "privacy-screen": {
+        "title": "Приватный экран",
+        "desc": "Размывает имена, фото и сообщения в WhatsApp Web, чтобы их не могли прочитать ни люди рядом с вами, ни те, кто смотрит вашу демонстрацию экрана. Наведите курсор, чтобы увидеть скрытое. Всё происходит в вашем браузере. Сама панель TwoTicks не размывается: закройте её или отодвиньте, прежде чем показывать экран."
+      },
+      "unanswered-chats": {
+        "title": "Чаты без ответа",
+        "desc": "Находит чаты, где последним написал собеседник, а вы ещё не ответили (в том числе прочитанные и забытые), и наоборот — чаты, где вы всё ещё ждёте ответа. Работает на вашем устройстве: ничего не отправляется и не отмечается как прочитанное."
+      },
+      "quick-replies": {
+        "title": "Быстрые ответы",
+        "desc": "Сохраняйте ответы, которые пишете снова и снова, и вставляйте их в любой чат клавишами Alt+Shift+Q. {name} заменяется именем собеседника. Ничего не отправится, пока вы не нажмёте Enter."
+      },
+      "ai-assistant": {
+        "title": "ИИ-ассистент",
+        "desc": "Спросите свой ИИ-сервис о чате: краткое содержание, открытые задачи, черновик ответа или что-то ещё. Работает с вашим собственным ключом API, и ничего не отправляется без вашего подтверждения."
+      },
+      "chat-analysis": {
+        "title": "Анализ чата",
+        "desc": "Находит решения, задачи, даты и вопросы в последних сообщениях прямо на вашем устройстве. Для более глубокого анализа вставьте готовый запрос в чат с вашим ИИ-ассистентом."
+      },
+      "scheduler": {
+        "title": "Запланировать сообщение",
+        "desc": "Отправляет ваше сообщение выбранному человеку или в группу в выбранное время: один раз или каждый день, неделю, месяц или год.",
+        "hint": "Сообщения отправляются и при закрытом WhatsApp Web, если Chrome запущен: незадолго до назначенного времени TwoTicks открывает его в свёрнутом окне и закрывает окно после отправки. Время, пропущенное, пока Chrome был закрыт, не отправляется с опозданием — в списке оно отмечено как «Пропущено», а повторяющееся сообщение ждёт следующего раза. Пока WhatsApp Web заблокирован собственной блокировкой экрана, ничего не отправляется."
+      },
+      "direct-message": {
+        "title": "Написать без сохранения номера",
+        "desc": "Откройте чат или отправьте сообщение, не добавляя номер в контакты, — для курьеров, сервисов или разовых разговоров.",
+        "hint": "Код страны можно не указывать; национальный префикс (0 в начале, 8 в России и Казахстане, 06 в Венгрии) убирается автоматически."
+      },
+      "compliments": {
+        "title": "Комплименты",
+        "desc": "Регулярно говорите близким что-нибудь приятное. В выбранные дни, каждый раз в другое время в пределах ваших часов, TwoTicks напоминает вам об этом и предлагает готовый к отправке комплимент из вашего списка — или отправляет его за вас."
+      },
+      "several-chats": {
+        "title": "Одно сообщение в несколько чатов",
+        "desc": "Отправляет персональное сообщение каждому выбранному человеку по очереди, с паузой между отправками."
+      },
+      "export-chats": {
+        "title": "Экспорт чатов",
+        "desc": "Сохраняет сообщения на компьютер в формате JSON (для ИИ-инструментов и других программ) или TXT (для чтения)."
+      },
+      "export-contacts": {
+        "title": "Экспорт контактов",
+        "desc": "Сохраняет людей из вашей адресной книги и тех, с кем вы переписывались, в таблицу Excel или в карточки VCF для импорта в телефон."
+      },
+      "download-media": {
+        "title": "Скачать медиафайлы",
+        "desc": "Собирает голосовые сообщения, фото, видео и документы из одного чата, нескольких или всех чатов в ZIP-архив, по папке на каждый чат. Голосовые сохраняются как файлы .ogg, готовые к расшифровке, а в файле-указателе для каждого файла указаны отправитель и дата.",
+        "hint": "Старые файлы, которых уже нет на серверах WhatsApp, телефон отправляет заново, по одному; это занимает время и расходует его трафик. Файлы, которых уже нет на телефоне, могут не скачаться; в результате указано, сколько их."
+      },
+      "deleted-messages": {
+        "title": "Удалённые и изменённые сообщения",
+        "desc": "Когда кто-то удаляет сообщение для всех или позже редактирует его, исходный текст сохраняется здесь. Записи хранятся только в этом браузере."
+      }
+    },
+    "ar": {
+      "privacy-screen": {
+        "title": "شاشة الخصوصية",
+        "desc": "يموّه الأسماء والصور والرسائل في WhatsApp Web، فلا يستطيع من يجلس بجانبك أو يشاهد شاشتك المشتركة قراءتها. مرّر المؤشر فوق أي عنصر لرؤيته. يتم كل شيء داخل متصفحك. لا تُموَّه لوحة TwoTicks نفسها: أغلقها أو أبعدها جانبًا قبل مشاركة شاشتك."
+      },
+      "unanswered-chats": {
+        "title": "دردشات بلا رد",
+        "desc": "يعثر على الدردشات التي جاءت آخر رسالة فيها من الطرف الآخر ولم يصلها ردك بعد، بما فيها الدردشات التي قرأتها ونسيتها، والعكس أيضًا: الدردشات التي ما زلت تنتظر فيها ردًا. يعمل على جهازك: لا يتم إرسال أي شيء، ولا توضع علامة القراءة على أي رسالة."
+      },
+      "quick-replies": {
+        "title": "الردود السريعة",
+        "desc": "احفظ الردود التي تكتبها مرارًا، وضعها في أي دردشة باستخدام Alt+Shift+Q. يتم استبدال {name} بالاسم الأول للشخص الذي تراسله. لا يتم إرسال أي شيء قبل أن تضغط Enter."
+      },
+      "ai-assistant": {
+        "title": "مساعد الذكاء الاصطناعي",
+        "desc": "اسأل خدمة الذكاء الاصطناعي الخاصة بك عن دردشة: ملخص، أو المهام المفتوحة، أو مسودة رد، أو أي شيء آخر. يعمل بمفتاح API الخاص بك، ولا يتم إرسال أي شيء قبل تأكيدك."
+      },
+      "chat-analysis": {
+        "title": "تحليل الدردشة",
+        "desc": "يستخرج القرارات والمهام والمواعيد والأسئلة من الرسائل الأخيرة، على جهازك مباشرةً. ولتحليل أعمق، الصق الموجّه الجاهز في مساعد الذكاء الاصطناعي الذي تستخدمه."
+      },
+      "scheduler": {
+        "title": "جدولة رسالة",
+        "desc": "يرسل رسالتك إلى شخص أو مجموعة من اختيارك، في الوقت الذي تحدده: مرة واحدة، أو كل يوم أو أسبوع أو شهر أو عام.",
+        "hint": "يتم الإرسال أيضًا عندما يكون WhatsApp Web مغلقًا، ما دام Chrome يعمل: يفتحه TwoTicks في نافذة مصغّرة قبل الموعد بقليل ويغلقها بعد الإرسال. أما الموعد الذي يفوت أثناء إغلاق Chrome فلا يُرسل متأخرًا، ويظهر في القائمة بحالة «فائتة»، وتنتظر الرسالة المتكررة الموعد التالي. لا يُرسل أي شيء ما دام WhatsApp Web مقفلًا بقفل الشاشة الخاص به."
+      },
+      "direct-message": {
+        "title": "مراسلة دون حفظ الرقم",
+        "desc": "افتح دردشة أو أرسل رسالة دون إضافة الرقم إلى جهات اتصالك، لمندوبي التوصيل أو مقدمي الخدمات أو الدردشات العابرة.",
+        "hint": "يمكنك حذف رمز الدولة؛ تُحذف البادئة الوطنية تلقائيًا (0 في البداية، أو 8 في روسيا وكازاخستان، و06 في المجر)."
+      },
+      "compliments": {
+        "title": "كلمات طيبة",
+        "desc": "قل لمن تحب كلمة طيبة بانتظام. في الأيام التي تختارها، وفي كل مرة في لحظة مختلفة ضمن ساعاتك، يذكّرك TwoTicks بكلمة طيبة من قائمتك جاهزة للإرسال، أو يرسلها نيابةً عنك."
+      },
+      "several-chats": {
+        "title": "رسالة واحدة إلى عدة دردشات",
+        "desc": "يرسل رسالة مخصصة إلى كل شخص من اختيارك، واحدًا تلو الآخر، مع فاصل زمني بين الرسائل."
+      },
+      "export-chats": {
+        "title": "تصدير الدردشات",
+        "desc": "يحفظ الرسائل على جهاز الكمبيوتر بصيغة JSON (لأدوات الذكاء الاصطناعي والبرامج الأخرى) أو TXT (للقراءة)."
+      },
+      "export-contacts": {
+        "title": "تصدير جهات الاتصال",
+        "desc": "يحفظ الأشخاص الموجودين في دفتر عناوينك والأشخاص الذين راسلتهم في جدول Excel أو في بطاقات VCF يمكنك استيرادها إلى هاتفك."
+      },
+      "download-media": {
+        "title": "تنزيل الوسائط",
+        "desc": "يجمع الرسائل الصوتية والصور ومقاطع الفيديو والمستندات من دردشة واحدة أو عدة دردشات أو جميعها في ملف ZIP، مع مجلد لكل دردشة. تصل الرسائل الصوتية كملفات OGG جاهزة للتحويل إلى نص، ويسرد ملف فهرس مُرسِل كل ملف وتاريخه.",
+        "hint": "الملفات القديمة التي لم يعد WhatsApp يحتفظ بها على خوادمه يرسلها هاتفك من جديد، واحدًا تلو الآخر؛ ويستغرق ذلك وقتًا ويستهلك بيانات الهاتف. وقد يتعذّر تنزيل الملفات التي لم تعد على هاتفك؛ وتذكر النتيجة عددها."
+      },
+      "deleted-messages": {
+        "title": "الرسائل المحذوفة والمعدلة",
+        "desc": "عندما يحذف شخص رسالة لدى الجميع أو يعدّلها لاحقًا، يتم حفظ النص الأصلي هنا. تبقى السجلات في هذا المتصفح فقط."
+      }
+    },
+    "hi": {
+      "privacy-screen": {
+        "title": "प्राइवेसी स्क्रीन",
+        "desc": "WhatsApp Web पर नाम, फ़ोटो और मैसेज ब्लर कर देता है, ताकि आपके पास बैठे लोग या आपकी शेयर की गई स्क्रीन देखने वाले उन्हें पढ़ न पाएँ। किसी चीज़ को देखने के लिए उस पर पॉइंटर ले जाएँ। सब कुछ आपके ब्राउज़र में ही होता है। TwoTicks का अपना पैनल धुंधला नहीं होता: स्क्रीन शेयर करने से पहले इसे बंद कर दें या एक तरफ़ हटा दें।"
+      },
+      "unanswered-chats": {
+        "title": "बिना जवाब वाली चैट",
+        "desc": "ऐसी चैट ढूँढता है जिनमें आख़िरी मैसेज सामने वाले का है और आपने अभी तक जवाब नहीं दिया, इनमें वे चैट भी शामिल हैं जिन्हें आपने पढ़कर भुला दिया; और इसका उल्टा भी: ऐसी चैट जिनमें आप अब भी जवाब का इंतज़ार कर रहे हैं। यह आपके डिवाइस पर ही चलता है; न कुछ भेजा जाता है, न कुछ पढ़ा हुआ मार्क होता है।"
+      },
+      "quick-replies": {
+        "title": "झटपट जवाब",
+        "desc": "जो जवाब आप बार-बार लिखते हैं, उन्हें सेव करें और Alt+Shift+Q से किसी भी चैट में डालें। {name} की जगह उस व्यक्ति का पहला नाम आ जाएगा जिसे आप लिख रहे हैं। जब तक आप Enter न दबाएँ, कुछ नहीं भेजा जाता।"
+      },
+      "ai-assistant": {
+        "title": "एआई असिस्टेंट",
+        "desc": "किसी चैट के बारे में अपनी एआई सेवा से पूछें: सारांश, बाकी काम, जवाब का ड्राफ़्ट या कुछ और। यह आपकी अपनी API कुंजी से चलता है, और आपकी पुष्टि से पहले कुछ भी नहीं भेजा जाता।"
+      },
+      "chat-analysis": {
+        "title": "चैट विश्लेषण",
+        "desc": "हाल के मैसेज से फ़ैसले, काम, तारीख़ें और सवाल आपके डिवाइस पर ही छाँटकर निकालता है। गहराई से विश्लेषण के लिए, तैयार प्रॉम्प्ट को अपने एआई असिस्टेंट में पेस्ट करें।"
+      },
+      "scheduler": {
+        "title": "मैसेज शेड्यूल करें",
+        "desc": "आपका मैसेज आपके चुने हुए व्यक्ति या ग्रुप को, आपके चुने हुए समय पर भेजता है: एक बार, या हर दिन, हफ़्ते, महीने या साल।",
+        "hint": "WhatsApp Web बंद होने पर भी मैसेज भेजे जाते हैं, बशर्ते Chrome चल रहा हो: समय से थोड़ा पहले TwoTicks उसे छोटी की गई विंडो में खोलता है और भेजने के बाद बंद कर देता है। Chrome बंद रहने के दौरान छूटा समय देर से नहीं भेजा जाता; वह लिस्ट में “छूट गया” दिखता है, और दोहराया जाने वाला मैसेज अगले समय का इंतज़ार करता है। जब तक WhatsApp Web अपने स्क्रीन लॉक से लॉक है, कुछ भी नहीं भेजा जाता।"
+      },
+      "direct-message": {
+        "title": "नंबर सेव किए बिना मैसेज करें",
+        "desc": "नंबर को संपर्कों में जोड़े बिना चैट खोलें या मैसेज भेजें; कूरियर, सर्विस या एक बार की बातचीत के लिए।",
+        "hint": "आप देश का कोड छोड़ सकते हैं; राष्ट्रीय प्रीफ़िक्स (शुरू का 0, या रूस और कज़ाख़स्तान में 8, हंगरी में 06) अपने-आप हटा दिया जाता है।"
+      },
+      "compliments": {
+        "title": "तारीफ़ें",
+        "desc": "अपनों से नियमित रूप से कुछ अच्छा कहें। आपके चुने हुए दिनों में, आपके घंटों के भीतर हर बार किसी अलग समय पर, TwoTicks आपको याद दिलाता है और आपकी अपनी लिस्ट से भेजने के लिए एक तारीफ़ तैयार रखता है, या उसे आपकी ओर से भेज देता है।"
+      },
+      "several-chats": {
+        "title": "कई चैट को एक मैसेज",
+        "desc": "आपके चुने हुए हर व्यक्ति को एक-एक करके, बीच में थोड़ा रुककर, उसके नाम वाला मैसेज भेजता है।"
+      },
+      "export-chats": {
+        "title": "चैट एक्सपोर्ट करें",
+        "desc": "मैसेज को आपके कंप्यूटर पर JSON (एआई टूल और दूसरे प्रोग्राम के लिए) या TXT (पढ़ने के लिए) फ़ाइल में सेव करता है।"
+      },
+      "export-contacts": {
+        "title": "संपर्क एक्सपोर्ट करें",
+        "desc": "आपकी संपर्क सूची के लोगों और जिनसे आपने चैट की है, उन्हें Excel शीट या VCF कार्ड के रूप में सेव करता है, जिन्हें आप अपने फ़ोन में इंपोर्ट कर सकते हैं।"
+      },
+      "download-media": {
+        "title": "मीडिया डाउनलोड करें",
+        "desc": "एक चैट, कई चैट या सभी चैट के वॉइस मैसेज, फ़ोटो, वीडियो और डॉक्यूमेंट को एक ZIP फ़ाइल में इकट्ठा करता है, हर चैट के लिए अलग फ़ोल्डर के साथ। वॉइस मैसेज .ogg फ़ाइलों के रूप में मिलते हैं, जो ट्रांसक्रिप्शन के लिए तैयार होती हैं; एक इंडेक्स फ़ाइल में हर फ़ाइल को भेजने वाले और उसकी तारीख़ की जानकारी होती है।",
+        "hint": "जो पुरानी फ़ाइलें अब WhatsApp के सर्वर पर नहीं हैं, उन्हें आपका फ़ोन एक-एक करके फिर से भेजता है; इसमें समय लगता है और फ़ोन का डेटा खर्च होता है। जो फ़ाइलें अब आपके फ़ोन पर नहीं हैं, वे शायद डाउनलोड न हों; नतीजे में उनकी गिनती दिखती है।"
+      },
+      "deleted-messages": {
+        "title": "डिलीट और एडिट किए गए मैसेज",
+        "desc": "जब कोई किसी मैसेज को सभी के लिए डिलीट करता है या बाद में उसे एडिट करता है, तो असली टेक्स्ट यहाँ सेव रहता है। रिकॉर्ड सिर्फ़ इसी ब्राउज़र में रहते हैं।"
+      }
+    },
+    "id": {
+      "privacy-screen": {
+        "title": "Layar privasi",
+        "desc": "Memburamkan nama, foto, dan pesan di WhatsApp Web, sehingga orang di sebelah Anda atau yang melihat layar yang Anda bagikan tidak bisa ikut membaca. Arahkan kursor ke sesuatu untuk melihatnya. Semuanya berlangsung di browser Anda. Panel TwoTicks sendiri tidak dikaburkan: tutup atau geser panel sebelum Anda membagikan layar."
+      },
+      "unanswered-chats": {
+        "title": "Chat yang belum dibalas",
+        "desc": "Menemukan chat yang pesan terakhirnya ditulis orang lain dan belum Anda balas, termasuk yang sudah Anda baca lalu terlupa, dan juga sebaliknya: chat yang balasannya masih Anda tunggu. Berjalan di perangkat Anda; tidak ada yang dikirim dan tidak ada yang ditandai sebagai dibaca."
+      },
+      "quick-replies": {
+        "title": "Balasan cepat",
+        "desc": "Simpan balasan yang Anda tulis berulang kali, lalu masukkan ke chat mana pun dengan Alt+Shift+Q. {name} diganti dengan nama depan penerima. Tidak ada yang terkirim sampai Anda menekan Enter."
+      },
+      "ai-assistant": {
+        "title": "Asisten AI",
+        "desc": "Tanyakan tentang sebuah chat ke layanan AI Anda sendiri: ringkasan, tugas yang belum selesai, draf balasan, atau hal lainnya. Asisten berjalan dengan kunci API Anda sendiri, dan tidak ada yang dikirim sebelum Anda mengonfirmasinya."
+      },
+      "chat-analysis": {
+        "title": "Analisis chat",
+        "desc": "Menemukan keputusan, tugas, tanggal, dan pertanyaan dari pesan terbaru, langsung di perangkat Anda. Untuk analisis yang lebih mendalam, tempelkan prompt siap pakai ke asisten AI Anda."
+      },
+      "scheduler": {
+        "title": "Jadwalkan pesan",
+        "desc": "Mengirim pesan Anda ke orang atau grup pilihan Anda, pada waktu yang Anda tentukan: sekali, atau setiap hari, minggu, bulan, atau tahun.",
+        "hint": "Pesan juga dikirim saat WhatsApp Web tertutup, asalkan Chrome berjalan: sesaat sebelum waktunya, TwoTicks membukanya di jendela yang diminimalkan dan menutupnya lagi setelah mengirim. Waktu yang terlewat saat Chrome tertutup tidak dikirim terlambat; pesan ditandai “Terlewat”, dan pesan berulang menunggu jadwal berikutnya. Selama WhatsApp Web terkunci oleh kunci layarnya sendiri, tidak ada yang dikirim."
+      },
+      "direct-message": {
+        "title": "Kirim pesan tanpa menyimpan nomor",
+        "desc": "Buka chat atau kirim pesan tanpa menambahkan nomor ke kontak Anda, cocok untuk kurir, layanan, atau percakapan sekali saja.",
+        "hint": "Kode negara boleh dihilangkan; awalan nasional (0 di depan, atau 8 di Rusia dan Kazakhstan, 06 di Hungaria) dihapus otomatis."
+      },
+      "compliments": {
+        "title": "Pujian",
+        "desc": "Sampaikan hal-hal manis secara rutin kepada orang-orang yang Anda sayangi. Pada hari yang Anda pilih, setiap kali pada saat yang berbeda dalam rentang jam Anda, TwoTicks mengingatkan Anda dengan pujian dari daftar Anda sendiri yang siap dikirim, atau langsung mengirimkannya untuk Anda."
+      },
+      "several-chats": {
+        "title": "Satu pesan ke beberapa chat",
+        "desc": "Mengirim pesan yang dipersonalisasi ke setiap orang yang Anda pilih, satu per satu, dengan jeda di antaranya."
+      },
+      "export-chats": {
+        "title": "Ekspor chat",
+        "desc": "Menyimpan pesan ke komputer Anda dalam format JSON (untuk alat AI dan program lain) atau TXT (untuk dibaca)."
+      },
+      "export-contacts": {
+        "title": "Ekspor kontak",
+        "desc": "Menyimpan orang di daftar kontak Anda dan orang yang pernah Anda ajak chat sebagai lembar Excel atau kartu VCF yang bisa diimpor ke ponsel."
+      },
+      "download-media": {
+        "title": "Unduh media",
+        "desc": "Mengumpulkan pesan suara, foto, video, dan dokumen dari satu chat, beberapa chat, atau semuanya ke dalam file ZIP, dengan satu folder untuk setiap chat. Pesan suara diunduh sebagai file .ogg yang siap ditranskripsi; file indeks mencantumkan pengirim dan tanggal setiap file.",
+        "hint": "File lama yang tidak lagi disimpan di server WhatsApp dikirim ulang oleh ponsel Anda satu per satu; ini butuh waktu dan memakai data ponsel. File yang sudah tidak ada di ponsel Anda mungkin tidak dapat diunduh; hasilnya menyebutkan jumlahnya."
+      },
+      "deleted-messages": {
+        "title": "Pesan yang dihapus dan diedit",
+        "desc": "Saat seseorang menghapus pesan untuk semua orang atau mengeditnya kemudian, teks aslinya disimpan di sini. Catatan hanya disimpan di browser ini."
+      }
+    }
+  }
+}

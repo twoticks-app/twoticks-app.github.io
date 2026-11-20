@@ -88,6 +88,7 @@ kbd {
   line-height: 1.5;
   direction: ltr;
 }
+.keys { white-space: nowrap; }
 section[id] { scroll-margin-top: 12px; }
 .vh {
   position: absolute !important;
@@ -419,7 +420,7 @@ section[id] { scroll-margin-top: 12px; }
   scrollbar-color: var(--tick-grey) transparent;
 }
 .shot { margin: 0; scroll-snap-align: start; }
-.shot img { width: 100%; height: auto; border: 2px solid var(--line-strong); background: var(--slate); }
+.shot img { width: 100%; height: auto; aspect-ratio: 16 / 10; border: 2px solid var(--line-strong); background: var(--slate); }
 .shot figcaption { display: flex; gap: 10px; margin-block-start: 10px; font-weight: 600; }
 .shot-no { color: var(--muted); font-variant-numeric: tabular-nums; }
 .groups { columns: 3 300px; column-gap: clamp(28px, 4vw, 56px); margin-block-start: clamp(44px, 6vw, 76px); }
@@ -505,6 +506,64 @@ section[id] { scroll-margin-top: 12px; }
 .foot-lang-list { display: flex; flex-wrap: wrap; gap: 8px 22px; margin: 0; padding: 0; list-style: none; }
 .foot-lang-list a { display: inline-flex; align-items: center; gap: 8px; }
 .foot-lang-list a[aria-current="page"] { color: #ffffff; font-weight: 700; text-decoration: none; }
+
+/* The tool names of the home page lead to the tools' own pages. */
+.tool-name a { color: inherit; text-decoration-color: var(--read); text-decoration-thickness: 2px; }
+.tool-name a:hover { color: var(--link); }
+
+/* --- the page of one tool --------------------------------------------------------------------------------------- */
+.tool-hero-in { padding-block: clamp(26px, 4vw, 44px) clamp(52px, 7vw, 92px); }
+.tool-hero .hero-text { max-width: 680px; }
+.tool-hero .hero-art { width: min(36vw, 520px); }
+@media (max-width: 1099px) { .tool-hero .hero-art { width: min(80vw, 520px); } }
+.crumbs { position: relative; z-index: 1; margin-block-end: clamp(30px, 5vw, 56px); font-size: 0.95rem; }
+.crumbs ol { display: flex; flex-wrap: wrap; gap: 4px 10px; margin: 0; padding: 0; list-style: none; color: var(--mist); }
+.crumbs li + li::before { content: "/"; margin-inline-end: 10px; color: #6b7f8c; }
+.crumbs a { color: #8fd5f4; }
+.crumbs [aria-current] { color: var(--snow); }
+.tool-h1 { margin-block-end: 22px; font-size: clamp(2.6rem, 6.6vw, 5.2rem); line-height: 0.98; letter-spacing: -0.008em; }
+.tool-h1::before { content: ""; display: block; width: clamp(72px, 9vw, 110px); height: 6px; margin-block-end: 24px; background: var(--read); }
+html:lang(ar) .tool-h1, html:lang(hi) .tool-h1 { line-height: 1.25; }
+
+.tool-body { padding-block: var(--section); background: var(--surface); border-block-end: 1px solid var(--line); }
+.tool-grid { display: grid; gap: clamp(40px, 6vw, 72px); }
+@media (min-width: 980px) { .tool-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1.12fr); align-items: start; } }
+.tool-col { min-width: 0; }
+.tool-col h2 { margin-block-end: 18px; font-size: clamp(1.5rem, 2.6vw, 2rem); }
+.tool-col h2:not(:first-child) { margin-block-start: clamp(36px, 5vw, 52px); }
+.tool-note { margin-block-start: 18px; padding-inline-start: 14px; border-inline-start: 4px solid var(--read); color: var(--muted); }
+
+/* The tool as it stands in the extension's panel: its slate bar, then the tool's own title, text and hint. */
+.panel-box { margin: 0; border: 2px solid var(--line-strong); background: var(--mock-panel); }
+.pb-bar { display: flex; align-items: center; gap: 10px; padding: 10px 14px; background: var(--slate); color: #ffffff; font-weight: 700; font-stretch: 85%; font-size: 1.1rem; }
+.pb-bar .logo-tile { width: 26px; height: 26px; }
+.pb-body { padding: 18px clamp(16px, 3vw, 24px) 6px; }
+.pb-title { margin-block-end: 8px; font-size: 1.15rem; font-weight: 700; }
+.pb-desc { color: var(--ink); }
+.pb-hint { padding: 10px 12px; border-inline-start: 4px solid var(--tick-grey); background: var(--mock-bg); color: var(--muted); font-size: 0.95rem; }
+
+.film-tool { min-height: clamp(230px, 26vw, 330px); }
+.film-tool .film-title { font-size: clamp(1.7rem, 3.4vw, 2.6rem); }
+.also-k { margin-block: 18px 6px; font-weight: 600; }
+.also { display: grid; gap: 6px; margin: 0 0 12px; padding: 0; list-style: none; }
+.also a { font-weight: 600; }
+.tool-shot { margin: clamp(48px, 7vw, 84px) 0 0; }
+.tool-shot img { width: 100%; height: auto; aspect-ratio: 16 / 10; border: 2px solid var(--line-strong); background: var(--slate); }
+
+.tool-others { padding-block: var(--section); background: var(--paper); }
+.tool-others h2 { font-size: clamp(1.9rem, 4vw, 2.8rem); }
+.tool-others h2::before { content: ""; display: block; width: 56px; height: 6px; margin-block-end: 20px; background: var(--read); }
+/* Here each group keeps a column of its own. */
+.groups-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+  gap: 8px clamp(28px, 4vw, 56px);
+  columns: auto;
+  margin-block-start: clamp(28px, 4vw, 44px);
+}
+.tools-links li { padding-block-end: 10px; }
+.tools-links a { font-weight: 600; }
+.tools-links li[aria-current="page"] { padding-inline-start: 10px; border-inline-start: 4px solid var(--read); }
 
 /* --- the page for addresses that do not exist ------------------------------------------------------------------- */
 .lost { background: var(--slate); color: var(--snow); }

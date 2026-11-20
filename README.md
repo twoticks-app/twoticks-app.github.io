@@ -8,14 +8,16 @@ TwoTicks is installed only from its page in the Chrome Web Store: https://chrome
 
 ## How the site is made
 
-`node build.mjs` writes the site into `dist/`, one static page per language. GitHub Actions (`.github/workflows/pages.yml`) runs it on every push to `main` and publishes `dist/` on GitHub Pages. The site needs no packages: Node 22 or newer is enough.
+`node build.mjs` writes the site into `dist/`: in each language the home page and a page for each of the thirteen tools (`tools/<tool>/`, for example `tools/scheduler/` or `tr/tools/scheduler/`), with the tool's film, its screenshot where there is one, the store's words for it and the panel's. GitHub Actions (`.github/workflows/pages.yml`) runs it on every push to `main` and publishes `dist/` on GitHub Pages. The site needs no packages: Node 22 or newer is enough.
 
 | Where | What |
 |---|---|
-| `src/page.mjs` | The page, as one template for every language |
+| `src/page.mjs` | The pages (the home page and the page of a tool), as templates for every language |
+| `site.config.json` | The addresses, the languages, and the tools with their films and screenshots |
 | `src/styles.css`, `src/app.js` | Its look and its script (the ticks of the install steps, the notice for other browsers, the language menu, the film) |
 | `i18n/<language>.json` | The site's own texts in each language |
 | `content/listing/<language>.txt` | The Chrome Web Store description in each language (copied from `store/listing/1.1.0/` of the extension): the tools, the price, the permissions, the support line |
+| `content/panel.json` | The panel's own words for each tool in each language (title, text, hint), read from the extension by `tools/panel-texts.cjs` |
 | `content/chrome-ui.json` | Chrome's own words in each language ('Add "$1"?', "Add extension", "Pin", "Remove from Chrome" and more), read from Chrome by `tools/chrome-ui.cjs` |
 | `content/webstore.json` | The Chrome Web Store's words in each language ("Add to Chrome" and the store's name), read from the store's page |
 | `src/fonts/`, `src/fonts.css` | IBM Plex, served from the site itself (`tools/fonts.mjs`; licence in `licenses/`) |
@@ -27,6 +29,7 @@ TwoTicks is installed only from its page in the Chrome Web Store: https://chrome
 node build.mjs                      the site into dist/
 node tools/serve.mjs                look at dist/ on http://localhost:8723/
 node tools/chrome-ui.cjs --pak-only Chrome's words again, from the installed Google Chrome
+node tools/panel-texts.cjs "<extension folder>"   the panel's words again, from the extension
 ```
 
 ## Before a new version

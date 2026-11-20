@@ -1,13 +1,14 @@
 // Copyright (c) 2026 Osman Bodur. All rights reserved.
-// Builds the site of TwoTicks into dist/: one static page per language (English at the root, the others in their
-// folders), the stylesheet with the fonts, the script, the pictures, 404.html, robots.txt and sitemap.xml.
+// Builds the site of TwoTicks into dist/: per language (English at the root, the others in their folders) the home
+// page and one page for each tool (tools/<slug>/), the stylesheet with the fonts, the script, the pictures,
+// 404.html, robots.txt and sitemap.xml.
 // TwoTicks is installed from the Chrome Web Store; the site guides there and through Chrome's own steps.
 // Usage: node build.mjs
 import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
 import { fileURLToPath } from 'node:url';
-import { render, esc, flag } from './src/page.mjs';
+import { render, renderTool, esc, flag } from './src/page.mjs';
 
 const ROOT = path.dirname(fileURLToPath(import.meta.url));
 const OUT = path.join(ROOT, 'dist');
@@ -15,6 +16,7 @@ const read = (rel) => fs.readFileSync(path.join(ROOT, rel), 'utf8');
 const cfg = JSON.parse(read('site.config.json'));
 const chromeUi = JSON.parse(read('content/chrome-ui.json')).labels;
 const webstore = JSON.parse(read('content/webstore.json')).labels;
+const panelTexts = JSON.parse(read('content/panel.json')).texts;
 const sha = (data, enc = 'hex') => String(crypto.createHash('sha256').update(data).digest(enc));
 
 // --- texts ---------------------------------------------------------------------------------------------------------
@@ -73,9 +75,11 @@ function copyDir(from, to) {
   for (const f of fs.readdirSync(from)) fs.copyFileSync(path.join(from, f), path.join(to, f));
 }
 
-// The inline script on the English page: a first visit in another of the site's languages goes to that page,
-// once; a language chosen in the menu is remembered and wins.
-const REDIRECT = "(function(){try{if(localStorage.getItem('tt-lang'))return;var m={de:'de/',es:'es/',fr:'fr/',it:'it/',pt:'pt-br/','pt-br':'pt-br/','pt-pt':'pt-pt/',tr:'tr/',ru:'ru/',ar:'ar/',hi:'hi/',id:'id/','in':'id/'};var l=navigator.languages||[navigator.language];for(var i=0;i<l.length;i++){var c=String(l[i]||'').toLowerCase();if(c==='en'||c.indexOf('en-')===0)return;var p=m[c]||m[c.split('-')[0]];if(p){location.replace(p+location.search+location.hash);return;}}}catch(e){}})();";
+// The inline script on the English pages: a first visit in another of the site's languages goes to the same page
+// in that language, once; a language chosen in the menu is remembered and wins. The page says where it is in the
+// site (data-page on <html>), so one script, with one hash in the CSP, serves every English page.
+const ROOT_PATH = new URL(cfg.siteUrl).pathname;
+const REDIRECT = `(function(){try{if(localStorage.getItem('tt-lang'))return;var m={de:'de/',es:'es/',fr:'fr/',it:'it/',pt:'pt-br/','pt-br':'pt-br/','pt-pt':'pt-pt/',tr:'tr/',ru:'ru/',ar:'ar/',hi:'hi/',id:'id/','in':'id/'};var l=navigator.languages||[navigator.language];for(var i=0;i<l.length;i++){var c=String(l[i]||'').toLowerCase();if(c==='en'||c.indexOf('en-')===0)return;var p=m[c]||m[c.split('-')[0]];if(p){location.replace('${ROOT_PATH}'+p+(document.documentElement.getAttribute('data-page')||'')+location.search+location.hash);return;}}}catch(e){}})();`;
 
 const FONT_PRELOADS = {
   base: ['ibm-plex-sans-400-700-latin.woff2'],
@@ -106,7 +110,10 @@ fs.rmSync(OUT, { recursive: true, force: true });
 fs.mkdirSync(path.join(OUT, 'assets'), { recursive: true });
 copyDir(path.join(ROOT, 'src', 'fonts'), path.join(OUT, 'assets', 'fonts'));
 copyDir(path.join(ROOT, 'src', 'img'), path.join(OUT, 'assets', 'img'));
-const css = `${read('src/fonts.css')}\n${read('src/styles.css')}`;
+// The stylesheet: the fonts, the site's own styles, then the parts that other tools add (src/parts/*.css).
+const partsDir = path.join(ROOT, 'src', 'parts');
+const partsCss = fs.existsSync(partsDir) ? fs.readdirSync(partsDir).filter((f) => f.endsWith('.css')).sort().map((f) => read(`src/parts/${f}`)) : [];
+const css = [read('src/fonts.css'), read('src/styles.css'), ...partsCss].join('\n');
 const js = read('src/app.js');
 fs.writeFileSync(path.join(OUT, 'assets', 'site.css'), css);
 fs.writeFileSync(path.join(OUT, 'assets', 'app.js'), js);
@@ -114,7 +121,20 @@ const cssRef = `assets/site.css?v=${sha(css).slice(0, 10)}`;
 const jsRef = `assets/app.js?v=${sha(js).slice(0, 10)}`;
 const redirectHash = sha(REDIRECT, 'base64');
 
+// Placeholders may stay only where the script fills them in (data-* attributes).
+function check(html, where) {
+  const loose = html.replace(/data-[a-z-]+="[^"]*"/g, '').replace(/<script[\s\S]*?<\/script>/g, '').match(/\{[a-zA-Z0-9]+\}/g);
+  if (loose) throw new Error(`${where}: placeholders left in the page: ${[...new Set(loose)].join(', ')}`);
+  if (/\$1/.test(html)) throw new Error(`${where}: "$1" left in the page`);
+}
+function writePage(rel, html) {
+  const file = path.join(OUT, rel, 'index.html');
+  fs.mkdirSync(path.dirname(file), { recursive: true });
+  fs.writeFileSync(file, html);
+}
+
 const enDict = JSON.parse(read('i18n/en.json'));
+const pageRels = ['', ...cfg.tools.map((tool) => `tools/${tool.slug}/`)];
 const pages = [];
 for (const lang of cfg.languages) {
   const dict = JSON.parse(read(`i18n/${lang.code}.json`));
@@ -127,25 +147,45 @@ for (const lang of cfg.languages) {
   for (const k of ['addToChrome', 'addTitle', 'addExtension', 'cancel', 'pin', 'remove', 'removeFromChrome', 'extensionsMenu']) {
     if (!ui[k]) throw new Error(`${lang.code}: no label "${k}" in content/chrome-ui.json or content/webstore.json`);
   }
-  const base = lang.path ? '../' : '';
-  const isRoot = !lang.path;
+  const list = listing(lang.code);
+  // Every tool of the listing has its page, and the panel's own words for it. (The privacy group of the listing
+  // has one tool and two promises.)
+  for (const g of ['productivity', 'files']) {
+    const n = cfg.tools.filter((tool) => tool.group === g).length;
+    if (n !== list[g].length) throw new Error(`${lang.code}: the listing has ${list[g].length} tools in "${g}", site.config.json ${n}`);
+  }
+  const panel = panelTexts[lang.code];
+  for (const tool of cfg.tools) {
+    if (!list[tool.group][tool.index]) throw new Error(`${lang.code}: no listing entry for ${tool.slug}`);
+    if (!panel || !panel[tool.slug]) throw new Error(`${lang.code}: no panel text for ${tool.slug} in content/panel.json`);
+  }
+  const english = !lang.path;
   const fonts = [...FONT_PRELOADS.base, ...(FONT_PRELOADS[lang.code] || [])];
-  const preloads = fonts.map((f) => `<link rel="preload" href="${base}assets/fonts/${f}" as="font" type="font/woff2" crossorigin>`).join('\n');
-  const html = render({
-    t, ta, ui, uiAlt, listing: listing(lang.code), cfg, lang, langs: cfg.languages, base,
-    css: cssRef, js: jsRef, preloads,
-    redirect: isRoot ? REDIRECT : '',
-    csp: csp(isRoot ? redirectHash : ''),
-    durationText: `${Math.floor(cfg.youtube.seconds / 60)}:${String(cfg.youtube.seconds % 60).padStart(2, '0')}`,
-  });
-  // Placeholders may stay only where the script fills them in (data-* attributes).
-  const loose = html.replace(/data-[a-z-]+="[^"]*"/g, '').replace(/<script[\s\S]*?<\/script>/g, '').match(/\{[a-zA-Z0-9]+\}/g);
-  if (loose) throw new Error(`${lang.code}: placeholders left in the page: ${[...new Set(loose)].join(', ')}`);
-  if (/\$1/.test(html)) throw new Error(`${lang.code}: "$1" left in the page`);
-  const file = path.join(OUT, lang.path, 'index.html');
-  fs.mkdirSync(path.dirname(file), { recursive: true });
-  fs.writeFileSync(file, html);
-  pages.push({ lang, bytes: Buffer.byteLength(html) });
+  // The preview picture when the page is shared: the one of its language where there is one.
+  const ogImage = fs.existsSync(path.join(ROOT, 'src', 'img', `og-${lang.code}.png`)) ? `assets/img/og-${lang.code}.png` : 'assets/img/og.png';
+  const context = (depth) => {
+    const base = '../'.repeat(depth);
+    return {
+      t, ta, ui, uiAlt, listing: list, panel, cfg, lang, langs: cfg.languages, base, ogImage,
+      css: cssRef, js: jsRef,
+      preloads: fonts.map((f) => `<link rel="preload" href="${base}assets/fonts/${f}" as="font" type="font/woff2" crossorigin>`).join('\n'),
+      redirect: english ? REDIRECT : '',
+      csp: csp(english ? redirectHash : ''),
+      durationText: `${Math.floor(cfg.youtube.seconds / 60)}:${String(cfg.youtube.seconds % 60).padStart(2, '0')}`,
+    };
+  };
+  const depth = lang.path.split('/').filter(Boolean).length;
+  const home = render(context(depth));
+  check(home, lang.code);
+  writePage(lang.path, home);
+  let toolBytes = 0;
+  for (const tool of cfg.tools) {
+    const html = renderTool(context(depth + 2), tool);
+    check(html, `${lang.code} ${tool.slug}`);
+    writePage(`${lang.path}tools/${tool.slug}/`, html);
+    toolBytes += Buffer.byteLength(html);
+  }
+  pages.push({ lang, bytes: Buffer.byteLength(home), toolBytes });
 }
 
 // 404: GitHub Pages serves it for every missing address, at any depth, so its links start at the site's root.
@@ -172,16 +212,19 @@ fs.writeFileSync(path.join(OUT, '404.html'), `<!doctype html>
 `);
 
 const today = new Date().toISOString().slice(0, 10);
-const alt = cfg.languages.map((l) => `    <xhtml:link rel="alternate" hreflang="${l.code}" href="${cfg.siteUrl}${l.path}"/>`).join('\n');
+const urls = pageRels.flatMap((rel) => {
+  const alt = cfg.languages.map((l) => `    <xhtml:link rel="alternate" hreflang="${l.code}" href="${cfg.siteUrl}${l.path}${rel}"/>`).join('\n');
+  return cfg.languages.map((l) => `  <url>\n    <loc>${cfg.siteUrl}${l.path}${rel}</loc>\n    <lastmod>${today}</lastmod>\n${alt}\n    <xhtml:link rel="alternate" hreflang="x-default" href="${cfg.siteUrl}${rel}"/>\n  </url>`);
+});
 fs.writeFileSync(path.join(OUT, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-${cfg.languages.map((l) => `  <url>\n    <loc>${cfg.siteUrl}${l.path}</loc>\n    <lastmod>${today}</lastmod>\n${alt}\n    <xhtml:link rel="alternate" hreflang="x-default" href="${cfg.siteUrl}"/>\n  </url>`).join('\n')}
+${urls.join('\n')}
 </urlset>
 `);
 fs.writeFileSync(path.join(OUT, 'robots.txt'), `User-agent: *\nAllow: /\nSitemap: ${cfg.siteUrl}sitemap.xml\n`);
 fs.writeFileSync(path.join(OUT, '.nojekyll'), '');
 
 const kb = (n) => `${Math.round(n / 1024)} KB`;
-console.log(`Built ${pages.length} pages in dist/ for ${cfg.siteUrl}`);
-for (const p of pages) console.log(`  ${(p.lang.path || '(root)').padEnd(8)} ${p.lang.code.padEnd(6)} ${kb(p.bytes)}`);
+console.log(`Built ${pages.length * pageRels.length} pages in dist/ for ${cfg.siteUrl}: ${pages.length} languages, each with its home page and ${cfg.tools.length} tool pages`);
+for (const p of pages) console.log(`  ${(p.lang.path || '(root)').padEnd(8)} ${p.lang.code.padEnd(6)} home ${kb(p.bytes)}, tools ${kb(p.toolBytes)}`);
 console.log(`  assets: site.css ${kb(Buffer.byteLength(css))}, app.js ${kb(Buffer.byteLength(js))}`);
