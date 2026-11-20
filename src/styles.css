@@ -31,7 +31,7 @@
   --g-green: #34a853;
   --g-blue: #4285f4;
   --g-stripe: linear-gradient(90deg, var(--g-red) 0 25%, var(--g-yellow) 0 50%, var(--g-green) 0 75%, var(--g-blue) 0);
-  --font: "Plex", system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", sans-serif;
+  --font: "Plex", "Plex Arabic", "Plex Devanagari", system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", sans-serif;
   --mono: "Plex Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
   --wrap: 1200px;
   --gutter: clamp(16px, 4vw, 48px);

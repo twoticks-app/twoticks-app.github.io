@@ -20,8 +20,10 @@ TwoTicks is installed only from its page in the Chrome Web Store: https://chrome
 | `content/panel.json` | The panel's own words for each tool in each language (title, text, hint), read from the extension by `tools/panel-texts.cjs` |
 | `content/chrome-ui.json` | Chrome's own words in each language ('Add "$1"?', "Add extension", "Pin", "Remove from Chrome" and more), read from Chrome by `tools/chrome-ui.cjs` |
 | `content/webstore.json` | The Chrome Web Store's words in each language ("Add to Chrome" and the store's name), read from the store's page |
+| `content/whatsnew/<version>.json`, `src/whatsnew.mjs` | What's new in a version, in each language, shown on the home pages while `"whatsNew"` in `site.config.json` says so |
+| `src/parts/*.css` | The look of such parts, added to the stylesheet after `src/styles.css` |
 | `src/fonts/`, `src/fonts.css` | IBM Plex, served from the site itself (`tools/fonts.mjs`; licence in `licenses/`) |
-| `src/img/` | Screenshots, the link preview and the icons (`tools/images.py`, from the extension's store pictures); the films' posters (`tools/film-frames.py`, from the films' own YouTube thumbnails, so nothing loads from YouTube before a click) |
+| `src/img/` | Screenshots and the icons (`tools/images.py`, from the extension's store pictures); the link preview of each language, `og-<language>.png` (`tools/og-images.mjs`); the films' posters (`tools/film-frames.py`, from the films' own YouTube thumbnails, so nothing loads from YouTube before a click) |
 
 ## Commands
 
@@ -31,11 +33,19 @@ node tools/serve.mjs                look at dist/ on http://localhost:8723/
 node tools/chrome-ui.cjs --pak-only Chrome's words again, from the installed Google Chrome
 node tools/panel-texts.cjs "<extension folder>"   the panel's words again, from the extension
 python -I tools/film-frames.py "<project folder>"   the films' posters again
+node tools/og-images.mjs "<project folder>"        the link previews again
+node tools/new-version.mjs <version>                a new version of TwoTicks (see below)
 ```
 
-## Before a new version
+## A new version of TwoTicks
 
-When the store gets a new description, copy `store/listing/<version>/description.<locale>.txt` of the extension to `content/listing/` (`pt_BR` and `pt_PT` become `pt-BR` and `pt-PT`) and build again. The structure of the description (its groups and bullets) must stay the same in all twelve languages; `build.mjs` stops when it does not.
+When the extension has the new version's store descriptions (`store/listing/<version>/`), one command brings them onto the site:
+
+```
+node tools/new-version.mjs <version> [--whats-new] [--publish]
+```
+
+It first checks that all twelve descriptions have the structure `build.mjs` reads, and stops before changing anything when one does not. Then it copies them to `content/listing/` (`pt_BR` and `pt_PT` become `pt-BR` and `pt-PT`), reads the panel's texts again into `content/panel.json`, builds the site and shows what changed. With `--whats-new` the home pages show the version's changes from `content/whatsnew/<version>.json` (write that file first, like `content/whatsnew/1.1.0.json`); `"whatsNew"` in `site.config.json` switches them on and off. With `--publish` it commits and pushes, and GitHub Actions publishes the site.
 
 The page sets no cookies and has no analytics. The film loads from YouTube (youtube-nocookie.com) only when someone presses play.
 

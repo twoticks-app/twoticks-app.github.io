@@ -1,0 +1,149 @@
+{
+  "version": "1.1.0",
+  "texts": {
+    "en": {
+      "title": "What's new in TwoTicks 1.1.0",
+      "items": [
+        "The AI assistant can now use the model built into Chrome on your own computer, if your computer can run it.",
+        "If you choose them, documents, images, PDF files and voice messages of the chat go along with an AI request.",
+        "\"Today\" in Chat analysis looks through your recent chats for what waits for your reply, what you promised and what is coming up.",
+        "A date or task that Chat analysis finds goes into a calendar file with one click, or into the Scheduler as a message to that chat.",
+        "The Privacy screen now also covers WhatsApp's side panels, animated emoji, tooltips and photos it missed before.",
+        "TwoTicks now respects locked chats and chats that use WhatsApp's Advanced chat privacy.",
+        "If WhatsApp Web signs you out and empties its storage, TwoTicks brings its data back from a copy it keeps for your WhatsApp account."
+      ]
+    },
+    "de": {
+      "title": "Neu in TwoTicks 1.1.0",
+      "items": [
+        "Der KI-Assistent kann jetzt das in Chrome eingebaute Modell auf Ihrem eigenen Computer nutzen, sofern Ihr Computer es ausführen kann.",
+        "Wenn Sie sie auswählen, gehen auch Dokumente, Bilder, PDF-Dateien und Sprachnachrichten des Chats an die KI.",
+        "„Heute“ in der Chat-Analyse sieht Ihre letzten Chats durch: was auf Ihre Antwort wartet, was Sie zugesagt haben und was bevorsteht.",
+        "Ein Termin oder eine Aufgabe aus der Chat-Analyse geht mit einem Klick in eine Kalenderdatei oder als Nachricht an diesen Chat in den Zeitplaner.",
+        "Der Sichtschutz erfasst jetzt auch die Seitenleisten von WhatsApp, animierte Emojis, Tooltips und Fotos, die er bisher übersah.",
+        "TwoTicks respektiert jetzt gesperrte Chats und Chats mit dem erweiterten Chat-Datenschutz von WhatsApp.",
+        "Meldet WhatsApp Web Sie ab und leert seinen Speicher, holt TwoTicks seine eigenen Daten aus einer Kopie zurück, die es für Ihr WhatsApp-Konto aufbewahrt."
+      ]
+    },
+    "es": {
+      "title": "Novedades de TwoTicks 1.1.0",
+      "items": [
+        "El Asistente de IA ya puede usar el modelo integrado en Chrome en tu propio ordenador, si tu ordenador puede ejecutarlo.",
+        "Si los eliges, también van a la IA documentos, imágenes, archivos PDF y mensajes de voz del chat.",
+        "«Hoy», en el Análisis del chat, revisa tus chats recientes: qué espera tu respuesta, qué prometiste y qué se acerca.",
+        "Una fecha o tarea que encuentra el Análisis del chat pasa con un clic a un archivo de calendario, o al Programador como mensaje a ese chat.",
+        "La Privacidad en pantalla ahora también cubre los paneles laterales de WhatsApp, los emojis animados, las descripciones emergentes y fotos que antes se le escapaban.",
+        "TwoTicks ahora respeta los chats que bloqueaste en WhatsApp y los chats con la privacidad avanzada del chat.",
+        "Si WhatsApp Web cierra tu sesión y vacía su almacenamiento, TwoTicks recupera sus propios datos de una copia que guarda para tu cuenta de WhatsApp."
+      ]
+    },
+    "fr": {
+      "title": "Nouveautés de TwoTicks 1.1.0",
+      "items": [
+        "L’Assistant IA peut désormais utiliser le modèle intégré à Chrome sur votre propre ordinateur, si votre ordinateur peut l’exécuter.",
+        "Si vous les choisissez, des documents, images, fichiers PDF et messages vocaux de la discussion accompagnent votre demande à l’IA.",
+        "« Aujourd’hui », dans l’Analyse de discussion, parcourt vos discussions récentes : ce qui attend votre réponse, ce que vous avez promis et ce qui approche.",
+        "Une date ou une tâche que l’Analyse de discussion trouve passe en un clic dans un fichier de calendrier, ou dans la Programmation comme message à cette discussion.",
+        "L’Écran de confidentialité couvre désormais aussi les panneaux latéraux de WhatsApp, les émojis animés, les infobulles et des photos qui lui échappaient.",
+        "TwoTicks respecte désormais les discussions verrouillées et celles qui utilisent la confidentialité avancée des discussions de WhatsApp.",
+        "Si WhatsApp Web vous déconnecte et vide son stockage, TwoTicks rétablit ses propres données à partir d’une copie qu’il conserve pour votre compte WhatsApp."
+      ]
+    },
+    "it": {
+      "title": "Novità di TwoTicks 1.1.0",
+      "items": [
+        "L’Assistente IA ora può usare il modello integrato in Chrome sul tuo computer, se il tuo computer può eseguirlo.",
+        "Se li scegli, documenti, immagini, file PDF e messaggi vocali della chat vanno insieme alla tua richiesta all’IA.",
+        "«Oggi», nell’Analisi della chat, scorre le tue chat recenti: cosa aspetta la tua risposta, cosa hai promesso e cosa è in arrivo.",
+        "Una data o un compito che l’Analisi della chat trova passa con un clic in un file di calendario, o alla Programmazione come messaggio a quella chat.",
+        "Lo Schermo privacy ora copre anche i pannelli laterali di WhatsApp, le emoji animate, i suggerimenti a comparsa e le foto che prima gli sfuggivano.",
+        "TwoTicks ora rispetta le chat bloccate in WhatsApp e le chat con la privacy avanzata della chat.",
+        "Se WhatsApp Web ti disconnette e svuota la sua memoria, TwoTicks ripristina i propri dati da una copia che conserva per il tuo account WhatsApp."
+      ]
+    },
+    "pt-BR": {
+      "title": "Novidades do TwoTicks 1.1.0",
+      "items": [
+        "O Assistente de IA agora pode usar o modelo integrado ao Chrome no seu próprio computador, se o seu computador puder executá-lo.",
+        "Se você escolher, documentos, imagens, arquivos PDF e mensagens de voz da conversa vão junto com o seu pedido à IA.",
+        "“Hoje”, na Análise da conversa, percorre suas conversas recentes: o que espera sua resposta, o que você prometeu e o que está chegando.",
+        "Uma data ou tarefa que a Análise da conversa encontra vai com um clique para um arquivo de calendário, ou para o Agendador como mensagem para essa conversa.",
+        "A Privacidade na tela agora também cobre os painéis laterais do WhatsApp, os emojis animados, as dicas de ferramenta e fotos que antes ficavam de fora.",
+        "O TwoTicks agora respeita as conversas trancadas e as conversas com a privacidade avançada da conversa do WhatsApp.",
+        "Se o WhatsApp Web desconectar você e esvaziar o armazenamento dele, o TwoTicks traz de volta os próprios dados a partir de uma cópia que guarda para a sua conta do WhatsApp."
+      ]
+    },
+    "pt-PT": {
+      "title": "Novidades do TwoTicks 1.1.0",
+      "items": [
+        "O Assistente de IA já pode utilizar o modelo integrado no Chrome no seu próprio computador, se o seu computador o conseguir executar.",
+        "Se os escolher, documentos, imagens, ficheiros PDF e mensagens de voz da conversa seguem com o seu pedido à IA.",
+        "“Hoje”, na Análise da conversa, percorre as suas conversas recentes: o que espera a sua resposta, o que prometeu e o que se aproxima.",
+        "Uma data ou tarefa que a Análise da conversa encontra passa com um clique para um ficheiro de calendário, ou para o Agendador como mensagem para essa conversa.",
+        "A Privacidade no ecrã passa a abranger também os painéis laterais do WhatsApp, os emojis animados, as dicas flutuantes e fotografias que antes ficavam de fora.",
+        "O TwoTicks passa a respeitar as conversas que trancou no WhatsApp e as que usam a privacidade avançada da conversa.",
+        "Se o WhatsApp Web terminar a sua sessão e esvaziar o armazenamento, o TwoTicks recupera os próprios dados a partir de uma cópia que guarda para a sua conta do WhatsApp."
+      ]
+    },
+    "tr": {
+      "title": "TwoTicks 1.1.0 ile gelen yenilikler",
+      "items": [
+        "Yapay zekâ asistanı artık, bilgisayarınız çalıştırabiliyorsa, kendi bilgisayarınızda Chrome'un içindeki modeli kullanabilir.",
+        "Seçerseniz sohbetin belgeleri, resimleri, PDF dosyaları ve sesli mesajları da yapay zekâ isteğinizle birlikte gider.",
+        "Sohbet analizi içindeki “Bugün”, son sohbetlerinize bakar: cevabınızı bekleyenler, verdiğiniz sözler ve yaklaşanlar.",
+        "Sohbet analizi bir tarih ya da görev bulursa, bu tek tıkla bir takvim dosyasına ya da o sohbete gidecek bir mesaj olarak Zamanlayıcı'ya geçer.",
+        "Gizlilik ekranı artık WhatsApp'ın yan panellerini, hareketli emojileri, araç ipuçlarını ve önceden kaçırdığı fotoğrafları da kapsar.",
+        "TwoTicks artık kilitli sohbetlere ve WhatsApp'ın Gelişmiş sohbet gizliliğini kullanan sohbetlere saygı gösterir.",
+        "WhatsApp Web oturumunuzu kapatıp depolamasını boşaltırsa, TwoTicks kendi verilerini WhatsApp hesabınız için tuttuğu bir kopyadan geri getirir."
+      ]
+    },
+    "ru": {
+      "title": "Что нового в TwoTicks 1.1.0",
+      "items": [
+        "ИИ-ассистент теперь работает и со встроенной в Chrome моделью на вашем компьютере, если ваш компьютер может её запустить.",
+        "Если вы их выберете, вместе с запросом к ИИ уйдут документы, изображения, PDF-файлы и голосовые сообщения чата.",
+        "«Сегодня» в Анализе чата просматривает ваши недавние чаты: что ждёт вашего ответа, что вы обещали и что приближается.",
+        "Дату или задачу, которую нашёл Анализ чата, можно одним щелчком сохранить в файл календаря или передать в Планировщик как сообщение в этот чат.",
+        "Приватный экран теперь закрывает и боковые панели WhatsApp, анимированные эмодзи, всплывающие подсказки и фото, которые раньше пропускал.",
+        "TwoTicks теперь уважает заблокированные чаты и чаты с расширенной конфиденциальностью чата WhatsApp.",
+        "Если WhatsApp Web выходит из аккаунта и очищает своё хранилище, TwoTicks восстанавливает свои данные из копии, которую хранит для вашего аккаунта WhatsApp."
+      ]
+    },
+    "ar": {
+      "title": "الجديد في TwoTicks 1.1.0",
+      "items": [
+        "يمكن لمساعد الذكاء الاصطناعي الآن استخدام النموذج المدمج في Chrome على جهازك، إن كان جهازك يستطيع تشغيله.",
+        "إن اخترتها، تذهب مستندات الدردشة وصورها وملفات PDF ورسائلها الصوتية مع طلبك إلى الذكاء الاصطناعي.",
+        "«اليوم» في تحليل الدردشة يتصفح دردشاتك الأخيرة: ما ينتظر ردّك، وما وعدتَ به، وما يقترب.",
+        "الموعد أو المهمة التي يجدها تحليل الدردشة تنتقل بنقرة واحدة إلى ملف تقويم، أو إلى الجدولة كرسالة إلى تلك الدردشة.",
+        "تغطي شاشة الخصوصية الآن أيضًا اللوحات الجانبية في WhatsApp والرموز التعبيرية المتحركة والتلميحات والصور التي كانت تفوتها من قبل.",
+        "تحترم TwoTicks الآن الدردشات المقفلة والدردشات التي تستخدم خصوصية الدردشة المتقدمة في WhatsApp.",
+        "إذا سجّل WhatsApp Web خروجك وأفرغ مساحة تخزينه، تعيد TwoTicks بياناتها من نسخة تحفظها لحسابك في WhatsApp."
+      ]
+    },
+    "hi": {
+      "title": "TwoTicks 1.1.0 में नया क्या है",
+      "items": [
+        "एआई असिस्टेंट अब आपके अपने कंप्यूटर पर Chrome में बने मॉडल का इस्तेमाल कर सकता है, अगर आपका कंप्यूटर उसे चला सकता है।",
+        "आप चुनें तो चैट के दस्तावेज़, तस्वीरें, PDF फ़ाइलें और वॉइस मैसेज भी एआई अनुरोध के साथ जाते हैं।",
+        "चैट विश्लेषण में “आज” आपकी हाल की चैट देखता है: क्या आपके जवाब का इंतज़ार कर रहा है, आपने क्या वादा किया और क्या पास आ रहा है।",
+        "चैट विश्लेषण जो तारीख़ या काम ढूँढता है, वह एक क्लिक में कैलेंडर फ़ाइल में, या उस चैट को जाने वाले मैसेज के रूप में शेड्यूलर में चला जाता है।",
+        "प्राइवेसी स्क्रीन अब WhatsApp के साइड पैनल, एनिमेटेड इमोजी, टूलटिप और पहले छूट जाने वाली फ़ोटो को भी ढकती है।",
+        "TwoTicks अब लॉक की गई चैट और WhatsApp की एडवांस्ड चैट प्राइवेसी वाली चैट का सम्मान करता है।",
+        "अगर WhatsApp Web आपको साइन आउट करके अपना स्टोरेज खाली कर दे, तो TwoTicks अपना डेटा उस कॉपी से वापस ले आता है जो वह आपके WhatsApp खाते के लिए रखता है।"
+      ]
+    },
+    "id": {
+      "title": "Yang baru di TwoTicks 1.1.0",
+      "items": [
+        "Asisten AI kini dapat memakai model bawaan Chrome di komputer Anda sendiri, jika komputer Anda dapat menjalankannya.",
+        "Jika Anda memilihnya, dokumen, gambar, file PDF, dan pesan suara dari chat ikut dengan permintaan AI Anda.",
+        "“Hari ini” di Analisis chat menelusuri chat terbaru Anda: apa yang menunggu balasan Anda, apa yang Anda janjikan, dan apa yang akan datang.",
+        "Jika Analisis chat menemukan tanggal atau tugas, dengan sekali klik Anda dapat memasukkannya ke file kalender, atau ke Penjadwal sebagai pesan ke chat tersebut.",
+        "Layar privasi kini juga menutupi panel samping WhatsApp, emoji animasi, tooltip, dan foto yang sebelumnya terlewat.",
+        "TwoTicks kini menghormati chat yang Anda kunci dan chat yang memakai privasi chat lanjutan WhatsApp.",
+        "Jika WhatsApp Web mengeluarkan Anda dari akun dan mengosongkan penyimpanannya, TwoTicks memulihkan datanya sendiri dari salinan yang ia simpan untuk akun WhatsApp Anda."
+      ]
+    }
+  }
+}

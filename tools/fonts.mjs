@@ -1,10 +1,13 @@
 // Copyright (c) 2026 Osman Bodur. All rights reserved.
 // Downloads the IBM Plex fonts the site uses (SIL Open Font License 1.1, see licenses/ibm-plex-OFL.txt) once and
 // writes them into src/fonts/ with src/fonts.css, so the published site loads no font from another server.
-// One family name, "Plex", covers all twelve languages: it joins the scripts' own Plex families by unicode-range, so
-// a page downloads only the files its letters need. Latin and Cyrillic come from the variable IBM Plex Sans (weights
-// 400 to 700, widths 85 to 100 percent: the headings use its condensed width), Arabic from IBM Plex Sans Arabic and
-// Devanagari from IBM Plex Sans Devanagari. "Plex Mono" is for the one address people copy and the checksum.
+// "Plex" is the variable IBM Plex Sans for Latin and Cyrillic (weights 400 to 700, widths 85 to 100 percent: the
+// headings use its condensed width); "Plex Arabic" and "Plex Devanagari" are IBM Plex Sans Arabic and Devanagari, in
+// 400, 600 and 700. The stylesheet lists the three in a row ("Plex", "Plex Arabic", "Plex Devanagari"), and each
+// page downloads only the files its letters need (unicode-range). They must keep their own names: within one family
+// the browser first picks the faces whose weight and width fit best, and only then looks at unicode-range, so the
+// fixed weights of Arabic and Devanagari and the variable Latin face would push each other out, and the letters of
+// the losing scripts would fall back to system fonts. "Plex Mono" is for the one address people copy.
 // Usage: node tools/fonts.mjs   (needs network access once; the files are then part of the repository)
 import fs from 'node:fs';
 import path from 'node:path';
@@ -18,8 +21,8 @@ const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
 // [our family, Google family, axes as the css2 API takes them, weights to expect, subsets to keep]
 const PLAN = [
   ['Plex', 'IBM Plex Sans', 'wdth,wght@85..100,400..700', ['400 700'], ['latin', 'latin-ext', 'cyrillic']],
-  ['Plex', 'IBM Plex Sans Arabic', 'wght@400;600;700', ['400', '600', '700'], ['arabic']],
-  ['Plex', 'IBM Plex Sans Devanagari', 'wght@400;600;700', ['400', '600', '700'], ['devanagari']],
+  ['Plex Arabic', 'IBM Plex Sans Arabic', 'wght@400;600;700', ['400', '600', '700'], ['arabic']],
+  ['Plex Devanagari', 'IBM Plex Sans Devanagari', 'wght@400;600;700', ['400', '600', '700'], ['devanagari']],
   ['Plex Mono', 'IBM Plex Mono', 'wght@400', ['400'], ['latin']],
 ];
 

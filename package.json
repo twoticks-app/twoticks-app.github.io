@@ -7,6 +7,9 @@
     "build": "node build.mjs",
     "serve": "node tools/serve.mjs",
     "labels": "node tools/chrome-ui.cjs --pak-only",
-    "fonts": "node tools/fonts.mjs"
+    "fonts": "node tools/fonts.mjs",
+    "new-version": "node tools/new-version.mjs",
+    "og": "node tools/og-images.mjs ..",
+    "posters": "python -I tools/film-frames.py .."
   }
 }

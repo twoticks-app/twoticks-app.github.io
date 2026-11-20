@@ -9,6 +9,7 @@ import path from 'node:path';
 import crypto from 'node:crypto';
 import { fileURLToPath } from 'node:url';
 import { render, renderTool, esc, flag } from './src/page.mjs';
+import { renderWhatsNew } from './src/whatsnew.mjs';
 
 const ROOT = path.dirname(fileURLToPath(import.meta.url));
 const OUT = path.join(ROOT, 'dist');
@@ -136,6 +137,9 @@ function writePage(rel, html) {
 }
 
 const enDict = JSON.parse(read('i18n/en.json'));
+// What's new: the changes of one version on the home pages, when site.config.json shows them (tools/new-version.mjs
+// switches them on with --whats-new).
+const whatsNew = cfg.whatsNew && cfg.whatsNew.show ? JSON.parse(read(`content/whatsnew/${cfg.whatsNew.version}.json`)) : null;
 const pageRels = ['', ...cfg.tools.map((tool) => `tools/${tool.slug}/`)];
 const pages = [];
 for (const lang of cfg.languages) {
@@ -177,7 +181,7 @@ for (const lang of cfg.languages) {
     };
   };
   const depth = lang.path.split('/').filter(Boolean).length;
-  const home = render(context(depth));
+  const home = render({ ...context(depth), whatsNewHtml: renderWhatsNew({ data: whatsNew, code: lang.code, esc }) });
   check(home, lang.code);
   writePage(lang.path, home);
   let toolBytes = 0;
