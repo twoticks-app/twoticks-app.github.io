@@ -433,32 +433,64 @@ section[id] { scroll-margin-top: 12px; }
 .film-link { display: inline-flex; align-items: center; gap: 6px; font-size: 0.92rem; font-weight: 600; }
 .film-link .i { width: 11px; height: 11px; }
 .langs-line { color: var(--muted); }
+/* A film: its poster (the film's own thumbnail) with one play button in the middle; the caption below. The poster
+   keeps the player's 16:9, so the player takes its place without a jump. */
 .film { margin-block-start: clamp(48px, 7vw, 84px); }
+.film-fig { margin: 0; }
+@media (min-width: 900px) {
+  .film .film-fig { display: grid; grid-template-columns: minmax(0, 1.75fr) minmax(240px, 1fr); gap: 0 clamp(28px, 3.5vw, 44px); align-items: end; }
+}
 .film-play {
   position: relative;
-  isolation: isolate;
-  display: grid;
-  align-content: end;
-  min-height: clamp(260px, 34vw, 430px);
-  padding: clamp(22px, 4vw, 44px);
+  display: block;
+  aspect-ratio: 16 / 9;
   overflow: hidden;
+  container-type: inline-size;
   border: 2px solid var(--slate);
   background: var(--slate);
   color: var(--snow);
   text-decoration: none;
 }
-.film-art { position: absolute; inset-block: -12%; inset-inline-end: -4%; z-index: -1; display: grid; place-items: center; width: min(62%, 640px); }
+.film-play picture, .film-play img { width: 100%; height: 100%; }
+.film-play img { object-fit: cover; }
+.film-btn {
+  position: absolute;
+  inset-block-start: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  display: grid;
+  place-items: center;
+  width: clamp(52px, 13cqi, 88px);
+  aspect-ratio: 1;
+  background: var(--read);
+  color: var(--deep);
+  box-shadow: 0 0 0 6px rgba(15, 26, 34, 0.32);
+}
+.film-btn .i { width: 40%; height: 40%; margin-inline-start: 6%; }
+.film-play:hover .film-btn, .film-play:focus-visible .film-btn { background: #82d0f1; }
+/* Without a poster: the ticks, faint, and the film's title. */
+.film-art { position: absolute; inset-block: -12%; inset-inline-end: -4%; display: grid; place-items: center; width: min(62%, 640px); }
 .film-ticks { width: 100%; height: auto; }
 .film-ticks .t1 { fill: #22343f; }
 .film-ticks .t2 { fill: #1f4458; stroke: var(--slate); stroke-width: 12; paint-order: stroke; }
-.film-kicker { display: block; margin-block-end: 8px; color: var(--mist); font-weight: 600; }
-.film-title { display: block; font-size: clamp(1.9rem, 4.4vw, 3.3rem); font-weight: 700; font-stretch: 85%; line-height: 1.02; }
-.film-meta { display: block; margin-block-start: 10px; color: var(--mist); }
-.film-btn { display: inline-flex; align-items: center; gap: 10px; justify-self: start; margin-block-start: 22px; padding: 12px 20px; background: var(--read); color: var(--deep); font-weight: 700; }
-.film-btn .i { width: 18px; height: 18px; }
-.film-play:hover .film-btn { background: #82d0f1; }
+.film-stand { position: absolute; inset-inline-start: 6%; inset-block-end: 9%; max-width: 46%; font-size: clamp(1.4rem, 6cqi, 2.8rem); font-weight: 700; font-stretch: 85%; line-height: 1.02; }
 .film-frame { display: block; width: 100%; aspect-ratio: 16 / 9; border: 2px solid var(--slate); background: #000000; }
-.film-note { margin-block-start: 12px; color: var(--muted); font-size: 0.96rem; }
+.film-cap { padding-block-start: 14px; }
+.film-cap p { margin: 0; }
+.film-kicker { margin-block-end: 6px !important; color: var(--muted); font-weight: 600; }
+.film-title { font-size: clamp(1.8rem, 3.4vw, 2.7rem); font-weight: 700; font-stretch: 85%; line-height: 1.04; }
+.film-meta { color: var(--muted); }
+.film .film-meta { margin-block-start: 10px !important; }
+.film-name { display: block; font-weight: 700; }
+.film-note { margin-block-start: 12px !important; color: var(--muted); font-size: 0.96rem; }
+@media (min-width: 900px) { .film .film-cap { padding-block: 0 4px; } }
+/* Further films of a tool: a small poster beside the title. */
+.also-link { display: grid; grid-template-columns: 144px minmax(0, 1fr); gap: 14px; align-items: center; color: var(--ink); text-decoration: none; }
+.also-link picture, .also-link img { width: 144px; height: auto; aspect-ratio: 16 / 9; }
+.also-link img { border: 2px solid var(--slate); object-fit: cover; }
+.also-name { display: block; color: var(--link); font-weight: 600; text-decoration: underline; text-underline-offset: 0.18em; text-decoration-thickness: 1px; }
+.also-link:hover .also-name { text-decoration-thickness: 2px; }
+.also-meta { display: block; color: var(--muted); font-size: 0.92rem; }
 
 /* --- questions -------------------------------------------------------------------------------------------------- */
 .faq h2 { margin-block-end: 30px; }
@@ -542,11 +574,8 @@ html:lang(ar) .tool-h1, html:lang(hi) .tool-h1 { line-height: 1.25; }
 .pb-desc { color: var(--ink); }
 .pb-hint { padding: 10px 12px; border-inline-start: 4px solid var(--tick-grey); background: var(--mock-bg); color: var(--muted); font-size: 0.95rem; }
 
-.film-tool { min-height: clamp(230px, 26vw, 330px); }
-.film-tool .film-title { font-size: clamp(1.7rem, 3.4vw, 2.6rem); }
-.also-k { margin-block: 18px 6px; font-weight: 600; }
-.also { display: grid; gap: 6px; margin: 0 0 12px; padding: 0; list-style: none; }
-.also a { font-weight: 600; }
+.also-k { margin-block: 22px 10px; font-weight: 600; }
+.also { display: grid; gap: 12px; margin: 0 0 14px; padding: 0; list-style: none; }
 .tool-shot { margin: clamp(48px, 7vw, 84px) 0 0; }
 .tool-shot img { width: 100%; height: auto; aspect-ratio: 16 / 10; border: 2px solid var(--line-strong); background: var(--slate); }
 

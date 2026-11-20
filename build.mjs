@@ -17,6 +17,8 @@ const cfg = JSON.parse(read('site.config.json'));
 const chromeUi = JSON.parse(read('content/chrome-ui.json')).labels;
 const webstore = JSON.parse(read('content/webstore.json')).labels;
 const panelTexts = JSON.parse(read('content/panel.json')).texts;
+// The films that have their poster in src/img (made by tools/film-frames.py).
+const frames = new Set(fs.readdirSync(path.join(ROOT, 'src', 'img')).map((f) => /^film-(.+)-1280\.webp$/.exec(f)).filter(Boolean).map((m) => m[1]));
 const sha = (data, enc = 'hex') => String(crypto.createHash('sha256').update(data).digest(enc));
 
 // --- texts ---------------------------------------------------------------------------------------------------------
@@ -166,7 +168,7 @@ for (const lang of cfg.languages) {
   const context = (depth) => {
     const base = '../'.repeat(depth);
     return {
-      t, ta, ui, uiAlt, listing: list, panel, cfg, lang, langs: cfg.languages, base, ogImage,
+      t, ta, ui, uiAlt, listing: list, panel, cfg, lang, langs: cfg.languages, base, ogImage, frames,
       css: cssRef, js: jsRef,
       preloads: fonts.map((f) => `<link rel="preload" href="${base}assets/fonts/${f}" as="font" type="font/woff2" crossorigin>`).join('\n'),
       redirect: english ? REDIRECT : '',

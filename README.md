@@ -21,7 +21,7 @@ TwoTicks is installed only from its page in the Chrome Web Store: https://chrome
 | `content/chrome-ui.json` | Chrome's own words in each language ('Add "$1"?', "Add extension", "Pin", "Remove from Chrome" and more), read from Chrome by `tools/chrome-ui.cjs` |
 | `content/webstore.json` | The Chrome Web Store's words in each language ("Add to Chrome" and the store's name), read from the store's page |
 | `src/fonts/`, `src/fonts.css` | IBM Plex, served from the site itself (`tools/fonts.mjs`; licence in `licenses/`) |
-| `src/img/` | Screenshots, the link preview and the icons (`tools/images.py`, from the extension's store pictures) |
+| `src/img/` | Screenshots, the link preview and the icons (`tools/images.py`, from the extension's store pictures); the films' posters (`tools/film-frames.py`, from the films' own YouTube thumbnails, so nothing loads from YouTube before a click) |
 
 ## Commands
 
@@ -30,6 +30,7 @@ node build.mjs                      the site into dist/
 node tools/serve.mjs                look at dist/ on http://localhost:8723/
 node tools/chrome-ui.cjs --pak-only Chrome's words again, from the installed Google Chrome
 node tools/panel-texts.cjs "<extension folder>"   the panel's words again, from the extension
+python -I tools/film-frames.py "<project folder>"   the films' posters again
 ```
 
 ## Before a new version

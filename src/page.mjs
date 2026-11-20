@@ -91,16 +91,29 @@ function common(c) {
   return { store, chip, addTitle, vars, T, storeLink, home, newTab, ta };
 }
 
-function filmBox(c, x, film, extraClass = '') {
-  return `<a class="film-play${extraClass ? ` ${extraClass}` : ''}" href="https://youtu.be/${film.id}" data-film="${film.id}" data-hl="${c.lang.code}" data-title="${esc(film.title)}">
-          <span class="film-art" aria-hidden="true">${ticks('film-ticks')}</span>
-          <span class="film-text">
-            ${film.kicker ? `<span class="film-kicker">${film.kicker}</span>` : ''}
-            <span class="film-title" lang="en">${esc(film.title)}</span>
-            <span class="film-meta">${x.T('video.meta', { duration: esc(minSec(film.seconds)) })}</span>
-          </span>
-          <span class="film-btn">${I.play}<span>${x.T('video.play')}</span></span>
-        </a>`;
+// The poster of a film: its own YouTube thumbnail, served by the site (tools/film-frames.py), so that nothing loads
+// from YouTube before a click.
+function poster(c, id, sizes) {
+  const src = (w, f) => `${c.base}assets/img/film-${id}-${w}.${f}`;
+  return `<picture>
+            <source type="image/avif" srcset="${src(640, 'avif')} 640w, ${src(1280, 'avif')} 1280w" sizes="${sizes}" width="1280" height="720">
+            <img src="${src(1280, 'webp')}" srcset="${src(640, 'webp')} 640w, ${src(1280, 'webp')} 1280w" sizes="${sizes}" width="1280" height="720" alt="" loading="lazy" decoding="async">
+          </picture>`;
+}
+
+// A film: the poster with a play button; a click puts YouTube's player in its place (src/app.js). Where a film has
+// no poster yet, the ticks and its title stand in. The caption stays below the player.
+function filmFig(c, x, film, caption, sizes) {
+  const art = c.frames.has(film.id)
+    ? poster(c, film.id, sizes)
+    : `<span class="film-art" aria-hidden="true">${ticks('film-ticks')}</span><span class="film-stand" lang="en" aria-hidden="true">${esc(film.title)}</span>`;
+  return `<figure class="film-fig">
+        <a class="film-play" href="https://youtu.be/${film.id}" data-film="${film.id}" data-hl="${c.lang.code}" data-title="${esc(film.title)}">
+          ${art}
+          <span class="film-btn">${I.play}<span class="vh">${x.T('video.play')}: <span lang="en">${esc(film.title)}</span></span></span>
+        </a>
+        <figcaption class="film-cap">${caption}</figcaption>
+      </figure>`;
 }
 
 function shot(c, x, s, sizes = '(min-width: 980px) 720px, 86vw') {
@@ -371,8 +384,12 @@ ${toolGroups(c, x, (tool) => `tools/${tool.slug}/`)}
       </div>
       <p class="langs-line"><b>${esc(listing.languages.name)}:</b> ${esc(listing.languages.text)}</p>
       <div class="film">
-        ${filmBox(c, x, { id: cfg.youtube.film, title: cfg.youtube.filmTitle, seconds: cfg.youtube.seconds, kicker: T('video.title') })}
-        <p class="film-note">${T('video.note')} <a href="${esc(cfg.youtube.channel)}">${T('video.channel')}</a></p>
+        ${filmFig(c, x, { id: cfg.youtube.film, title: cfg.youtube.filmTitle }, `
+          <p class="film-kicker">${T('video.title')}</p>
+          <p class="film-title" lang="en">${esc(cfg.youtube.filmTitle)}</p>
+          <p class="film-meta">${T('video.meta', { duration: esc(minSec(cfg.youtube.seconds)) })}</p>
+          <p class="film-note">${T('video.note')} <a href="${esc(cfg.youtube.channel)}">${T('video.channel')}</a></p>`,
+          '(min-width: 1240px) 680px, (min-width: 900px) 60vw, 92vw')}
       </div>
     </div>
   </section>
@@ -409,7 +426,8 @@ export function renderTool(c, tool) {
   const extra = [];
   if (tool.slug === 'several-chats') extra.push(`<p class="tool-note">${esc(listing.several)}</p>`);
   if (tool.slug === 'ai-assistant') extra.push(`<p class="tool-note"><b>${esc(listing.privacy[2].name)}:</b> ${esc(listing.privacy[2].text)}</p>`);
-  const more = (tool.more || []).map((f) => `<li><a href="https://youtu.be/${f.id}"><span lang="en">${esc(f.title)}</span> (${esc(minSec(f.seconds))})</a></li>`).join('');
+  const meta = (f) => T('video.meta', { duration: esc(minSec(f.seconds)) });
+  const more = (tool.more || []).map((f) => `<li><a class="also-link" href="https://youtu.be/${f.id}">${c.frames.has(f.id) ? poster(c, f.id, '144px') : ''}<span><span class="also-name" lang="en">${esc(f.title)}</span><span class="also-meta">${meta(f)}</span></span></a></li>`).join('');
 
   const main = `  <section class="hero tool-hero" aria-labelledby="tool-title">
     <div class="wrap hero-in tool-hero-in">
@@ -448,7 +466,8 @@ export function renderTool(c, tool) {
       </div>
       <div class="tool-col">
         <h2>${T('tool.film')}</h2>
-        ${filmBox(c, x, tool.film, 'film-tool')}
+        ${filmFig(c, x, tool.film, `<p><span class="film-name" lang="en">${esc(tool.film.title)}</span> <span class="film-meta">${meta(tool.film)}</span></p>`,
+          '(min-width: 1240px) 550px, (min-width: 980px) 48vw, 92vw')}
         ${more ? `<p class="also-k">${T('tool.alsoFilm')}</p><ul class="also">${more}</ul>` : ''}
         <p class="film-note">${T('video.note')}</p>
       </div>
