@@ -19,7 +19,7 @@
     "show": false
   },
   "reviews": {
-    "show": false
+    "show": true
   },
   "tools": [
     {
