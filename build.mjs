@@ -1,16 +1,20 @@
 // Copyright (c) 2026 Osman Bodur. All rights reserved.
 // Builds the site of TwoTicks into dist/: per language (English at the root, the others in their folders) the home
-// page, one page for each tool (tools/<slug>/) and the version history (versions/); the stylesheet with the fonts,
-// the script, the pictures, 404.html, robots.txt and sitemap.xml.
+// page, one page for each tool (tools/<slug>/) and the version history (versions/); once, in English, the privacy
+// policy of the extension (privacy/, the address privacyUrl in site.config.json) and the film pages that the
+// extension's film window opens (watch/<number>/, not linked from the site); the stylesheet with the fonts, the
+// script, the pictures, 404.html, robots.txt and sitemap.xml.
 // TwoTicks is installed from the Chrome Web Store; the site guides there and through Chrome's own steps.
 // Usage: node build.mjs
 import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
 import { fileURLToPath } from 'node:url';
-import { render, renderTool, renderVersions, esc, flag } from './src/page.mjs';
+import { render, renderTool, renderVersions, renderPrivacy, esc, flag } from './src/page.mjs';
 import { renderWhatsNew } from './src/whatsnew.mjs';
 import { renderReviews } from './src/reviews.mjs';
+import { markdown } from './src/markdown.mjs';
+import { renderWatch } from './src/watch.mjs';
 
 const ROOT = path.dirname(fileURLToPath(import.meta.url));
 const OUT = path.join(ROOT, 'dist');
@@ -166,6 +170,16 @@ const versions = fs.readdirSync(path.join(ROOT, 'content', 'whatsnew')).filter((
   })
   .sort((a, b) => newer(a.version, b.version));
 const pageRels = ['', ...cfg.tools.map((tool) => `tools/${tool.slug}/`), ...(versions.length ? ['versions/'] : [])];
+// The privacy policy of the extension, in English only: content/privacy-policy.md, a copy of the extension's
+// store/privacy-policy.md (tools/new-version.mjs copies it). It stands at privacyUrl, a folder of this site; every
+// page's footer and the home page's questions link to it.
+if (typeof cfg.privacyUrl !== 'string' || !cfg.privacyUrl.startsWith(cfg.siteUrl) || cfg.privacyUrl === cfg.siteUrl || !cfg.privacyUrl.endsWith('/')) {
+  throw new Error(`site.config.json: "privacyUrl" must be a folder of ${cfg.siteUrl}, such as ${cfg.siteUrl}privacy/, not ${cfg.privacyUrl}`);
+}
+const PRIVACY_REL = cfg.privacyUrl.slice(cfg.siteUrl.length);
+const policy = markdown(read('content/privacy-policy.md'), { esc });
+if (!policy.title || !policy.html) throw new Error('content/privacy-policy.md: no "# " title, or no text below it');
+let privacyBytes = 0;
 const pages = [];
 for (const lang of cfg.languages) {
   const dict = JSON.parse(read(`i18n/${lang.code}.json`));
@@ -198,7 +212,7 @@ for (const lang of cfg.languages) {
     const base = '../'.repeat(depth);
     return {
       t, ta, ui, uiAlt, listing: list, panel, cfg, lang, langs: cfg.languages, base, ogImage, frames, bigFrames, hasVersions: versions.length > 0,
-      css: cssRef, js: jsRef,
+      privacyRel: PRIVACY_REL, css: cssRef, js: jsRef,
       preloads: fonts.map((f) => `<link rel="preload" href="${base}assets/fonts/${f}" as="font" type="font/woff2" crossorigin>`).join('\n'),
       redirect: english ? REDIRECT : '',
       csp: csp(english ? redirectHash : ''),
@@ -226,8 +240,24 @@ for (const lang of cfg.languages) {
     writePage(`${lang.path}tools/${tool.slug}/`, html);
     toolBytes += Buffer.byteLength(html);
   }
+  // The privacy policy, once, with the English texts. No language redirect there: the page has no other language.
+  if (lang.code === 'en') {
+    const html = renderPrivacy({ ...context(PRIVACY_REL.split('/').filter(Boolean).length), redirect: '', csp: csp('') }, policy);
+    check(html, 'privacy');
+    writePage(PRIVACY_REL, html);
+    privacyBytes = Buffer.byteLength(html);
+  }
   pages.push({ lang, bytes: Buffer.byteLength(home), toolBytes });
 }
+if (!privacyBytes) throw new Error('site.config.json: no language "en" for the privacy policy');
+
+// The film pages: one for each how-to film of the extension (content/films.json, copied from its films.js by
+// tools/films.cjs), at watch/<number>/, the address the extension's film window opens. Not linked from the site
+// and not in the sitemap.
+const films = JSON.parse(read('content/films.json')).films;
+if (!Array.isArray(films) || !films.length) throw new Error('content/films.json: no films');
+if (new Set(films.map((f) => f.n)).size !== films.length) throw new Error('content/films.json: two films have the same number');
+for (const film of films) writePage(`watch/${film.n}/`, renderWatch(film, { esc, sha }));
 
 // 404: GitHub Pages serves it for every missing address, at any depth, so its links start at the site's root.
 const rootPath = new URL(cfg.siteUrl).pathname;
@@ -257,6 +287,7 @@ const urls = pageRels.flatMap((rel) => {
   const alt = cfg.languages.map((l) => `    <xhtml:link rel="alternate" hreflang="${l.code}" href="${cfg.siteUrl}${l.path}${rel}"/>`).join('\n');
   return cfg.languages.map((l) => `  <url>\n    <loc>${cfg.siteUrl}${l.path}${rel}</loc>\n    <lastmod>${today}</lastmod>\n${alt}\n    <xhtml:link rel="alternate" hreflang="x-default" href="${cfg.siteUrl}${rel}"/>\n  </url>`);
 });
+urls.push(`  <url>\n    <loc>${cfg.privacyUrl}</loc>\n    <lastmod>${today}</lastmod>\n  </url>`);
 fs.writeFileSync(path.join(OUT, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 ${urls.join('\n')}
@@ -266,6 +297,8 @@ fs.writeFileSync(path.join(OUT, 'robots.txt'), `User-agent: *\nAllow: /\nSitemap
 fs.writeFileSync(path.join(OUT, '.nojekyll'), '');
 
 const kb = (n) => `${Math.round(n / 1024)} KB`;
-console.log(`Built ${pages.length * pageRels.length} pages in dist/ for ${cfg.siteUrl}: ${pages.length} languages, each with its home page, ${cfg.tools.length} tool pages${versions.length ? ` and the history of ${versions.length} versions` : ''}`);
+console.log(`Built ${pages.length * pageRels.length + 1} pages in dist/ for ${cfg.siteUrl}: ${pages.length} languages, each with its home page, ${cfg.tools.length} tool pages${versions.length ? ` and the history of ${versions.length} versions` : ''}; the privacy policy in English`);
 for (const p of pages) console.log(`  ${(p.lang.path || '(root)').padEnd(8)} ${p.lang.code.padEnd(6)} home ${kb(p.bytes)}, tools ${kb(p.toolBytes)}`);
+console.log(`  ${PRIVACY_REL.padEnd(8)} en     privacy policy ${kb(privacyBytes)} (${policy.title})`);
+console.log(`  watch/   en     ${films.length} film pages for the extension's film window: ${films.map((f) => f.n).sort().join(', ')}`);
 console.log(`  assets: site.css ${kb(Buffer.byteLength(css))}, app.js ${kb(Buffer.byteLength(js))}`);

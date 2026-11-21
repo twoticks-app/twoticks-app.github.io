@@ -1,0 +1,108 @@
+{
+  "read": "2026-11-21",
+  "extensionVersion": "1.2.0",
+  "films": [
+    {
+      "n": "01",
+      "yt": "5-FYggT6LfY",
+      "s": 104,
+      "title": "Getting started"
+    },
+    {
+      "n": "16",
+      "yt": "Q62NyjNYKKY",
+      "s": 104,
+      "title": "Separate window"
+    },
+    {
+      "n": "07",
+      "yt": "09oqMhSMDyk",
+      "s": 108,
+      "title": "AI setup"
+    },
+    {
+      "n": "17",
+      "yt": "otiB62h4UVs",
+      "s": 108,
+      "title": "Sending in the background"
+    },
+    {
+      "n": "02",
+      "yt": "g2rCmZSxTa0",
+      "s": 104,
+      "title": "Export chats"
+    },
+    {
+      "n": "03",
+      "yt": "4E59GVUOK74",
+      "s": 99,
+      "title": "Export contacts"
+    },
+    {
+      "n": "04",
+      "yt": "t7cD2IgxDVo",
+      "s": 91,
+      "title": "Download media"
+    },
+    {
+      "n": "05",
+      "yt": "MxfcjbwJpSs",
+      "s": 110,
+      "title": "Chat analysis"
+    },
+    {
+      "n": "06",
+      "yt": "VNWywlwXie8",
+      "s": 110,
+      "title": "Unanswered chats"
+    },
+    {
+      "n": "08",
+      "yt": "iMwdRQjIPxI",
+      "s": 108,
+      "title": "AI assistant"
+    },
+    {
+      "n": "09",
+      "yt": "BJ1YCNMrESA",
+      "s": 106,
+      "title": "Message without saving the number"
+    },
+    {
+      "n": "10",
+      "yt": "XCGlXF271ss",
+      "s": 107,
+      "title": "Quick replies"
+    },
+    {
+      "n": "11",
+      "yt": "_GVSHYH3cZU",
+      "s": 109,
+      "title": "Schedule a message"
+    },
+    {
+      "n": "12",
+      "yt": "ncmyGvWMP3g",
+      "s": 108,
+      "title": "Compliments"
+    },
+    {
+      "n": "13",
+      "yt": "aLY9XK4iEDk",
+      "s": 108,
+      "title": "One message to several chats"
+    },
+    {
+      "n": "14",
+      "yt": "AIt5K9Y0Dn4",
+      "s": 108,
+      "title": "Privacy screen"
+    },
+    {
+      "n": "15",
+      "yt": "SKWaXkueYwA",
+      "s": 104,
+      "title": "Deleted and edited messages"
+    }
+  ]
+}

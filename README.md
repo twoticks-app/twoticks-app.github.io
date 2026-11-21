@@ -8,15 +8,17 @@ TwoTicks is installed only from its page in the Chrome Web Store: https://chrome
 
 ## How the site is made
 
-`node build.mjs` writes the site into `dist/`: in each language the home page, the version history (`versions/`) and a page for each of the thirteen tools (`tools/<tool>/`, for example `tools/scheduler/` or `tr/tools/scheduler/`), with the tool's film, its screenshot where there is one, the store's words for it and the panel's. GitHub Actions (`.github/workflows/pages.yml`) runs it on every push to `main` and publishes `dist/` on GitHub Pages. The site needs no packages: Node 22 or newer is enough.
+`node build.mjs` writes the site into `dist/`: in each language the home page, the version history (`versions/`) and a page for each of the thirteen tools (`tools/<tool>/`, for example `tools/scheduler/` or `tr/tools/scheduler/`), with the tool's film, its screenshot where there is one, the store's words for it and the panel's. In English only, it also writes the extension's privacy policy (`privacy/`, which every page's footer links to and whose address goes into the Chrome Web Store's privacy field) and a page for each of the extension's how-to films (`watch/01/` to `watch/17/`), which the extension's film window opens; those film pages are not linked from the site and not in the sitemap. GitHub Actions (`.github/workflows/pages.yml`) runs it on every push to `main` and publishes `dist/` on GitHub Pages. The site needs no packages: Node 22 or newer is enough.
 
 | Where | What |
 |---|---|
-| `src/page.mjs` | The pages (the home page and the page of a tool), as templates for every language |
-| `site.config.json` | The addresses, the languages, and the tools with their screenshots and films: the tool's film, its step-by-step film (`steps`), its everyday stories (`stories`) and further films (`more`); the home page's further films (`youtube.more`) |
+| `src/page.mjs` | The pages (the home page, the page of a tool, the version history and the privacy policy), as templates for every language |
+| `site.config.json` | The addresses (`privacyUrl`: the privacy policy's page on this site), the languages, and the tools with their screenshots and films: the tool's film, its step-by-step film (`steps`), its everyday stories (`stories`) and further films (`more`); the home page's further films (`youtube.more`) |
 | `src/styles.css`, `src/app.js` | Its look and its script (the ticks of the install steps, the notice for other browsers, the language menu, the film) |
 | `i18n/<language>.json` | The site's own texts in each language |
 | `content/listing/<language>.txt` | The Chrome Web Store description in each language (copied from `store/listing/1.1.0/` of the extension): the tools, the price, the permissions, the support line |
+| `content/privacy-policy.md`, `src/markdown.mjs`, `src/parts/doc.css` | The extension's privacy policy, a copy of its `store/privacy-policy.md`, shown in English at `privacy/`; `src/markdown.mjs` turns its headings, paragraphs, lists, tables, bold words and links into HTML and escapes everything else |
+| `content/films.json`, `src/watch.mjs` | The extension's how-to films (number, YouTube video, length and the panel's English title), read from its `films.js` and `lang/en.js` by `tools/films.cjs`; one page each at `watch/<number>/`: YouTube's privacy-enhanced player on black and nothing else (no script, no font), because YouTube refuses that player inside an extension's page or on its own ("Error 153") |
 | `content/panel.json` | The panel's own words for each tool in each language (title, text, hint), read from the extension by `tools/panel-texts.cjs` |
 | `content/chrome-ui.json` | Chrome's own words in each language ('Add "$1"?', "Add extension", "Pin", "Remove from Chrome" and more), read from Chrome by `tools/chrome-ui.cjs` |
 | `content/webstore.json` | The Chrome Web Store's words in each language ("Add to Chrome" and the store's name), read from the store's page |
@@ -33,10 +35,11 @@ node build.mjs                      the site into dist/
 node tools/serve.mjs                look at dist/ on http://localhost:8723/
 node tools/chrome-ui.cjs --pak-only Chrome's words again, from the installed Google Chrome
 node tools/panel-texts.cjs "<extension folder>"   the panel's words again, from the extension
+node tools/films.cjs "<extension folder>"         the list of how-to films again, from the extension
 python -I tools/film-frames.py "<project folder>"   the films' posters again
 node tools/og-images.mjs "<project folder>"        the link previews again
 node tools/reviews.mjs                              the store's reviews again
-node tools/new-version.mjs <version>                a new version of TwoTicks (see below)
+node tools/new-version.mjs <version>                a new version of TwoTicks: store texts, privacy policy, panel words, films (see below)
 ```
 
 ## A new version of TwoTicks
@@ -47,8 +50,8 @@ When the extension has the new version's store descriptions (`store/listing/<ver
 node tools/new-version.mjs <version> [--whats-new] [--publish]
 ```
 
-It first checks that all twelve descriptions have the structure `build.mjs` reads, and stops before changing anything when one does not. Then it copies them to `content/listing/` (`pt_BR` and `pt_PT` become `pt-BR` and `pt-PT`), reads the panel's texts again into `content/panel.json`, builds the site and shows what changed. With `--whats-new` the home pages show the version's changes from `content/whatsnew/<version>.json` (write that file first, like `content/whatsnew/1.1.0.json`), and the command writes the day into it, so the version history lists the version too; `"whatsNew"` in `site.config.json` switches the home pages' part on and off. With `--publish` it commits and pushes, and GitHub Actions publishes the site.
+It first checks that all twelve descriptions have the structure `build.mjs` reads and that the extension's privacy policy has its title and its "Last updated:" line, and stops before changing anything when one does not. Then it copies the descriptions to `content/listing/` (`pt_BR` and `pt_PT` become `pt-BR` and `pt-PT`) and the privacy policy (`store/privacy-policy.md`) to `content/privacy-policy.md`, reads the panel's texts again into `content/panel.json` and the list of films into `content/films.json`, builds the site and shows what changed. Before a version goes to the store for review, the site must already carry its privacy policy and its film pages (the store's privacy field points to `privacy/`, and the version's film window opens `watch/<number>/`). Run this command then; or, while the version's store descriptions are not written yet, copy `store/privacy-policy.md` of the extension to `content/privacy-policy.md` and run `node tools/films.cjs "<extension folder>"`, then build, look and push. With `--whats-new` the home pages show the version's changes from `content/whatsnew/<version>.json` (write that file first, like `content/whatsnew/1.1.0.json`), and the command writes the day into it, so the version history lists the version too; `"whatsNew"` in `site.config.json` switches the home pages' part on and off. With `--publish` it commits and pushes, and GitHub Actions publishes the site.
 
-The page sets no cookies and has no analytics. The film loads from YouTube (youtube-nocookie.com) only when someone presses play.
+The page sets no cookies and has no analytics. The film loads from YouTube (youtube-nocookie.com) only when someone presses play. A film page under `watch/` loads YouTube's player as soon as it opens; the extension opens one only when its user clicks a film.
 
 Copyright (c) 2026 Osman Bodur. All rights reserved. TwoTicks is not affiliated with, endorsed by or sponsored by WhatsApp or Meta.

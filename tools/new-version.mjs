@@ -2,8 +2,10 @@
 // Brings a new version of TwoTicks onto the site in one command. It copies the version's Chrome Web Store descriptions
 // from the extension to content/listing/ (store/listing/<version>/description.<locale>.txt, or
 // store/listing/description.<locale>.txt when the version has no folder of its own; pt_BR and pt_PT become pt-BR and
-// pt-PT), but only once all of them have the structure build.mjs reads; reads the panel's texts again
-// (tools/panel-texts.cjs, into content/panel.json); with --whats-new, shows the version's "What's new" on the home page
+// pt-PT), but only once all of them have the structure build.mjs reads; copies the extension's privacy policy
+// (store/privacy-policy.md, to content/privacy-policy.md, the page privacy/); reads the panel's texts again
+// (tools/panel-texts.cjs, into content/panel.json) and the list of how-to films (tools/films.cjs, from films.js into
+// content/films.json, the pages watch/<number>/); with --whats-new, shows the version's "What's new" on the home page
 // (whatsNew in site.config.json, texts in content/whatsnew/<version>.json); builds the site and shows what changed.
 // Nothing is committed or pushed without --publish.
 // Usage: node tools/new-version.mjs <version> [--ext "<extension folder>"] [--whats-new] [--publish]
@@ -26,7 +28,7 @@ const USAGE = 'Usage: node tools/new-version.mjs <version> [--ext "<extension fo
 const SHAPE = [1, 4, 9, 5, 1, 2, 4, 'N', 1, 1, 3];
 // What this command writes. With --publish, other changes that were there before it ran stop it, because git add -A
 // would put them into the version's commit.
-const OWN = ['content/listing/', 'content/panel.json', 'content/whatsnew/', 'site.config.json'];
+const OWN = ['content/listing/', 'content/panel.json', 'content/privacy-policy.md', 'content/films.json', 'content/whatsnew/', 'site.config.json'];
 
 function stop(message) {
   console.error(`\n${message}`);
@@ -64,6 +66,12 @@ ext = path.resolve(ext);
 // --- checks, before anything changes -------------------------------------------------------------------------------
 const listingDir = path.join(ext, 'store', 'listing');
 if (!fs.existsSync(listingDir)) stop(`${ext} has no store/listing/. Is it the TwoTicks extension folder? Name it with --ext.`);
+// The privacy policy, as build.mjs reads it: a "# " title and the day of its last change.
+const policyFrom = path.join(ext, 'store', 'privacy-policy.md');
+const policyTo = path.join(ROOT, 'content', 'privacy-policy.md');
+const policyText = fs.existsSync(policyFrom) ? fs.readFileSync(policyFrom, 'utf8') : '';
+const policyDate = (/^Last updated: (.+?)\s*$/m.exec(policyText) || [])[1];
+if (!/^# \S/m.test(policyText) || !policyDate) stop(`${policyFrom} is missing, or has no "# " title or no "Last updated:" line. Nothing was changed.`);
 let codes;
 try {
   codes = JSON.parse(fs.readFileSync(CONFIG, 'utf8')).languages.map((l) => l.code);
@@ -139,9 +147,16 @@ for (const f of files) {
 }
 console.log(`content/listing/: ${files.length} descriptions with the structure ${shapes[0].join(',')}, ${changed} changed`);
 
-// --- 2. the panel's texts ------------------------------------------------------------------------------------------
+// --- 1b. the privacy policy ----------------------------------------------------------------------------------------
+const policySame = fs.existsSync(policyTo) && fs.readFileSync(policyTo).equals(fs.readFileSync(policyFrom));
+if (!policySame) fs.copyFileSync(policyFrom, policyTo);
+console.log(`content/privacy-policy.md: the privacy policy of ${policyDate}, ${policySame ? 'unchanged' : 'copied from store/privacy-policy.md'}`);
+
+// --- 2. the panel's texts and the films ----------------------------------------------------------------------------
 console.log('\n> node tools/panel-texts.cjs');
 if (!run(process.execPath, [path.join('tools', 'panel-texts.cjs'), ext])) stop('tools/panel-texts.cjs failed (see above).');
+console.log('\n> node tools/films.cjs');
+if (!run(process.execPath, [path.join('tools', 'films.cjs'), ext])) stop('tools/films.cjs failed (see above).');
 
 // --- 3. What's new -------------------------------------------------------------------------------------------------
 if (whatsNew) {

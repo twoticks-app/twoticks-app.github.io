@@ -1,0 +1,143 @@
+# Privacy Policy for TwoTicks
+
+Last updated: 21 November 2026
+
+TwoTicks ("the extension") is provided by Osman Bodur, a private individual living in Austria ("I", "me"). It adds tools to WhatsApp Web (web.whatsapp.com) in your Chrome browser. This policy explains what data the extension handles, where it goes and what I receive. The extension is not affiliated with, endorsed by or sponsored by WhatsApp or Meta.
+
+## Summary
+
+- The extension runs inside your browser, on web.whatsapp.com. I run no servers for it and receive none of the data you handle with it: no chats, contacts, API keys or usage data.
+- There is no analytics, advertising or tracking, and no data is sold.
+- TwoTicks is free of charge. There is no account, no payment and no licence, and the extension contacts no payment service.
+- Apart from the video tutorials you play and the links you click (see "Video tutorials and links"), the extension contacts only one kind of outside service, and only after you act: **the AI service you choose yourself** for the optional AI functions (the AI assistant, reply drafts in "Unanswered", an order of urgency for the digest over all chats, compliment ideas and, where Chrome's own model cannot do it on your computer, writing down voice messages), with your own API key, each time you confirm an AI request. Before every request TwoTicks shows exactly what will be sent, in a window of its own that WhatsApp's page cannot read or change, and sends only after you click "Send" there, unless you switched this check off for that service and model ("Don't show this again"). The settings page also asks that service for the list of models your account offers (right after you save a key, when you click "Load models", or when you open the AI settings and no list is stored yet) and sends a fixed test request when you click "Test connection"; only your API key goes along with these, never anything from your chats.
+- Instead of an outside service you can choose **Chrome's built-in model**: it is part of the Chrome browser and answers on your own computer. The extension then contacts no service at all for the AI assistant.
+
+## What data the extension handles
+
+To provide its features, the extension reads data that WhatsApp Web already shows you in your browser:
+
+- Chats and messages (text, captions, media, shared locations, contact cards and polls, sender names and times): to export chats, download media, analyze a chat, prepare the digest over your recent chats ("Today"), find chats waiting for your reply and, if you ask for it, to send messages (and the documents, images, PDF files or voice messages you choose) to your AI service.
+- Your contacts: the people in your address book and the people you have a one-to-one chat with (names, phone numbers, WhatsApp IDs): to export them as an Excel or VCF file. People you know only from a group are not exported.
+- Messages that a contact deletes for everyone or edits afterwards: so the "Deleted" tool can show you the original text. This works by itself from the moment TwoTicks runs, also when you never open that tool, until you switch it off there.
+- Phone numbers and messages you type into the direct message, quick replies, scheduler, compliments and "Several chats" tools, and the notes you write for AI compliment ideas.
+- If you set up the AI assistant: your API key for the AI service you chose, and your settings for it.
+
+## Where data is stored
+
+- **Files you export** (JSON, TXT, Excel, VCF, ZIP, Markdown reports and calendar files) are saved on your computer through Chrome's normal download function. You decide where they are kept.
+- **In the site storage of web.whatsapp.com**, in this browser on this device:
+  - scheduled messages (recipient, text, time, status and, for a repeating message, how often it repeats, how many times it was sent and the last time it was skipped);
+  - your quick replies (short name, text and how often you used each one);
+  - the privacy screen's settings (whether the blur is on and which parts it covers). No message content;
+  - compliment routines: the person, the days and time, whether TwoTicks reminds you or sends automatically, your compliments, the notes, tone and language you set for AI ideas, and when the last compliment was sent and how many so far;
+  - the log of deleted and edited messages (at most 150 entries; small image previews only for the 20 newest). It stays until you clear it, also after WhatsApp Web is closed, and WhatsApp's own page and other extensions allowed on web.whatsapp.com can read this site storage;
+  - up to 8 phone numbers you recently used in the direct message tool;
+  - for the "Several chats" tool: the times of the messages it sent in the last 24 hours (no text and no recipient), so it keeps to its limit of 30 messages in 24 hours;
+  - the chats you marked as "No reply needed" in the "Unanswered" tool or set aside there with "Remind me later", and the ones you marked as "No answer needed" in its "You are waiting" view (at most 300 each: the chat's WhatsApp ID and the ID of its last message, for a chat set aside also the day it comes back; no message text);
+  - your settings: last used tool, country code, the position of the panel button and of the panel, the panel's size and whether it fills the window, the interface language and when you chose it, whether the "Deleted" tool keeps deleted and edited messages, when you last opened the "Deleted" tool, when you first opened the panel, and whether and when TwoTicks asked you to rate it (it asks only once);
+  - a technical note for starting up: the names of parts of WhatsApp Web's own code that TwoTicks waited for when the page loaded and that WhatsApp no longer has (at most five names, each with the time it was noted; a name is forgotten after seven days, or as soon as WhatsApp has such a part again). It keeps later page loads from waiting for them again and says nothing about you, your chats or how you use TwoTicks;
+  - the last information the panel received from the extension: whether sending while WhatsApp Web is closed is switched on, which AI service and model are set up, what they can take besides text (images, PDF files, voice messages), for Chrome's built-in model the languages Chrome reports for it and how much text it takes, and the names and texts of your saved AI instructions. No API key.
+- **In the extension's own storage**, on this device only. WhatsApp's page and other websites cannot read it:
+  - the date and time of the extension's first run and the version that made it, so that installations can be told apart should paid plans ever be introduced (see "TwoTicks is free of charge");
+  - the AI service you chose; your API key for each service you set up (each stays until you remove it); the model chosen for each service and the list of model names each service offered your account; the address of an AI server on your own computer; the ID of the Anthropic workspace you entered, if any; the size of the text window Chrome reports for its built-in model (one number); your request limits; and the services and models for which you switched off the check before sending;
+  - your saved AI instructions;
+  - a log of the last 300 AI requests: time, service, model, kind of task, number of characters sent, the number and total size of images, PDF files and voice recordings sent, token counts and the result (answered or the error). The log holds no message text, no answers, and neither the names nor the contents of files;
+  - the interface language you chose in the toolbar popup or on the settings page, and when you chose it. The extension passes this choice on to TwoTicks' panel on WhatsApp's page, so that the panel opens in the language you chose;
+  - the size and place of the window in which you open WhatsApp Web with TwoTicks ("Open in its own window"), so it opens the same way next time;
+  - while TwoTicks' panel is open in its separate window: the numbers Chrome gives that window and its tab, so the extension finds the window again. They are forgotten when the window closes (if WhatsApp Web's own tab closes first: the next time WhatsApp Web starts, or when Chrome restarts);
+  - while the window of the video tutorials is open: the number Chrome gives that window, so that the next film opens in the same window. It is forgotten when the window closes, and whenever Chrome starts;
+  - for sending while WhatsApp Web is closed: whether it is switched on, the times of the coming scheduled messages and automatic compliments (up to 30; only the times, no recipient and no text) and whether more follow them, and the time and outcome of the last time the extension opened WhatsApp Web for it (how many messages were sent or failed);
+  - a copy of what TwoTicks keeps of yours in the site storage of web.whatsapp.com (listed above): the scheduled messages, quick replies, compliment routines, the privacy screen's settings, the chats marked or set aside in "Unanswered", the recent numbers of the direct message tool, the times of the messages to several chats and your settings; not the log of deleted and edited messages. WhatsApp Web empties its site storage when it signs this browser out (for example when the phone removes the linked device); when the same WhatsApp account signs in here again, TwoTicks puts back what is missing and says so. The copy belongs to one account only and is filed under a code computed from that account's WhatsApp ID: when another account signs in here, the copy of the earlier one is deleted. It follows every change within a second; a copy not renewed for 30 days is no longer used and is deleted, and so is one that would grow beyond 250,000 characters. Unlike the rest of this storage, this copy can be asked for from WhatsApp Web's page, like the site storage it copies.
+- **In memory only**: while WhatsApp Web is open, recent messages are held in memory so that a message deleted later can still be shown (not while the "Deleted" tool is switched off); the result of the "Unanswered" search, of the chat analysis and of the digest over all chats, the words of voice messages that were written down, the last AI answer and AI compliment ideas are kept the same way. All of this is discarded when the tab is closed.
+
+## How data is used
+
+Data is used only for the feature you are using: exporting, analyzing, sending the messages you write or schedule, reminding you of the compliments you planned (and sending them, if you chose that for a routine), showing deleted or edited messages and, when you ask for it, getting an answer from your AI service. Messages you send with the extension are sent by WhatsApp Web from your own account, the same way as messages you type yourself, and only after you start the action (messages to several chats only after you confirm the text and the recipients).
+
+**Sending while WhatsApp Web is closed.** So that a scheduled message or an automatic compliment goes out at its time even when no WhatsApp Web tab is open, the extension sets an alarm in Chrome for shortly before that time. If no WhatsApp Web tab is open then, it opens WhatsApp Web in a minimised window on your computer; WhatsApp Web sends what is due from your account, as it would in a tab you opened, and the window closes again. Nothing is sent to me or to any other server for this. You can switch it off in the extension's settings ("Sending"). If you also tick "Keep Chrome running in the background" there, Chrome keeps running after you close its windows and starts when you sign in to your computer (Chrome's "background" permission); untick it to stop that.
+
+The chat analysis, the digest over all chats ("Today"), the reading of days and times from messages, the calendar files made from them and the reply suggestions in the "Unanswered" tool run entirely on your device. Two things there can send something, each only if you choose it and confirm it in the window that shows what goes out: an order of urgency for the digest from your AI service, and voice messages written down by your AI service where Chrome's own model cannot do it on your computer (both are described under "The AI assistant with your own API key"). "Add to scheduler" only fills in the Scheduler: nothing is planned or sent until you press its button there. "Copy AI prompt" copies recent messages of a chat to your clipboard; they go only where you paste them.
+
+## TwoTicks is free of charge
+
+TwoTicks is free of charge. There is no account, no payment and no licence, and the extension contacts no payment service.
+
+The extension keeps the time and the version of its first run in its own storage on your device, so that installations can be told apart should paid plans ever be introduced. This information never leaves your browser.
+
+Should paid plans be introduced in a later version, this policy will be updated before any payment service is contacted.
+
+## The AI assistant with your own API key
+
+The AI assistant is optional and off until you set it up in the settings. You choose Chrome's built-in model, which needs no account, or a service that you use with your own account:
+
+| Service | Provider | Privacy policy |
+|---|---|---|
+| Chrome's built-in model | runs on your own computer, inside Chrome | — |
+| Anthropic Claude | Anthropic PBC, USA | https://www.anthropic.com/legal/privacy |
+| OpenAI | OpenAI, USA | https://openai.com/policies/privacy-policy |
+| Google Gemini | Google LLC, USA / Google Ireland Ltd. | https://policies.google.com/privacy |
+| Mistral AI | Mistral AI SAS, France | https://legal.mistral.ai/terms/privacy-policy |
+| OpenRouter | OpenRouter, Inc., USA | https://openrouter.ai/privacy |
+| Local server (Ollama, LM Studio) | runs on your own computer | — |
+
+- **Your API key** stays in the extension's own storage on your device. It is sent only to the service it belongs to, with each request (to Anthropic together with the workspace ID, if you entered one). I never see either.
+- **What is sent, and when.** Only when you start a request and confirm it, the extension sends to your service: your instruction (for example "summarise"), today's date and your local time (part of the instructions TwoTicks adds, so that the model can tell what is past or still ahead), the chat's name and its messages that you chose (date, time, sender name as shown in WhatsApp or, without a saved name, the phone number, text and captions, shared locations with their coordinates, names on shared contact cards, poll questions and options; for photos, voice messages and other media only their type or file name; the file itself only where you choose it, as follows). If you tick "Documents" in the AI assistant, the text of the documents you chose there goes along as well (Word, Excel and text files of the chat; the extension reads them into plain text on your device and sends that text, not the file). If you tick "Images", the images you chose there go along too: each is drawn again on your device as a smaller JPEG picture (at most 1568 pixels a side), so only the picture itself is sent and nothing a camera wrote into the file. PDF files you chose under "Documents" go along as they are, where the service takes PDF files; where it takes none (and with Chrome's built-in model), the extension reads the text out of the PDF file on your device and sends that text, not the file (a scanned PDF, which holds pictures of its pages and no text, is left out). A PDF file protected with a password is left out as well, as a file and as text. If you tick "Voice messages", the voice messages you chose there are first written down. Where Chrome's built-in model is on your computer and can listen there, it does this on your own computer, whichever AI service you use for the request: the recording itself goes to no service. Where it is not (it has not been downloaded, or your computer cannot run it) and the AI service you use can write down speech itself (at present Google Gemini and OpenAI), that service does it: the recording then goes to that service, with your key, like any other request. Before each recording goes out, the confirmation shows it with a player to listen to, who sent it and when, and how long it is; this confirmation cannot be switched off, and if you cancel, the recording is not sent. Where neither is possible, voice messages are not offered. The same holds in "Unanswered" and in the chat analysis, where a recording goes to a service only after your own step for it (in "Unanswered" the button in a chat's row, or "Draft with AI" for the voice messages addressed to you, both only while "Write down voice messages" is ticked there; in the chat analysis the option, which is off until you tick it) and never by itself. Afterwards only the words go along, as part of the request's text, where the confirmation shows them before anything is sent. Images are offered only where the service and model you use can take them; a PDF file goes as a file where the service takes PDF files and as its text elsewhere; at most ten images and five documents go with a request, and never anything from messages sent to be viewed once. Like any website, the service also sees your IP address. Chrome asks for your permission before the extension may contact a service at all. The confirmation shows the complete request, including the instructions TwoTicks adds, exactly as it will be sent, every time; it shows every image that goes along and names every PDF file, with who sent it in the chat and when. Before a voice recording goes to a service, it shows the recording itself with a player, the service and the model it goes to, and the fixed words that go with it where the service is given any; a recording that your browser cannot play is not sent. It is drawn by the extension itself, out of reach of WhatsApp's page and of other scripts running there, so nothing else can change what it shows or send in your name. If you tick "Don't show this again" for a service and model, later requests to it go out without this confirmation, right after a click on an AI button; a malicious script running on WhatsApp's page could then use one of your clicks to start such a request; you can switch the check on again in the settings ("Before each AI request"), and it comes back by itself for another service or model, or when you remove the key. A request that carries images or PDF files as files always shows the confirmation, whatever you ticked, and so does every voice recording that goes to a service. The text of a document, also of a PDF file, is part of the request's text, for which your choice "Don't show this again" holds. For the digest over all chats ("Today" in the chat analysis), nothing is sent unless you choose "Sort by urgency with AI" there; then the lines the digest lists go along (for each: the chat's name, the sender, date, time and text of that message), not the chats they come from. For compliment ideas, the extension sends the notes, tone and language you chose and the compliments already in your list; the person's name and your chat with them only if you tick "Let the AI read our last 30 messages".
+- **The answer** is shown in the panel. If you choose to, it is put into WhatsApp's message box, unsent. The extension does not store it.
+- **The service** processes the request under its own terms and privacy policy, with your account, and bills its usage to you. Some services keep requests for a limited time, for example to detect abuse; check the settings of your account there. Services based outside the EU (marked USA above) receive the data in their country; the service is responsible for the safeguards required for such transfers (such as the EU-U.S. Data Privacy Framework or standard contractual clauses). With a local server the data does not leave your computer. The exception are Ollama's cloud models (their name contains "cloud", for example "gpt-oss:120b-cloud"): Ollama passes such a request on to its own servers (ollama.com, USA) under its own terms. TwoTicks never chooses such a model by itself, and the confirmation names the model and says that the request goes to Ollama Cloud.
+- **Chrome's built-in model** is part of the Chrome browser (Google calls it Gemini Nano). With it, a request is answered inside your browser, on your own computer: the extension sends it to no service, needs no key and asks Chrome for no permission to reach one. According to Google, no data is sent to Google or to anyone else when the model is used. The model itself is not part of TwoTicks: Chrome downloads it once from Google's servers when you click "Download model" in the settings, as it downloads its own updates; nothing from your chats goes along with that download. The check before sending shows the request in the same way as for a service. Where Chrome reports that the model can look at images on your computer, images you chose are given to it there as well; of a PDF file it gets the text, read on your device. Where it can listen on your computer, it also writes down the voice messages you chose, for every AI service you may use.
+- **Free plans.** Some services offer free plans or free models (marked "free with limits" in the settings). On such plans the service may use what you send to improve its models, and its staff may read it: for example Google Gemini's free tier outside the EU, the EEA, Switzerland and the UK, OpenRouter's free models (depending on your account settings and the provider behind each model) and possibly Mistral AI's free plan. Your chats contain other people's words and names, so a paid plan or a model on your own computer is the safer choice. The settings show this warning next to these services, and TwoTicks never chooses a free model by itself; you can still pick one.
+- **Request limits** per hour and per day, which you can change, stop the extension from sending more requests than you expect.
+
+The messages you send to an AI service contain other people's words and names, and a voice message is another person's voice. For personal use this is generally your private matter. If you use the AI assistant for work, you need a legal basis for sending that data, possibly a data processing agreement with the AI service, and you must not send special categories of data (for example health data) without consent. See the Terms of Use.
+
+## Video tutorials and links
+
+The panel's "Video tutorials" page and the list under "Help and documents" in the settings show short films on how to use TwoTicks. Nothing is loaded before you click a film. Then a small window opens with that film's page on TwoTicks' official site (twoticks-app.github.io, hosted on GitHub Pages), which plays it in YouTube's privacy-enhanced player (www.youtube-nocookie.com). From then on GitHub, which hosts the site, and YouTube (Google) receive what any browser sends when it opens a page or plays a video, for example your IP address and details of your browser, and their own privacy policies apply to that: GitHub's at https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement and Google's at https://policies.google.com/privacy. TwoTicks sends neither of them anything about you or your chats. So that the next film opens in the same window, the extension keeps the number Chrome gives that window (see "Where data is stored").
+
+Two links open a page only when you click them, each in a new tab, and TwoTicks sends nothing along: "Rate TwoTicks" opens TwoTicks' page in the Chrome Web Store, where you can leave a review, and "Website" opens the home page of TwoTicks' official site.
+
+## Contacting me
+
+If you write to me at mr.osmanbodur@gmail.com, I receive your e-mail address and what you write. I use your message and contact details only to answer you. The legal basis is Art. 6(1)(f) GDPR (my interest in answering). I delete the messages when the matter is closed, unless records must be kept for legal reasons. They are stored with my e-mail provider, who processes them on my behalf.
+
+## What I receive
+
+I receive no data from the extension itself: not your chats, contacts, exports, API keys, AI requests or answers, and no usage statistics. The only personal data I process is what you write to me if you contact me. No data is sold, shared with third parties for their own purposes, or used for advertising, creditworthiness or any purpose unrelated to the features above.
+
+## WhatsApp
+
+The extension works inside WhatsApp Web, so WhatsApp's own privacy policy applies to your account and your messages: https://www.whatsapp.com/legal/privacy-policy
+
+## Fonts and libraries
+
+The extension's fonts are part of the package, and so is the library that reads the text out of PDF files (PDF.js, with Adobe's character maps for Chinese, Japanese and Korean text): it runs in a page of the extension that is sealed off from the rest (it cannot reach the extension's storage or WhatsApp's page) and that can make no network request. The usage analytics and link-preview servers built into the open-source library it uses to work with WhatsApp Web (wa-js) are switched off.
+
+## Retention and deletion
+
+Data stays in your browser until you delete it:
+
+- "Clear" in the "Deleted" tool deletes the log of deleted and edited messages.
+- In the Scheduler, the × on a pending message cancels it, and "Clear history" deletes past entries.
+- In Compliments, the bin icon on a routine deletes it with its compliments and notes.
+- The × next to a recent number removes it from the direct message tool.
+- In Quick replies, the bin icon deletes a reply.
+- "Show again" in the "Unanswered" tool forgets the chats you marked as "No reply needed" (or "No answer needed") and the ones you set aside with "Remind me later"; a chat is also forgotten by itself when a new message arrives in it, and a chat set aside on the day it comes back.
+- In the settings: "Remove key" deletes the API key of the service shown, with its list of models; "Delete" removes a saved instruction; "Clear log" empties the AI request log.
+- The copy of your data from WhatsApp Web's site storage (see above) follows what you delete in TwoTicks. Deleting the site data of web.whatsapp.com does not delete it; it is deleted when another WhatsApp account signs in here, when it was not renewed for 30 days, or when you uninstall the extension.
+- Uninstalling the extension deletes its own storage (the time and version of its first run, API keys, instructions, request log, the language you chose and the copy of your data from WhatsApp Web's site storage); a copy of your instructions' names and texts in WhatsApp Web's site storage stays (see below). It does not remove what the extension stored in the site storage of web.whatsapp.com. To remove that as well, delete the site data for web.whatsapp.com in Chrome (Settings > Privacy and security > Third-party cookies > See all site data and permissions). This also signs you out of WhatsApp Web.
+
+Exported files belong to you and stay on your computer until you delete them. Data you sent to an AI service is kept there under that service's rules.
+
+## Your rights
+
+For the personal data I process (the messages you send me), you have the right to access, rectification, erasure, restriction of processing, data portability and to object, under Articles 15 to 21 GDPR. Write to the address below. You can also complain to a data protection authority; in Austria this is the Datenschutzbehörde, Barichgasse 40–42, 1030 Wien, https://www.dsb.gv.at. For data held by your AI service, contact that service directly; I can help you find the right place.
+
+## Changes to this policy
+
+If the extension's data practices change, this policy will be updated, with a new "Last updated" date, before the new version is published.
+
+## Contact
+
+Provider of the extension and controller for the messages you send me:
+Dr.techn. Osman Bodur, Vienna, Austria
+Privacy questions: mr.osmanbodur@gmail.com

@@ -1,0 +1,33 @@
+/* TwoTicks site. Copyright (c) 2026 Osman Bodur. All rights reserved.
+   A document page (the privacy policy, renderPrivacy in src/page.mjs): the dark hero with the document's title, then
+   its text on the white surface, in one column of a comfortable width. Each section opens with a short bar of the
+   read-tick blue, like the site's own headings; a table scrolls sideways on a narrow screen instead of squeezing its
+   columns. Square corners, like everything else. Load it after styles.css, which defines the colours. */
+
+.doc {
+  padding-block: clamp(36px, 5vw, 64px) var(--section);
+  border-block-end: 1px solid var(--line);
+  background: var(--surface);
+}
+.doc-body { max-width: 760px; }
+/* The document's first line: the day of its last change. */
+.doc-body > p:first-child { color: var(--muted); font-weight: 600; }
+.doc-body h2 {
+  margin-block: clamp(40px, 5vw, 56px) 14px;
+  font-size: clamp(1.45rem, 2.6vw, 1.9rem);
+  scroll-margin-top: 12px;
+}
+.doc-body h2::before { content: ""; display: block; width: 44px; height: 5px; margin-block-end: 16px; background: var(--read); }
+.doc-body h3 { margin-block: 28px 10px; font-size: 1.2rem; scroll-margin-top: 12px; }
+.doc-body :is(ul, ol) { margin: 0 0 0.9em; padding-inline-start: 1.3em; }
+.doc-body li { margin-block-end: 0.55em; }
+.doc-body li > :is(ul, ol) { margin-block: 0.55em 0; }
+.doc-body li::marker { color: var(--muted); }
+/* Long web addresses break rather than push the page wider on a phone. */
+.doc-body a { overflow-wrap: anywhere; }
+
+.doc-table { margin: 0 0 1.2em; overflow-x: auto; }
+.doc-table table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+.doc-table th, .doc-table td { padding: 8px 12px; border: 1px solid var(--line); text-align: start; vertical-align: top; }
+.doc-table th { background: var(--paper); font-weight: 700; }
+.doc-table td { overflow-wrap: anywhere; }

@@ -1,8 +1,9 @@
 // Copyright (c) 2026 Osman Bodur. All rights reserved.
 // The pages of one language, as HTML: the home page (render) and the page of each tool (renderTool), around one
-// shell (head, masthead, footer). build.mjs gives them everything they show: the site's texts (t, ta), the words of
-// Chrome and of the Chrome Web Store in that language (ui), the store listing (listing) and the panel's own texts
-// (panel). TwoTicks is installed from the Chrome Web Store only.
+// shell (head, masthead, footer); in English only, the privacy policy (renderPrivacy). build.mjs gives them
+// everything they show: the site's texts (t, ta), the words of Chrome and of the Chrome Web Store in that language
+// (ui), the store listing (listing) and the panel's own texts (panel). TwoTicks is installed from the Chrome Web
+// Store only.
 
 export const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
@@ -133,14 +134,21 @@ function shot(c, x, s, sizes = '(min-width: 980px) 720px, 86vw') {
         </picture>`;
 }
 
-// The whole document: head, masthead, the page's main content, footer. `page` gives the parts that differ.
+// The whole document: head, masthead, the page's main content, footer. `page` gives the parts that differ. A page in
+// one language only (page.only, the code of that language: the privacy policy) names no other language's version,
+// its language lists lead to the home page of each other language, and their heading is page.langsLabel.
 function shell(c, x, page) {
   const { cfg, lang, langs, base } = c;
   const rtl = lang.dir === 'rtl';
-  const langList = (cls) => `<ul class="${cls}">${langs.map((l) => `<li><a href="${base}${l.path}${page.rel}" hreflang="${l.code}" lang="${l.code}" data-lang="${l.code}"${l.code === lang.code ? ' aria-current="page"' : ''}>${flag(l.code)}<span>${esc(l.native)}</span></a></li>`).join('')}</ul>`;
+  const relOf = (l) => (page.only && l.code !== page.only ? '' : page.rel);
+  const langList = (cls) => `<ul class="${cls}">${langs.map((l) => `<li><a href="${base}${l.path}${relOf(l)}" hreflang="${l.code}" lang="${l.code}" data-lang="${l.code}"${l.code === lang.code ? ' aria-current="page"' : ''}>${flag(l.code)}<span>${esc(l.native)}</span></a></li>`).join('')}</ul>`;
   const url = (l) => `${cfg.siteUrl}${l.path}${page.rel}`;
-  const alternates = langs.map((l) => `<link rel="alternate" hreflang="${l.code}" href="${url(l)}">`).join('\n');
-  const ogAlternates = langs.filter((l) => l.code !== lang.code).map((l) => `<meta property="og:locale:alternate" content="${l.og}">`).join('\n');
+  const alternates = page.only ? '' : `${langs.map((l) => `<link rel="alternate" hreflang="${l.code}" href="${url(l)}">`).join('\n')}
+<link rel="alternate" hreflang="x-default" href="${cfg.siteUrl}${page.rel}">
+`;
+  const ogAlternates = page.only ? '' : `${langs.filter((l) => l.code !== lang.code).map((l) => `<meta property="og:locale:alternate" content="${l.og}">`).join('\n')}
+`;
+  const langsLabel = page.langsLabel ? esc(page.langsLabel) : x.T('footer.languages');
   const nav = (hash) => (page.rel ? `${x.home}#${hash}` : `#${hash}`);
   return `<!doctype html>
 <html lang="${lang.code}" dir="${rtl ? 'rtl' : 'ltr'}" data-page="${page.rel}">
@@ -154,9 +162,7 @@ ${cfg.googleSiteVerification ? `<meta name="google-site-verification" content="$
 <meta name="color-scheme" content="light dark">
 <meta name="theme-color" content="#16232d">
 <link rel="canonical" href="${url(lang)}">
-${alternates}
-<link rel="alternate" hreflang="x-default" href="${cfg.siteUrl}${page.rel}">
-<meta property="og:type" content="website">
+${alternates}<meta property="og:type" content="website">
 <meta property="og:site_name" content="TwoTicks">
 <meta property="og:title" content="${page.title}">
 <meta property="og:description" content="${page.description}">
@@ -166,8 +172,7 @@ ${alternates}
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="${esc(cfg.name)}">
 <meta property="og:locale" content="${lang.og}">
-${ogAlternates}
-<meta name="twitter:card" content="summary_large_image">
+${ogAlternates}<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="${base}assets/img/icon.svg" type="image/svg+xml">
 <link rel="icon" href="${base}assets/img/icon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="${base}assets/img/icon-180.png">
@@ -215,12 +220,12 @@ ${page.main}
       <ul>
         <li><a href="${esc(x.storeLink(page.place || 'footer'))}">${x.T('store.name')}</a></li>
         ${c.hasVersions ? `<li><a href="${x.home}versions/">${x.T('versions.title')}</a></li>` : ''}
-        <li><a href="${esc(cfg.privacyUrl)}" hreflang="en">${x.T('footer.privacy')}</a></li>
+        <li><a href="${base}${c.privacyRel}" hreflang="en"${page.rel === c.privacyRel ? ' aria-current="page"' : ''}>${x.T('footer.privacy')}</a></li>
         <li><a href="${esc(cfg.youtube.channel)}">YouTube</a></li>
       </ul>
     </nav>
-    <nav class="foot-langs" aria-label="${x.ta('footer.languages')}">
-      <p class="foot-k">${x.T('footer.languages')}</p>
+    <nav class="foot-langs" aria-label="${langsLabel}">
+      <p class="foot-k">${langsLabel}</p>
       ${langList('foot-lang-list')}
     </nav>
   </div>
@@ -334,7 +339,7 @@ export function render(c) {
 
   const faq = [
     ['faq.free.q', `<p>${kbd(esc(listing.price))}</p>`],
-    ['faq.privacy.q', `<p>${esc(listing.privacy[1].name)}: ${esc(listing.privacy[1].text)}</p><p>${esc(listing.privacy[2].name)}: ${esc(listing.privacy[2].text)}</p><p><a href="${esc(cfg.privacyUrl)}" hreflang="en">${T('faq.privacy.link')}</a></p>`],
+    ['faq.privacy.q', `<p>${esc(listing.privacy[1].name)}: ${esc(listing.privacy[1].text)}</p><p>${esc(listing.privacy[2].name)}: ${esc(listing.privacy[2].text)}</p><p><a href="${c.base}${c.privacyRel}" hreflang="en">${T('faq.privacy.link')}</a></p>`],
     ['faq.permissions.q', `<ul>${listing.permissions.map((p) => `<li>${esc(p)}</li>`).join('')}</ul>`],
     ['faq.update.q', `<p>${T('faq.update.a')}</p>`],
     ['faq.browsers.q', `<p>${T('faq.browsers.a')}</p>`],
@@ -569,6 +574,50 @@ ${blocks}
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'TwoTicks', item: `${cfg.siteUrl}${lang.path}` },
         { '@type': 'ListItem', position: 2, name: c.t.raw('versions.title'), item: `${cfg.siteUrl}${lang.path}${rel}` },
+      ],
+    },
+  });
+}
+
+// --- the privacy policy ----------------------------------------------------------------------------------------------
+// The extension's privacy policy, in English only, at privacyUrl (site.config.json): content/privacy-policy.md, a copy
+// of the extension's store/privacy-policy.md (tools/new-version.mjs copies it), read by src/markdown.mjs into
+// doc = { title, html }. Every page's footer links to it; from it, the language lists lead to the home pages. Its
+// look is in src/parts/doc.css.
+export function renderPrivacy(c, doc) {
+  const { ta, cfg } = c;
+  const x = common(c);
+  const { T, home } = x;
+
+  const main = `  <section class="hero tool-hero" aria-labelledby="doc-title">
+    <div class="wrap hero-in tool-hero-in">
+      <nav class="crumbs" aria-label="${ta('footer.privacy')}">
+        <ol><li><a href="${home}">TwoTicks</a></li><li aria-current="page">${T('footer.privacy')}</li></ol>
+      </nav>
+      <div class="hero-text">
+        <h1 id="doc-title" class="tool-h1">${esc(doc.title)}</h1>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">${ticks('hero-ticks')}</div>
+  </section>
+
+  <div class="doc">
+    <div class="wrap">
+      <article class="doc-body" aria-labelledby="doc-title">
+${doc.html}
+      </article>
+    </div>
+  </div>`;
+
+  return shell(c, x, {
+    rel: c.privacyRel, skip: '#main', main, place: 'privacy', only: 'en', langsLabel: 'This site in other languages',
+    title: `${ta('footer.privacy')} · ${esc(cfg.name)}`,
+    description: esc(`The privacy policy of the Chrome extension ${cfg.name}: what data it handles, where it goes and what its publisher receives.`),
+    jsonLd: {
+      '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'TwoTicks', item: cfg.siteUrl },
+        { '@type': 'ListItem', position: 2, name: c.t.raw('footer.privacy'), item: cfg.privacyUrl },
       ],
     },
   });
