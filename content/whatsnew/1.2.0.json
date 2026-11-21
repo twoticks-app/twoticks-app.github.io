@@ -1,0 +1,161 @@
+{
+  "version": "1.2.0",
+  "texts": {
+    "en": {
+      "title": "What's new in TwoTicks 1.2.0",
+      "items": [
+        "\"Video tutorials\" at the foot of the tool list: a short how-to film for every tool, 17 films of under two minutes each, in English for now.",
+        "A film opens only when you click it, in a small window of its own, in YouTube's privacy-enhanced player.",
+        "Settings › Help and documents lists the same films and now also links to TwoTicks' website in your language.",
+        "In WhatsApp, the panel's ✕ is now – (\"Minimise\"), because it only hides the panel; the button beside it still lets the panel fill the window.",
+        "In TwoTicks' separate window, only Chrome's own window buttons remain, \"Back into WhatsApp\" is written out, and a double-click on the top bar switches to full screen.",
+        "The chat list shows \"Refresh\" beside ⇄ and, when it is more than a minute old, refreshes by itself as you open a tool.",
+        "Once, after a week of use, TwoTicks asks whether you would like to rate it in the Chrome Web Store; the link stays in Settings › Help and documents.",
+        "Fixed: two changes to the AI settings saved at the same moment could undo each other, and tooltips sometimes showed squeezed or in the wrong place."
+      ]
+    },
+    "de": {
+      "title": "Neu in TwoTicks 1.2.0",
+      "items": [
+        "„Video-Anleitungen“ ganz unten in der Werkzeugliste: ein kurzer Anleitungsfilm zu jedem Werkzeug, 17 Filme von jeweils unter zwei Minuten, vorerst auf Englisch.",
+        "Ein Film öffnet sich erst, wenn Sie ihn anklicken, in einem kleinen eigenen Fenster mit dem datenschutzfreundlichen Player von YouTube.",
+        "Unter Einstellungen › Hilfe und Dokumente stehen dieselben Filme und jetzt auch ein Link zur Website von TwoTicks in Ihrer Sprache.",
+        "In WhatsApp ist das ✕ des Panels jetzt ein – („Minimieren“), denn es blendet das Panel nur aus; mit der Schaltfläche daneben füllt das Panel weiterhin das Fenster.",
+        "Im separaten Fenster von TwoTicks bleiben nur die Fensterschaltflächen von Chrome, „Zurück in WhatsApp“ steht ausgeschrieben da, und ein Doppelklick auf die obere Leiste schaltet in den Vollbildmodus.",
+        "Die Chatliste zeigt „Aktualisieren“ neben ⇄ und lädt sich von selbst neu, wenn Sie ein Werkzeug öffnen und sie älter als eine Minute ist.",
+        "Einmal, nach einer Woche Nutzung, fragt TwoTicks, ob Sie es im Chrome Web Store bewerten möchten; der Link bleibt unter Einstellungen › Hilfe und Dokumente.",
+        "Behoben: Zwei gleichzeitig gespeicherte Änderungen an den KI-Einstellungen konnten einander aufheben, und Tooltips erschienen manchmal gestaucht oder an der falschen Stelle."
+      ]
+    },
+    "es": {
+      "title": "Novedades de TwoTicks 1.2.0",
+      "items": [
+        "«Videotutoriales», al final de la lista de herramientas: un vídeo breve sobre cada herramienta, 17 vídeos de menos de dos minutos cada uno, por ahora en inglés.",
+        "Un vídeo solo se abre cuando haces clic en él, en una pequeña ventana propia, con el reproductor de privacidad mejorada de YouTube.",
+        "Ajustes › Ayuda y documentos muestra los mismos vídeos y ahora también enlaza al sitio web de TwoTicks en tu idioma.",
+        "En WhatsApp, la ✕ del panel ahora es – («Minimizar»), porque solo oculta el panel; el botón de al lado sigue haciendo que el panel ocupe la ventana.",
+        "En la ventana aparte de TwoTicks solo quedan los botones de ventana del propio Chrome, «Volver a WhatsApp» aparece escrito y un doble clic en la barra superior la pone a pantalla completa.",
+        "La lista de chats muestra «Actualizar» junto a ⇄ y, si tiene más de un minuto, se actualiza sola al abrir una herramienta.",
+        "Una sola vez, tras una semana de uso, TwoTicks te pregunta si quieres valorarlo en Chrome Web Store; el enlace sigue en Ajustes › Ayuda y documentos.",
+        "Corregido: dos cambios en los ajustes de IA guardados en el mismo momento podían anularse entre sí, y las descripciones emergentes a veces aparecían estrechas o fuera de sitio."
+      ]
+    },
+    "fr": {
+      "title": "Nouveautés de TwoTicks 1.2.0",
+      "items": [
+        "« Tutoriels vidéo » en bas de la liste des outils : un court film pour chaque outil, 17 films de moins de deux minutes chacun, en anglais pour l’instant.",
+        "Un film ne s’ouvre que lorsque vous cliquez dessus, dans sa propre petite fenêtre, avec le lecteur à confidentialité renforcée de YouTube.",
+        "Paramètres › Aide et documents présente les mêmes films et renvoie désormais aussi au site web de TwoTicks dans votre langue.",
+        "Dans WhatsApp, le ✕ du panneau devient – (« Réduire »), car il ne fait que masquer le panneau ; le bouton voisin permet toujours au panneau de remplir la fenêtre.",
+        "Dans la fenêtre séparée de TwoTicks, seuls restent les boutons de fenêtre de Chrome, « Revenir dans WhatsApp » est écrit en toutes lettres, et un double-clic sur la barre du haut passe en plein écran.",
+        "La liste des discussions affiche « Actualiser » à côté de ⇄ et, si elle date de plus d’une minute, s’actualise d’elle-même quand vous ouvrez un outil.",
+        "Une seule fois, après une semaine d’utilisation, TwoTicks vous demande si vous souhaitez l’évaluer sur le Chrome Web Store ; le lien reste dans Paramètres › Aide et documents.",
+        "Corrigé : deux modifications des paramètres de l’IA enregistrées au même moment pouvaient s’annuler l’une l’autre, et les infobulles apparaissaient parfois écrasées ou au mauvais endroit."
+      ]
+    },
+    "it": {
+      "title": "Novità di TwoTicks 1.2.0",
+      "items": [
+        "«Video tutorial» in fondo all’elenco degli strumenti: un breve video per ogni strumento, 17 video di meno di due minuti ciascuno, per ora in inglese.",
+        "Un video si apre solo con un tuo clic, in una piccola finestra tutta sua, con il player a privacy avanzata di YouTube.",
+        "Impostazioni › Aiuto e documenti elenca gli stessi video e ora rimanda anche al sito web di TwoTicks nella tua lingua.",
+        "In WhatsApp la ✕ del pannello ora è – («Riduci»), perché nasconde soltanto il pannello; il pulsante accanto continua a fargli riempire la finestra.",
+        "Nella finestra separata di TwoTicks restano solo i pulsanti della finestra di Chrome, «Torna in WhatsApp» è scritto per intero e un doppio clic sulla barra in alto passa allo schermo intero.",
+        "L’elenco delle chat mostra «Aggiorna» accanto a ⇄ e, se ha più di un minuto, si aggiorna da solo quando apri uno strumento.",
+        "Una sola volta, dopo una settimana di utilizzo, TwoTicks ti chiede se vuoi valutarlo nel Chrome Web Store; il link resta in Impostazioni › Aiuto e documenti.",
+        "Corretto: due modifiche alle impostazioni dell’IA salvate nello stesso momento potevano annullarsi a vicenda, e i suggerimenti a comparsa a volte apparivano schiacciati o nel posto sbagliato."
+      ]
+    },
+    "pt-BR": {
+      "title": "Novidades do TwoTicks 1.2.0",
+      "items": [
+        "“Tutoriais em vídeo”, no fim da lista de ferramentas: um vídeo curto para cada ferramenta, 17 vídeos de menos de dois minutos cada, por enquanto em inglês.",
+        "Um vídeo só abre quando você clica nele, numa pequena janela própria, com o player com privacidade aprimorada do YouTube.",
+        "Configurações › Ajuda e documentos lista os mesmos vídeos e agora também leva ao site do TwoTicks no seu idioma.",
+        "No WhatsApp, o ✕ do painel agora é – (“Minimizar”), porque ele só esconde o painel; o botão ao lado continua fazendo o painel ocupar a janela.",
+        "Na janela separada do TwoTicks ficam só os botões de janela do próprio Chrome, “Voltar para o WhatsApp” aparece por extenso e um clique duplo na barra superior abre a tela cheia.",
+        "A lista de conversas mostra “Atualizar” ao lado de ⇄ e, se tiver mais de um minuto, se atualiza sozinha quando você abre uma ferramenta.",
+        "Uma única vez, depois de uma semana de uso, o TwoTicks pergunta se você quer avaliá-lo na Chrome Web Store; o link continua em Configurações › Ajuda e documentos.",
+        "Corrigido: duas mudanças nas configurações de IA salvas no mesmo instante podiam anular uma à outra, e as dicas de ferramenta às vezes apareciam espremidas ou no lugar errado."
+      ]
+    },
+    "pt-PT": {
+      "title": "Novidades do TwoTicks 1.2.0",
+      "items": [
+        "“Tutoriais em vídeo”, no fim da lista de ferramentas: um vídeo curto para cada ferramenta, 17 vídeos com menos de dois minutos cada, para já em inglês.",
+        "Um vídeo só se abre quando clica nele, numa pequena janela própria, com o leitor com privacidade melhorada do YouTube.",
+        "Configurações › Ajuda e documentos lista os mesmos vídeos e passa também a ter uma ligação para o site do TwoTicks no seu idioma.",
+        "No WhatsApp, o ✕ do painel passou a ser – (“Minimizar”), porque apenas oculta o painel; o botão ao lado continua a fazer o painel ocupar a janela.",
+        "Na janela separada do TwoTicks ficam apenas os botões de janela do próprio Chrome, “Voltar para o WhatsApp” aparece por extenso e um duplo clique na barra superior passa para ecrã inteiro.",
+        "A lista de conversas mostra “Atualizar” ao lado de ⇄ e, se tiver mais de um minuto, atualiza-se sozinha quando abre uma ferramenta.",
+        "Uma única vez, após uma semana de utilização, o TwoTicks pergunta se o quer avaliar na Web Store do Chrome; a ligação continua em Configurações › Ajuda e documentos.",
+        "Corrigido: duas alterações às definições de IA guardadas no mesmo instante podiam anular-se uma à outra, e as dicas flutuantes por vezes apareciam apertadas ou no sítio errado."
+      ]
+    },
+    "tr": {
+      "title": "TwoTicks 1.2.0 ile gelen yenilikler",
+      "items": [
+        "Araç listesinin en altında “Video eğitimleri”: her araç için kısa bir nasıl yapılır filmi, her biri iki dakikadan kısa 17 film, şimdilik İngilizce.",
+        "Bir film yalnızca ona tıkladığınızda, kendi küçük penceresinde, YouTube'un gizlilik dostu oynatıcısıyla açılır.",
+        "Ayarlar › Yardım ve belgeler aynı filmleri listeler ve artık TwoTicks'in web sitesine de sizin dilinizde bağlantı verir.",
+        "WhatsApp'ta panelin ✕ düğmesi artık – (“Küçült”), çünkü paneli yalnızca gizler; yanındaki düğmeyle panel yine pencereyi doldurur.",
+        "TwoTicks'in ayrı penceresinde yalnızca Chrome'un kendi pencere düğmeleri kalır, “WhatsApp'a geri al” yazıyla görünür ve üst çubuğa çift tıklayınca pencere tam ekran olur.",
+        "Sohbet listesi ⇄ simgesinin yanında “Yenile” yazar ve bir dakikadan eskiyse, bir araç açtığınızda kendiliğinden yenilenir.",
+        "TwoTicks, bir haftalık kullanımdan sonra yalnızca bir kez, onu Chrome Web Mağazası'nda değerlendirmek isteyip istemediğinizi sorar; bağlantı Ayarlar › Yardım ve belgeler bölümünde kalır.",
+        "Düzeltildi: yapay zekâ ayarlarında aynı anda kaydedilen iki değişiklik birbirini geri alabiliyordu; araç ipuçları da bazen daralmış ya da yanlış yerde görünüyordu."
+      ]
+    },
+    "ru": {
+      "title": "Что нового в TwoTicks 1.2.0",
+      "items": [
+        "«Видеоуроки» внизу списка инструментов: короткое видео о каждом инструменте, всего 17 роликов, каждый короче двух минут, пока на английском.",
+        "Ролик открывается только по вашему щелчку, в своём небольшом окне, в плеере YouTube с повышенной конфиденциальностью.",
+        "В разделе «Настройки» › «Помощь и документы» есть те же ролики, а теперь и ссылка на сайт TwoTicks на вашем языке.",
+        "В WhatsApp кнопка ✕ на панели стала – («Свернуть»): она лишь скрывает панель; кнопка рядом по-прежнему разворачивает панель на всё окно.",
+        "В отдельном окне TwoTicks остаются только кнопки окна самого Chrome, «Вернуть в WhatsApp» написано словами, а двойной щелчок по верхней полосе разворачивает окно на весь экран.",
+        "Список чатов показывает «Обновить» рядом с ⇄ и, если ему больше минуты, обновляется сам, когда вы открываете инструмент.",
+        "Один раз, после недели использования, TwoTicks спрашивает, не хотите ли вы оценить его в Интернет-магазине Chrome; ссылка остаётся в разделе «Настройки» › «Помощь и документы».",
+        "Исправлено: два изменения настроек ИИ, сохранённые в один и тот же момент, могли отменять друг друга, а всплывающие подсказки иногда выглядели сжатыми или появлялись не на своём месте."
+      ]
+    },
+    "ar": {
+      "title": "الجديد في TwoTicks 1.2.0",
+      "items": [
+        "«دروس فيديو» في أسفل قائمة الأدوات: فيلم قصير لكل أداة، 17 فيلمًا مدة كل منها أقل من دقيقتين، بالإنجليزية حاليًا.",
+        "لا يُفتح الفيلم إلا عندما تنقر عليه، في نافذة صغيرة خاصة به، بمشغّل YouTube المُحسَّن للخصوصية.",
+        "في الإعدادات › المساعدة والمستندات القائمة نفسها من الأفلام، ومعها الآن رابط إلى موقع TwoTicks الإلكتروني بلغتك.",
+        "في WhatsApp أصبح زر ✕ في اللوحة – («تصغير»)، لأنه يخفي اللوحة فقط؛ وما زال الزر المجاور له يجعل اللوحة تملأ النافذة.",
+        "في نافذة TwoTicks المنفصلة لا تبقى إلا أزرار نافذة Chrome نفسه، وتظهر «العودة إلى WhatsApp» مكتوبة بالكلمات، والنقر المزدوج على الشريط العلوي يعرض النافذة بملء الشاشة.",
+        "تعرض قائمة الدردشات «تحديث» بجانب ⇄، وإذا مضت على قراءتها أكثر من دقيقة تُحدَّث تلقائيًا عندما تفتح أداة.",
+        "مرة واحدة فقط، بعد أسبوع من الاستخدام، يسألك TwoTicks إن كنت تودّ تقييمه في سوق Chrome الإلكتروني؛ ويبقى الرابط في الإعدادات › المساعدة والمستندات.",
+        "تم الإصلاح: كان تغييران في إعدادات الذكاء الاصطناعي يُحفظان في اللحظة نفسها قد يلغي أحدهما الآخر، وكانت التلميحات تظهر أحيانًا ضيقة أو في غير مكانها."
+      ]
+    },
+    "hi": {
+      "title": "TwoTicks 1.2.0 में नया क्या है",
+      "items": [
+        "टूल सूची में सबसे नीचे “वीडियो ट्यूटोरियल”: हर टूल पर एक छोटी फ़िल्म, कुल 17 फ़िल्में, हर एक दो मिनट से कम की, फ़िलहाल अंग्रेज़ी में।",
+        "कोई फ़िल्म सिर्फ़ तभी खुलती है जब आप उस पर क्लिक करते हैं, अपनी छोटी-सी विंडो में, YouTube के निजता-सुरक्षित प्लेयर में।",
+        "सेटिंग्स › सहायता और दस्तावेज़ में यही फ़िल्में हैं, और अब आपकी भाषा में TwoTicks की वेबसाइट का लिंक भी है।",
+        "WhatsApp में पैनल का ✕ अब – (“छोटा करें”) है, क्योंकि यह पैनल को सिर्फ़ छिपाता है; इसके बगल वाला बटन पहले की तरह पैनल को पूरी विंडो में फैला देता है।",
+        "TwoTicks की अलग विंडो में सिर्फ़ Chrome के अपने विंडो बटन रहते हैं, “वापस WhatsApp में” शब्दों में लिखा दिखता है, और ऊपरी पट्टी पर डबल-क्लिक करने से विंडो पूरी स्क्रीन पर आ जाती है।",
+        "चैट सूची में ⇄ के बगल में “रीफ़्रेश करें” लिखा है, और अगर सूची एक मिनट से पुरानी हो तो कोई टूल खोलते ही वह अपने आप रीफ़्रेश हो जाती है।",
+        "एक हफ़्ते के इस्तेमाल के बाद, सिर्फ़ एक बार, TwoTicks पूछता है कि क्या आप उसे Chrome वेब स्टोर में रेट करना चाहेंगे; लिंक सेटिंग्स › सहायता और दस्तावेज़ में बना रहता है।",
+        "ठीक किया गया: एआई सेटिंग्स में एक ही पल में सेव हुए दो बदलाव एक-दूसरे को पलट सकते थे, और टूलटिप कभी-कभी सिकुड़े हुए या ग़लत जगह दिखते थे।"
+      ]
+    },
+    "id": {
+      "title": "Yang baru di TwoTicks 1.2.0",
+      "items": [
+        "“Tutorial video” di bagian paling bawah daftar alat: film singkat untuk setiap alat, 17 film yang masing-masing berdurasi kurang dari dua menit, untuk saat ini dalam bahasa Inggris.",
+        "Film baru terbuka saat Anda mengekliknya, di jendela kecilnya sendiri, memakai pemutar YouTube dengan privasi yang ditingkatkan.",
+        "Setelan › Bantuan dan dokumen menampilkan film yang sama dan kini juga menautkan ke situs web TwoTicks dalam bahasa Anda.",
+        "Di WhatsApp, tombol ✕ pada panel kini menjadi – (“Kecilkan”), karena tombol itu hanya menyembunyikan panel; tombol di sebelahnya tetap membuat panel memenuhi jendela.",
+        "Di jendela terpisah TwoTicks hanya tersisa tombol jendela milik Chrome sendiri, “Kembali ke WhatsApp” ditulis lengkap, dan klik dua kali pada bilah atas membuat jendela itu layar penuh.",
+        "Daftar chat menampilkan “Perbarui” di samping ⇄ dan, jika sudah lebih dari satu menit, memperbarui dirinya sendiri saat Anda membuka sebuah alat.",
+        "Hanya sekali, setelah seminggu pemakaian, TwoTicks menanyakan apakah Anda ingin memberinya nilai di Chrome Web Store; tautannya tetap ada di Setelan › Bantuan dan dokumen.",
+        "Diperbaiki: dua perubahan pada setelan AI yang disimpan pada saat yang sama bisa saling membatalkan, dan tooltip kadang tampak terjepit atau muncul di tempat yang salah."
+      ]
+    }
+  }
+}

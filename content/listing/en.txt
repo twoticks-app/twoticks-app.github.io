@@ -2,7 +2,7 @@ TwoTicks keeps your WhatsApp Web chats private on screen and helps you work thro
 
 PRIVACY
 • Privacy screen: blur names, photos, messages and pictures so people next to you or watching your shared screen cannot read along; point at something to see it, or press Alt+Shift+X.
-• Your chats stay with you: TwoTicks has no server of its own, and none of your chats, contacts or keys reach its developer; there is no analytics or tracking. TwoTicks contacts only the AI service you choose, for the requests you start.
+• Your chats stay with you: TwoTicks has no server of its own, and none of your chats, contacts or keys reach its developer; there is no analytics or tracking. TwoTicks contacts only the AI service you choose, for the requests you start, and, only when you click a video tutorial, TwoTicks' website and YouTube's privacy-enhanced player.
 • You decide what an AI sees: by default you see exactly what is sent before each request (always when images, PDF files or voice recordings go along), and your API key stays in this browser.
 
 PRODUCTIVITY
@@ -29,7 +29,7 @@ TwoTicks is free: every tool, without limits, without an account and without pay
 HOW TO USE
 1. Open web.whatsapp.com and sign in.
 2. Click the dark button with the two ticks at the bottom right, press Alt+Shift+H, or use the toolbar icon.
-3. Choose a tool on the left, make your choices and use the button in the bar at the bottom. Drag the panel by its top bar to keep WhatsApp in view beside it, drag its edges to resize it, or let it fill the window with the button beside "Close". With two screens, the button next to it opens TwoTicks in a separate window: WhatsApp on one screen, TwoTicks on the other. To keep WhatsApp Web and TwoTicks in a window of their own, like an app, choose "Open in its own window" in the toolbar popup.
+3. Choose a tool on the left, make your choices and use the button in the bar at the bottom. To see how a tool works, open "Video tutorials" at the foot of the tool list: a short how-to film for every tool, 17 films of under two minutes each, in English for now. A film opens only when you click it, in a small window of its own. The same list is also under Settings › Help and documents. Drag the panel by its top bar to keep WhatsApp in view beside it, drag its edges to resize it, or let it fill the window with the button beside "Minimise". With two screens, the button next to it opens TwoTicks in a separate window: WhatsApp on one screen, TwoTicks on the other. In that window, double-click the top bar for full screen. To keep WhatsApp Web and TwoTicks in a window of their own, like an app, choose "Open in its own window" in the toolbar popup.
 
 PERMISSIONS
 • "Read and change your data on web.whatsapp.com": the tools run inside WhatsApp Web and nowhere else.

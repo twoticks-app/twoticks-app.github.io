@@ -2,7 +2,7 @@ TwoTicks mantiene private sullo schermo le tue chat di WhatsApp Web e ti aiuta a
 
 PRIVACY
 • Schermo privacy: sfoca nomi, foto profilo, messaggi e immagini, così chi ti sta accanto o guarda il tuo schermo condiviso non può leggere; punta su qualcosa per vederlo, oppure premi Alt+Shift+X.
-• Le tue chat restano a te: TwoTicks non ha un proprio server, e al suo sviluppatore non arrivano né chat, né contatti, né chiavi; nessuna analisi, nessun tracciamento. TwoTicks si collega solo al servizio di IA che scegli, per le richieste che avvii.
+• Le tue chat restano a te: TwoTicks non ha un proprio server, e al suo sviluppatore non arrivano né chat, né contatti, né chiavi; nessuna analisi, nessun tracciamento. TwoTicks si collega solo al servizio di IA che scegli, per le richieste che avvii, e, solo quando fai clic su un video tutorial, al sito web di TwoTicks e al player a privacy avanzata di YouTube.
 • Decidi tu cosa vede un’IA: di norma vedi esattamente cosa viene inviato prima di ogni richiesta (sempre quando vanno insieme immagini, file PDF o registrazioni vocali), e la tua chiave API resta in questo browser.
 
 PRODUTTIVITÀ
@@ -29,7 +29,7 @@ TwoTicks è gratuito: tutti gli strumenti, senza limiti, senza account e senza d
 COME SI USA
 1. Apri web.whatsapp.com ed effettua l’accesso.
 2. Fai clic sul pulsante scuro con le due spunte in basso a destra, premi Alt+Shift+H oppure usa l’icona nella barra degli strumenti.
-3. Scegli uno strumento a sinistra, fai le tue scelte e usa il pulsante nella barra in basso. Trascina il pannello dalla barra superiore per tenere WhatsApp visibile accanto, trascinane i bordi per ridimensionarlo, oppure fagli riempire la finestra con il pulsante accanto a «Chiudi». Con due schermi, il pulsante vicino apre TwoTicks in una finestra a parte: WhatsApp su uno schermo, TwoTicks sull’altro. Per avere WhatsApp Web e TwoTicks in una finestra propria, come un’app, scegli «Apri in una finestra a parte» nel menu della barra degli strumenti.
+3. Scegli uno strumento a sinistra, fai le tue scelte e usa il pulsante nella barra in basso. Per vedere come funziona uno strumento, apri «Video tutorial» in fondo all’elenco degli strumenti: un breve video per ogni strumento, 17 video di meno di due minuti ciascuno, per ora in inglese. Un video si apre solo con un tuo clic, in una piccola finestra tutta sua. Lo stesso elenco è anche in Impostazioni › Aiuto e documenti. Trascina il pannello dalla barra superiore per tenere WhatsApp visibile accanto, trascinane i bordi per ridimensionarlo, oppure fagli riempire la finestra con il pulsante accanto a «Riduci». Con due schermi, il pulsante vicino apre TwoTicks in una finestra a parte: WhatsApp su uno schermo, TwoTicks sull’altro. In quella finestra, fai doppio clic sulla barra superiore per lo schermo intero. Per avere WhatsApp Web e TwoTicks in una finestra propria, come un’app, scegli «Apri in una finestra a parte» nel menu della barra degli strumenti.
 
 AUTORIZZAZIONI
 • «Leggere e modificare i tuoi dati su web.whatsapp.com»: gli strumenti funzionano dentro WhatsApp Web e da nessun’altra parte.

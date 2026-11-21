@@ -2,7 +2,7 @@ TwoTicks, WhatsApp Web'deki sohbetlerinizi ekranda gizli tutar ve onlarla daha h
 
 GİZLİLİK
 • Gizlilik ekranı: isimleri, profil fotoğraflarını, mesajları ve resimleri bulanıklaştırır; böylece yanınızdakiler ya da ekranınızı paylaştığınız kişiler okuyamaz. Görmek istediğinizin üzerine gelin ya da Alt+Shift+X'e basın.
-• Sohbetleriniz sizde kalır: TwoTicks'in kendi sunucusu yok; sohbetlerinizin, kişilerinizin ve anahtarlarınızın hiçbiri geliştiricisine ulaşmaz; analiz ya da izleme yoktur. TwoTicks yalnızca seçtiğiniz yapay zekâ hizmetine, başlattığınız istekler için bağlanır.
+• Sohbetleriniz sizde kalır: TwoTicks'in kendi sunucusu yok; sohbetlerinizin, kişilerinizin ve anahtarlarınızın hiçbiri geliştiricisine ulaşmaz; analiz ya da izleme yoktur. TwoTicks yalnızca seçtiğiniz yapay zekâ hizmetine, başlattığınız istekler için bağlanır, TwoTicks'in web sitesine ve YouTube'un gizlilik dostu oynatıcısına ise yalnızca bir eğitim videosuna tıkladığınızda.
 • Yapay zekânın ne göreceğine siz karar verirsiniz: Varsayılan olarak her istekten önce tam olarak neyin gönderileceğini görürsünüz (resim, PDF dosyası ya da ses kaydı gidiyorsa her zaman); API anahtarınız bu tarayıcıda kalır.
 
 VERİMLİLİK
@@ -29,7 +29,7 @@ TwoTicks ücretsizdir: tüm araçlar, sınırlama olmadan, hesap açmadan ve öd
 NASIL KULLANILIR
 1. web.whatsapp.com'u açın ve giriş yapın.
 2. Sağ alttaki iki tikli koyu düğmeye tıklayın, Alt+Shift+H'ye basın ya da araç çubuğundaki simgeyi kullanın.
-3. Soldan bir araç seçin, seçimlerinizi yapın ve alttaki çubuktaki düğmeyi kullanın. WhatsApp'ı yanında görmek için paneli üst çubuğundan sürükleyin, boyutunu kenarlarından değiştirin ya da "Kapat"ın yanındaki düğmeyle pencereyi doldurmasını sağlayın. İki ekranınız varsa yanındaki düğme TwoTicks'i ayrı bir pencerede açar: WhatsApp bir ekranda, TwoTicks diğerinde. WhatsApp Web ile TwoTicks'i bir uygulama gibi kendi penceresinde kullanmak için araç çubuğu menüsünde "Kendi penceresinde aç"ı seçin.
+3. Soldan bir araç seçin, seçimlerinizi yapın ve alttaki çubuktaki düğmeyi kullanın. Bir aracın nasıl çalıştığını görmek için araç listesinin en altındaki "Video eğitimleri"ni açın: her araç için kısa bir nasıl yapılır filmi, her biri iki dakikadan kısa 17 film, şimdilik İngilizce. Bir film yalnızca ona tıkladığınızda, kendi küçük penceresinde açılır. Aynı liste Ayarlar › Yardım ve belgeler bölümünde de bulunur. WhatsApp'ı yanında görmek için paneli üst çubuğundan sürükleyin, boyutunu kenarlarından değiştirin ya da "Küçült"ün yanındaki düğmeyle pencereyi doldurmasını sağlayın. İki ekranınız varsa yanındaki düğme TwoTicks'i ayrı bir pencerede açar: WhatsApp bir ekranda, TwoTicks diğerinde. Bu pencerede üst çubuğa çift tıklarsanız tam ekran olur. WhatsApp Web ile TwoTicks'i bir uygulama gibi kendi penceresinde kullanmak için araç çubuğu menüsünde "Kendi penceresinde aç"ı seçin.
 
 İZİNLER
 • "web.whatsapp.com üzerindeki verilerinizi okuma ve değiştirme": Araçlar yalnızca WhatsApp Web'in içinde çalışır, başka hiçbir yerde değil.

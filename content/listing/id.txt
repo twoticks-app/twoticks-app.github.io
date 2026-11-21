@@ -2,7 +2,7 @@ TwoTicks menjaga chat WhatsApp Web Anda tetap privat di layar dan membantu Anda 
 
 PRIVASI
 • Layar privasi: memburamkan nama, foto profil, pesan, dan gambar agar orang di sebelah Anda atau yang melihat layar yang Anda bagikan tidak bisa ikut membaca; arahkan kursor untuk melihatnya, atau tekan Alt+Shift+X.
-• Chat Anda tetap milik Anda: TwoTicks tidak memiliki server sendiri, dan tidak ada chat, kontak, atau kunci Anda yang sampai ke pengembangnya; tidak ada analitik maupun pelacakan. TwoTicks hanya terhubung ke layanan AI pilihan Anda, untuk permintaan yang Anda mulai.
+• Chat Anda tetap milik Anda: TwoTicks tidak memiliki server sendiri, dan tidak ada chat, kontak, atau kunci Anda yang sampai ke pengembangnya; tidak ada analitik maupun pelacakan. TwoTicks hanya terhubung ke layanan AI pilihan Anda, untuk permintaan yang Anda mulai, dan, hanya saat Anda mengeklik tutorial video, ke situs web TwoTicks dan pemutar YouTube dengan privasi yang ditingkatkan.
 • Anda yang menentukan apa yang dilihat AI: secara bawaan Anda melihat persis apa yang dikirim sebelum setiap permintaan (selalu jika gambar, file PDF, atau rekaman suara ikut dikirim), dan kunci API Anda tetap di browser ini.
 
 PRODUKTIVITAS
@@ -29,7 +29,7 @@ TwoTicks gratis: semua alat, tanpa batasan, tanpa akun, dan tanpa data pembayara
 CARA MENGGUNAKAN
 1. Buka web.whatsapp.com dan masuk.
 2. Klik tombol gelap dengan dua centang di kanan bawah, tekan Alt+Shift+H, atau gunakan ikon di bilah alat.
-3. Pilih alat di sebelah kiri, tentukan pilihan Anda, lalu gunakan tombol di bilah bawah. Seret panel pada bilah atasnya agar WhatsApp tetap terlihat di sampingnya, seret tepinya untuk mengubah ukuran, atau biarkan memenuhi jendela dengan tombol di samping "Tutup". Dengan dua layar, tombol di sebelahnya membuka TwoTicks di jendela terpisah: WhatsApp di satu layar, TwoTicks di layar lainnya. Agar WhatsApp Web dan TwoTicks berada di jendela tersendiri seperti aplikasi, pilih "Buka di jendela tersendiri" di menu bilah alat.
+3. Pilih alat di sebelah kiri, tentukan pilihan Anda, lalu gunakan tombol di bilah bawah. Untuk melihat cara kerja sebuah alat, buka "Tutorial video" di bagian paling bawah daftar alat: film singkat untuk setiap alat, 17 film yang masing-masing berdurasi kurang dari dua menit, untuk saat ini dalam bahasa Inggris. Film baru terbuka saat Anda mengekliknya, di jendela kecilnya sendiri. Daftar yang sama juga ada di Setelan › Bantuan dan dokumen. Seret panel pada bilah atasnya agar WhatsApp tetap terlihat di sampingnya, seret tepinya untuk mengubah ukuran, atau biarkan memenuhi jendela dengan tombol di samping "Kecilkan". Dengan dua layar, tombol di sebelahnya membuka TwoTicks di jendela terpisah: WhatsApp di satu layar, TwoTicks di layar lainnya. Di jendela itu, klik dua kali bilah atas untuk layar penuh. Agar WhatsApp Web dan TwoTicks berada di jendela tersendiri seperti aplikasi, pilih "Buka di jendela tersendiri" di menu bilah alat.
 
 IZIN
 • "Membaca dan mengubah data Anda di web.whatsapp.com": alat-alatnya berjalan di dalam WhatsApp Web dan tidak di tempat lain.
