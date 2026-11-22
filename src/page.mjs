@@ -150,19 +150,22 @@ function shot(c, x, s, sizes = '(min-width: 980px) 720px, 86vw') {
 }
 
 // The whole document: head, masthead, the page's main content, footer. `page` gives the parts that differ. A page in
-// one language only (page.only, the code of that language: the privacy policy) names no other language's version,
-// its language lists lead to the home page of each other language, and their heading is page.langsLabel.
+// some languages only (page.langs, their codes: the privacy policy) names only those as its other versions, and its
+// language lists lead the other languages to their home page; a page in one language names none, and its language
+// lists have the heading page.langsLabel.
 function shell(c, x, page) {
   const { cfg, lang, langs, base } = c;
   const rtl = lang.dir === 'rtl';
-  const relOf = (l) => (page.only && l.code !== page.only ? '' : page.rel);
+  const has = (l) => !page.langs || page.langs.includes(l.code);
+  const several = !page.langs || page.langs.length > 1;
+  const relOf = (l) => (has(l) ? page.rel : '');
   const langList = (cls) => `<ul class="${cls}">${langs.map((l) => `<li><a href="${base}${l.path}${relOf(l)}" hreflang="${l.code}" lang="${l.code}" data-lang="${l.code}"${l.code === lang.code ? ' aria-current="page"' : ''}>${flag(l.code)}<span>${esc(l.native)}</span></a></li>`).join('')}</ul>`;
   const url = (l) => `${cfg.siteUrl}${l.path}${page.rel}`;
-  const alternates = page.only ? '' : `${langs.map((l) => `<link rel="alternate" hreflang="${l.code}" href="${url(l)}">`).join('\n')}
+  const alternates = several ? `${langs.filter(has).map((l) => `<link rel="alternate" hreflang="${l.code}" href="${url(l)}">`).join('\n')}
 <link rel="alternate" hreflang="x-default" href="${cfg.siteUrl}${page.rel}">
-`;
-  const ogAlternates = page.only ? '' : `${langs.filter((l) => l.code !== lang.code).map((l) => `<meta property="og:locale:alternate" content="${l.og}">`).join('\n')}
-`;
+` : '';
+  const ogAlternates = several ? `${langs.filter((l) => has(l) && l.code !== lang.code).map((l) => `<meta property="og:locale:alternate" content="${l.og}">`).join('\n')}
+` : '';
   const langsLabel = page.langsLabel ? esc(page.langsLabel) : x.T('footer.languages');
   const nav = (hash) => (page.rel ? `${x.home}#${hash}` : `#${hash}`);
   return `<!doctype html>
@@ -235,7 +238,7 @@ ${page.main}
       <ul>
         <li><a href="${esc(x.storeLink(page.place || 'footer'))}">${x.T('store.name')}</a></li>
         ${c.hasVersions ? `<li><a href="${x.home}versions/">${x.T('versions.title')}</a></li>` : ''}
-        <li><a href="${base}${c.privacyRel}" hreflang="en"${page.rel === c.privacyRel ? ' aria-current="page"' : ''}>${x.T('footer.privacy')}</a></li>
+        <li><a href="${base}${c.privacyHref}" hreflang="${c.privacyLang}"${page.place === 'privacy' ? ' aria-current="page"' : ''}>${x.T('footer.privacy')}</a></li>
         <li><a href="${esc(cfg.youtube.channel)}">YouTube</a></li>
       </ul>
     </nav>
@@ -356,7 +359,7 @@ export function render(c) {
 
   const faq = [
     ['faq.free.q', `<p>${kbd(esc(listing.price))}</p>`],
-    ['faq.privacy.q', `<p>${esc(listing.privacy[1].name)}: ${esc(listing.privacy[1].text)}</p><p>${esc(listing.privacy[2].name)}: ${esc(listing.privacy[2].text)}</p><p><a href="${c.base}${c.privacyRel}" hreflang="en">${T('faq.privacy.link')}</a></p>`],
+    ['faq.privacy.q', `<p>${esc(listing.privacy[1].name)}: ${esc(listing.privacy[1].text)}</p><p>${esc(listing.privacy[2].name)}: ${esc(listing.privacy[2].text)}</p><p><a href="${c.base}${c.privacyHref}" hreflang="${c.privacyLang}">${T('faq.privacy.link')}</a></p>`],
     ['faq.permissions.q', `<ul>${listing.permissions.map((p) => `<li>${esc(p)}</li>`).join('')}</ul>`],
     ['faq.update.q', `<p>${T('faq.update.a')}</p>`],
     ['faq.browsers.q', `<p>${T('faq.browsers.a')}</p>`],
@@ -599,14 +602,18 @@ ${blocks}
 }
 
 // --- the privacy policy ----------------------------------------------------------------------------------------------
-// The extension's privacy policy, in English only, at privacyUrl (site.config.json): content/privacy-policy.md, a copy
-// of the extension's store/privacy-policy.md (tools/new-version.mjs copies it), read by src/markdown.mjs into
-// doc = { title, html }. Every page's footer links to it; from it, the language lists lead to the home pages. Its
-// look is in src/parts/doc.css.
-export function renderPrivacy(c, doc) {
+// The extension's privacy policy at privacyUrl (site.config.json): content/privacy-policy.md, a copy of the
+// extension's store/privacy-policy.md (tools/new-version.mjs copies it), read by src/markdown.mjs into
+// doc = { title, html }; in a language with a translation (build.mjs) also at that language's privacy/, where `english`
+// is the English doc and a note at the top says that the English text is the binding one. Every page's footer links to
+// the policy in its language, else to the English one. Its look is in src/parts/doc.css.
+export function renderPrivacy(c, doc, english) {
   const { ta, cfg } = c;
   const x = common(c);
   const { T, home } = x;
+  const note = english
+    ? `<p class="tool-note">${T('privacy.translated', { link: `<a href="${c.base}${c.privacyRel}" hreflang="en" lang="en">${esc(english.title)}</a>` })}</p>\n`
+    : '';
 
   const main = `  <section class="hero tool-hero" aria-labelledby="doc-title">
     <div class="wrap hero-in tool-hero-in">
@@ -623,20 +630,21 @@ export function renderPrivacy(c, doc) {
   <div class="doc">
     <div class="wrap">
       <article class="doc-body" aria-labelledby="doc-title">
-${doc.html}
+${note}${doc.html}
       </article>
     </div>
   </div>`;
 
   return shell(c, x, {
-    rel: c.privacyRel, skip: '#main', main, place: 'privacy', only: 'en', langsLabel: 'This site in other languages',
+    rel: c.privacyRel, skip: '#main', main, place: 'privacy', langs: c.privacyLangs,
+    ...(c.privacyLangs.length > 1 ? {} : { langsLabel: 'This site in other languages' }),
     title: `${ta('footer.privacy')} · ${esc(cfg.name)}`,
-    description: esc(`The privacy policy of the Chrome extension ${cfg.name}: what data it handles, where it goes and what its publisher receives.`),
+    description: ta('privacy.description', { name: cfg.name }),
     jsonLd: {
       '@context': 'https://schema.org', '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'TwoTicks', item: cfg.siteUrl },
-        { '@type': 'ListItem', position: 2, name: c.t.raw('footer.privacy'), item: cfg.privacyUrl },
+        { '@type': 'ListItem', position: 1, name: 'TwoTicks', item: `${cfg.siteUrl}${c.lang.path}` },
+        { '@type': 'ListItem', position: 2, name: c.t.raw('footer.privacy'), item: `${cfg.siteUrl}${c.lang.path}${c.privacyRel}` },
       ],
     },
   });

@@ -81,6 +81,8 @@
   "versions.all": "Alle Versionen",
   "footer.publisher": "TwoTicks wird von {publisher} herausgegeben, einer Privatperson in Wien, Österreich.",
   "footer.privacy": "Datenschutzerklärung",
+  "privacy.translated": "Dies ist eine Übersetzung zu Ihrer Information. Maßgeblich ist der englische Originaltext: {link}.",
+  "privacy.description": "Die Datenschutzerklärung der Chrome-Erweiterung {name}: Welche Daten werden verarbeitet, wohin werden sie übertragen und was erhält der Herausgeber?",
   "footer.page": "Diese Seite setzt keine Cookies und hat keine Analyse. Der Film wird erst von YouTube geladen, wenn Sie ihn abspielen.",
   "footer.rights": "Alle Rechte vorbehalten.",
   "footer.languages": "Diese Seite in anderen Sprachen",

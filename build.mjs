@@ -186,9 +186,33 @@ if (typeof cfg.privacyUrl !== 'string' || !cfg.privacyUrl.startsWith(cfg.siteUrl
   throw new Error(`site.config.json: "privacyUrl" must be a folder of ${cfg.siteUrl}, such as ${cfg.siteUrl}privacy/, not ${cfg.privacyUrl}`);
 }
 const PRIVACY_REL = cfg.privacyUrl.slice(cfg.siteUrl.length);
-const policy = markdown(read('content/privacy-policy.md'), { esc });
+const policySource = read('content/privacy-policy.md');
+const policy = markdown(policySource, { esc });
 if (!policy.title || !policy.html) throw new Error('content/privacy-policy.md: no "# " title, or no text below it');
+// Its translations (content/privacy-policy-i18n/<language>.md, tools/privacy-i18n.py), each at its language's
+// privacy/ (tr/privacy/). The English text stays the binding one, and each translation says so with a link to it. A
+// translation names on its first line the English text's date line it was made from (<!-- en: Last updated: ... -->);
+// while that is not the English text's own, the language's pages link to the English text, so a changed policy is
+// never shown in an old translation.
+const policyDate = (/^Last updated:.*$/m.exec(policySource) || [''])[0].trim();
+const policies = { en: policy };
+for (const l of cfg.languages) {
+  const rel = `content/privacy-policy-i18n/${l.code}.md`;
+  if (l.code === 'en' || !fs.existsSync(path.join(ROOT, rel))) continue;
+  const src = read(rel);
+  const head = /^<!-- en: (.+?) -->\r?\n/.exec(src);
+  if (!head) throw new Error(`${rel}: no "<!-- en: Last updated: ... -->" first line`);
+  if (head[1].trim() !== policyDate) {
+    console.warn(`  ${l.code}: ${rel} is a translation of "${head[1].trim()}", the English text is of "${policyDate}": its pages link to the English text until it is translated again`);
+    continue;
+  }
+  const doc = markdown(src.slice(head[0].length), { esc });
+  if (!doc.title || !doc.html) throw new Error(`${rel}: no "# " title, or no text below it`);
+  policies[l.code] = doc;
+}
+const privacyLangs = cfg.languages.filter((l) => policies[l.code]).map((l) => l.code);
 let privacyBytes = 0;
+const privacyPages = [];
 const pages = [];
 for (const lang of cfg.languages) {
   const dict = JSON.parse(read(`i18n/${lang.code}.json`));
@@ -227,6 +251,10 @@ for (const lang of cfg.languages) {
       t, ta, ui, uiAlt, listing: list, panel, cfg, lang, langs: cfg.languages, base, ogImage, frames, bigFrames, hasVersions: versions.length > 0,
       films: filmsI18n[lang.code] || {},
       shotLang,
+      // The privacy policy this language's pages link to: its own translation, or the English text.
+      privacyHref: policies[lang.code] ? `${lang.path}${PRIVACY_REL}` : PRIVACY_REL,
+      privacyLang: policies[lang.code] ? lang.code : 'en',
+      privacyLangs,
       privacyRel: PRIVACY_REL, css: cssRef, js: jsRef,
       preloads: fonts.map((f) => `<link rel="preload" href="${base}assets/fonts/${f}" as="font" type="font/woff2" crossorigin>`).join('\n'),
       redirect: english ? REDIRECT : '',
@@ -255,12 +283,16 @@ for (const lang of cfg.languages) {
     writePage(`${lang.path}tools/${tool.slug}/`, html);
     toolBytes += Buffer.byteLength(html);
   }
-  // The privacy policy, once, with the English texts. No language redirect there: the page has no other language.
-  if (lang.code === 'en') {
-    const html = renderPrivacy({ ...context(PRIVACY_REL.split('/').filter(Boolean).length), redirect: '', csp: csp('') }, policy);
+  // The privacy policy: the English text at privacyUrl; a language with a current translation also has it at its own
+  // privacy/, with a note that leads to the English text. No language redirect on these pages.
+  if (policies[lang.code]) {
+    const en = lang.code === 'en';
+    const rel = en ? PRIVACY_REL : `${lang.path}${PRIVACY_REL}`;
+    const html = renderPrivacy({ ...context(rel.split('/').filter(Boolean).length), redirect: '', csp: csp('') }, policies[lang.code], en ? null : policy);
     check(html, 'privacy');
-    writePage(PRIVACY_REL, html);
-    privacyBytes = Buffer.byteLength(html);
+    writePage(rel, html);
+    if (en) privacyBytes = Buffer.byteLength(html);
+    else privacyPages.push({ lang, rel, bytes: Buffer.byteLength(html) });
   }
   pages.push({ lang, bytes: Buffer.byteLength(home), toolBytes });
 }
@@ -302,7 +334,12 @@ const urls = pageRels.flatMap((rel) => {
   const alt = cfg.languages.map((l) => `    <xhtml:link rel="alternate" hreflang="${l.code}" href="${cfg.siteUrl}${l.path}${rel}"/>`).join('\n');
   return cfg.languages.map((l) => `  <url>\n    <loc>${cfg.siteUrl}${l.path}${rel}</loc>\n    <lastmod>${today}</lastmod>\n${alt}\n    <xhtml:link rel="alternate" hreflang="x-default" href="${cfg.siteUrl}${rel}"/>\n  </url>`);
 });
-urls.push(`  <url>\n    <loc>${cfg.privacyUrl}</loc>\n    <lastmod>${today}</lastmod>\n  </url>`);
+// The privacy policy in each language it is in, each naming the others; the English text is the default.
+const privacyUrlOf = (code) => `${cfg.siteUrl}${cfg.languages.find((l) => l.code === code).path}${PRIVACY_REL}`;
+const privacyAlt = privacyLangs.length > 1
+  ? `${privacyLangs.map((code) => `    <xhtml:link rel="alternate" hreflang="${code}" href="${privacyUrlOf(code)}"/>`).join('\n')}\n    <xhtml:link rel="alternate" hreflang="x-default" href="${cfg.privacyUrl}"/>\n`
+  : '';
+for (const code of privacyLangs) urls.push(`  <url>\n    <loc>${privacyUrlOf(code)}</loc>\n    <lastmod>${today}</lastmod>\n${privacyAlt}  </url>`);
 fs.writeFileSync(path.join(OUT, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 ${urls.join('\n')}
@@ -312,8 +349,9 @@ fs.writeFileSync(path.join(OUT, 'robots.txt'), `User-agent: *\nAllow: /\nSitemap
 fs.writeFileSync(path.join(OUT, '.nojekyll'), '');
 
 const kb = (n) => `${Math.round(n / 1024)} KB`;
-console.log(`Built ${pages.length * pageRels.length + 1} pages in dist/ for ${cfg.siteUrl}: ${pages.length} languages, each with its home page, ${cfg.tools.length} tool pages${versions.length ? ` and the history of ${versions.length} versions` : ''}; the privacy policy in English`);
+console.log(`Built ${pages.length * pageRels.length + 1 + privacyPages.length} pages in dist/ for ${cfg.siteUrl}: ${pages.length} languages, each with its home page, ${cfg.tools.length} tool pages${versions.length ? ` and the history of ${versions.length} versions` : ''}; the privacy policy in English${privacyPages.length ? ` and ${privacyPages.length} translations of it` : ''}`);
 for (const p of pages) console.log(`  ${(p.lang.path || '(root)').padEnd(8)} ${p.lang.code.padEnd(6)} home ${kb(p.bytes)}, tools ${kb(p.toolBytes)}`);
 console.log(`  ${PRIVACY_REL.padEnd(8)} en     privacy policy ${kb(privacyBytes)} (${policy.title})`);
+for (const p of privacyPages) console.log(`  ${p.rel.padEnd(8)} ${p.lang.code.padEnd(6)} privacy policy ${kb(p.bytes)}, a translation (${policies[p.lang.code].title})`);
 console.log(`  watch/   en     ${films.length} film pages for the extension's film window: ${films.map((f) => f.n).sort().join(', ')}`);
 console.log(`  assets: site.css ${kb(Buffer.byteLength(css))}, app.js ${kb(Buffer.byteLength(js))}`);

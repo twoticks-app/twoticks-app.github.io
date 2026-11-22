@@ -82,6 +82,8 @@
   "versions.all": "Tüm sürümler",
   "footer.publisher": "TwoTicks'i, Viyana'da (Avusturya) yaşayan bir özel kişi olan {publisher} yayımlıyor.",
   "footer.privacy": "Gizlilik politikası",
+  "privacy.translated": "Bu çeviri size kolaylık olsun diye hazırlandı. Bağlayıcı olan İngilizce özgün metindir: {link}.",
+  "privacy.description": "{name} Chrome uzantısının gizlilik politikası: hangi verileri işlediği, bu verilerin nereye gittiği ve yayıncısının neleri aldığı.",
   "footer.page": "Bu sayfa çerez kullanmaz ve analiz yapmaz. Video, siz oynatana kadar YouTube'dan yüklenmez.",
   "footer.rights": "Tüm hakları saklıdır.",
   "footer.languages": "Bu sayfa başka dillerde",

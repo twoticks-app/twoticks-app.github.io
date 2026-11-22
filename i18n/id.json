@@ -81,6 +81,8 @@
   "versions.all": "Semua versi",
   "footer.publisher": "TwoTicks diterbitkan oleh {publisher}, perorangan yang tinggal di Wina, Austria.",
   "footer.privacy": "Kebijakan privasi",
+  "privacy.translated": "Ini adalah terjemahan yang disediakan untuk kemudahan Anda. Teks yang mengikat adalah teks asli dalam bahasa Inggris: {link}.",
+  "privacy.description": "Kebijakan privasi ekstensi Chrome {name}: data apa saja yang diolah, ke mana data tersebut dikirim, dan apa yang diterima oleh pengembangnya.",
   "footer.page": "Halaman ini tidak memakai cookie dan tidak memakai analitik. Video baru dimuat dari YouTube saat Anda memutarnya.",
   "footer.rights": "Hak cipta dilindungi undang-undang.",
   "footer.languages": "Halaman ini dalam bahasa lain",

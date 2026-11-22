@@ -81,6 +81,8 @@
   "versions.all": "Todas as versões",
   "footer.publisher": "O TwoTicks é publicado por {publisher}, um particular residente em Viena, na Áustria.",
   "footer.privacy": "Política de privacidade",
+  "privacy.translated": "Esta é uma tradução para sua conveniência. O texto que faz fé é o original em inglês: {link}.",
+  "privacy.description": "A política de privacidade da extensão do Chrome {name}: que dados trata, para onde vão e o que o seu editor recebe.",
   "footer.page": "Esta página não usa cookies nem ferramentas de análise. O vídeo só é carregado do YouTube quando o reproduzir.",
   "footer.rights": "Todos os direitos reservados.",
   "footer.languages": "Esta página noutros idiomas",
