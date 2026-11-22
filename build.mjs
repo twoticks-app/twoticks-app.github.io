@@ -214,6 +214,10 @@ for (const lang of cfg.languages) {
     if (!panel || !panel[tool.slug]) throw new Error(`${lang.code}: no panel text for ${tool.slug} in content/panel.json`);
   }
   const english = !lang.path;
+  // The store's screenshots in this language (tools/images.py: <file>-<code>-<width>; "pt" serves both Portuguese
+  // sites, as the panel has one Portuguese) where all of them are there in both sizes and formats; else the English.
+  const shotCode = lang.code.split('-')[0].toLowerCase();
+  const shotLang = !english && cfg.shots.every((s) => ['640.webp', '640.avif', '1280.webp', '1280.avif'].every((w) => images.includes(`${s.file}-${shotCode}-${w}`))) ? shotCode : '';
   const fonts = [...FONT_PRELOADS.base, ...(FONT_PRELOADS[lang.code] || [])];
   // The preview picture when the page is shared: the one of its language where there is one.
   const ogImage = fs.existsSync(path.join(ROOT, 'src', 'img', `og-${lang.code}.png`)) ? `assets/img/og-${lang.code}.png` : 'assets/img/og.png';
@@ -222,6 +226,7 @@ for (const lang of cfg.languages) {
     return {
       t, ta, ui, uiAlt, listing: list, panel, cfg, lang, langs: cfg.languages, base, ogImage, frames, bigFrames, hasVersions: versions.length > 0,
       films: filmsI18n[lang.code] || {},
+      shotLang,
       privacyRel: PRIVACY_REL, css: cssRef, js: jsRef,
       preloads: fonts.map((f) => `<link rel="preload" href="${base}assets/fonts/${f}" as="font" type="font/woff2" crossorigin>`).join('\n'),
       redirect: english ? REDIRECT : '',

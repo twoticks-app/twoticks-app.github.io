@@ -1,6 +1,7 @@
 # Copyright (c) 2026 Osman Bodur. All rights reserved.
 # Makes the site's pictures from the extension's own store pictures (in the TwoTicks project folder):
-# - the five store screenshots as AVIF and WebP, 640 and 1280 pixels wide;
+# - the five store screenshots as AVIF and WebP, 640 and 1280 pixels wide, in English and in every other language the
+#   store has them in (store/screenshots/<name>.<code>.png -> src/img/<name>-<code>-<width>.<format>);
 # - the picture for link previews (Open Graph, 1200 x 630) from the marquee promo tile;
 # - the icons (32, 180, 192, 512 pixels) from the YouTube channel picture, and the SVG icon from the logo's geometry.
 # Usage: python -I tools/images.py "<TwoTicks project folder>"   (needs Pillow with AVIF and WebP)
@@ -25,14 +26,19 @@ def main(project: Path) -> None:
     OUT.mkdir(parents=True, exist_ok=True)
     store = project / "store"
     total = 0
+    shots = store / "screenshots"
     for name in SHOTS:
-        img = Image.open(store / "screenshots" / f"{name}.png").convert("RGB")
-        for width in (640, 1280):
-            pic = img if img.width == width else img.resize((width, round(img.height * width / img.width)), Image.Resampling.LANCZOS)
-            for fmt, opts in (("avif", {"quality": 62, "speed": 4}), ("webp", {"quality": 84, "method": 6})):
-                path = OUT / f"{name}-{width}.{fmt}"
-                pic.save(path, fmt.upper(), **opts)
-                total += path.stat().st_size
+        # The English screenshot, then the store's screenshots in the panel's other languages (<name>.<code>.png, for
+        # example 1-privacy-screen.tr.png), as <name>-<code>-<width>: a page shows those of its own language.
+        for source in [shots / f"{name}.png"] + sorted(shots.glob(f"{name}.*.png")):
+            code = source.stem[len(name) + 1:]
+            img = Image.open(source).convert("RGB")
+            for width in (640, 1280):
+                pic = img if img.width == width else img.resize((width, round(img.height * width / img.width)), Image.Resampling.LANCZOS)
+                for fmt, opts in (("avif", {"quality": 62, "speed": 4}), ("webp", {"quality": 84, "method": 6})):
+                    path = OUT / (f"{name}-{code}-{width}.{fmt}" if code else f"{name}-{width}.{fmt}")
+                    pic.save(path, fmt.upper(), **opts)
+                    total += path.stat().st_size
 
     # Link preview: the marquee lockup, centred on the brand's slate at 1200 x 630.
     marquee = Image.open(store / "promo-marquee-1400x560.png").convert("RGB")

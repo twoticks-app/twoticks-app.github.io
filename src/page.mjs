@@ -140,7 +140,9 @@ function filmFig(c, x, film, caption, sizes) {
 
 function shot(c, x, s, sizes = '(min-width: 980px) 720px, 86vw') {
   const tool = c.listing[s.group][s.index].name;
-  const src = (w, f) => `${c.base}assets/img/${s.file}-${w}.${f}`;
+  // In the page's language where the store has the screenshot in it (build.mjs: shotLang), else in English.
+  const file = c.shotLang ? `${s.file}-${c.shotLang}` : s.file;
+  const src = (w, f) => `${c.base}assets/img/${file}-${w}.${f}`;
   return `<picture>
           <source type="image/avif" srcset="${src(640, 'avif')} 640w, ${src(1280, 'avif')} 1280w" sizes="${sizes}" width="1280" height="800">
           <img src="${src(1280, 'webp')}" srcset="${src(640, 'webp')} 640w, ${src(1280, 'webp')} 1280w" sizes="${sizes}" width="1280" height="800" alt="${x.ta(s.alt, { tool })}" loading="lazy" decoding="async">

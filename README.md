@@ -27,7 +27,7 @@ TwoTicks is installed only from its page in the Chrome Web Store: https://chrome
 | `content/reviews.json`, `content/reviews-i18n.json`, `src/reviews.mjs` | The reviews of TwoTicks in the Chrome Web Store, read by `tools/reviews.mjs` (names shortened), with their words in each language; shown on the home pages while `"reviews"` in `site.config.json` says so |
 | `src/parts/*.css` | The look of such parts, added to the stylesheet after `src/styles.css` |
 | `src/fonts/`, `src/fonts.css` | IBM Plex, served from the site itself (`tools/fonts.mjs`; licence in `licenses/`) |
-| `src/img/` | Screenshots and the icons (`tools/images.py`, from the extension's store pictures); the link preview of each language, `og-<language>.png` (`tools/og-images.mjs`); the films' posters (`tools/film-frames.py`, from the films' own YouTube thumbnails, and for the films of `content/films-i18n.json` from that language's covers, so nothing loads from YouTube before a click) |
+| `src/img/` | Screenshots and the icons (`tools/images.py`, from the extension's store pictures): the five screenshots in English and in every language the store has them in, `<name>-<code>-<width>`, and each language's pages show their own (both Portuguese sites `pt`, the panel's one Portuguese); the link preview of each language, `og-<language>.png` (`tools/og-images.mjs`); the films' posters (`tools/film-frames.py`, from the films' own YouTube thumbnails, and for the films of `content/films-i18n.json` from that language's covers, so nothing loads from YouTube before a click) |
 
 ## Commands
 
