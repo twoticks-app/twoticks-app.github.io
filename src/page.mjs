@@ -105,21 +105,34 @@ function poster(c, id, sizes) {
           </picture>`;
 }
 
+// A film as this page shows it: where the page's language has the same film made in it (content/films-i18n.json), that
+// film, with its own YouTube id, title and length ("local"); otherwise the English film, its title marked as English.
+function loc(c, film) {
+  const f = c.films && c.films[film.id];
+  return f ? { ...film, id: f.id, title: f.title, seconds: f.seconds, local: true } : film;
+}
+const enLang = (film) => (film.local ? '' : ' lang="en"');
+// The line under a film: its length and language ("in English", or the page's own language for a local film).
+const filmMeta = (x, film) => x.T(film.local ? 'video.metaLocal' : 'video.meta', { duration: esc(minSec(film.seconds)) });
+
 // Further films, each a small poster beside its title and length; they open on YouTube.
 function alsoItems(c, x, films) {
-  return films.map((f) => `<li><a class="also-link" href="https://youtu.be/${f.id}">${c.frames.has(f.id) ? poster(c, f.id, '144px') : ''}<span><span class="also-name" lang="en">${esc(f.title)}</span><span class="also-meta">${x.T('video.meta', { duration: esc(minSec(f.seconds)) })}</span></span></a></li>`).join('');
+  return films.map((f0) => {
+    const f = loc(c, f0);
+    return `<li><a class="also-link" href="https://youtu.be/${f.id}">${c.frames.has(f.id) ? poster(c, f.id, '144px') : ''}<span><span class="also-name"${enLang(f)}>${esc(f.title)}</span><span class="also-meta">${filmMeta(x, f)}</span></span></a></li>`;
+  }).join('');
 }
 
 // A film: the poster with a play button; a click puts YouTube's player in its place (src/app.js). Where a film has
-// no poster yet, the ticks and its title stand in. The caption stays below the player.
+// no poster yet, the ticks and its title stand in. The caption stays below the player. `film` is as loc() gives it.
 function filmFig(c, x, film, caption, sizes) {
   const art = c.frames.has(film.id)
     ? poster(c, film.id, sizes)
-    : `<span class="film-art" aria-hidden="true">${ticks('film-ticks')}</span><span class="film-stand" lang="en" aria-hidden="true">${esc(film.title)}</span>`;
+    : `<span class="film-art" aria-hidden="true">${ticks('film-ticks')}</span><span class="film-stand"${enLang(film)} aria-hidden="true">${esc(film.title)}</span>`;
   return `<figure class="film-fig">
         <a class="film-play" href="https://youtu.be/${film.id}" data-film="${film.id}" data-hl="${c.lang.code}" data-title="${esc(film.title)}">
           ${art}
-          <span class="film-btn">${I.play}<span class="vh">${x.T('video.play')}: <span lang="en">${esc(film.title)}</span></span></span>
+          <span class="film-btn">${I.play}<span class="vh">${x.T('video.play')}: <span${enLang(film)}>${esc(film.title)}</span></span></span>
         </a>
         <figcaption class="film-cap">${caption}</figcaption>
       </figure>`;
@@ -247,7 +260,7 @@ function toolGroups(c, x, link, current) {
           ? `<li aria-current="page"><b>${esc(it.name)}</b></li>`
           : `<li><a href="${link(tool)}">${esc(it.name)}</a></li>`;
       }
-      return `<li><h4 class="tool-name"><a href="${link(tool)}">${esc(it.name)}</a></h4><p>${kbd(esc(it.sentence))}</p><a class="film-link" href="https://youtu.be/${tool.film.id}">${I.play}<span>${x.T('features.film')}</span><span class="vh">: ${esc(it.name)}</span></a></li>`;
+      return `<li><h4 class="tool-name"><a href="${link(tool)}">${esc(it.name)}</a></h4><p>${kbd(esc(it.sentence))}</p><a class="film-link" href="https://youtu.be/${loc(c, tool.film).id}">${I.play}<span>${x.T('features.film')}</span><span class="vh">: ${esc(it.name)}</span></a></li>`;
     }).join('');
     return `<section class="group" aria-labelledby="g-${g}"><h3 id="g-${g}">${x.T(`features.group.${g}`)}</h3><ul class="tools${current ? ' tools-links' : ''}">${items}</ul></section>`;
   }).join('\n');
@@ -256,6 +269,8 @@ function toolGroups(c, x, link, current) {
 // --- the home page ----------------------------------------------------------------------------------------------
 export function render(c) {
   const { t, ta, ui, listing, cfg, lang } = c;
+  // The overview film ("One day, thirteen tools"), in the page's language where it is made in it.
+  const dayFilm = loc(c, { id: cfg.youtube.film, title: cfg.youtube.filmTitle, seconds: cfg.youtube.seconds });
   const x = common(c);
   const { T, newTab, storeLink, addTitle } = x;
 
@@ -398,10 +413,10 @@ ${toolGroups(c, x, (tool) => `tools/${tool.slug}/`)}
       </div>
       <p class="langs-line"><b>${esc(listing.languages.name)}:</b> ${esc(listing.languages.text)}</p>
       <div class="film">
-        ${filmFig(c, x, { id: cfg.youtube.film, title: cfg.youtube.filmTitle }, `
+        ${filmFig(c, x, dayFilm, `
           <p class="film-kicker">${T('video.title')}</p>
-          <p class="film-title" lang="en">${esc(cfg.youtube.filmTitle)}</p>
-          <p class="film-meta">${T('video.meta', { duration: esc(minSec(cfg.youtube.seconds)) })}</p>
+          <p class="film-title"${enLang(dayFilm)}>${esc(dayFilm.title)}</p>
+          <p class="film-meta">${filmMeta(x, dayFilm)}</p>
           <p class="film-note">${T('video.note')} <a href="${esc(cfg.youtube.channel)}">${T('video.channel')}</a></p>`,
           '(min-width: 1240px) 680px, (min-width: 900px) 60vw, 92vw')}
         ${(cfg.youtube.more || []).length ? `<p class="also-k">${T('tool.alsoFilm')}</p>
@@ -442,7 +457,9 @@ export function renderTool(c, tool) {
   const extra = [];
   if (tool.slug === 'several-chats') extra.push(`<p class="tool-note">${esc(listing.several)}</p>`);
   if (tool.slug === 'ai-assistant') extra.push(`<p class="tool-note"><b>${esc(listing.privacy[2].name)}:</b> ${esc(listing.privacy[2].text)}</p>`);
-  const meta = (f) => T('video.meta', { duration: esc(minSec(f.seconds)) });
+  // The tool's film and its step-by-step film, in the page's language where they are made in it.
+  const toolFilm = loc(c, tool.film);
+  const stepsFilm = tool.steps ? loc(c, tool.steps) : null;
   // The tool's everyday stories, then its further films.
   const more = alsoItems(c, x, [...(tool.stories || []), ...(tool.more || [])]);
 
@@ -480,12 +497,12 @@ export function renderTool(c, tool) {
         ${extra.join('\n')}
         <h2>${T('tool.howTitle')}</h2>
         <p>${T('tool.how', { keys: keys('Alt+Shift+H'), panelTool: `<span class="ui">${braces(esc(p.title))}</span>` })}</p>
-        ${tool.steps ? filmFig(c, x, tool.steps, `<p><span class="film-name" lang="en">${esc(tool.steps.title)}</span> <span class="film-meta">${meta(tool.steps)}</span></p>`,
+        ${stepsFilm ? filmFig(c, x, stepsFilm, `<p><span class="film-name"${enLang(stepsFilm)}>${esc(stepsFilm.title)}</span> <span class="film-meta">${filmMeta(x, stepsFilm)}</span></p>`,
           '(min-width: 1240px) 500px, (min-width: 980px) 44vw, 92vw') : ''}
       </div>
       <div class="tool-col">
         <h2>${T('tool.film')}</h2>
-        ${filmFig(c, x, tool.film, `<p><span class="film-name" lang="en">${esc(tool.film.title)}</span> <span class="film-meta">${meta(tool.film)}</span></p>`,
+        ${filmFig(c, x, toolFilm, `<p><span class="film-name"${enLang(toolFilm)}>${esc(toolFilm.title)}</span> <span class="film-meta">${filmMeta(x, toolFilm)}</span></p>`,
           '(min-width: 1240px) 550px, (min-width: 980px) 48vw, 92vw')}
         ${more ? `<p class="also-k">${T('tool.alsoFilm')}</p><ul class="also">${more}</ul>` : ''}
         <p class="film-note">${T('video.note')}</p>

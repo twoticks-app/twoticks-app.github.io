@@ -49,6 +49,7 @@
   "video.title": "TwoTicks ile bir gün",
   "video.play": "Videoyu oynat",
   "video.meta": "{duration}, İngilizce, YouTube'da",
+  "video.metaLocal": "{duration}, Türkçe, YouTube'da",
   "video.note": "Video, siz oynatana kadar YouTube'dan yüklenmez.",
   "video.channel": "YouTube'daki bütün videolar",
   "faq.title": "Sorular ve cevaplar",

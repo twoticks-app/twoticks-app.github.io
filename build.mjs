@@ -29,6 +29,15 @@ const images = fs.readdirSync(path.join(ROOT, 'src', 'img'));
 const posters = (width) => new Set(images.map((f) => new RegExp(`^film-(.+)-${width}\\.webp$`).exec(f)).filter(Boolean).map((m) => m[1]));
 const frames = posters(640);
 const bigFrames = posters(1280);
+// The films made in a language (content/films-i18n.json, tools/films-i18n.py): under each English film's YouTube id the
+// same film in that language. A language's pages show those; a film the file does not have stays English there.
+const filmsI18n = fs.existsSync(path.join(ROOT, 'content', 'films-i18n.json')) ? JSON.parse(read('content/films-i18n.json')) : {};
+for (const [code, list] of Object.entries(filmsI18n)) {
+  if (!cfg.languages.some((l) => l.code === code)) throw new Error(`content/films-i18n.json: ${code} is not a language of the site`);
+  for (const [en, f] of Object.entries(list)) {
+    if (!/^[\w-]{11}$/.test(f.id) || !f.title || !(f.seconds > 0)) throw new Error(`content/films-i18n.json: ${code} ${en} needs an id, a title and seconds`);
+  }
+}
 const sha = (data, enc = 'hex') => String(crypto.createHash('sha256').update(data).digest(enc));
 
 // --- texts ---------------------------------------------------------------------------------------------------------
@@ -212,6 +221,7 @@ for (const lang of cfg.languages) {
     const base = '../'.repeat(depth);
     return {
       t, ta, ui, uiAlt, listing: list, panel, cfg, lang, langs: cfg.languages, base, ogImage, frames, bigFrames, hasVersions: versions.length > 0,
+      films: filmsI18n[lang.code] || {},
       privacyRel: PRIVACY_REL, css: cssRef, js: jsRef,
       preloads: fonts.map((f) => `<link rel="preload" href="${base}assets/fonts/${f}" as="font" type="font/woff2" crossorigin>`).join('\n'),
       redirect: english ? REDIRECT : '',

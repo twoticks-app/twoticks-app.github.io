@@ -5,6 +5,8 @@
 # The films shown large (the overview film, each tool's film and its step-by-step film) get 640 and 1280 pixels; the
 # films shown small in a list (a tool's stories and further films, the home page's further films) get 640 pixels.
 # A film whose thumbnail the manifest does not list by its YouTube id names its file in "thumb" (for example "tl11").
+# The same films made in other languages (content/films-i18n.json, tools/films-i18n.py) get their posters from that
+# language's covers ("thumb": "tr/f17" is thumbnails/tr/f17.jpg), in the sizes of the English film they stand for.
 # The site serves the posters itself, so nothing loads from YouTube before someone presses play. The folder is
 # written afresh: posters of films the site no longer names are removed.
 # Usage: python -I tools/film-frames.py "<TwoTicks project folder>"   (needs Pillow with AVIF and WebP)
@@ -18,7 +20,7 @@ ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "src" / "img"
 
 
-def films(cfg: dict) -> dict:
+def films(cfg: dict, local: dict) -> dict:
     """YouTube id -> (thumbnail name or None, shown large)."""
     out: dict = {}
 
@@ -35,6 +37,11 @@ def films(cfg: dict) -> dict:
             add(tool["steps"], True)
         for f in tool.get("stories", []) + tool.get("more", []):
             add(f, False)
+    english = dict(out)
+    for lang_films in local.values():
+        for en_id, f in lang_films.items():
+            if en_id in english:
+                add({"id": f["id"], "thumb": f["thumb"]}, english[en_id][1])
     return out
 
 
@@ -45,7 +52,9 @@ def main(project: Path) -> None:
     thumbs = project / "store" / "video" / "_final" / "thumbnails"
     manifest = json.loads((thumbs / "manifest.json").read_text(encoding="utf-8"))
     by_id = {v["yt"]: thumbs / Path(v["file"]).name for v in manifest.values() if v.get("kind") == "long" and v.get("yt")}
-    plan = films(cfg)
+    local_file = ROOT / "content" / "films-i18n.json"
+    local = json.loads(local_file.read_text(encoding="utf-8")) if local_file.exists() else {}
+    plan = films(cfg, local)
     sources = {}
     for film, (thumb, _) in plan.items():
         path = thumbs / f"{thumb}.jpg" if thumb else by_id.get(film)

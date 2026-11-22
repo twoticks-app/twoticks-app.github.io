@@ -18,6 +18,7 @@ TwoTicks is installed only from its page in the Chrome Web Store: https://chrome
 | `i18n/<language>.json` | The site's own texts in each language |
 | `content/listing/<language>.txt` | The Chrome Web Store description in each language (copied from `store/listing/1.2.0/` of the extension): the tools, the price, the permissions, the support line |
 | `content/privacy-policy.md`, `src/markdown.mjs`, `src/parts/doc.css` | The extension's privacy policy, a copy of its `store/privacy-policy.md`, shown in English at `privacy/`; `src/markdown.mjs` turns its headings, paragraphs, lists, tables, bold words and links into HTML and escapes everything else |
+| `content/films-i18n.json` | The same films made in other languages (so far Turkish): under each English film's YouTube id, the language's YouTube id, title, length and cover, written by `tools/films-i18n.py` from the TwoTicks project (the covers' `manifest.json`, the status table of `store/youtube/YOUTUBE-<language>.md`, the films' files). That language's pages show these films, their titles in the language and their length line in it (`video.metaLocal` in `i18n/<language>.json`, for example "Türkçe"); a film the file does not list stays English there, marked as English |
 | `content/films.json`, `src/watch.mjs` | The extension's how-to films (number, YouTube video, length and the panel's English title), read from its `films.js` and `lang/en.js` by `tools/films.cjs`; one page each at `watch/<number>/`: YouTube's privacy-enhanced player on black and nothing else (no script, no font), because YouTube refuses that player inside an extension's page or on its own ("Error 153") |
 | `content/panel.json` | The panel's own words for each tool in each language (title, text, hint), read from the extension by `tools/panel-texts.cjs` |
 | `content/chrome-ui.json` | Chrome's own words in each language ('Add "$1"?', "Add extension", "Pin", "Remove from Chrome" and more), read from Chrome by `tools/chrome-ui.cjs` |
@@ -26,7 +27,7 @@ TwoTicks is installed only from its page in the Chrome Web Store: https://chrome
 | `content/reviews.json`, `content/reviews-i18n.json`, `src/reviews.mjs` | The reviews of TwoTicks in the Chrome Web Store, read by `tools/reviews.mjs` (names shortened), with their words in each language; shown on the home pages while `"reviews"` in `site.config.json` says so |
 | `src/parts/*.css` | The look of such parts, added to the stylesheet after `src/styles.css` |
 | `src/fonts/`, `src/fonts.css` | IBM Plex, served from the site itself (`tools/fonts.mjs`; licence in `licenses/`) |
-| `src/img/` | Screenshots and the icons (`tools/images.py`, from the extension's store pictures); the link preview of each language, `og-<language>.png` (`tools/og-images.mjs`); the films' posters (`tools/film-frames.py`, from the films' own YouTube thumbnails, so nothing loads from YouTube before a click) |
+| `src/img/` | Screenshots and the icons (`tools/images.py`, from the extension's store pictures); the link preview of each language, `og-<language>.png` (`tools/og-images.mjs`); the films' posters (`tools/film-frames.py`, from the films' own YouTube thumbnails, and for the films of `content/films-i18n.json` from that language's covers, so nothing loads from YouTube before a click) |
 
 ## Commands
 
@@ -36,6 +37,7 @@ node tools/serve.mjs                look at dist/ on http://localhost:8723/
 node tools/chrome-ui.cjs --pak-only Chrome's words again, from the installed Google Chrome
 node tools/panel-texts.cjs "<extension folder>"   the panel's words again, from the extension
 node tools/films.cjs "<extension folder>"         the list of how-to films again, from the extension
+python -I tools/films-i18n.py "<project folder>" tr   the site's films in Turkish again (then the posters)
 python -I tools/film-frames.py "<project folder>"   the films' posters again
 node tools/og-images.mjs "<project folder>"        the link previews again
 node tools/reviews.mjs                              the store's reviews again
