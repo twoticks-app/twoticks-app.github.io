@@ -5,14 +5,20 @@
 // plays. So each page is only that player, on black, filling the window: no script, no font, nothing else loaded
 // (its content security policy allows the player's frame and the page's own style, no more). The pages are not
 // linked from the site, are not in the sitemap and ask search engines not to list them.
-// Usage: renderWatch(film, { esc, sha }) gives the page's HTML; film = { n, yt, s, title }.
+// A film made in another language than English has a page of its own one level below, watch/<number>/<language>/,
+// which the extension opens when its panel speaks that language (since 1.2.2).
+// Usage: renderWatch(film, { esc, sha, lang }) gives the page's HTML; film = { n, yt, s, title }; lang: the language
+// of that film's page below watch/<number>/ (none: the English film at watch/<number>/ itself).
 
 const STYLE = 'html,body{height:100%;margin:0;background:#000}iframe{display:block;width:100%;height:100%;border:0}';
 
-export function renderWatch(film, { esc, sha }) {
+export function renderWatch(film, { esc, sha, lang = '' }) {
   if (!/^\d{2}$/.test(film.n) || !/^[A-Za-z0-9_-]{11}$/.test(film.yt) || typeof film.title !== 'string' || !film.title.trim()) {
     throw new Error(`content/films.json: film ${JSON.stringify(film)} has no two-digit number, no YouTube video id or no title`);
   }
+  if (lang && !/^[a-z]{2}$/.test(lang)) throw new Error(`film ${film.n}: "${lang}" is not a language code of the extension's panel`);
+  // The page's own files: two levels up from watch/<number>/, three from watch/<number>/<language>/.
+  const up = lang ? '../../../' : '../../';
   const csp = [
     "default-src 'none'",
     `style-src 'sha256-${sha(STYLE, 'base64')}'`,
@@ -23,7 +29,7 @@ export function renderWatch(film, { esc, sha }) {
     "form-action 'none'",
   ].join('; ');
   return `<!doctype html>
-<html lang="en">
+<html lang="${lang || 'en'}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -31,8 +37,8 @@ export function renderWatch(film, { esc, sha }) {
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="robots" content="noindex">
 <title>${esc(film.title)} · TwoTicks</title>
-<link rel="icon" href="../../assets/img/icon.svg" type="image/svg+xml">
-<link rel="icon" href="../../assets/img/icon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="${up}assets/img/icon.svg" type="image/svg+xml">
+<link rel="icon" href="${up}assets/img/icon-32.png" sizes="32x32" type="image/png">
 <style>${STYLE}</style>
 </head>
 <body>

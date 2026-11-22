@@ -305,6 +305,17 @@ const films = JSON.parse(read('content/films.json')).films;
 if (!Array.isArray(films) || !films.length) throw new Error('content/films.json: no films');
 if (new Set(films.map((f) => f.n)).size !== films.length) throw new Error('content/films.json: two films have the same number');
 for (const film of films) writePage(`watch/${film.n}/`, renderWatch(film, { esc, sha }));
+// The same films in a language they were made in (content/films-i18n.json, under each English film's YouTube id), at
+// watch/<number>/<language>/: the extension opens that page when its panel speaks the language (since 1.2.2; its
+// films.js names the languages, by the panel's two-letter code, which is the address's too).
+const filmLangs = [];
+for (const [code, made] of Object.entries(filmsI18n)) {
+  const own = films.filter((film) => made[film.yt]);
+  if (!own.length) continue;
+  if (!/^[a-z]{2}$/.test(code)) throw new Error(`content/films-i18n.json: no film pages for "${code}": the extension's panel knows two-letter codes only`);
+  for (const film of own) writePage(`watch/${film.n}/${code}/`, renderWatch({ n: film.n, yt: made[film.yt].id, s: made[film.yt].seconds, title: made[film.yt].title }, { esc, sha, lang: code }));
+  filmLangs.push({ code, n: own.length });
+}
 
 // 404: GitHub Pages serves it for every missing address, at any depth, so its links start at the site's root.
 const rootPath = new URL(cfg.siteUrl).pathname;
@@ -354,4 +365,5 @@ for (const p of pages) console.log(`  ${(p.lang.path || '(root)').padEnd(8)} ${p
 console.log(`  ${PRIVACY_REL.padEnd(8)} en     privacy policy ${kb(privacyBytes)} (${policy.title})`);
 for (const p of privacyPages) console.log(`  ${p.rel.padEnd(8)} ${p.lang.code.padEnd(6)} privacy policy ${kb(p.bytes)}, a translation (${policies[p.lang.code].title})`);
 console.log(`  watch/   en     ${films.length} film pages for the extension's film window: ${films.map((f) => f.n).sort().join(', ')}`);
+for (const l of filmLangs) console.log(`  watch/   ${l.code.padEnd(6)} ${l.n} of them in that language too (watch/<number>/${l.code}/)${l.n < films.length ? ' — NOT ALL: the extension lists a language only with every film' : ''}`);
 console.log(`  assets: site.css ${kb(Buffer.byteLength(css))}, app.js ${kb(Buffer.byteLength(js))}`);
