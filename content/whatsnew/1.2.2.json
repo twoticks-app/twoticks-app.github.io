@@ -4,73 +4,109 @@
     "en": {
       "title": "What's new in TwoTicks 1.2.2",
       "items": [
-        "The Privacy screen’s “Blur everything when you leave the window” now works on its own too: with no part ticked, nothing is blurred while you work in WhatsApp, and everything once another window is in front."
+        "The Privacy screen’s “Blur everything when you leave the window” now works on its own too: with no part ticked, nothing is blurred while you work in WhatsApp, and everything once another window is in front.",
+        "After a slow start (a slow computer, or a browser busy with other things), TwoTicks’ tools could stay unavailable until the page was loaded again. That no longer happens.",
+        "A lighter start: TwoTicks does less work while WhatsApp Web starts.",
+        "With TwoTicks set to Turkish, the how-to films are now the Turkish ones: in “Video tutorials” and in the settings."
       ]
     },
     "de": {
       "title": "Neu in TwoTicks 1.2.2",
       "items": [
-        "„Alles unscharf machen, wenn Sie das Fenster verlassen“ im Sichtschutz wirkt jetzt auch allein: Ist kein Bereich angehakt, bleibt in WhatsApp alles lesbar, und sobald ein anderes Fenster im Vordergrund ist, wird alles unscharf."
+        "„Alles unscharf machen, wenn Sie das Fenster verlassen“ im Sichtschutz wirkt jetzt auch allein: Ist kein Bereich angehakt, bleibt in WhatsApp alles lesbar, und sobald ein anderes Fenster im Vordergrund ist, wird alles unscharf.",
+        "Nach einem langsamen Start (langsamer Computer oder stark beschäftigter Browser) konnten die Werkzeuge von TwoTicks unbenutzbar bleiben, bis die Seite neu geladen wurde. Das passiert nicht mehr.",
+        "Leichterer Start: Während WhatsApp Web startet, hat TwoTicks weniger zu tun.",
+        "Ist TwoTicks auf Türkisch gestellt, sind die Anleitungsfilme jetzt die türkischen: unter „Video-Anleitungen“ und in den Einstellungen."
       ]
     },
     "es": {
       "title": "Novedades de TwoTicks 1.2.2",
       "items": [
-        "«Desenfocarlo todo al salir de la ventana» de Privacidad en pantalla ahora funciona también por sí solo: sin ninguna parte marcada, nada se difumina mientras trabajas en WhatsApp y todo se difumina en cuanto otra ventana pasa al frente."
+        "«Desenfocarlo todo al salir de la ventana» de Privacidad en pantalla ahora funciona también por sí solo: sin ninguna parte marcada, nada se difumina mientras trabajas en WhatsApp y todo se difumina en cuanto otra ventana pasa al frente.",
+        "Tras un inicio lento (un ordenador lento o un navegador muy ocupado), las herramientas de TwoTicks podían quedarse sin funcionar hasta volver a cargar la página. Ya no ocurre.",
+        "Un inicio más ligero: TwoTicks hace menos trabajo mientras WhatsApp Web se inicia.",
+        "Con TwoTicks en turco, los vídeos de ayuda son ahora los que están en turco: en «Videotutoriales» y en los ajustes."
       ]
     },
     "fr": {
       "title": "Nouveautés de TwoTicks 1.2.2",
       "items": [
-        "« Tout flouter quand vous quittez la fenêtre » de l’Écran de confidentialité fonctionne désormais aussi seul : sans aucune partie cochée, rien n’est flouté pendant que vous travaillez dans WhatsApp, et tout l’est dès qu’une autre fenêtre passe au premier plan."
+        "« Tout flouter quand vous quittez la fenêtre » de l’Écran de confidentialité fonctionne désormais aussi seul : sans aucune partie cochée, rien n’est flouté pendant que vous travaillez dans WhatsApp, et tout l’est dès qu’une autre fenêtre passe au premier plan.",
+        "Après un démarrage lent (ordinateur lent ou navigateur très occupé), les outils de TwoTicks pouvaient rester inutilisables jusqu’au rechargement de la page. Cela n’arrive plus.",
+        "Un démarrage plus léger : TwoTicks a moins à faire pendant le démarrage de WhatsApp Web.",
+        "Avec TwoTicks en turc, les films d’aide sont désormais ceux en turc : dans « Tutoriels vidéo » et dans les paramètres."
       ]
     },
     "it": {
       "title": "Novità di TwoTicks 1.2.2",
       "items": [
-        "«Sfoca tutto quando lasci la finestra» dello Schermo privacy ora funziona anche da solo: senza nessuna parte selezionata, nulla viene sfocato mentre lavori in WhatsApp, e tutto appena un’altra finestra passa in primo piano."
+        "«Sfoca tutto quando lasci la finestra» dello Schermo privacy ora funziona anche da solo: senza nessuna parte selezionata, nulla viene sfocato mentre lavori in WhatsApp, e tutto appena un’altra finestra passa in primo piano.",
+        "Dopo un avvio lento (computer lento o browser molto occupato), gli strumenti di TwoTicks potevano restare inutilizzabili finché la pagina non veniva ricaricata. Ora non succede più.",
+        "Avvio più leggero: TwoTicks ha meno lavoro da fare mentre WhatsApp Web si avvia.",
+        "Con TwoTicks in turco, i filmati di aiuto sono ora quelli in turco: in «Video tutorial» e nelle impostazioni."
       ]
     },
     "pt-BR": {
       "title": "Novidades do TwoTicks 1.2.2",
       "items": [
-        "“Desfocar tudo ao sair da janela” da Privacidade na tela agora funciona também sozinho: sem nenhuma parte marcada, nada fica desfocado enquanto você usa o WhatsApp, e tudo fica assim que outra janela vem para a frente."
+        "“Desfocar tudo ao sair da janela” da Privacidade na tela agora funciona também sozinho: sem nenhuma parte marcada, nada fica desfocado enquanto você usa o WhatsApp, e tudo fica assim que outra janela vem para a frente.",
+        "Depois de um início lento (computador lento ou navegador muito ocupado), as ferramentas do TwoTicks podiam ficar indisponíveis até a página ser recarregada. Isso não acontece mais.",
+        "Início mais leve: o TwoTicks faz menos trabalho enquanto o WhatsApp Web inicia.",
+        "Com o TwoTicks em turco, os vídeos de ajuda agora são os que estão em turco: em “Tutoriais em vídeo” e nas configurações."
       ]
     },
     "pt-PT": {
       "title": "Novidades do TwoTicks 1.2.2",
       "items": [
-        "“Desfocar tudo ao sair da janela” da Privacidade no ecrã passa a funcionar também sozinho: sem nenhuma parte assinalada, nada fica desfocado enquanto usa o WhatsApp, e tudo fica desfocado assim que outra janela passa para a frente."
+        "“Desfocar tudo ao sair da janela” da Privacidade no ecrã passa a funcionar também sozinho: sem nenhuma parte assinalada, nada fica desfocado enquanto usa o WhatsApp, e tudo fica desfocado assim que outra janela passa para a frente.",
+        "Depois de um arranque lento (computador lento ou navegador muito ocupado), as ferramentas do TwoTicks podiam ficar indisponíveis até a página ser recarregada. Isso já não acontece.",
+        "Arranque mais leve: o TwoTicks tem menos trabalho enquanto o WhatsApp Web arranca.",
+        "Com o TwoTicks em turco, os vídeos de ajuda passam a ser os que estão em turco: em “Tutoriais em vídeo” e nas definições."
       ]
     },
     "tr": {
       "title": "TwoTicks 1.2.2 ile gelen yenilikler",
       "items": [
-        "Gizlilik ekranındaki “Pencereden ayrılınca her şeyi bulanıklaştır” artık tek başına da çalışır: hiçbir bölüm seçili değilken WhatsApp'ta çalışırken hiçbir şey bulanıklaşmaz, başka bir pencere öne geçince her şey bulanıklaşır."
+        "Gizlilik ekranındaki “Pencereden ayrılınca her şeyi bulanıklaştır” artık tek başına da çalışır: hiçbir bölüm seçili değilken WhatsApp'ta çalışırken hiçbir şey bulanıklaşmaz, başka bir pencere öne geçince her şey bulanıklaşır.",
+        "Yavaş bir açılışın ardından (yavaş bir bilgisayarda ya da tarayıcı çok meşgulken) TwoTicks'in araçları, sayfa yeniden yüklenene kadar kullanılamayabiliyordu. Bu artık olmaz.",
+        "Daha hafif açılış: WhatsApp Web açılırken TwoTicks daha az iş yapar.",
+        "TwoTicks Türkçeyken eğitim filmleri artık Türkçe: “Video eğitimleri” sayfasında ve Ayarlar’da."
       ]
     },
     "ru": {
       "title": "Что нового в TwoTicks 1.2.2",
       "items": [
-        "«Размывать всё, когда окно на заднем плане» в приватном экране теперь работает и само по себе: если не отмечена ни одна часть, в WhatsApp ничего не размывается, пока вы в нём работаете, а как только на переднем плане другое окно, размывается всё."
+        "«Размывать всё, когда окно на заднем плане» в приватном экране теперь работает и само по себе: если не отмечена ни одна часть, в WhatsApp ничего не размывается, пока вы в нём работаете, а как только на переднем плане другое окно, размывается всё.",
+        "После медленного запуска (медленный компьютер или сильно загруженный браузер) инструменты TwoTicks могли оставаться недоступными, пока страницу не загружали заново. Теперь такого не происходит.",
+        "Более лёгкий запуск: пока запускается WhatsApp Web, TwoTicks выполняет меньше работы.",
+        "Если в TwoTicks выбран турецкий язык, обучающие ролики теперь показываются на турецком: в разделе «Видеоуроки» и в настройках."
       ]
     },
     "ar": {
       "title": "الجديد في TwoTicks 1.2.2",
       "items": [
-        "يعمل خيار «تمويه كل شيء عند مغادرة النافذة» في شاشة الخصوصية الآن بمفرده أيضًا: إذا لم يُحدَّد أي جزء فلا يُموَّه شيء وأنت تعمل في WhatsApp، ويُموَّه كل شيء بمجرد أن تصبح نافذة أخرى في المقدمة."
+        "يعمل خيار «تمويه كل شيء عند مغادرة النافذة» في شاشة الخصوصية الآن بمفرده أيضًا: إذا لم يُحدَّد أي جزء فلا يُموَّه شيء وأنت تعمل في WhatsApp، ويُموَّه كل شيء بمجرد أن تصبح نافذة أخرى في المقدمة.",
+        "بعد بدء تشغيل بطيء (حاسوب بطيء أو متصفح مشغول جدًا) كانت أدوات TwoTicks قد تبقى غير متاحة إلى أن يُعاد تحميل الصفحة. لم يعد ذلك يحدث.",
+        "بدء تشغيل أخف: يقوم TwoTicks بعمل أقل أثناء بدء تشغيل WhatsApp Web.",
+        "عند اختيار اللغة التركية في TwoTicks، تُعرض مقاطع الشرح الآن باللغة التركية: في «دروس فيديو» وفي الإعدادات."
       ]
     },
     "hi": {
       "title": "TwoTicks 1.2.2 में नया क्या है",
       "items": [
-        "प्राइवेसी स्क्रीन का “विंडो से हटने पर सब कुछ ब्लर करें” अब अकेले भी काम करता है: कोई हिस्सा चुना न हो तो WhatsApp में काम करते समय कुछ भी ब्लर नहीं होता, और कोई दूसरी विंडो सामने आते ही सब कुछ ब्लर हो जाता है।"
+        "प्राइवेसी स्क्रीन का “विंडो से हटने पर सब कुछ ब्लर करें” अब अकेले भी काम करता है: कोई हिस्सा चुना न हो तो WhatsApp में काम करते समय कुछ भी ब्लर नहीं होता, और कोई दूसरी विंडो सामने आते ही सब कुछ ब्लर हो जाता है।",
+        "धीमी शुरुआत के बाद (धीमा कंप्यूटर या बहुत व्यस्त ब्राउज़र) TwoTicks के टूल तब तक इस्तेमाल नहीं हो पाते थे जब तक पेज दोबारा लोड न किया जाए। अब ऐसा नहीं होता।",
+        "हल्की शुरुआत: WhatsApp Web के शुरू होते समय TwoTicks अब कम काम करता है।",
+        "TwoTicks की भाषा तुर्की होने पर मदद वाले वीडियो अब तुर्की में मिलते हैं: “वीडियो ट्यूटोरियल” में और सेटिंग्स में।"
       ]
     },
     "id": {
       "title": "Yang baru di TwoTicks 1.2.2",
       "items": [
-        "“Buramkan semuanya saat Anda meninggalkan jendela” di Layar privasi kini juga berfungsi sendiri: tanpa bagian yang dicentang, tidak ada yang diburamkan selama Anda bekerja di WhatsApp, dan semuanya diburamkan begitu jendela lain berada di depan."
+        "“Buramkan semuanya saat Anda meninggalkan jendela” di Layar privasi kini juga berfungsi sendiri: tanpa bagian yang dicentang, tidak ada yang diburamkan selama Anda bekerja di WhatsApp, dan semuanya diburamkan begitu jendela lain berada di depan.",
+        "Setelah awal yang lambat (komputer lambat atau browser yang sedang sibuk), alat-alat TwoTicks bisa tetap tidak dapat dipakai sampai halaman dimuat ulang. Hal itu tidak terjadi lagi.",
+        "Awal yang lebih ringan: TwoTicks mengerjakan lebih sedikit saat WhatsApp Web dimulai.",
+        "Jika TwoTicks berbahasa Turki, film panduannya kini yang berbahasa Turki: di “Tutorial video” dan di Setelan."
       ]
     }
   }
