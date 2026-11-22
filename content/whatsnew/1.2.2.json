@@ -1,0 +1,77 @@
+{
+  "version": "1.2.2",
+  "texts": {
+    "en": {
+      "title": "What's new in TwoTicks 1.2.2",
+      "items": [
+        "The Privacy screen’s “Blur everything when you leave the window” now works on its own too: with no part ticked, nothing is blurred while you work in WhatsApp, and everything once another window is in front."
+      ]
+    },
+    "de": {
+      "title": "Neu in TwoTicks 1.2.2",
+      "items": [
+        "„Alles unscharf machen, wenn Sie das Fenster verlassen“ im Sichtschutz wirkt jetzt auch allein: Ist kein Bereich angehakt, bleibt in WhatsApp alles lesbar, und sobald ein anderes Fenster im Vordergrund ist, wird alles unscharf."
+      ]
+    },
+    "es": {
+      "title": "Novedades de TwoTicks 1.2.2",
+      "items": [
+        "«Desenfocarlo todo al salir de la ventana» de Privacidad en pantalla ahora funciona también por sí solo: sin ninguna parte marcada, nada se difumina mientras trabajas en WhatsApp y todo se difumina en cuanto otra ventana pasa al frente."
+      ]
+    },
+    "fr": {
+      "title": "Nouveautés de TwoTicks 1.2.2",
+      "items": [
+        "« Tout flouter quand vous quittez la fenêtre » de l’Écran de confidentialité fonctionne désormais aussi seul : sans aucune partie cochée, rien n’est flouté pendant que vous travaillez dans WhatsApp, et tout l’est dès qu’une autre fenêtre passe au premier plan."
+      ]
+    },
+    "it": {
+      "title": "Novità di TwoTicks 1.2.2",
+      "items": [
+        "«Sfoca tutto quando lasci la finestra» dello Schermo privacy ora funziona anche da solo: senza nessuna parte selezionata, nulla viene sfocato mentre lavori in WhatsApp, e tutto appena un’altra finestra passa in primo piano."
+      ]
+    },
+    "pt-BR": {
+      "title": "Novidades do TwoTicks 1.2.2",
+      "items": [
+        "“Desfocar tudo ao sair da janela” da Privacidade na tela agora funciona também sozinho: sem nenhuma parte marcada, nada fica desfocado enquanto você usa o WhatsApp, e tudo fica assim que outra janela vem para a frente."
+      ]
+    },
+    "pt-PT": {
+      "title": "Novidades do TwoTicks 1.2.2",
+      "items": [
+        "“Desfocar tudo ao sair da janela” da Privacidade no ecrã passa a funcionar também sozinho: sem nenhuma parte assinalada, nada fica desfocado enquanto usa o WhatsApp, e tudo fica desfocado assim que outra janela passa para a frente."
+      ]
+    },
+    "tr": {
+      "title": "TwoTicks 1.2.2 ile gelen yenilikler",
+      "items": [
+        "Gizlilik ekranındaki “Pencereden ayrılınca her şeyi bulanıklaştır” artık tek başına da çalışır: hiçbir bölüm seçili değilken WhatsApp'ta çalışırken hiçbir şey bulanıklaşmaz, başka bir pencere öne geçince her şey bulanıklaşır."
+      ]
+    },
+    "ru": {
+      "title": "Что нового в TwoTicks 1.2.2",
+      "items": [
+        "«Размывать всё, когда окно на заднем плане» в приватном экране теперь работает и само по себе: если не отмечена ни одна часть, в WhatsApp ничего не размывается, пока вы в нём работаете, а как только на переднем плане другое окно, размывается всё."
+      ]
+    },
+    "ar": {
+      "title": "الجديد في TwoTicks 1.2.2",
+      "items": [
+        "يعمل خيار «تمويه كل شيء عند مغادرة النافذة» في شاشة الخصوصية الآن بمفرده أيضًا: إذا لم يُحدَّد أي جزء فلا يُموَّه شيء وأنت تعمل في WhatsApp، ويُموَّه كل شيء بمجرد أن تصبح نافذة أخرى في المقدمة."
+      ]
+    },
+    "hi": {
+      "title": "TwoTicks 1.2.2 में नया क्या है",
+      "items": [
+        "प्राइवेसी स्क्रीन का “विंडो से हटने पर सब कुछ ब्लर करें” अब अकेले भी काम करता है: कोई हिस्सा चुना न हो तो WhatsApp में काम करते समय कुछ भी ब्लर नहीं होता, और कोई दूसरी विंडो सामने आते ही सब कुछ ब्लर हो जाता है।"
+      ]
+    },
+    "id": {
+      "title": "Yang baru di TwoTicks 1.2.2",
+      "items": [
+        "“Buramkan semuanya saat Anda meninggalkan jendela” di Layar privasi kini juga berfungsi sendiri: tanpa bagian yang dicentang, tidak ada yang diburamkan selama Anda bekerja di WhatsApp, dan semuanya diburamkan begitu jendela lain berada di depan."
+      ]
+    }
+  }
+}

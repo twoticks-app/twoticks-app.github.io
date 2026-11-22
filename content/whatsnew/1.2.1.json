@@ -6,96 +6,84 @@
       "title": "What's new in TwoTicks 1.2.1",
       "items": [
         "With the Privacy screen on, the chat list scrolls smoothly again.",
-        "TwoTicks is lighter on WhatsApp Web's tab: the parts for Excel and ZIP files load only when a tool first needs them, and the chat lists of tools you are not using are no longer kept on the page.",
-        "WhatsApp Web's tab and window now show WhatsApp's own filled icon instead of the thin outline; while chats are unread, WhatsApp still shows its icon with their number."
+        "TwoTicks is lighter on WhatsApp Web's tab: the parts for Excel and ZIP files load only when a tool first needs them, and the chat lists of tools you are not using are no longer kept on the page."
       ]
     },
     "de": {
       "title": "Neu in TwoTicks 1.2.1",
       "items": [
         "Bei eingeschaltetem Sichtschutz scrollt die Chatliste wieder flüssig.",
-        "TwoTicks belastet den Tab von WhatsApp Web weniger: Die Teile für Excel- und ZIP-Dateien werden erst geladen, wenn ein Werkzeug sie zum ersten Mal braucht, und die Chatlisten der Werkzeuge, die Sie gerade nicht verwenden, bleiben nicht mehr auf der Seite.",
-        "Tab und Fenster von WhatsApp Web zeigen jetzt das ausgefüllte Symbol von WhatsApp statt des dünnen Umrisses; solange Chats ungelesen sind, zeigt WhatsApp weiterhin sein Symbol mit ihrer Anzahl."
+        "TwoTicks belastet den Tab von WhatsApp Web weniger: Die Teile für Excel- und ZIP-Dateien werden erst geladen, wenn ein Werkzeug sie zum ersten Mal braucht, und die Chatlisten der Werkzeuge, die Sie gerade nicht verwenden, bleiben nicht mehr auf der Seite."
       ]
     },
     "es": {
       "title": "Novedades de TwoTicks 1.2.1",
       "items": [
         "Con Privacidad en pantalla activada, la lista de chats vuelve a desplazarse con fluidez.",
-        "TwoTicks pesa menos en la pestaña de WhatsApp Web: las partes para archivos de Excel y ZIP solo se cargan cuando una herramienta las necesita por primera vez, y las listas de chats de las herramientas que no estás usando ya no se quedan en la página.",
-        "La pestaña y la ventana de WhatsApp Web muestran ahora el icono relleno de WhatsApp en lugar del contorno fino; mientras haya chats sin leer, WhatsApp sigue mostrando su icono con el número."
+        "TwoTicks pesa menos en la pestaña de WhatsApp Web: las partes para archivos de Excel y ZIP solo se cargan cuando una herramienta las necesita por primera vez, y las listas de chats de las herramientas que no estás usando ya no se quedan en la página."
       ]
     },
     "fr": {
       "title": "Nouveautés de TwoTicks 1.2.1",
       "items": [
         "Avec l’Écran de confidentialité activé, la liste des discussions défile de nouveau avec fluidité.",
-        "TwoTicks pèse moins sur l’onglet de WhatsApp Web : les parties pour les fichiers Excel et ZIP ne se chargent que lorsqu’un outil en a besoin pour la première fois, et les listes de discussions des outils que vous n’utilisez pas ne restent plus sur la page.",
-        "L’onglet et la fenêtre de WhatsApp Web affichent désormais l’icône pleine de WhatsApp au lieu du contour fin ; tant que des discussions restent non lues, WhatsApp affiche toujours son icône avec leur nombre."
+        "TwoTicks pèse moins sur l’onglet de WhatsApp Web : les parties pour les fichiers Excel et ZIP ne se chargent que lorsqu’un outil en a besoin pour la première fois, et les listes de discussions des outils que vous n’utilisez pas ne restent plus sur la page."
       ]
     },
     "it": {
       "title": "Novità di TwoTicks 1.2.1",
       "items": [
         "Con lo Schermo privacy attivo, l’elenco delle chat torna a scorrere in modo fluido.",
-        "TwoTicks pesa meno sulla scheda di WhatsApp Web: le parti per i file Excel e ZIP si caricano solo quando uno strumento ne ha bisogno per la prima volta, e gli elenchi delle chat degli strumenti che non stai usando non restano più nella pagina.",
-        "La scheda e la finestra di WhatsApp Web ora mostrano l’icona piena di WhatsApp invece del contorno sottile; finché ci sono chat non lette, WhatsApp continua a mostrare la sua icona con il loro numero."
+        "TwoTicks pesa meno sulla scheda di WhatsApp Web: le parti per i file Excel e ZIP si caricano solo quando uno strumento ne ha bisogno per la prima volta, e gli elenchi delle chat degli strumenti che non stai usando non restano più nella pagina."
       ]
     },
     "pt-BR": {
       "title": "Novidades do TwoTicks 1.2.1",
       "items": [
         "Com a Privacidade na tela ativada, a lista de conversas volta a rolar com fluidez.",
-        "O TwoTicks pesa menos na aba do WhatsApp Web: as partes para arquivos do Excel e ZIP só carregam quando uma ferramenta precisa delas pela primeira vez, e as listas de conversas das ferramentas que você não está usando não ficam mais na página.",
-        "A aba e a janela do WhatsApp Web agora mostram o ícone preenchido do próprio WhatsApp em vez do contorno fino; enquanto houver conversas não lidas, o WhatsApp continua mostrando seu ícone com o número delas."
+        "O TwoTicks pesa menos na aba do WhatsApp Web: as partes para arquivos do Excel e ZIP só carregam quando uma ferramenta precisa delas pela primeira vez, e as listas de conversas das ferramentas que você não está usando não ficam mais na página."
       ]
     },
     "pt-PT": {
       "title": "Novidades do TwoTicks 1.2.1",
       "items": [
         "Com a Privacidade no ecrã ativada, a lista de conversas volta a deslizar com fluidez.",
-        "O TwoTicks pesa menos no separador do WhatsApp Web: as partes para ficheiros Excel e ZIP só são carregadas quando uma ferramenta precisa delas pela primeira vez, e as listas de conversas das ferramentas que não está a usar deixam de ficar na página.",
-        "O separador e a janela do WhatsApp Web mostram agora o ícone preenchido do próprio WhatsApp em vez do contorno fino; enquanto houver conversas por ler, o WhatsApp continua a mostrar o seu ícone com o respetivo número."
+        "O TwoTicks pesa menos no separador do WhatsApp Web: as partes para ficheiros Excel e ZIP só são carregadas quando uma ferramenta precisa delas pela primeira vez, e as listas de conversas das ferramentas que não está a usar deixam de ficar na página."
       ]
     },
     "tr": {
       "title": "TwoTicks 1.2.1 ile gelen yenilikler",
       "items": [
         "Gizlilik ekranı açıkken sohbet listesi yeniden akıcı kayar.",
-        "TwoTicks, WhatsApp Web sekmesinde daha az bellek kullanır: Excel ve ZIP dosyaları için gereken parçalar ancak bir araç onlara ilk kez ihtiyaç duyduğunda yüklenir; o an kullanmadığınız araçların sohbet listeleri de artık sayfada tutulmaz.",
-        "WhatsApp Web'in sekmesi ve penceresi artık ince çizgili simge yerine WhatsApp'ın kendi dolu simgesini gösterir; okunmamış sohbetler varken WhatsApp sayılı simgesini göstermeye devam eder."
+        "TwoTicks, WhatsApp Web sekmesinde daha az bellek kullanır: Excel ve ZIP dosyaları için gereken parçalar ancak bir araç onlara ilk kez ihtiyaç duyduğunda yüklenir; o an kullanmadığınız araçların sohbet listeleri de artık sayfada tutulmaz."
       ]
     },
     "ru": {
       "title": "Что нового в TwoTicks 1.2.1",
       "items": [
         "Когда приватный экран включён, список чатов снова прокручивается плавно.",
-        "TwoTicks меньше нагружает вкладку WhatsApp Web: части для файлов Excel и ZIP загружаются, только когда они впервые понадобятся инструменту, а списки чатов тех инструментов, которыми вы сейчас не пользуетесь, больше не хранятся на странице.",
-        "Вкладка и окно WhatsApp Web теперь показывают собственный заполненный значок WhatsApp вместо тонкого контура; пока есть непрочитанные чаты, WhatsApp по-прежнему показывает свой значок с их числом."
+        "TwoTicks меньше нагружает вкладку WhatsApp Web: части для файлов Excel и ZIP загружаются, только когда они впервые понадобятся инструменту, а списки чатов тех инструментов, которыми вы сейчас не пользуетесь, больше не хранятся на странице."
       ]
     },
     "ar": {
       "title": "الجديد في TwoTicks 1.2.1",
       "items": [
         "عند تشغيل شاشة الخصوصية تعود قائمة الدردشات إلى التمرير بسلاسة.",
-        "أصبح TwoTicks أخف على علامة تبويب WhatsApp Web: لا تُحمَّل أجزاؤه الخاصة بملفات Excel وZIP إلا عندما تحتاجها أداة لأول مرة، ولم تعد قوائم الدردشات الخاصة بالأدوات التي لا تستخدمها تبقى في الصفحة.",
-        "تعرض علامة تبويب WhatsApp Web ونافذته الآن أيقونة WhatsApp المصمتة بدلًا من الأيقونة ذات الخط الرفيع؛ وما دامت هناك دردشات غير مقروءة يواصل WhatsApp عرض أيقونته مع عددها."
+        "أصبح TwoTicks أخف على علامة تبويب WhatsApp Web: لا تُحمَّل أجزاؤه الخاصة بملفات Excel وZIP إلا عندما تحتاجها أداة لأول مرة، ولم تعد قوائم الدردشات الخاصة بالأدوات التي لا تستخدمها تبقى في الصفحة."
       ]
     },
     "hi": {
       "title": "TwoTicks 1.2.1 में नया क्या है",
       "items": [
         "प्राइवेसी स्क्रीन चालू होने पर चैट सूची फिर से बिना अटके स्क्रॉल होती है।",
-        "TwoTicks अब WhatsApp Web के टैब पर कम बोझ डालता है: Excel और ZIP फ़ाइलों वाले हिस्से तभी लोड होते हैं जब किसी टूल को पहली बार उनकी ज़रूरत होती है, और जिन टूल का आप अभी इस्तेमाल नहीं कर रहे, उनकी चैट सूचियाँ अब पेज पर नहीं रखी जातीं।",
-        "WhatsApp Web के टैब और विंडो में अब पतली आउटलाइन की जगह WhatsApp का अपना भरा हुआ आइकन दिखता है; जब तक बिना पढ़ी चैट हैं, WhatsApp पहले की तरह उनकी गिनती वाला अपना आइकन दिखाता है।"
+        "TwoTicks अब WhatsApp Web के टैब पर कम बोझ डालता है: Excel और ZIP फ़ाइलों वाले हिस्से तभी लोड होते हैं जब किसी टूल को पहली बार उनकी ज़रूरत होती है, और जिन टूल का आप अभी इस्तेमाल नहीं कर रहे, उनकी चैट सूचियाँ अब पेज पर नहीं रखी जातीं।"
       ]
     },
     "id": {
       "title": "Yang baru di TwoTicks 1.2.1",
       "items": [
         "Saat Layar privasi aktif, daftar chat kembali bergulir dengan mulus.",
-        "TwoTicks kini lebih ringan di tab WhatsApp Web: bagian untuk file Excel dan ZIP baru dimuat saat sebuah alat pertama kali membutuhkannya, dan daftar chat dari alat yang tidak sedang Anda gunakan tidak lagi disimpan di halaman.",
-        "Tab dan jendela WhatsApp Web kini menampilkan ikon WhatsApp sendiri yang terisi, bukan garis tipisnya; selama ada chat yang belum dibaca, WhatsApp tetap menampilkan ikonnya dengan jumlah chat tersebut."
+        "TwoTicks kini lebih ringan di tab WhatsApp Web: bagian untuk file Excel dan ZIP baru dimuat saat sebuah alat pertama kali membutuhkannya, dan daftar chat dari alat yang tidak sedang Anda gunakan tidak lagi disimpan di halaman."
       ]
     }
   }
