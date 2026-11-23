@@ -642,11 +642,16 @@ ${body}
   ].map((s) => `<li>${s}</li>`).join('');
   const step = (n, body) => `<li class="mcp-step"><h3><span class="mcp-no" aria-hidden="true">${n}</span>${T(`mcp.step${n}.title`)}</h3>${body}</li>`;
   const steps = [
-    step(1, `<p>${T('mcp.step1.text')}</p>${code(m.install)}<p>${T('mcp.step1.after')}</p><p class="mcp-small">${T('mcp.step1.ps', { npxcmd: '<code>npx.cmd</code>', npx: '<code>npx</code>' })}</p>`),
+    step(1, `<p>${T('mcp.step1.text')}</p>${code(m.install)}<p>${T('mcp.step1.npx', { ask: '<code dir="ltr" lang="en">Ok to proceed?</code>', y: '<kbd dir="ltr">y</kbd>' })}</p><p>${T('mcp.step1.after')}</p><p class="mcp-small">${T('mcp.step1.ps', { npxcmd: '<code>npx.cmd</code>', npx: '<code>npx</code>' })}</p>`),
     step(2, `<p>${T('mcp.step2.text', { tab: say(w.tab), on: say(w.on), agree: say(w.agree), permission: chip('nativeMessaging'), allowChrome: chip('allow') })}</p>`),
     step(3, `<p>${T('mcp.step3.text', { allow: say(w.allow) })}</p>`),
     step(4, `<p>${T('mcp.step4.text')}</p><ul class="mcp-asks">${[1, 2, 3, 4].map((n) => `<li>${T(`mcp.ask${n}`)}</li>`).join('')}</ul>`),
   ].join('\n');
+  // For Claude Code users: where the install command puts the server, a new session, Claude Code's own question,
+  // the confirmation on WhatsApp Web when Claude Code's panel in VS Code shows no forms, and what to do when the install
+  // command does not find Claude Code (its line "Claude Code: not found", in English as it prints it).
+  const ccWords = { now: say(w.connectedNow), mcp: '<code dir="ltr">/mcp</code>', notFound: '<code dir="ltr" lang="en">Claude Code: not found</code>', add: '<code dir="ltr">claude mcp add</code>' };
+  const tips = [1, 2, 3, 4, 5].map((n) => `<li><b>${T(`mcp.cc.p${n}.title`, ccWords)}</b><span>${T(`mcp.cc.p${n}.text`, ccWords)}</span></li>`).join('');
   const groups = mcp.groups.map((g) => {
     const gw = w.groups[g.id];
     const tools = mcp.tools.filter((tl) => tl.group === g.id);
@@ -727,6 +732,7 @@ ${section('mcp-need', T('mcp.needTitle'), `        <ul class="mcp-list">${needs}
 ${section('mcp-setup', T('mcp.stepsTitle'), `        <ol class="mcp-steps">
 ${steps}
         </ol>`, ' id="setup"')}
+${section('mcp-cc', T('mcp.cc.title'), `        <ul class="mcp-tips">${tips}</ul>`)}
 ${section('mcp-tools', T('mcp.toolsTitle'), `        <p class="mcp-intro">${T('mcp.toolsIntro', { tag: `<span class="mcp-tag">${esc(w.withYou)}</span>` })}</p>
         <div class="mcp-groups">
 ${groups}

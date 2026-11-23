@@ -240,7 +240,7 @@ for (const lang of cfg.languages) {
   const mcpWords = mcpCfg ? panelMcp.texts && panelMcp.texts[lang.code] : null;
   if (mcpCfg) {
     const missing = !mcpWords ? ['all'] : [
-      ...['tab', 'on', 'agree', 'allow', 'confirmHere', 'withYou', 'cfBrand', 'cfSend', 'cfTo', 'cfText', 'cfGo', 'cfCancel'].filter((k) => !mcpWords[k]),
+      ...['tab', 'on', 'agree', 'allow', 'confirmHere', 'withYou', 'connectedNow', 'cfBrand', 'cfSend', 'cfTo', 'cfText', 'cfGo', 'cfCancel'].filter((k) => !mcpWords[k]),
       ...panelMcp.groups.filter((g) => !mcpWords.groups || !mcpWords.groups[g.id] || !mcpWords.groups[g.id].title || !mcpWords.groups[g.id].sub).map((g) => `group ${g.id}`),
       ...panelMcp.tools.filter((tl) => !mcpWords.tools || !mcpWords.tools[tl.name]).map((tl) => `tool ${tl.name}`),
     ];

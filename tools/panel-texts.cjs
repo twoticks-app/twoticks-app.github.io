@@ -58,6 +58,8 @@ const mcpTools = (box.TT_MCP_TOOLS || []).filter((t) => t.group).map((t) => ({ n
 const mcpGroups = (box.TT_MCP_GROUPS || []).map((g) => ({ id: g.id, on: !!g.on }));
 const MCP_WORDS = {
   tab: 'opt.tabMcp', on: 'opt.mcp.on', agree: 'opt.mcp.agree', allow: 'opt.mcp.allow', confirmHere: 'opt.mcp.confirmHere', withYou: 'opt.mcp.withYou',
+  // How the list of allowed AI programs marks one that is connected (the part for Claude Code users).
+  connectedNow: 'opt.mcp.connectedNow',
   // The confirmation window of a message (bridge.js): its header, its question, its two labels and its two buttons.
   cfBrand: 'mcp.chk.brand', cfSend: 'mcp.cf.send', cfTo: 'mcp.cf.to', cfText: 'mcp.cf.text', cfGo: 'mcp.cf.btnSend', cfCancel: 'dialog.cancel',
 };
