@@ -1,5 +1,5 @@
 {
-  "read": "2026-11-20",
+  "read": "2026-11-23",
   "chrome": "158.0.8127.36",
   "playwrightChromium": "1223",
   "labels": {
@@ -23,7 +23,9 @@
       "addTitle": "Add \"$1\"?",
       "addExtension": "Add extension",
       "removeFromChrome": "Remove from Chrome",
-      "cancel": "Cancel"
+      "cancel": "Cancel",
+      "nativeMessaging": "Communicate with cooperating native applications",
+      "allow": "Allow"
     },
     "de": {
       "title": "Erweiterungen",
@@ -45,7 +47,9 @@
       "addTitle": "\"$1\" hinzufügen?",
       "addExtension": "Erweiterung hinzufügen",
       "removeFromChrome": "Aus Chrome entfernen",
-      "cancel": "Abbrechen"
+      "cancel": "Abbrechen",
+      "nativeMessaging": "Mit zusammenarbeitenden nativen Anwendungen kommunizieren",
+      "allow": "Zulassen"
     },
     "es": {
       "title": "Extensiones",
@@ -67,7 +71,9 @@
       "addTitle": "¿Quieres instalar \"$1\"?",
       "addExtension": "Añadir extensión",
       "removeFromChrome": "Eliminar de Chrome",
-      "cancel": "Cancelar"
+      "cancel": "Cancelar",
+      "nativeMessaging": "Comunicarse con aplicaciones nativas cooperativas",
+      "allow": "Permitir"
     },
     "es-419": {
       "title": "Extensiones",
@@ -89,7 +95,9 @@
       "addTitle": "¿Quieres agregar \"$1\"?",
       "addExtension": "Agregar extensión",
       "removeFromChrome": "Quitar de Chrome",
-      "cancel": "Cancelar"
+      "cancel": "Cancelar",
+      "nativeMessaging": "Comunicarse con aplicaciones nativas en cooperación",
+      "allow": "Permitir"
     },
     "fr": {
       "title": "Extensions",
@@ -111,7 +119,9 @@
       "addTitle": "Installer \"$1\" ?",
       "addExtension": "Ajouter l'extension",
       "removeFromChrome": "Supprimer de Google Chrome",
-      "cancel": "Annuler"
+      "cancel": "Annuler",
+      "nativeMessaging": "Communiquer avec les applications natives associées",
+      "allow": "Autoriser"
     },
     "it": {
       "title": "Estensioni",
@@ -133,7 +143,9 @@
       "addTitle": "Aggiungere \"$1\"?",
       "addExtension": "Aggiungi estensione",
       "removeFromChrome": "Rimuovi da Chrome",
-      "cancel": "Annulla"
+      "cancel": "Annulla",
+      "nativeMessaging": "Comunicazione con applicazioni native interoperative",
+      "allow": "Consenti"
     },
     "pt-BR": {
       "title": "Extensões",
@@ -155,7 +167,9 @@
       "addTitle": "Adicionar \"$1\"?",
       "addExtension": "Adicionar extensão",
       "removeFromChrome": "Remover do Google Chrome",
-      "cancel": "Cancelar"
+      "cancel": "Cancelar",
+      "nativeMessaging": "Comunicar-se com aplicativos nativos de colaboração",
+      "allow": "Permitir"
     },
     "pt-PT": {
       "title": "Extensões",
@@ -177,7 +191,9 @@
       "addTitle": "Adicionar \"$1\"?",
       "addExtension": "Adicionar extensão",
       "removeFromChrome": "Remover do Chrome",
-      "cancel": "Cancelar"
+      "cancel": "Cancelar",
+      "nativeMessaging": "Comunicar com aplicações nativas cooperantes",
+      "allow": "Permitir"
     },
     "ru": {
       "title": "Расширения",
@@ -199,7 +215,9 @@
       "addTitle": "Установить \"$1\"?",
       "addExtension": "Установить расширение",
       "removeFromChrome": "Удалить",
-      "cancel": "Отмена"
+      "cancel": "Отмена",
+      "nativeMessaging": "Установка соединения со смежными нативными приложениями",
+      "allow": "Разрешить"
     },
     "tr": {
       "title": "Uzantılar",
@@ -221,7 +239,9 @@
       "addTitle": "\"$1\" eklensin mi?",
       "addExtension": "Uzantı ekle",
       "removeFromChrome": "Chrome'dan kaldır",
-      "cancel": "İptal"
+      "cancel": "İptal",
+      "nativeMessaging": "İşbirliği yapan yerel uygulamalarla iletişim kurma",
+      "allow": "İzin ver"
     },
     "ar": {
       "title": "الإضافات",
@@ -243,7 +263,9 @@
       "addTitle": "هل تريد إضافة \"$1\"؟",
       "addExtension": "تثبيت الإضافة",
       "removeFromChrome": "‏إزالة من Chrome",
-      "cancel": "إلغاء"
+      "cancel": "إلغاء",
+      "nativeMessaging": "الاتصال بتطبيقات التعاون الأصلية",
+      "allow": "سماح"
     },
     "hi": {
       "title": "एक्‍सटेंशन",
@@ -265,7 +287,9 @@
       "addTitle": "\"$1\" जोड़ें?",
       "addExtension": "एक्‍सटेंशन जोड़ें",
       "removeFromChrome": "Chrome से हटाएं",
-      "cancel": "अभी नहीं"
+      "cancel": "अभी नहीं",
+      "nativeMessaging": "स्थानीय ऐप्स  के साथ सहयोग करते हुए संचार करें",
+      "allow": "अनुमति दें"
     },
     "id": {
       "title": "Ekstensi",
@@ -287,7 +311,9 @@
       "addTitle": "Tambahkan \"$1\"?",
       "addExtension": "Tambahkan ekstensi",
       "removeFromChrome": "Hapus dari Chrome",
-      "cancel": "Batal"
+      "cancel": "Batal",
+      "nativeMessaging": "Berkomunikasi dengan aplikasi asli yang kooperatif",
+      "allow": "Izinkan"
     }
   }
 }

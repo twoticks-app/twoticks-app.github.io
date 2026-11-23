@@ -6,8 +6,9 @@
 //    an unpacked extension ("Details", "Remove", the reload button, "Unpacked extension").
 // 2. From the language files (.pak) of the installed Google Chrome, when there is one: the app menu's "Extensions"
 //    and "Manage extensions", "Pin", the install dialog ('Add "$1"?', "Add extension", "Cancel"), "Remove from
-//    Chrome", and the error Chrome shows for a wrong folder ("Failed to load extension", "Manifest file is missing
-//    or unreadable").
+//    Chrome", the error Chrome shows for a wrong folder ("Failed to load extension", "Manifest file is missing
+//    or unreadable"), and the request for an optional permission that the TwoTicks MCP page quotes ("Communicate with
+//    cooperating native applications", "Allow").
 // Usage: node tools/chrome-ui.cjs <folder of an unpacked extension>   ->  content/chrome-ui.json
 //        node tools/chrome-ui.cjs --pak-only                          (only part 2, keeps part 1 as it is)
 // Needs Playwright with its Chromium (npm i -g @playwright/cli); set PLAYWRIGHT or CHROMIUM to other locations.
@@ -121,6 +122,8 @@ function menuLabels(loc) {
     addExtension: /^Add extension$/,
     removeFromChrome: /^Remove from Chrome$/,
     cancel: /^Cancel$/,
+    nativeMessaging: /^Communicate with cooperating native applications$/,
+    allow: /^Allow$/,
   };
   const ids = {};
   for (const [key, re] of Object.entries(want)) ids[key] = [...en].filter(([, v]) => re.test(v.trim())).map(([id]) => id);

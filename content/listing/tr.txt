@@ -38,6 +38,7 @@ NASIL KULLANILIR
 • Offscreen: PDF dosyası kabul etmeyen yapay zekâ hizmetleri için TwoTicks'in bir PDF dosyasının metnini bilgisayarınızda, kapalı bir sayfada okumasını sağlar.
 • İsteğe bağlı "arka plan", yalnızca ayarlarda işaretlerseniz: Son penceresi kapandıktan sonra Chrome'u çalışır tutar ve bilgisayarınızda oturum açtığınızda başlatır; böylece zamanlanmış mesajlar yine gider.
 • İsteğe bağlı, yalnızca kullandığınızda istenir: Seçtiğiniz yapay zekâ hizmetinin adresi.
+• İsteğe bağlı "nativeMessaging", yalnızca Ayarlar › Bağlantı (MCP) açıldığında istenir: TwoTicks'in bilgisayarınızdaki ayrı TwoTicks MCP programıyla konuşmasını sağlar; böylece orada izin verdiğiniz yapay zekâ programları onun araçlarını kullanabilir. Okudukları o programlara gider; bir şey gönderen veya değiştiren her işlem onayınızı bekler.
 
 "Birkaç sohbet" aracı reklam için değildir. Yalnızca sizden mesaj almayı kabul etmiş kişilere yazın; izinsiz reklam çoğu ülkede yasaktır ve WhatsApp çok mesaj gönderen hesapları kısıtlayabilir.
 

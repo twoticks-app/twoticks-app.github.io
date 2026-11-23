@@ -171,6 +171,7 @@ section[id] { scroll-margin-top: 12px; }
 .nav ul { display: flex; gap: 2px; margin: 0; padding: 0; list-style: none; }
 .nav a { display: block; padding: 8px 12px; color: var(--snow); font-weight: 500; text-decoration: none; }
 .nav a:hover { background: rgba(255, 255, 255, 0.08); }
+.nav a[aria-current="page"] { box-shadow: inset 0 -3px 0 var(--read); }
 .lang { position: relative; }
 .lang-btn {
   display: inline-flex; align-items: center; gap: 10px;
@@ -215,6 +216,8 @@ section[id] { scroll-margin-top: 12px; }
 }
 .lang-list a:hover, .lang-list a:focus-visible { background: var(--paper); }
 .lang-list a[aria-current="page"] { border-inline-start-color: var(--read); font-weight: 700; }
+/* Four entries beside the longest language name (Portuguese of Portugal) need the room just above that width. */
+@media (max-width: 800px) { .nav a { padding-inline: 8px; } }
 @media (max-width: 760px) { .nav { display: none; } .lang { margin-inline-start: auto; } }
 
 /* --- hero ------------------------------------------------------------------------------------------------------- */

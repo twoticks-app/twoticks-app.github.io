@@ -38,6 +38,7 @@ PERMISSIONS
 • Offscreen: lets TwoTicks read the text out of a PDF file in a sealed page on your computer, for AI services that take no PDF files.
 • Optional "background", only if you tick it in the settings: keeps Chrome running after its last window closes and starts it when you sign in to your computer, so scheduled messages still go out.
 • Optional, asked for only when you use it: the address of the AI service you choose.
+• Optional "nativeMessaging", asked for only when you switch on Settings › Connection (MCP): lets TwoTicks talk to the separate TwoTicks MCP program on your computer, so that AI programs you allow there can use its tools. What they read goes to those programs; whatever sends or changes something waits for your confirmation.
 
 The "Several chats" tool is not for advertising. Only message people who agreed to receive your messages; unsolicited advertising is illegal in most countries, and WhatsApp can restrict accounts that send many messages.
 

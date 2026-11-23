@@ -1,0 +1,113 @@
+{
+  "version": "1.3.0",
+  "texts": {
+    "en": {
+      "title": "What's new in TwoTicks 1.3.0",
+      "items": [
+        "New and optional: with “Connection (MCP)” in the settings, AI programs on your computer, such as Claude Code or VS Code with GitHub Copilot, can use TwoTicks’ tools: they read and summarise chats, look at unanswered ones, analyse attachments and prepare messages. It needs the free TwoTicks MCP program for Windows from our website.",
+        "Whatever an AI program wants to send, schedule, delete, change or export waits for your confirmation, in the AI program or in TwoTicks’ window on WhatsApp Web. TwoTicks’ sending limits stay, and deleted and edited messages stay off until you switch them on.",
+        "In that confirmation you can correct a message’s text before it goes, and when several messages wait together you can leave single ones out.",
+        "No API key is needed for this: your AI program does the thinking, and TwoTicks reads documents on your computer."
+      ]
+    },
+    "tr": {
+      "title": "TwoTicks 1.3.0 ile gelen yenilikler",
+      "items": [
+        "Yeni ve isteğe bağlı: Ayarlardaki “Bağlantı (MCP)” ile bilgisayarınızdaki yapay zekâ programları, örneğin Claude Code veya GitHub Copilot'lu VS Code, TwoTicks'in araçlarını kullanabilir: sohbetleri okuyup özetler, cevapsız olanlara bakar, ekleri analiz eder ve mesaj hazırlar. Bunun için sitemizdeki, Windows için ücretsiz TwoTicks MCP programı gerekir.",
+        "Bir yapay zekâ programının göndermek, planlamak, silmek, değiştirmek veya dışa aktarmak istediği her şey onayınızı bekler: yapay zekâ programında ya da TwoTicks'in WhatsApp Web'deki penceresinde. TwoTicks'in gönderim sınırları geçerli kalır; silinen ve düzenlenen mesajlar siz açana kadar kapalıdır.",
+        "Bu onayda mesajın metnini gitmeden önce düzeltebilir, birkaç mesaj birlikte beklediğinde istemediklerinizi dışarıda bırakabilirsiniz.",
+        "Bunun için API anahtarı gerekmez: düşünme işini yapay zekâ programınız yapar, TwoTicks belgeleri bilgisayarınızda okur."
+      ]
+    },
+    "de": {
+      "title": "Neu in TwoTicks 1.3.0",
+      "items": [
+        "Neu und optional: Mit „Verbindung (MCP)“ in den Einstellungen können KI-Programme auf Ihrem Computer, zum Beispiel Claude Code oder VS Code mit GitHub Copilot, die Werkzeuge von TwoTicks verwenden: Sie lesen und fassen Chats zusammen, sehen sich unbeantwortete an, analysieren Anhänge und bereiten Nachrichten vor. Dafür brauchen Sie das kostenlose Programm TwoTicks MCP für Windows von unserer Website.",
+        "Alles, was ein KI-Programm senden, planen, löschen, ändern oder exportieren will, wartet auf Ihre Bestätigung, im KI-Programm oder im Fenster von TwoTicks in WhatsApp Web. Die Sendegrenzen von TwoTicks bleiben bestehen, und gelöschte und bearbeitete Nachrichten bleiben ausgeschaltet, bis Sie sie einschalten.",
+        "In dieser Bestätigung können Sie den Text einer Nachricht noch korrigieren und, wenn mehrere Nachrichten zusammen warten, einzelne davon weglassen.",
+        "Einen API-Schlüssel brauchen Sie dafür nicht: Ihr KI-Programm übernimmt das Denken, und TwoTicks liest Dokumente auf Ihrem Computer."
+      ]
+    },
+    "es": {
+      "title": "Novedades de TwoTicks 1.3.0",
+      "items": [
+        "Nuevo y opcional: con «Conexión (MCP)» en los ajustes, los programas de IA de tu ordenador, como Claude Code o VS Code con GitHub Copilot, pueden usar las herramientas de TwoTicks: leen y resumen chats, miran los que están sin responder, analizan archivos adjuntos y preparan mensajes. Necesita el programa gratuito TwoTicks MCP para Windows de nuestra web.",
+        "Todo lo que un programa de IA quiera enviar, programar, eliminar, cambiar o exportar espera tu confirmación, en el programa de IA o en la ventana de TwoTicks en WhatsApp Web. Los límites de envío de TwoTicks se mantienen, y los mensajes eliminados y editados siguen desactivados hasta que los actives.",
+        "En esa confirmación puedes corregir el texto de un mensaje antes de que salga y, cuando varios mensajes esperan juntos, dejar fuera los que no quieras.",
+        "No hace falta ninguna clave de API: tu programa de IA se encarga de pensar, y TwoTicks lee los documentos en tu ordenador."
+      ]
+    },
+    "fr": {
+      "title": "Nouveautés de TwoTicks 1.3.0",
+      "items": [
+        "Nouveau et facultatif : avec « Connexion (MCP) » dans les paramètres, les programmes d’IA de votre ordinateur, comme Claude Code ou VS Code avec GitHub Copilot, peuvent utiliser les outils de TwoTicks : ils lisent et résument les discussions, regardent celles qui sont sans réponse, analysent les pièces jointes et préparent des messages. Il faut pour cela le programme gratuit TwoTicks MCP pour Windows, sur notre site.",
+        "Tout ce qu’un programme d’IA veut envoyer, programmer, supprimer, modifier ou exporter attend votre confirmation, dans le programme d’IA ou dans la fenêtre de TwoTicks sur WhatsApp Web. Les limites d’envoi de TwoTicks restent en place, et les messages supprimés et modifiés restent désactivés tant que vous ne les activez pas.",
+        "Dans cette confirmation, vous pouvez corriger le texte d’un message avant son envoi et, lorsque plusieurs messages attendent ensemble, écarter ceux que vous ne voulez pas.",
+        "Aucune clé API n’est nécessaire : c’est votre programme d’IA qui réfléchit, et TwoTicks lit les documents sur votre ordinateur."
+      ]
+    },
+    "it": {
+      "title": "Novità di TwoTicks 1.3.0",
+      "items": [
+        "Novità facoltativa: con «Connessione (MCP)» nelle impostazioni, i programmi di IA sul tuo computer, come Claude Code o VS Code con GitHub Copilot, possono usare gli strumenti di TwoTicks: leggono e riassumono le chat, guardano quelle senza risposta, analizzano gli allegati e preparano messaggi. Serve il programma gratuito TwoTicks MCP per Windows, dal nostro sito.",
+        "Tutto ciò che un programma di IA vuole inviare, programmare, eliminare, modificare o esportare attende la tua conferma, nel programma di IA o nella finestra di TwoTicks su WhatsApp Web. I limiti di invio di TwoTicks restano, e i messaggi eliminati e modificati restano disattivati finché non li attivi.",
+        "In quella conferma puoi correggere il testo di un messaggio prima che parta e, quando più messaggi attendono insieme, escludere quelli che non vuoi.",
+        "Non serve alcuna chiave API: il tuo programma di IA fa il lavoro di ragionamento, e TwoTicks legge i documenti sul tuo computer."
+      ]
+    },
+    "pt-BR": {
+      "title": "Novidades do TwoTicks 1.3.0",
+      "items": [
+        "Novo e opcional: com “Conexão (MCP)” nas configurações, programas de IA no seu computador, como o Claude Code ou o VS Code com o GitHub Copilot, podem usar as ferramentas do TwoTicks: leem e resumem conversas, olham as sem resposta, analisam anexos e preparam mensagens. É preciso o programa gratuito TwoTicks MCP para Windows, do nosso site.",
+        "Tudo o que um programa de IA quiser enviar, agendar, excluir, alterar ou exportar aguarda a sua confirmação, no programa de IA ou na janela do TwoTicks no WhatsApp Web. Os limites de envio do TwoTicks continuam valendo, e as mensagens excluídas e editadas permanecem desativadas até você ativá-las.",
+        "Nessa confirmação você pode corrigir o texto de uma mensagem antes de ela sair e, quando várias mensagens aguardam juntas, deixar de fora as que não quiser.",
+        "Não é preciso nenhuma chave de API: o seu programa de IA faz o raciocínio, e o TwoTicks lê os documentos no seu computador."
+      ]
+    },
+    "pt-PT": {
+      "title": "Novidades do TwoTicks 1.3.0",
+      "items": [
+        "Novo e opcional: com “Conexão (MCP)” nas definições, os programas de IA do seu computador, como o Claude Code ou o VS Code com o GitHub Copilot, podem usar as ferramentas do TwoTicks: leem e resumem conversas, veem as que estão sem resposta, analisam anexos e preparam mensagens. É preciso o programa gratuito TwoTicks MCP para Windows, do nosso site.",
+        "Tudo o que um programa de IA quiser enviar, agendar, eliminar, alterar ou exportar aguarda a sua confirmação, no programa de IA ou na janela do TwoTicks no WhatsApp Web. Os limites de envio do TwoTicks mantêm-se, e as mensagens eliminadas e editadas continuam desativadas até as ativar.",
+        "Nessa confirmação pode corrigir o texto de uma mensagem antes de ela sair e, quando várias mensagens aguardam juntas, deixar de fora as que não quiser.",
+        "Não é preciso nenhuma chave de API: o seu programa de IA faz o raciocínio, e o TwoTicks lê os documentos no seu computador."
+      ]
+    },
+    "ru": {
+      "title": "Что нового в TwoTicks 1.3.0",
+      "items": [
+        "Новое и необязательное: с помощью «Подключение (MCP)» в настройках ИИ-программы на вашем компьютере, например Claude Code или VS Code с GitHub Copilot, могут пользоваться инструментами TwoTicks: они читают и пересказывают чаты, смотрят чаты без ответа, анализируют вложения и готовят сообщения. Для этого нужна бесплатная программа TwoTicks MCP для Windows с нашего сайта.",
+        "Всё, что ИИ-программа хочет отправить, запланировать, удалить, изменить или экспортировать, ждёт вашего подтверждения: в самой ИИ-программе или в окне TwoTicks в WhatsApp Web. Ограничения TwoTicks на отправку сохраняются, а удалённые и изменённые сообщения остаются выключенными, пока вы их не включите.",
+        "В этом подтверждении можно исправить текст сообщения перед отправкой, а когда вместе ждут несколько сообщений, исключить ненужные.",
+        "Ключ API для этого не нужен: думает ваша ИИ-программа, а TwoTicks читает документы на вашем компьютере."
+      ]
+    },
+    "ar": {
+      "title": "الجديد في TwoTicks 1.3.0",
+      "items": [
+        "جديد واختياري: عبر «الاتصال (MCP)» في الإعدادات، تستطيع برامج الذكاء الاصطناعي على جهازك، مثل Claude Code أو VS Code مع GitHub Copilot، استخدام أدوات TwoTicks: تقرأ الدردشات وتلخّصها، وتنظر في التي لم يُردّ عليها، وتحلّل المرفقات، وتجهّز الرسائل. ويحتاج ذلك إلى برنامج TwoTicks MCP المجاني لنظام Windows من موقعنا.",
+        "كل ما يريد برنامج الذكاء الاصطناعي إرساله أو جدولته أو حذفه أو تغييره أو تصديره ينتظر تأكيدك، في برنامج الذكاء الاصطناعي أو في نافذة TwoTicks في WhatsApp Web. وتبقى حدود الإرسال في TwoTicks سارية، وتظل الرسائل المحذوفة والمعدّلة متوقفة إلى أن تفعّلها.",
+        "في هذا التأكيد يمكنك تصحيح نص الرسالة قبل إرسالها، وعندما تنتظر عدة رسائل معًا يمكنك استبعاد ما لا تريد إرساله منها.",
+        "لا حاجة إلى مفتاح API لهذا: فبرنامج الذكاء الاصطناعي الخاص بك هو الذي يتولى التفكير، ويقرأ TwoTicks المستندات على جهازك."
+      ]
+    },
+    "hi": {
+      "title": "TwoTicks 1.3.0 में नया क्या है",
+      "items": [
+        "नया और वैकल्पिक: सेटिंग्स में “कनेक्शन (MCP)” के साथ, आपके कंप्यूटर पर चल रहे एआई प्रोग्राम, जैसे Claude Code या GitHub Copilot के साथ VS Code, TwoTicks के टूल्स इस्तेमाल कर सकते हैं: वे चैट पढ़कर उनका सार बनाते हैं, बिना जवाब वाली चैट देखते हैं, अटैचमेंट का विश्लेषण करते हैं और मैसेज तैयार करते हैं। इसके लिए हमारी वेबसाइट से Windows के लिए मुफ़्त प्रोग्राम TwoTicks MCP चाहिए।",
+        "एआई प्रोग्राम जो कुछ भी भेजना, शेड्यूल करना, हटाना, बदलना या एक्सपोर्ट करना चाहता है, वह आपकी पुष्टि का इंतज़ार करता है: एआई प्रोग्राम में या WhatsApp Web पर TwoTicks की विंडो में। TwoTicks की भेजने की सीमाएँ बनी रहती हैं, और हटाए और बदले गए मैसेज तब तक बंद रहते हैं जब तक आप उन्हें चालू नहीं करते।",
+        "इस पुष्टि में आप मैसेज के जाने से पहले उसका टेक्स्ट ठीक कर सकते हैं, और जब कई मैसेज एक साथ इंतज़ार कर रहे हों, तो जो नहीं भेजने हैं उन्हें छोड़ सकते हैं।",
+        "इसके लिए API कुंजी की ज़रूरत नहीं है: सोचने का काम आपका एआई प्रोग्राम करता है, और TwoTicks दस्तावेज़ आपके कंप्यूटर पर पढ़ता है।"
+      ]
+    },
+    "id": {
+      "title": "Yang baru di TwoTicks 1.3.0",
+      "items": [
+        "Baru dan opsional: dengan “Koneksi (MCP)” di setelan, program AI di komputer Anda, seperti Claude Code atau VS Code dengan GitHub Copilot, dapat menggunakan alat TwoTicks: mereka membaca dan merangkum chat, melihat chat yang belum dibalas, menganalisis lampiran, dan menyiapkan pesan. Untuk itu diperlukan program gratis TwoTicks MCP untuk Windows dari situs web kami.",
+        "Apa pun yang ingin dikirim, dijadwalkan, dihapus, diubah, atau diekspor oleh program AI menunggu konfirmasi Anda, di program AI atau di jendela TwoTicks di WhatsApp Web. Batas pengiriman TwoTicks tetap berlaku, dan pesan yang dihapus dan diedit tetap nonaktif sampai Anda mengaktifkannya.",
+        "Dalam konfirmasi itu Anda dapat memperbaiki teks pesan sebelum terkirim dan, bila beberapa pesan menunggu bersama, mengecualikan pesan yang tidak Anda inginkan.",
+        "Kunci API tidak diperlukan untuk ini: program AI Anda yang berpikir, dan TwoTicks membaca dokumen di komputer Anda."
+      ]
+    }
+  }
+}

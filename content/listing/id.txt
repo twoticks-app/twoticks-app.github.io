@@ -38,6 +38,7 @@ IZIN
 • Offscreen: memungkinkan TwoTicks membaca teks file PDF di halaman terisolasi di komputer Anda, untuk layanan AI yang tidak menerima file PDF.
 • "Latar belakang", opsional, hanya jika Anda mencentangnya di pengaturan: menjaga Chrome tetap berjalan setelah jendela terakhirnya ditutup dan menjalankannya saat Anda masuk ke komputer, agar pesan terjadwal tetap terkirim.
 • Opsional, hanya diminta saat Anda menggunakannya: alamat layanan AI pilihan Anda.
+• "nativeMessaging" opsional, hanya diminta saat Anda mengaktifkan Setelan › Koneksi (MCP): memungkinkan TwoTicks berbicara dengan program terpisah TwoTicks MCP di komputer Anda, sehingga program AI yang Anda izinkan di sana dapat menggunakan alatnya. Apa yang mereka baca masuk ke program-program itu; apa pun yang mengirim atau mengubah sesuatu menunggu konfirmasi Anda.
 
 Alat "Beberapa chat" bukan untuk iklan. Kirim pesan hanya kepada orang yang setuju menerima pesan Anda; iklan yang tidak diminta melanggar hukum di sebagian besar negara, dan WhatsApp dapat membatasi akun yang mengirim banyak pesan.
 

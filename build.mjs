@@ -1,6 +1,7 @@
 // Copyright (c) 2026 Osman Bodur. All rights reserved.
 // Builds the site of TwoTicks into dist/: per language (English at the root, the others in their folders) the home
-// page, one page for each tool (tools/<slug>/) and the version history (versions/); once, in English, the privacy
+// page, one page for each tool (tools/<slug>/), the version history (versions/) and the page of the optional program
+// for AI programs, TwoTicks MCP (mcp/, while site.config.json shows it); once, in English, the privacy
 // policy of the extension (privacy/, the address privacyUrl in site.config.json) and the film pages that the
 // extension's film window opens (watch/<number>/, not linked from the site); the stylesheet with the fonts, the
 // script, the pictures, 404.html, robots.txt and sitemap.xml.
@@ -10,7 +11,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
 import { fileURLToPath } from 'node:url';
-import { render, renderTool, renderVersions, renderPrivacy, esc, flag } from './src/page.mjs';
+import { render, renderTool, renderVersions, renderPrivacy, renderMcp, esc, flag } from './src/page.mjs';
 import { renderWhatsNew } from './src/whatsnew.mjs';
 import { renderReviews } from './src/reviews.mjs';
 import { markdown } from './src/markdown.mjs';
@@ -22,7 +23,17 @@ const read = (rel) => fs.readFileSync(path.join(ROOT, rel), 'utf8');
 const cfg = JSON.parse(read('site.config.json'));
 const chromeUi = JSON.parse(read('content/chrome-ui.json')).labels;
 const webstore = JSON.parse(read('content/webstore.json')).labels;
-const panelTexts = JSON.parse(read('content/panel.json')).texts;
+const panelJson = JSON.parse(read('content/panel.json'));
+const panelTexts = panelJson.texts;
+// TwoTicks MCP (mcp/, since TwoTicks 1.3.0): the page of the optional program for AI programs, while site.config.json
+// shows it; the tools, their groups and the extension's words for them come from content/panel.json
+// (tools/panel-texts.cjs).
+const mcpCfg = cfg.mcp && cfg.mcp.show ? cfg.mcp : null;
+const panelMcp = panelJson.mcp;
+if (mcpCfg) {
+  for (const k of ['minVersion', 'node', 'install', 'status', 'uninstall', 'manual']) if (!mcpCfg[k]) throw new Error(`site.config.json: "mcp" needs "${k}"`);
+  if (!panelMcp || !Array.isArray(panelMcp.tools) || !panelMcp.tools.length || !Array.isArray(panelMcp.groups)) throw new Error('content/panel.json: no "mcp" tools (node tools/panel-texts.cjs "<extension folder>" with TwoTicks 1.3.0 or newer)');
+}
 // The films that have their poster in src/img (made by tools/film-frames.py): every one in 640 pixels (frames), the
 // films shown large also in 1280 (bigFrames).
 const images = fs.readdirSync(path.join(ROOT, 'src', 'img'));
@@ -178,7 +189,7 @@ const versions = fs.readdirSync(path.join(ROOT, 'content', 'whatsnew')).filter((
     return data;
   })
   .sort((a, b) => newer(a.version, b.version));
-const pageRels = ['', ...cfg.tools.map((tool) => `tools/${tool.slug}/`), ...(versions.length ? ['versions/'] : [])];
+const pageRels = ['', ...cfg.tools.map((tool) => `tools/${tool.slug}/`), ...(versions.length ? ['versions/'] : []), ...(mcpCfg ? ['mcp/'] : [])];
 // The privacy policy of the extension, in English only: content/privacy-policy.md, a copy of the extension's
 // store/privacy-policy.md (tools/new-version.mjs copies it). It stands at privacyUrl, a folder of this site; every
 // page's footer and the home page's questions link to it.
@@ -222,8 +233,18 @@ for (const lang of cfg.languages) {
   const words = (code) => (code ? { ...chromeUi[code], ...webstore[code] } : null);
   const ui = words(lang.chrome);
   const uiAlt = words(lang.chromeAlt);
-  for (const k of ['addToChrome', 'addTitle', 'addExtension', 'cancel', 'pin', 'remove', 'removeFromChrome', 'extensionsMenu']) {
+  for (const k of ['addToChrome', 'addTitle', 'addExtension', 'cancel', 'pin', 'remove', 'removeFromChrome', 'extensionsMenu', ...(mcpCfg ? ['nativeMessaging', 'allow'] : [])]) {
     if (!ui[k]) throw new Error(`${lang.code}: no label "${k}" in content/chrome-ui.json or content/webstore.json`);
+  }
+  // The extension's words for the TwoTicks MCP page in this language: every group and every tool named.
+  const mcpWords = mcpCfg ? panelMcp.texts && panelMcp.texts[lang.code] : null;
+  if (mcpCfg) {
+    const missing = !mcpWords ? ['all'] : [
+      ...['tab', 'on', 'agree', 'allow', 'confirmHere', 'withYou', 'cfBrand', 'cfSend', 'cfTo', 'cfText', 'cfGo', 'cfCancel'].filter((k) => !mcpWords[k]),
+      ...panelMcp.groups.filter((g) => !mcpWords.groups || !mcpWords.groups[g.id] || !mcpWords.groups[g.id].title || !mcpWords.groups[g.id].sub).map((g) => `group ${g.id}`),
+      ...panelMcp.tools.filter((tl) => !mcpWords.tools || !mcpWords.tools[tl.name]).map((tl) => `tool ${tl.name}`),
+    ];
+    if (missing.length) throw new Error(`${lang.code}: content/panel.json has no words for TwoTicks MCP: ${missing.join(', ')}`);
   }
   const list = listing(lang.code);
   // Every tool of the listing has its page, and the panel's own words for it. (The privacy group of the listing
@@ -249,6 +270,7 @@ for (const lang of cfg.languages) {
     const base = '../'.repeat(depth);
     return {
       t, ta, ui, uiAlt, listing: list, panel, cfg, lang, langs: cfg.languages, base, ogImage, frames, bigFrames, hasVersions: versions.length > 0,
+      hasMcp: !!mcpCfg,
       films: filmsI18n[lang.code] || {},
       shotLang,
       // The privacy policy this language's pages link to: its own translation, or the English text.
@@ -276,6 +298,13 @@ for (const lang of cfg.languages) {
     check(html, `${lang.code} versions`);
     writePage(`${lang.path}versions/`, html);
   }
+  let mcpBytes = 0;
+  if (mcpCfg) {
+    const html = renderMcp(context(depth + 1), { cfg: mcpCfg, groups: panelMcp.groups, tools: panelMcp.tools, words: mcpWords });
+    check(html, `${lang.code} mcp`);
+    writePage(`${lang.path}mcp/`, html);
+    mcpBytes = Buffer.byteLength(html);
+  }
   let toolBytes = 0;
   for (const tool of cfg.tools) {
     const html = renderTool(context(depth + 2), tool);
@@ -294,7 +323,7 @@ for (const lang of cfg.languages) {
     if (en) privacyBytes = Buffer.byteLength(html);
     else privacyPages.push({ lang, rel, bytes: Buffer.byteLength(html) });
   }
-  pages.push({ lang, bytes: Buffer.byteLength(home), toolBytes });
+  pages.push({ lang, bytes: Buffer.byteLength(home), toolBytes, mcpBytes });
 }
 if (!privacyBytes) throw new Error('site.config.json: no language "en" for the privacy policy');
 
@@ -360,8 +389,8 @@ fs.writeFileSync(path.join(OUT, 'robots.txt'), `User-agent: *\nAllow: /\nSitemap
 fs.writeFileSync(path.join(OUT, '.nojekyll'), '');
 
 const kb = (n) => `${Math.round(n / 1024)} KB`;
-console.log(`Built ${pages.length * pageRels.length + 1 + privacyPages.length} pages in dist/ for ${cfg.siteUrl}: ${pages.length} languages, each with its home page, ${cfg.tools.length} tool pages${versions.length ? ` and the history of ${versions.length} versions` : ''}; the privacy policy in English${privacyPages.length ? ` and ${privacyPages.length} translations of it` : ''}`);
-for (const p of pages) console.log(`  ${(p.lang.path || '(root)').padEnd(8)} ${p.lang.code.padEnd(6)} home ${kb(p.bytes)}, tools ${kb(p.toolBytes)}`);
+console.log(`Built ${pages.length * pageRels.length + 1 + privacyPages.length} pages in dist/ for ${cfg.siteUrl}: ${pages.length} languages, each with its home page, ${cfg.tools.length} tool pages${versions.length ? `, the history of ${versions.length} versions` : ''}${mcpCfg ? ' and the page of TwoTicks MCP' : ''}; the privacy policy in English${privacyPages.length ? ` and ${privacyPages.length} translations of it` : ''}`);
+for (const p of pages) console.log(`  ${(p.lang.path || '(root)').padEnd(8)} ${p.lang.code.padEnd(6)} home ${kb(p.bytes)}, tools ${kb(p.toolBytes)}${p.mcpBytes ? `, TwoTicks MCP ${kb(p.mcpBytes)}` : ''}`);
 console.log(`  ${PRIVACY_REL.padEnd(8)} en     privacy policy ${kb(privacyBytes)} (${policy.title})`);
 for (const p of privacyPages) console.log(`  ${p.rel.padEnd(8)} ${p.lang.code.padEnd(6)} privacy policy ${kb(p.bytes)}, a translation (${policies[p.lang.code].title})`);
 console.log(`  watch/   en     ${films.length} film pages for the extension's film window: ${films.map((f) => f.n).sort().join(', ')}`);

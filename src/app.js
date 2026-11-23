@@ -1,7 +1,8 @@
 // TwoTicks site. Copyright (c) 2026 Osman Bodur. All rights reserved.
 // The page works without this script; the script adds: the ticks of the install steps (remembered in this
 // browser), the notice for other browsers, Chrome's words of Spain on the Spanish page, the language menu where
-// popovers are missing, the remembered language, and the film, which loads from YouTube only on a click.
+// popovers are missing, the remembered language, the film, which loads from YouTube only on a click, and the copy
+// buttons of the commands on the TwoTicks MCP page.
 (() => {
   'use strict';
   const $ = (s, r = document) => r.querySelector(s);
@@ -44,6 +45,21 @@
   for (const b of $$('.done-btn')) b.hidden = false;
   paint();
 
+  // --- the copy buttons beside a command (only where the browser lets the page write to the clipboard) ---
+  if (navigator.clipboard && window.isSecureContext) for (const b of $$('[data-copy]')) b.hidden = false;
+  function copyCommand(btn) {
+    const code = document.getElementById(btn.dataset.copy);
+    if (!code) return;
+    navigator.clipboard.writeText(code.textContent).then(() => {
+      const label = $('span', btn);
+      if (!label) return;
+      if (!btn.dataset.label) btn.dataset.label = label.textContent;
+      label.textContent = btn.dataset.done;
+      clearTimeout(Number(btn.dataset.timer));
+      btn.dataset.timer = String(setTimeout(() => { label.textContent = btn.dataset.label; }, 2000));
+    }, () => { /* refused: the command stays there to select */ });
+  }
+
   // --- one listener for the page's clicks ---
   document.addEventListener('click', (e) => {
     const t = e.target instanceof Element ? e.target : null;
@@ -73,6 +89,11 @@
         title.focus();
         title.addEventListener('blur', () => title.removeAttribute('tabindex'), { once: true });
       }
+      return;
+    }
+    const copy = t.closest('[data-copy]');
+    if (copy) {
+      copyCommand(copy);
       return;
     }
     const lang = t.closest('a[data-lang]');

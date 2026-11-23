@@ -51,6 +51,15 @@
   "reviews": {
     "show": true
   },
+  "mcp": {
+    "show": true,
+    "minVersion": "1.3.0",
+    "node": 20,
+    "install": "npx twoticks-mcp install",
+    "status": "npx twoticks-mcp status",
+    "uninstall": "npx twoticks-mcp uninstall",
+    "manual": "node \"%LOCALAPPDATA%\\TwoTicks\\mcp\\app\\bin\\twoticks-mcp.js\""
+  },
   "tools": [
     {
       "slug": "privacy-screen",

@@ -38,6 +38,7 @@ AUTORISATIONS
 • Offscreen : permet à TwoTicks de lire le texte d’un fichier PDF dans une page isolée sur votre ordinateur, pour les services d’IA qui n’acceptent pas les fichiers PDF.
 • « Arrière-plan », facultatif, seulement si vous le cochez dans les paramètres : garde Chrome actif après la fermeture de sa dernière fenêtre et le lance quand vous ouvrez votre session, pour que les messages programmés partent quand même.
 • Facultative, demandée seulement quand vous l’utilisez : l’adresse du service d’IA de votre choix.
+• « nativeMessaging », facultatif, demandé seulement quand vous activez Paramètres › Connexion (MCP) : permet à TwoTicks de communiquer avec le programme distinct TwoTicks MCP sur votre ordinateur, afin que les programmes d’IA que vous y autorisez puissent utiliser ses outils. Ce qu’ils lisent va à ces programmes ; tout ce qui envoie ou modifie quelque chose attend votre confirmation.
 
 L’outil « Plusieurs discussions » n’est pas destiné à la publicité. N’écrivez qu’aux personnes qui ont accepté de recevoir vos messages ; la publicité non sollicitée est illégale dans la plupart des pays, et WhatsApp peut restreindre les comptes qui envoient beaucoup de messages.
 

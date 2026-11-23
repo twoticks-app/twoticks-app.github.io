@@ -38,6 +38,7 @@ PERMISSÕES
 • Offscreen: permite ao TwoTicks ler o texto de um ficheiro PDF numa página isolada no seu computador, para os serviços de IA que não aceitam ficheiros PDF.
 • "Segundo plano", opcional, só se o assinalar nas definições: mantém o Chrome a funcionar depois de fechar a última janela e inicia-o quando entra no computador, para que as mensagens agendadas continuem a sair.
 • Opcional, pedida só quando a usa: o endereço do serviço de IA que escolher.
+• "nativeMessaging", opcional, pedida só quando ativa Configurações › Conexão (MCP): permite ao TwoTicks comunicar com o programa separado TwoTicks MCP no seu computador, para que os programas de IA que permitir lá possam usar as respetivas ferramentas. O que leem vai para esses programas; tudo o que envia ou altera algo aguarda a sua confirmação.
 
 A ferramenta "Várias conversas" não é para publicidade. Escreva só a pessoas que aceitaram receber as suas mensagens; a publicidade não solicitada é ilegal na maioria dos países, e o WhatsApp pode restringir contas que enviam muitas mensagens.
 

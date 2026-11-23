@@ -38,6 +38,7 @@ BERECHTIGUNGEN
 • Offscreen: Damit liest TwoTicks den Text einer PDF-Datei in einer abgeschotteten Seite auf Ihrem Computer aus, für KI-Dienste, die keine PDF-Dateien annehmen.
 • Optional „Hintergrund“, nur wenn Sie es in den Einstellungen ankreuzen: Hält Chrome nach dem Schließen des letzten Fensters aktiv und startet es, wenn Sie sich am Computer anmelden, damit geplante Nachrichten trotzdem rausgehen.
 • Optional, nur angefragt, wenn Sie sie nutzen: die Adresse des KI-Dienstes Ihrer Wahl.
+• Optional „nativeMessaging“, nur angefragt, wenn Sie Einstellungen › Verbindung (MCP) einschalten: Damit kann TwoTicks mit dem separaten Programm TwoTicks MCP auf Ihrem Computer sprechen, sodass KI-Programme, die Sie dort erlauben, seine Werkzeuge nutzen können. Was sie lesen, geht an diese Programme; alles, was etwas sendet oder ändert, wartet auf Ihre Bestätigung.
 
 Das Werkzeug „Mehrere Chats“ ist nicht für Werbung gedacht. Schreiben Sie nur Personen, die zugestimmt haben, Ihre Nachrichten zu erhalten; unerwünschte Werbung ist in den meisten Ländern verboten, und WhatsApp kann Konten einschränken, die viele Nachrichten senden.
 

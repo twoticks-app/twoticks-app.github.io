@@ -1,6 +1,7 @@
 // Copyright (c) 2026 Osman Bodur. All rights reserved.
-// The pages of one language, as HTML: the home page (render) and the page of each tool (renderTool), around one
-// shell (head, masthead, footer); in English only, the privacy policy (renderPrivacy). build.mjs gives them
+// The pages of one language, as HTML: the home page (render), the page of each tool (renderTool), the version history
+// (renderVersions) and the page of the optional program for AI programs, TwoTicks MCP (renderMcp), around one shell
+// (head, masthead, footer); the privacy policy (renderPrivacy) in English and its translations. build.mjs gives them
 // everything they show: the site's texts (t, ta), the words of Chrome and of the Chrome Web Store in that language
 // (ui), the store listing (listing) and the panel's own texts (panel). TwoTicks is installed from the Chrome Web
 // Store only.
@@ -48,6 +49,8 @@ const I = {
   steps: icon('<path d="M4 6h3M4 12h3M4 18h3M10 6h10M10 12h10M10 18h10"/>'),
   chevron: icon('<path d="M6 9l6 6 6-6"/>', 'i chev'),
   restart: icon('<path d="M4 12a8 8 0 1 0 2.3-5.6M4 4v5h5"/>'),
+  copy: icon('<path d="M9 9h11v11H9zM5 15H4V4h11v1"/>'),
+  arrow: icon('<path d="M4 12h15M13 6l6 6-6 6"/>', 'i arrow'),
 };
 
 // Key combinations, kept on one line.
@@ -209,7 +212,8 @@ ${c.redirect ? `<script>${c.redirect}</script>` : ''}
       <ul>
         <li><a href="${nav('install')}">${x.T('nav.install')}</a></li>
         <li><a href="${nav('features')}">${x.T('nav.features')}</a></li>
-        <li><a href="${nav('faq')}">${x.T('nav.faq')}</a></li>
+        <li><a href="${nav('faq')}">${x.T('nav.faq')}</a></li>${c.hasMcp ? `
+        <li><a href="${x.home}mcp/"${page.place === 'mcp' ? ' aria-current="page"' : ''}>MCP</a></li>` : ''}
       </ul>
     </nav>
     <div class="lang">
@@ -238,6 +242,7 @@ ${page.main}
       <ul>
         <li><a href="${esc(x.storeLink(page.place || 'footer'))}">${x.T('store.name')}</a></li>
         ${c.hasVersions ? `<li><a href="${x.home}versions/">${x.T('versions.title')}</a></li>` : ''}
+        ${c.hasMcp ? `<li><a href="${x.home}mcp/"${page.place === 'mcp' ? ' aria-current="page"' : ''}>TwoTicks MCP</a></li>` : ''}
         <li><a href="${base}${c.privacyHref}" hreflang="${c.privacyLang}"${page.place === 'privacy' ? ' aria-current="page"' : ''}>${x.T('footer.privacy')}</a></li>
         <li><a href="${esc(cfg.youtube.channel)}">YouTube</a></li>
       </ul>
@@ -363,6 +368,7 @@ export function render(c) {
     ['faq.permissions.q', `<ul>${listing.permissions.map((p) => `<li>${esc(p)}</li>`).join('')}</ul>`],
     ['faq.update.q', `<p>${T('faq.update.a')}</p>`],
     ['faq.browsers.q', `<p>${T('faq.browsers.a')}</p>`],
+    ...(c.hasMcp ? [['faq.mcp.q', `<p>${T('faq.mcp.a', { link: `<a href="${x.home}mcp/">${T('faq.mcp.link')}</a>` })}</p>`]] : []),
     ['faq.blocked.q', `<p>${T('faq.blocked.a')}</p>`],
     ['faq.remove.q', `<p>${T('faq.remove.a')}</p>`],
   ].map(([q, a]) => `<details><summary>${I.chevron}<span>${T(q)}</span></summary><div class="answer">${a}</div></details>`).join('\n');
@@ -596,6 +602,165 @@ ${blocks}
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'TwoTicks', item: `${cfg.siteUrl}${lang.path}` },
         { '@type': 'ListItem', position: 2, name: c.t.raw('versions.title'), item: `${cfg.siteUrl}${lang.path}${rel}` },
+      ],
+    },
+  });
+}
+
+// --- TwoTicks MCP ------------------------------------------------------------------------------------------------
+// The page of TwoTicks MCP (mcp/), the optional, separate program for Windows that lets AI programs on the user's
+// computer use TwoTicks' tools (since TwoTicks 1.3.0, whose settings open this page): how it works, what it needs, its
+// setup in four steps, the tools in their groups, what waits for the user's confirmation, attachments, privacy and
+// removal; below the hero, an example in Claude Code (a terminal box with a request and the confirmation). `mcp` = { cfg: "mcp" of site.config.json (versions and commands), groups and tools (the extension's
+// mcp-tools.js: each tool's group and whether it waits for the user's confirmation), words: the extension's own words
+// in this language (its settings' tab, switch and buttons, the groups' and the tools' names; content/panel.json) }.
+// Chrome's words for the permission come from content/chrome-ui.json. Its look is in src/parts/mcp.css; the copy
+// buttons work through src/app.js and stay hidden without it.
+export function renderMcp(c, mcp) {
+  const { ta, cfg, lang } = c;
+  const x = common(c);
+  const { T, newTab, storeLink, home, chip } = x;
+  const m = mcp.cfg;
+  const w = mcp.words;
+  const rel = 'mcp/';
+  const say = (s) => `<span class="ui">${esc(s)}</span>`;
+  let codes = 0;
+  const code = (s) => {
+    const id = `cmd-${++codes}`;
+    return `<div class="mcp-code"><code id="${id}" dir="ltr">${esc(s)}</code><button type="button" class="btn btn-line mcp-copy" data-copy="${id}" data-done="${ta('mcp.copied')}" hidden>${I.copy}<span aria-live="polite">${T('mcp.copy')}</span></button></div>`;
+  };
+  const section = (id, title, body, extra = '') => `      <section class="mcp-sec"${extra} aria-labelledby="${id}">
+        <h2 id="${id}">${title}</h2>
+${body}
+      </section>`;
+
+  const flow = [1, 2, 3, 4].map((n) => `<li><b>${T(`mcp.flow${n}.name`)}</b><span>${T(`mcp.flow${n}`)}</span>${n < 4 ? `<span class="mcp-next" aria-hidden="true">${I.arrow}</span>` : ''}</li>`).join('');
+  const needs = [
+    T('mcp.need1', { version: esc(m.minVersion) }),
+    T('mcp.need2', { node: esc(String(m.node)), nodejs: '<a href="https://nodejs.org/" lang="en">nodejs.org</a>' }),
+    T('mcp.need3'),
+  ].map((s) => `<li>${s}</li>`).join('');
+  const step = (n, body) => `<li class="mcp-step"><h3><span class="mcp-no" aria-hidden="true">${n}</span>${T(`mcp.step${n}.title`)}</h3>${body}</li>`;
+  const steps = [
+    step(1, `<p>${T('mcp.step1.text')}</p>${code(m.install)}<p>${T('mcp.step1.after')}</p><p class="mcp-small">${T('mcp.step1.ps', { npxcmd: '<code>npx.cmd</code>', npx: '<code>npx</code>' })}</p>`),
+    step(2, `<p>${T('mcp.step2.text', { tab: say(w.tab), on: say(w.on), agree: say(w.agree), permission: chip('nativeMessaging'), allowChrome: chip('allow') })}</p>`),
+    step(3, `<p>${T('mcp.step3.text', { allow: say(w.allow) })}</p>`),
+    step(4, `<p>${T('mcp.step4.text')}</p><ul class="mcp-asks">${[1, 2, 3, 4].map((n) => `<li>${T(`mcp.ask${n}`)}</li>`).join('')}</ul>`),
+  ].join('\n');
+  const groups = mcp.groups.map((g) => {
+    const gw = w.groups[g.id];
+    const tools = mcp.tools.filter((tl) => tl.group === g.id);
+    return `<section class="mcp-group" aria-labelledby="mg-${g.id}">
+          <h3 id="mg-${g.id}">${esc(gw.title)}</h3>${g.on ? '' : `
+          <p class="mcp-off">${T('mcp.offByDefault')}</p>`}
+          <p>${esc(gw.sub)}</p>
+          <ul>${tools.map((tl) => `<li>${esc(w.tools[tl.name])}${tl.confirm ? ` <span class="mcp-tag">${esc(w.withYou)}</span>` : ''}</li>`).join('')}</ul>
+        </section>`;
+  }).join('\n');
+  const privacyLink = `<a href="${c.base}${c.privacyHref}" hreflang="${c.privacyLang}">${T('mcp.privacyLink')}</a>`;
+  // An example in Claude Code, drawn as a terminal in the site's own colours: two requests, the tool that answers each
+  // (named as the panel names it) and the window in which the user confirms the message, in the panel's own words.
+  // The names are invented, each language has its own. The signs before the lines are not read aloud; the browser
+  // itself turns the request sign round in Arabic.
+  const sign = (ch) => `<span class="mcp-term-sign" aria-hidden="true">${ch}</span>`;
+  const toolLine = (name) => `<p class="mcp-term-tool">${sign('●')}<span><span dir="ltr">twoticks</span> · ${esc(w.tools[name])}</span></p>`;
+  const waiting = [1, 2, 3].map((n) => `<li><b>${T(`mcp.term.n${n}`)}</b><span class="mcp-term-age">${T(`mcp.term.w${n}`)}</span><span class="mcp-term-said">${T(`mcp.term.q${n}`)}</span></li>`).join('');
+  const example = `        <div class="mcp-show">
+          <figure class="mcp-fig">
+            <div class="mcp-term">
+              <p class="mcp-term-bar"><b>${T('mcp.term.bar')}</b><span lang="en" dir="ltr">Claude Code</span></p>
+              <div class="mcp-term-body">
+                <p class="mcp-term-ask">${sign('›')}<span>${T('mcp.ask1')}</span></p>
+                <div class="mcp-term-ans">
+                  ${toolLine('unanswered')}
+                  <p class="mcp-term-out">${T('mcp.term.count')}</p>
+                  <ul class="mcp-term-rows">${waiting}</ul>
+                </div>
+                <p class="mcp-term-ask">${sign('›')}<span>${T('mcp.term.ask2')}</span></p>
+                <div class="mcp-term-ans">
+                  ${toolLine('send_message')}
+                  <p class="mcp-term-out">${T('mcp.term.wait')}</p>
+                  <div class="mcp-card">
+                    <p class="mcp-card-hd"><b>TwoTicks</b><span>${esc(w.cfBrand)}</span></p>
+                    <div class="mcp-card-bd">
+                      <p class="mcp-card-q">${esc(w.cfSend)}</p>
+                      <dl class="mcp-card-rows"><dt>${esc(w.cfTo)}</dt><dd>${T('mcp.term.n1')}</dd><dt>${esc(w.cfText)}</dt><dd class="mcp-card-text">${T('mcp.term.msg')}</dd></dl>
+                      <p class="mcp-card-acts" aria-hidden="true"><span>${esc(w.cfCancel)}</span><span class="mcp-card-go">${esc(w.cfGo)}</span></p>
+                    </div>
+                  </div>
+                </div>
+                <p class="mcp-term-done">${sign('✓')}<span>${T('mcp.term.done')}</span></p>
+              </div>
+            </div>
+            <figcaption class="mcp-small">${T('mcp.term.note')}</figcaption>
+          </figure>
+          <ul class="mcp-points">
+            ${[1, 2, 3].map((n) => `<li><b>${T(`mcp.term.p${n}.title`)}</b><span>${T(`mcp.term.p${n}.text`)}</span></li>`).join('\n            ')}
+          </ul>
+        </div>`;
+
+  const main = `  <section class="hero tool-hero" aria-labelledby="mcp-title">
+    <div class="wrap hero-in tool-hero-in">
+      <nav class="crumbs" aria-label="TwoTicks MCP">
+        <ol><li><a href="${home}">TwoTicks</a></li><li aria-current="page">TwoTicks MCP</li></ol>
+      </nav>
+      <div class="hero-text">
+        <h1 id="mcp-title" class="tool-h1">TwoTicks MCP</h1>
+        <p class="lead">${T('mcp.lead')}</p>
+        <div class="cta">
+          <a class="btn btn-hero btn-store" href="${esc(storeLink('mcp'))}" target="_blank" rel="noopener">
+            ${I.store}<span class="btn-two"><span class="btn-label">${T('hero.cta')}</span><span class="btn-meta">${T('hero.ctaMeta')}</span></span>${newTab}
+          </a>
+          <a class="btn btn-hero btn-hero-alt" href="#setup">${I.steps}<span class="btn-label">${T('mcp.ctaSetup')}</span></a>
+        </div>
+        <p class="hero-note">${T('mcp.facts')}</p>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">${ticks('hero-ticks')}</div>
+  </section>
+
+  <div class="mcp">
+    <div class="wrap">
+${section('mcp-see', T('mcp.term.title'), example)}
+${section('mcp-how', T('mcp.flowTitle'), `        <ol class="mcp-flow">${flow}</ol>`)}
+${section('mcp-need', T('mcp.needTitle'), `        <ul class="mcp-list">${needs}</ul>`)}
+${section('mcp-setup', T('mcp.stepsTitle'), `        <ol class="mcp-steps">
+${steps}
+        </ol>`, ' id="setup"')}
+${section('mcp-tools', T('mcp.toolsTitle'), `        <p class="mcp-intro">${T('mcp.toolsIntro', { tag: `<span class="mcp-tag">${esc(w.withYou)}</span>` })}</p>
+        <div class="mcp-groups">
+${groups}
+        </div>`)}
+${section('mcp-confirm', T('mcp.confirmTitle'), `        <p>${T('mcp.confirm1', { confirmHere: say(w.confirmHere) })}</p>
+        <p>${T('mcp.confirm4')}</p>
+        <p>${T('mcp.confirm2')}</p>
+        <p>${T('mcp.confirm3')}</p>`)}
+${section('mcp-files', T('mcp.filesTitle'), `        <p>${T('mcp.files1', { folder: '<code>twoticks-files</code>' })}</p>
+        <p>${T('mcp.files2')}</p>
+        <p>${T('mcp.files3')}</p>`)}
+${section('mcp-privacy', T('mcp.privacyTitle'), `        <p>${T('mcp.privacy1')}</p>
+        <p>${T('mcp.privacy2')}</p>
+        <p>${T('mcp.privacy3')}</p>
+        <p>${privacyLink}</p>`)}
+${section('mcp-other', T('mcp.otherTitle'), `        <p>${T('mcp.otherText')}</p>
+        ${code(m.manual)}`)}
+${section('mcp-remove', T('mcp.removeTitle'), `        <p>${T('mcp.status')}</p>
+        ${code(m.status)}
+        <p>${T('mcp.uninstall')}</p>
+        ${code(m.uninstall)}
+        <p>${T('mcp.removeNote', { tab: say(w.tab) })}</p>`)}
+    </div>
+  </div>`;
+
+  return shell(c, x, {
+    rel, skip: '#main', main, place: 'mcp',
+    title: ta('mcp.metaTitle'),
+    description: ta('mcp.description'),
+    jsonLd: {
+      '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'TwoTicks', item: `${cfg.siteUrl}${lang.path}` },
+        { '@type': 'ListItem', position: 2, name: 'TwoTicks MCP', item: `${cfg.siteUrl}${lang.path}${rel}` },
       ],
     },
   });

@@ -1,6 +1,6 @@
 {
-  "read": "2026-11-22",
-  "extensionVersion": "1.2.2",
+  "read": "2026-11-23",
+  "extensionVersion": "1.3.0",
   "tools": [
     {
       "slug": "privacy-screen",
@@ -738,6 +738,1001 @@
       "deleted-messages": {
         "title": "Pesan yang dihapus dan diedit",
         "desc": "Saat seseorang menghapus pesan untuk semua orang atau mengeditnya kemudian, teks aslinya disimpan di sini. Catatan hanya disimpan di browser ini."
+      }
+    }
+  },
+  "mcp": {
+    "groups": [
+      {
+        "id": "read",
+        "on": true
+      },
+      {
+        "id": "act",
+        "on": true
+      },
+      {
+        "id": "files",
+        "on": true
+      },
+      {
+        "id": "assistant",
+        "on": true
+      },
+      {
+        "id": "privacy",
+        "on": true
+      },
+      {
+        "id": "deleted",
+        "on": false
+      }
+    ],
+    "tools": [
+      {
+        "name": "list_chats",
+        "group": "read",
+        "confirm": false
+      },
+      {
+        "name": "read_chat",
+        "group": "read",
+        "confirm": false
+      },
+      {
+        "name": "unanswered",
+        "group": "read",
+        "confirm": false
+      },
+      {
+        "name": "today",
+        "group": "read",
+        "confirm": false
+      },
+      {
+        "name": "analyze_chat",
+        "group": "read",
+        "confirm": false
+      },
+      {
+        "name": "list_scheduled",
+        "group": "read",
+        "confirm": false
+      },
+      {
+        "name": "list_compliments",
+        "group": "read",
+        "confirm": false
+      },
+      {
+        "name": "list_quick_replies",
+        "group": "read",
+        "confirm": false
+      },
+      {
+        "name": "bulk_status",
+        "group": "read",
+        "confirm": false
+      },
+      {
+        "name": "send_message",
+        "group": "act",
+        "confirm": true
+      },
+      {
+        "name": "send_to_several",
+        "group": "act",
+        "confirm": true
+      },
+      {
+        "name": "send_messages",
+        "group": "act",
+        "confirm": true
+      },
+      {
+        "name": "schedule_message",
+        "group": "act",
+        "confirm": true
+      },
+      {
+        "name": "cancel_scheduled",
+        "group": "act",
+        "confirm": true
+      },
+      {
+        "name": "create_compliment_routine",
+        "group": "act",
+        "confirm": true
+      },
+      {
+        "name": "delete_compliment_routine",
+        "group": "act",
+        "confirm": true
+      },
+      {
+        "name": "save_quick_reply",
+        "group": "act",
+        "confirm": true
+      },
+      {
+        "name": "delete_quick_reply",
+        "group": "act",
+        "confirm": true
+      },
+      {
+        "name": "list_attachments",
+        "group": "files",
+        "confirm": false
+      },
+      {
+        "name": "get_attachment",
+        "group": "files",
+        "confirm": false
+      },
+      {
+        "name": "export_chats",
+        "group": "files",
+        "confirm": true
+      },
+      {
+        "name": "export_contacts",
+        "group": "files",
+        "confirm": true
+      },
+      {
+        "name": "download_media",
+        "group": "files",
+        "confirm": true
+      },
+      {
+        "name": "read_document",
+        "group": "assistant",
+        "confirm": false
+      },
+      {
+        "name": "transcribe_voice",
+        "group": "assistant",
+        "confirm": false
+      },
+      {
+        "name": "privacy_screen",
+        "group": "privacy",
+        "confirm": false
+      },
+      {
+        "name": "deleted_messages",
+        "group": "deleted",
+        "confirm": false
+      }
+    ],
+    "texts": {
+      "en": {
+        "tab": "Connection (MCP)",
+        "on": "Allow AI programs to use TwoTicks",
+        "agree": "Agree and switch on",
+        "allow": "Allow",
+        "confirmHere": "Always confirm on WhatsApp Web",
+        "withYou": "with your confirmation",
+        "cfBrand": "AI connection",
+        "cfSend": "Send this message?",
+        "cfTo": "To",
+        "cfText": "Message",
+        "cfGo": "Send",
+        "cfCancel": "Cancel",
+        "groups": {
+          "read": {
+            "title": "Reading",
+            "sub": "Chats and messages, chat analysis and the Today digest, unanswered chats, scheduled messages, compliment routines, quick replies"
+          },
+          "act": {
+            "title": "Sending and planning",
+            "sub": "Sending a message, sending to several chats, scheduling messages, compliments, quick replies"
+          },
+          "files": {
+            "title": "Files",
+            "sub": "Attachments for analysis; exporting chats and contacts, downloading media"
+          },
+          "assistant": {
+            "title": "Reading documents and voice messages",
+            "sub": "The text of PDF, Word and Excel files, and voice messages written down by Chrome’s built-in model, all on your computer"
+          },
+          "privacy": {
+            "title": "Privacy screen",
+            "sub": "Switching it on and off"
+          },
+          "deleted": {
+            "title": "Deleted and edited messages",
+            "sub": "Messages that others deleted or edited would go to the company of your AI program. That is why this is switched on separately."
+          }
+        },
+        "tools": {
+          "list_chats": "List of chats",
+          "read_chat": "Reading a chat",
+          "unanswered": "Unanswered chats",
+          "today": "Today digest",
+          "analyze_chat": "Chat analysis",
+          "list_scheduled": "Scheduled messages",
+          "list_compliments": "Compliment routines",
+          "list_quick_replies": "Quick replies",
+          "bulk_status": "Progress of sending to several chats",
+          "send_message": "Sending a message",
+          "send_to_several": "Sending to several chats",
+          "send_messages": "Sending several messages at once",
+          "schedule_message": "Scheduling a message",
+          "cancel_scheduled": "Deleting a scheduled message",
+          "create_compliment_routine": "New compliment routine",
+          "delete_compliment_routine": "Deleting a compliment routine",
+          "save_quick_reply": "Saving a quick reply",
+          "delete_quick_reply": "Deleting a quick reply",
+          "list_attachments": "List of attachments",
+          "get_attachment": "Getting an attachment",
+          "export_chats": "Exporting chats",
+          "export_contacts": "Exporting contacts",
+          "download_media": "Downloading media",
+          "read_document": "Reading a document",
+          "transcribe_voice": "Writing down a voice message",
+          "privacy_screen": "Privacy screen",
+          "deleted_messages": "Deleted messages"
+        }
+      },
+      "de": {
+        "tab": "Verbindung (MCP)",
+        "on": "KI-Programmen erlauben, TwoTicks zu verwenden",
+        "agree": "Zustimmen und einschalten",
+        "allow": "Erlauben",
+        "confirmHere": "Immer in WhatsApp Web bestätigen",
+        "withYou": "mit Ihrer Bestätigung",
+        "cfBrand": "KI-Verbindung",
+        "cfSend": "Diese Nachricht senden?",
+        "cfTo": "An",
+        "cfText": "Nachricht",
+        "cfGo": "Senden",
+        "cfCancel": "Abbrechen",
+        "groups": {
+          "read": {
+            "title": "Lesen",
+            "sub": "Chats und Nachrichten, Chat-Analyse und die Übersicht „Heute“, unbeantwortete Chats, geplante Nachrichten, Kompliment-Routinen, Schnellantworten"
+          },
+          "act": {
+            "title": "Senden und Planen",
+            "sub": "Eine Nachricht senden, an mehrere Chats senden, Nachrichten planen, Komplimente, Schnellantworten"
+          },
+          "files": {
+            "title": "Dateien",
+            "sub": "Anhänge zur Analyse; Chats und Kontakte exportieren, Medien herunterladen"
+          },
+          "assistant": {
+            "title": "Dokumente und Sprachnachrichten lesen",
+            "sub": "Der Text von PDF-, Word- und Excel-Dateien sowie Sprachnachrichten, die Chromes integriertes Modell niederschreibt, alles auf Ihrem Computer"
+          },
+          "privacy": {
+            "title": "Sichtschutz",
+            "sub": "Ein- und Ausschalten"
+          },
+          "deleted": {
+            "title": "Gelöschte und bearbeitete Nachrichten",
+            "sub": "Nachrichten, die andere gelöscht oder bearbeitet haben, würden an das Unternehmen Ihres KI-Programms gehen. Deshalb wird dies gesondert eingeschaltet."
+          }
+        },
+        "tools": {
+          "list_chats": "Liste der Chats",
+          "read_chat": "Chat lesen",
+          "unanswered": "Unbeantwortete Chats",
+          "today": "Übersicht „Heute“",
+          "analyze_chat": "Chat-Analyse",
+          "list_scheduled": "Geplante Nachrichten",
+          "list_compliments": "Kompliment-Routinen",
+          "list_quick_replies": "Schnellantworten",
+          "bulk_status": "Fortschritt beim Senden an mehrere Chats",
+          "send_message": "Nachricht senden",
+          "send_to_several": "An mehrere Chats senden",
+          "send_messages": "Mehrere Nachrichten auf einmal senden",
+          "schedule_message": "Nachricht planen",
+          "cancel_scheduled": "Geplante Nachricht löschen",
+          "create_compliment_routine": "Neue Kompliment-Routine",
+          "delete_compliment_routine": "Kompliment-Routine löschen",
+          "save_quick_reply": "Schnellantwort speichern",
+          "delete_quick_reply": "Schnellantwort löschen",
+          "list_attachments": "Liste der Anhänge",
+          "get_attachment": "Anhang abrufen",
+          "export_chats": "Chats exportieren",
+          "export_contacts": "Kontakte exportieren",
+          "download_media": "Medien herunterladen",
+          "read_document": "Dokument lesen",
+          "transcribe_voice": "Sprachnachricht niederschreiben",
+          "privacy_screen": "Sichtschutz",
+          "deleted_messages": "Gelöschte Nachrichten"
+        }
+      },
+      "es": {
+        "tab": "Conexión (MCP)",
+        "on": "Permitir que los programas de IA usen TwoTicks",
+        "agree": "Aceptar y activar",
+        "allow": "Permitir",
+        "confirmHere": "Confirmar siempre en WhatsApp Web",
+        "withYou": "con tu confirmación",
+        "cfBrand": "Conexión con IA",
+        "cfSend": "¿Enviar este mensaje?",
+        "cfTo": "Para",
+        "cfText": "Mensaje",
+        "cfGo": "Enviar",
+        "cfCancel": "Cancelar",
+        "groups": {
+          "read": {
+            "title": "Lectura",
+            "sub": "Chats y mensajes, análisis del chat y el resumen «Hoy», chats sin responder, mensajes programados, rutinas de cumplidos, respuestas rápidas"
+          },
+          "act": {
+            "title": "Envío y planificación",
+            "sub": "Enviar un mensaje, enviar a varios chats, programar mensajes, cumplidos, respuestas rápidas"
+          },
+          "files": {
+            "title": "Archivos",
+            "sub": "Archivos adjuntos para analizar; exportar chats y contactos, descargar multimedia"
+          },
+          "assistant": {
+            "title": "Lectura de documentos y mensajes de voz",
+            "sub": "El texto de archivos PDF, Word y Excel, y los mensajes de voz que transcribe el modelo integrado de Chrome, todo en tu ordenador"
+          },
+          "privacy": {
+            "title": "Privacidad en pantalla",
+            "sub": "Activarla y desactivarla"
+          },
+          "deleted": {
+            "title": "Mensajes eliminados y editados",
+            "sub": "Los mensajes que otras personas eliminaron o editaron irían a la empresa de tu programa de IA. Por eso este grupo se activa por separado."
+          }
+        },
+        "tools": {
+          "list_chats": "Lista de chats",
+          "read_chat": "Leer un chat",
+          "unanswered": "Chats sin responder",
+          "today": "Resumen «Hoy»",
+          "analyze_chat": "Análisis del chat",
+          "list_scheduled": "Mensajes programados",
+          "list_compliments": "Rutinas de cumplidos",
+          "list_quick_replies": "Respuestas rápidas",
+          "bulk_status": "Progreso del envío a varios chats",
+          "send_message": "Enviar un mensaje",
+          "send_to_several": "Enviar a varios chats",
+          "send_messages": "Enviar varios mensajes a la vez",
+          "schedule_message": "Programar un mensaje",
+          "cancel_scheduled": "Eliminar un mensaje programado",
+          "create_compliment_routine": "Nueva rutina de cumplidos",
+          "delete_compliment_routine": "Eliminar una rutina de cumplidos",
+          "save_quick_reply": "Guardar una respuesta rápida",
+          "delete_quick_reply": "Eliminar una respuesta rápida",
+          "list_attachments": "Lista de archivos adjuntos",
+          "get_attachment": "Obtener un archivo adjunto",
+          "export_chats": "Exportar chats",
+          "export_contacts": "Exportar contactos",
+          "download_media": "Descargar multimedia",
+          "read_document": "Leer un documento",
+          "transcribe_voice": "Transcribir un mensaje de voz",
+          "privacy_screen": "Privacidad en pantalla",
+          "deleted_messages": "Mensajes eliminados"
+        }
+      },
+      "fr": {
+        "tab": "Connexion (MCP)",
+        "on": "Autoriser les programmes d’IA à utiliser TwoTicks",
+        "agree": "Accepter et activer",
+        "allow": "Autoriser",
+        "confirmHere": "Toujours confirmer sur WhatsApp Web",
+        "withYou": "avec votre confirmation",
+        "cfBrand": "Connexion IA",
+        "cfSend": "Envoyer ce message ?",
+        "cfTo": "Destinataire",
+        "cfText": "Message",
+        "cfGo": "Envoyer",
+        "cfCancel": "Annuler",
+        "groups": {
+          "read": {
+            "title": "Lecture",
+            "sub": "Discussions et messages, analyse de discussion et récapitulatif « Aujourd’hui », discussions sans réponse, messages programmés, routines de compliments, réponses rapides"
+          },
+          "act": {
+            "title": "Envoi et planification",
+            "sub": "Envoyer un message, envoyer à plusieurs discussions, programmer des messages, compliments, réponses rapides"
+          },
+          "files": {
+            "title": "Fichiers",
+            "sub": "Pièces jointes à analyser ; exporter les discussions et les contacts, télécharger les médias"
+          },
+          "assistant": {
+            "title": "Lecture de documents et de messages vocaux",
+            "sub": "Le texte des fichiers PDF, Word et Excel, et les messages vocaux transcrits par le modèle intégré de Chrome, le tout sur votre ordinateur"
+          },
+          "privacy": {
+            "title": "Écran de confidentialité",
+            "sub": "L’activer et le désactiver"
+          },
+          "deleted": {
+            "title": "Messages supprimés et modifiés",
+            "sub": "Les messages que d’autres ont supprimés ou modifiés iraient à l’entreprise de votre programme d’IA. C’est pourquoi ce groupe s’active séparément."
+          }
+        },
+        "tools": {
+          "list_chats": "Liste des discussions",
+          "read_chat": "Lecture d’une discussion",
+          "unanswered": "Discussions sans réponse",
+          "today": "Récapitulatif « Aujourd’hui »",
+          "analyze_chat": "Analyse de discussion",
+          "list_scheduled": "Messages programmés",
+          "list_compliments": "Routines de compliments",
+          "list_quick_replies": "Réponses rapides",
+          "bulk_status": "Progression de l’envoi à plusieurs discussions",
+          "send_message": "Envoi d’un message",
+          "send_to_several": "Envoi à plusieurs discussions",
+          "send_messages": "Envoi de plusieurs messages à la fois",
+          "schedule_message": "Programmation d’un message",
+          "cancel_scheduled": "Suppression d’un message programmé",
+          "create_compliment_routine": "Nouvelle routine de compliments",
+          "delete_compliment_routine": "Suppression d’une routine de compliments",
+          "save_quick_reply": "Enregistrement d’une réponse rapide",
+          "delete_quick_reply": "Suppression d’une réponse rapide",
+          "list_attachments": "Liste des pièces jointes",
+          "get_attachment": "Récupération d’une pièce jointe",
+          "export_chats": "Export des discussions",
+          "export_contacts": "Export des contacts",
+          "download_media": "Téléchargement des médias",
+          "read_document": "Lecture d’un document",
+          "transcribe_voice": "Transcription d’un message vocal",
+          "privacy_screen": "Écran de confidentialité",
+          "deleted_messages": "Messages supprimés"
+        }
+      },
+      "it": {
+        "tab": "Connessione (MCP)",
+        "on": "Consenti ai programmi di IA di usare TwoTicks",
+        "agree": "Accetta e attiva",
+        "allow": "Consenti",
+        "confirmHere": "Conferma sempre su WhatsApp Web",
+        "withYou": "con la tua conferma",
+        "cfBrand": "Connessione IA",
+        "cfSend": "Inviare questo messaggio?",
+        "cfTo": "Destinatario",
+        "cfText": "Messaggio",
+        "cfGo": "Invia",
+        "cfCancel": "Annulla",
+        "groups": {
+          "read": {
+            "title": "Lettura",
+            "sub": "Chat e messaggi, analisi della chat e il riepilogo «Oggi», chat senza risposta, messaggi programmati, routine di complimenti, risposte rapide"
+          },
+          "act": {
+            "title": "Invio e pianificazione",
+            "sub": "Inviare un messaggio, inviare a più chat, programmare messaggi, complimenti, risposte rapide"
+          },
+          "files": {
+            "title": "File",
+            "sub": "Allegati da analizzare; esportare chat e contatti, scaricare i media"
+          },
+          "assistant": {
+            "title": "Lettura di documenti e messaggi vocali",
+            "sub": "Il testo dei file PDF, Word ed Excel e i messaggi vocali trascritti dal modello integrato di Chrome, tutto sul tuo computer"
+          },
+          "privacy": {
+            "title": "Schermo privacy",
+            "sub": "Attivarlo e disattivarlo"
+          },
+          "deleted": {
+            "title": "Messaggi eliminati e modificati",
+            "sub": "I messaggi che altri hanno eliminato o modificato andrebbero all’azienda del tuo programma di IA. Per questo il gruppo si attiva separatamente."
+          }
+        },
+        "tools": {
+          "list_chats": "Elenco delle chat",
+          "read_chat": "Lettura di una chat",
+          "unanswered": "Chat senza risposta",
+          "today": "Riepilogo «Oggi»",
+          "analyze_chat": "Analisi della chat",
+          "list_scheduled": "Messaggi programmati",
+          "list_compliments": "Routine di complimenti",
+          "list_quick_replies": "Risposte rapide",
+          "bulk_status": "Avanzamento dell’invio a più chat",
+          "send_message": "Invio di un messaggio",
+          "send_to_several": "Invio a più chat",
+          "send_messages": "Invio di più messaggi insieme",
+          "schedule_message": "Programmazione di un messaggio",
+          "cancel_scheduled": "Eliminazione di un messaggio programmato",
+          "create_compliment_routine": "Nuova routine di complimenti",
+          "delete_compliment_routine": "Eliminazione di una routine di complimenti",
+          "save_quick_reply": "Salvataggio di una risposta rapida",
+          "delete_quick_reply": "Eliminazione di una risposta rapida",
+          "list_attachments": "Elenco degli allegati",
+          "get_attachment": "Recupero di un allegato",
+          "export_chats": "Esportazione delle chat",
+          "export_contacts": "Esportazione dei contatti",
+          "download_media": "Download dei media",
+          "read_document": "Lettura di un documento",
+          "transcribe_voice": "Trascrizione di un messaggio vocale",
+          "privacy_screen": "Schermo privacy",
+          "deleted_messages": "Messaggi eliminati"
+        }
+      },
+      "pt-BR": {
+        "tab": "Conexão (MCP)",
+        "on": "Permitir que programas de IA usem o TwoTicks",
+        "agree": "Concordar e ativar",
+        "allow": "Permitir",
+        "confirmHere": "Sempre confirmar no WhatsApp Web",
+        "withYou": "com sua confirmação",
+        "cfBrand": "Conexão com IA",
+        "cfSend": "Enviar esta mensagem?",
+        "cfTo": "Para",
+        "cfText": "Mensagem",
+        "cfGo": "Enviar",
+        "cfCancel": "Cancelar",
+        "groups": {
+          "read": {
+            "title": "Leitura",
+            "sub": "Conversas e mensagens, análise da conversa e o resumo “Hoje”, conversas sem resposta, mensagens agendadas, rotinas de elogios, respostas rápidas"
+          },
+          "act": {
+            "title": "Envio e planejamento",
+            "sub": "Enviar uma mensagem, enviar para várias conversas, agendar mensagens, elogios, respostas rápidas"
+          },
+          "files": {
+            "title": "Arquivos",
+            "sub": "Anexos para análise; exportar conversas e contatos, baixar mídia"
+          },
+          "assistant": {
+            "title": "Leitura de documentos e mensagens de voz",
+            "sub": "O texto de arquivos PDF, Word e Excel, e mensagens de voz transcritas pelo modelo integrado do Chrome, tudo no seu computador"
+          },
+          "privacy": {
+            "title": "Privacidade na tela",
+            "sub": "Ativar e desativar"
+          },
+          "deleted": {
+            "title": "Mensagens apagadas e editadas",
+            "sub": "Mensagens que outras pessoas apagaram ou editaram iriam para a empresa do seu programa de IA. Por isso, este grupo é ativado separadamente."
+          }
+        },
+        "tools": {
+          "list_chats": "Lista de conversas",
+          "read_chat": "Ler uma conversa",
+          "unanswered": "Conversas sem resposta",
+          "today": "Resumo “Hoje”",
+          "analyze_chat": "Análise da conversa",
+          "list_scheduled": "Mensagens agendadas",
+          "list_compliments": "Rotinas de elogios",
+          "list_quick_replies": "Respostas rápidas",
+          "bulk_status": "Progresso do envio para várias conversas",
+          "send_message": "Enviar uma mensagem",
+          "send_to_several": "Enviar para várias conversas",
+          "send_messages": "Enviar várias mensagens de uma vez",
+          "schedule_message": "Agendar uma mensagem",
+          "cancel_scheduled": "Excluir uma mensagem agendada",
+          "create_compliment_routine": "Nova rotina de elogios",
+          "delete_compliment_routine": "Excluir uma rotina de elogios",
+          "save_quick_reply": "Salvar uma resposta rápida",
+          "delete_quick_reply": "Excluir uma resposta rápida",
+          "list_attachments": "Lista de anexos",
+          "get_attachment": "Obter um anexo",
+          "export_chats": "Exportar conversas",
+          "export_contacts": "Exportar contatos",
+          "download_media": "Baixar mídia",
+          "read_document": "Ler um documento",
+          "transcribe_voice": "Transcrever uma mensagem de voz",
+          "privacy_screen": "Privacidade na tela",
+          "deleted_messages": "Mensagens apagadas"
+        }
+      },
+      "pt-PT": {
+        "tab": "Conexão (MCP)",
+        "on": "Permitir que programas de IA usem o TwoTicks",
+        "agree": "Concordar e ativar",
+        "allow": "Permitir",
+        "confirmHere": "Sempre confirmar no WhatsApp Web",
+        "withYou": "com sua confirmação",
+        "cfBrand": "Conexão com IA",
+        "cfSend": "Enviar esta mensagem?",
+        "cfTo": "Para",
+        "cfText": "Mensagem",
+        "cfGo": "Enviar",
+        "cfCancel": "Cancelar",
+        "groups": {
+          "read": {
+            "title": "Leitura",
+            "sub": "Conversas e mensagens, análise da conversa e o resumo “Hoje”, conversas sem resposta, mensagens agendadas, rotinas de elogios, respostas rápidas"
+          },
+          "act": {
+            "title": "Envio e planejamento",
+            "sub": "Enviar uma mensagem, enviar para várias conversas, agendar mensagens, elogios, respostas rápidas"
+          },
+          "files": {
+            "title": "Arquivos",
+            "sub": "Anexos para análise; exportar conversas e contatos, baixar mídia"
+          },
+          "assistant": {
+            "title": "Leitura de documentos e mensagens de voz",
+            "sub": "O texto de arquivos PDF, Word e Excel, e mensagens de voz transcritas pelo modelo integrado do Chrome, tudo no seu computador"
+          },
+          "privacy": {
+            "title": "Privacidade na tela",
+            "sub": "Ativar e desativar"
+          },
+          "deleted": {
+            "title": "Mensagens apagadas e editadas",
+            "sub": "Mensagens que outras pessoas apagaram ou editaram iriam para a empresa do seu programa de IA. Por isso, este grupo é ativado separadamente."
+          }
+        },
+        "tools": {
+          "list_chats": "Lista de conversas",
+          "read_chat": "Ler uma conversa",
+          "unanswered": "Conversas sem resposta",
+          "today": "Resumo “Hoje”",
+          "analyze_chat": "Análise da conversa",
+          "list_scheduled": "Mensagens agendadas",
+          "list_compliments": "Rotinas de elogios",
+          "list_quick_replies": "Respostas rápidas",
+          "bulk_status": "Progresso do envio para várias conversas",
+          "send_message": "Enviar uma mensagem",
+          "send_to_several": "Enviar para várias conversas",
+          "send_messages": "Enviar várias mensagens de uma vez",
+          "schedule_message": "Agendar uma mensagem",
+          "cancel_scheduled": "Excluir uma mensagem agendada",
+          "create_compliment_routine": "Nova rotina de elogios",
+          "delete_compliment_routine": "Excluir uma rotina de elogios",
+          "save_quick_reply": "Salvar uma resposta rápida",
+          "delete_quick_reply": "Excluir uma resposta rápida",
+          "list_attachments": "Lista de anexos",
+          "get_attachment": "Obter um anexo",
+          "export_chats": "Exportar conversas",
+          "export_contacts": "Exportar contatos",
+          "download_media": "Baixar mídia",
+          "read_document": "Ler um documento",
+          "transcribe_voice": "Transcrever uma mensagem de voz",
+          "privacy_screen": "Privacidade na tela",
+          "deleted_messages": "Mensagens apagadas"
+        }
+      },
+      "tr": {
+        "tab": "Bağlantı (MCP)",
+        "on": "Yapay zekâ programlarının TwoTicks’i kullanmasına izin ver",
+        "agree": "Kabul ediyorum, aç",
+        "allow": "İzin ver",
+        "confirmHere": "Onayı her zaman WhatsApp Web’de iste",
+        "withYou": "onayınızla",
+        "cfBrand": "Yapay zekâ bağlantısı",
+        "cfSend": "Bu mesaj gönderilsin mi?",
+        "cfTo": "Kime",
+        "cfText": "Mesaj",
+        "cfGo": "Gönder",
+        "cfCancel": "Vazgeç",
+        "groups": {
+          "read": {
+            "title": "Okuma",
+            "sub": "Sohbetler ve mesajlar, sohbet analizi ve Bugün özeti, cevapsız sohbetler, planlı mesajlar, iltifat rutinleri, hızlı yanıtlar"
+          },
+          "act": {
+            "title": "Gönderme ve planlama",
+            "sub": "Mesaj gönderme, birkaç sohbete gönderme, mesaj zamanlama, iltifatlar, hızlı yanıtlar"
+          },
+          "files": {
+            "title": "Dosyalar",
+            "sub": "Analiz için ekler; sohbetleri ve kişileri dışa aktarma, medya indirme"
+          },
+          "assistant": {
+            "title": "Belge ve sesli mesaj okuma",
+            "sub": "PDF, Word ve Excel dosyalarının metni ile Chrome’un yerleşik modelinin yazıya döktüğü sesli mesajlar; hepsi bilgisayarınızda"
+          },
+          "privacy": {
+            "title": "Gizlilik ekranı",
+            "sub": "Açar ve kapatır"
+          },
+          "deleted": {
+            "title": "Silinen ve düzenlenen mesajlar",
+            "sub": "Başkalarının sildiği ya da düzenlediği mesajlar, yapay zekâ programınızın şirketine gider. Bu yüzden ayrıca açılır."
+          }
+        },
+        "tools": {
+          "list_chats": "Sohbet listesi",
+          "read_chat": "Sohbet okuma",
+          "unanswered": "Cevapsız sohbetler",
+          "today": "Bugün özeti",
+          "analyze_chat": "Sohbet analizi",
+          "list_scheduled": "Planlı mesajlar",
+          "list_compliments": "İltifat rutinleri",
+          "list_quick_replies": "Hızlı yanıtlar",
+          "bulk_status": "Birkaç sohbete gönderimin durumu",
+          "send_message": "Mesaj gönderme",
+          "send_to_several": "Birkaç sohbete gönderme",
+          "send_messages": "Birkaç mesajı tek onayla gönderme",
+          "schedule_message": "Mesaj zamanlama",
+          "cancel_scheduled": "Zamanlanmış mesajı silme",
+          "create_compliment_routine": "Yeni iltifat rutini",
+          "delete_compliment_routine": "İltifat rutinini silme",
+          "save_quick_reply": "Hızlı yanıt kaydetme",
+          "delete_quick_reply": "Hızlı yanıt silme",
+          "list_attachments": "Ek listesi",
+          "get_attachment": "Ek alma",
+          "export_chats": "Sohbetleri dışa aktarma",
+          "export_contacts": "Kişileri dışa aktarma",
+          "download_media": "Medya indirme",
+          "read_document": "Belge okuma",
+          "transcribe_voice": "Sesli mesajı yazıya dökme",
+          "privacy_screen": "Gizlilik ekranı",
+          "deleted_messages": "Silinen mesajlar"
+        }
+      },
+      "ru": {
+        "tab": "Подключение (MCP)",
+        "on": "Разрешить ИИ-программам использовать TwoTicks",
+        "agree": "Согласиться и включить",
+        "allow": "Разрешить",
+        "confirmHere": "Всегда подтверждать в WhatsApp Web",
+        "withYou": "с вашим подтверждением",
+        "cfBrand": "Подключение ИИ",
+        "cfSend": "Отправить это сообщение?",
+        "cfTo": "Кому",
+        "cfText": "Сообщение",
+        "cfGo": "Отправить",
+        "cfCancel": "Отмена",
+        "groups": {
+          "read": {
+            "title": "Чтение",
+            "sub": "Чаты и сообщения, анализ чата и сводка «Сегодня», чаты без ответа, запланированные сообщения, расписания комплиментов, быстрые ответы"
+          },
+          "act": {
+            "title": "Отправка и планирование",
+            "sub": "Отправка сообщения, отправка в несколько чатов, планирование сообщений, комплименты, быстрые ответы"
+          },
+          "files": {
+            "title": "Файлы",
+            "sub": "Вложения для анализа; экспорт чатов и контактов, скачивание медиафайлов"
+          },
+          "assistant": {
+            "title": "Чтение документов и голосовых сообщений",
+            "sub": "Текст файлов PDF, Word и Excel, а также голосовые сообщения, записанные текстом встроенной моделью Chrome, — всё на вашем компьютере"
+          },
+          "privacy": {
+            "title": "Приватный экран",
+            "sub": "Включение и выключение"
+          },
+          "deleted": {
+            "title": "Удалённые и изменённые сообщения",
+            "sub": "Сообщения, которые другие удалили или изменили, попали бы к компании, стоящей за вашей ИИ-программой. Поэтому эта группа включается отдельно."
+          }
+        },
+        "tools": {
+          "list_chats": "Список чатов",
+          "read_chat": "Чтение чата",
+          "unanswered": "Чаты без ответа",
+          "today": "Сводка «Сегодня»",
+          "analyze_chat": "Анализ чата",
+          "list_scheduled": "Запланированные сообщения",
+          "list_compliments": "Расписания комплиментов",
+          "list_quick_replies": "Быстрые ответы",
+          "bulk_status": "Ход отправки в несколько чатов",
+          "send_message": "Отправка сообщения",
+          "send_to_several": "Отправка в несколько чатов",
+          "send_messages": "Отправка нескольких сообщений сразу",
+          "schedule_message": "Планирование сообщения",
+          "cancel_scheduled": "Удаление запланированного сообщения",
+          "create_compliment_routine": "Новое расписание комплиментов",
+          "delete_compliment_routine": "Удаление расписания комплиментов",
+          "save_quick_reply": "Сохранение быстрого ответа",
+          "delete_quick_reply": "Удаление быстрого ответа",
+          "list_attachments": "Список вложений",
+          "get_attachment": "Получение вложения",
+          "export_chats": "Экспорт чатов",
+          "export_contacts": "Экспорт контактов",
+          "download_media": "Скачивание медиафайлов",
+          "read_document": "Чтение документа",
+          "transcribe_voice": "Запись голосового сообщения текстом",
+          "privacy_screen": "Приватный экран",
+          "deleted_messages": "Удалённые сообщения"
+        }
+      },
+      "ar": {
+        "tab": "الاتصال (MCP)",
+        "on": "السماح لبرامج الذكاء الاصطناعي باستخدام TwoTicks",
+        "agree": "الموافقة والتفعيل",
+        "allow": "السماح",
+        "confirmHere": "التأكيد دائمًا في WhatsApp Web",
+        "withYou": "بتأكيدك",
+        "cfBrand": "اتصال الذكاء الاصطناعي",
+        "cfSend": "إرسال هذه الرسالة؟",
+        "cfTo": "إلى",
+        "cfText": "الرسالة",
+        "cfGo": "إرسال",
+        "cfCancel": "إلغاء",
+        "groups": {
+          "read": {
+            "title": "القراءة",
+            "sub": "الدردشات والرسائل، وتحليل الدردشة وملخص «اليوم»، والدردشات التي بلا رد، والرسائل المجدولة، وجداول الكلمات الطيبة، والردود السريعة"
+          },
+          "act": {
+            "title": "الإرسال والتخطيط",
+            "sub": "إرسال رسالة، والإرسال إلى عدة دردشات، وجدولة الرسائل، والكلمات الطيبة، والردود السريعة"
+          },
+          "files": {
+            "title": "الملفات",
+            "sub": "المرفقات للتحليل؛ وتصدير الدردشات وجهات الاتصال، وتنزيل الوسائط"
+          },
+          "assistant": {
+            "title": "قراءة المستندات والرسائل الصوتية",
+            "sub": "نص ملفات PDF وWord وExcel، والرسائل الصوتية التي يكتبها نموذج Chrome المدمج نصًا، وكل ذلك على كمبيوترك"
+          },
+          "privacy": {
+            "title": "شاشة الخصوصية",
+            "sub": "تفعيلها وإيقافها"
+          },
+          "deleted": {
+            "title": "الرسائل المحذوفة والمعدلة",
+            "sub": "الرسائل التي حذفها الآخرون أو عدّلوها كانت ستذهب إلى الشركة التي تقف وراء برنامج الذكاء الاصطناعي لديك. لهذا تُفعَّل هذه المجموعة على حدة."
+          }
+        },
+        "tools": {
+          "list_chats": "قائمة الدردشات",
+          "read_chat": "قراءة دردشة",
+          "unanswered": "دردشات بلا رد",
+          "today": "ملخص «اليوم»",
+          "analyze_chat": "تحليل الدردشة",
+          "list_scheduled": "الرسائل المجدولة",
+          "list_compliments": "جداول الكلمات الطيبة",
+          "list_quick_replies": "الردود السريعة",
+          "bulk_status": "تقدّم الإرسال إلى عدة دردشات",
+          "send_message": "إرسال رسالة",
+          "send_to_several": "الإرسال إلى عدة دردشات",
+          "send_messages": "إرسال عدة رسائل دفعة واحدة",
+          "schedule_message": "جدولة رسالة",
+          "cancel_scheduled": "حذف رسالة مجدولة",
+          "create_compliment_routine": "جدول كلمات طيبة جديد",
+          "delete_compliment_routine": "حذف جدول كلمات طيبة",
+          "save_quick_reply": "حفظ رد سريع",
+          "delete_quick_reply": "حذف رد سريع",
+          "list_attachments": "قائمة المرفقات",
+          "get_attachment": "جلب مرفق",
+          "export_chats": "تصدير الدردشات",
+          "export_contacts": "تصدير جهات الاتصال",
+          "download_media": "تنزيل الوسائط",
+          "read_document": "قراءة مستند",
+          "transcribe_voice": "كتابة رسالة صوتية نصًا",
+          "privacy_screen": "شاشة الخصوصية",
+          "deleted_messages": "الرسائل المحذوفة"
+        }
+      },
+      "hi": {
+        "tab": "कनेक्शन (MCP)",
+        "on": "एआई प्रोग्राम को TwoTicks इस्तेमाल करने की अनुमति दें",
+        "agree": "सहमत हूँ, चालू करें",
+        "allow": "अनुमति दें",
+        "confirmHere": "हमेशा WhatsApp Web पर पुष्टि करें",
+        "withYou": "आपकी पुष्टि के साथ",
+        "cfBrand": "एआई कनेक्शन",
+        "cfSend": "यह मैसेज भेजें?",
+        "cfTo": "पाने वाला",
+        "cfText": "मैसेज",
+        "cfGo": "भेजें",
+        "cfCancel": "रद्द करें",
+        "groups": {
+          "read": {
+            "title": "पढ़ना",
+            "sub": "चैट और मैसेज, चैट विश्लेषण और “आज” का सार, बिना जवाब वाली चैट, शेड्यूल किए गए मैसेज, तारीफ़ रूटीन, झटपट जवाब"
+          },
+          "act": {
+            "title": "भेजना और प्लान करना",
+            "sub": "मैसेज भेजना, कई चैट को भेजना, मैसेज शेड्यूल करना, तारीफ़ें, झटपट जवाब"
+          },
+          "files": {
+            "title": "फ़ाइलें",
+            "sub": "विश्लेषण के लिए अटैचमेंट; चैट और संपर्क एक्सपोर्ट करना, मीडिया डाउनलोड करना"
+          },
+          "assistant": {
+            "title": "दस्तावेज़ और वॉइस मैसेज पढ़ना",
+            "sub": "PDF, Word और Excel फ़ाइलों का टेक्स्ट, और Chrome के अपने मॉडल के लिखे वॉइस मैसेज, सब कुछ आपके कंप्यूटर पर"
+          },
+          "privacy": {
+            "title": "प्राइवेसी स्क्रीन",
+            "sub": "इसे चालू और बंद करना"
+          },
+          "deleted": {
+            "title": "डिलीट और एडिट किए गए मैसेज",
+            "sub": "दूसरों के डिलीट या एडिट किए गए मैसेज आपके एआई प्रोग्राम की कंपनी तक पहुँच जाएँगे। इसीलिए यह ग्रुप अलग से चालू किया जाता है।"
+          }
+        },
+        "tools": {
+          "list_chats": "चैट की लिस्ट",
+          "read_chat": "चैट पढ़ना",
+          "unanswered": "बिना जवाब वाली चैट",
+          "today": "“आज” का सार",
+          "analyze_chat": "चैट विश्लेषण",
+          "list_scheduled": "शेड्यूल किए गए मैसेज",
+          "list_compliments": "तारीफ़ रूटीन",
+          "list_quick_replies": "झटपट जवाब",
+          "bulk_status": "कई चैट को भेजने की प्रगति",
+          "send_message": "मैसेज भेजना",
+          "send_to_several": "कई चैट को भेजना",
+          "send_messages": "एक साथ कई मैसेज भेजना",
+          "schedule_message": "मैसेज शेड्यूल करना",
+          "cancel_scheduled": "शेड्यूल किया गया मैसेज डिलीट करना",
+          "create_compliment_routine": "नया तारीफ़ रूटीन",
+          "delete_compliment_routine": "तारीफ़ रूटीन डिलीट करना",
+          "save_quick_reply": "झटपट जवाब सेव करना",
+          "delete_quick_reply": "झटपट जवाब डिलीट करना",
+          "list_attachments": "अटैचमेंट की लिस्ट",
+          "get_attachment": "अटैचमेंट लेना",
+          "export_chats": "चैट एक्सपोर्ट करना",
+          "export_contacts": "संपर्क एक्सपोर्ट करना",
+          "download_media": "मीडिया डाउनलोड करना",
+          "read_document": "दस्तावेज़ पढ़ना",
+          "transcribe_voice": "वॉइस मैसेज लिखना",
+          "privacy_screen": "प्राइवेसी स्क्रीन",
+          "deleted_messages": "डिलीट किए गए मैसेज"
+        }
+      },
+      "id": {
+        "tab": "Koneksi (MCP)",
+        "on": "Izinkan program AI menggunakan TwoTicks",
+        "agree": "Setuju dan aktifkan",
+        "allow": "Izinkan",
+        "confirmHere": "Selalu konfirmasi di WhatsApp Web",
+        "withYou": "dengan konfirmasi Anda",
+        "cfBrand": "Koneksi AI",
+        "cfSend": "Kirim pesan ini?",
+        "cfTo": "Kepada",
+        "cfText": "Pesan",
+        "cfGo": "Kirim",
+        "cfCancel": "Batal",
+        "groups": {
+          "read": {
+            "title": "Membaca",
+            "sub": "Chat dan pesan, analisis chat dan ringkasan “Hari ini”, chat yang belum dibalas, pesan terjadwal, rutinitas pujian, balasan cepat"
+          },
+          "act": {
+            "title": "Mengirim dan merencanakan",
+            "sub": "Mengirim pesan, mengirim ke beberapa chat, menjadwalkan pesan, pujian, balasan cepat"
+          },
+          "files": {
+            "title": "File",
+            "sub": "Lampiran untuk dianalisis; mengekspor chat dan kontak, mengunduh media"
+          },
+          "assistant": {
+            "title": "Membaca dokumen dan pesan suara",
+            "sub": "Teks file PDF, Word, dan Excel, serta pesan suara yang dituliskan oleh model bawaan Chrome, semuanya di komputer Anda"
+          },
+          "privacy": {
+            "title": "Layar privasi",
+            "sub": "Mengaktifkan dan mematikannya"
+          },
+          "deleted": {
+            "title": "Pesan yang dihapus dan diedit",
+            "sub": "Pesan yang dihapus atau diedit orang lain akan sampai ke perusahaan program AI Anda. Karena itu, grup ini diaktifkan secara terpisah."
+          }
+        },
+        "tools": {
+          "list_chats": "Daftar chat",
+          "read_chat": "Membaca chat",
+          "unanswered": "Chat yang belum dibalas",
+          "today": "Ringkasan “Hari ini”",
+          "analyze_chat": "Analisis chat",
+          "list_scheduled": "Pesan terjadwal",
+          "list_compliments": "Rutinitas pujian",
+          "list_quick_replies": "Balasan cepat",
+          "bulk_status": "Progres pengiriman ke beberapa chat",
+          "send_message": "Mengirim pesan",
+          "send_to_several": "Mengirim ke beberapa chat",
+          "send_messages": "Mengirim beberapa pesan sekaligus",
+          "schedule_message": "Menjadwalkan pesan",
+          "cancel_scheduled": "Menghapus pesan terjadwal",
+          "create_compliment_routine": "Rutinitas pujian baru",
+          "delete_compliment_routine": "Menghapus rutinitas pujian",
+          "save_quick_reply": "Menyimpan balasan cepat",
+          "delete_quick_reply": "Menghapus balasan cepat",
+          "list_attachments": "Daftar lampiran",
+          "get_attachment": "Mengambil lampiran",
+          "export_chats": "Mengekspor chat",
+          "export_contacts": "Mengekspor kontak",
+          "download_media": "Mengunduh media",
+          "read_document": "Membaca dokumen",
+          "transcribe_voice": "Menuliskan pesan suara",
+          "privacy_screen": "Layar privasi",
+          "deleted_messages": "Pesan yang dihapus"
+        }
       }
     }
   }
