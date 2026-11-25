@@ -53,9 +53,12 @@
   },
   "mcp": {
     "show": true,
-    "minVersion": "1.4.0",
+    "minVersion": "1.3.0",
+    "newIn": "1.4.0",
+    "interim": true,
     "node": 20,
     "install": "npx twoticks-mcp install",
+    "update": "npx twoticks-mcp@latest install",
     "status": "npx twoticks-mcp status",
     "uninstall": "npx twoticks-mcp uninstall",
     "manual": "node \"%LOCALAPPDATA%\\TwoTicks\\mcp\\app\\bin\\twoticks-mcp.js\""

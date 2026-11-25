@@ -640,12 +640,14 @@ ${body}
     T('mcp.need1', { version: esc(m.minVersion) }),
     T('mcp.need2', { node: esc(String(m.node)), nodejs: '<a href="https://nodejs.org/" lang="en">nodejs.org</a>' }),
     T('mcp.need3'),
+    // While the store still has the version before `newIn` ("interim" in site.config.json): what the new one adds.
+    ...(m.interim ? [T('mcp.needNew', { version: esc(m.newIn) })] : []),
   ].map((s) => `<li>${s}</li>`).join('');
   const step = (n, body) => `<li class="mcp-step"><h3><span class="mcp-no" aria-hidden="true">${n}</span>${T(`mcp.step${n}.title`)}</h3>${body}</li>`;
   const steps = [
     step(1, `<p>${T('mcp.step1.text')}</p>${code(m.install)}<p>${T('mcp.step1.npx', { ask: '<code dir="ltr" lang="en">Ok to proceed?</code>', y: '<kbd dir="ltr">y</kbd>' })}</p><p>${T('mcp.step1.after')}</p><p>${T('mcp.step1.opens', { tab: say(w.tab) })}</p><p class="mcp-small">${T('mcp.step1.ps', { npxcmd: '<code>npx.cmd</code>', npx: '<code>npx</code>' })}</p>`),
-    step(2, `<p>${T('mcp.step2.text', { tab: say(w.tab), agree: say(w.agreeConnect), permission: chip('nativeMessaging'), allowChrome: chip('allow') })}</p>`),
-    step(3, `<p>${T('mcp.step3.text')}</p><ul class="mcp-asks">${[1, 2, 3, 4].map((n) => `<li>${T(`mcp.ask${n}`)}</li>`).join('')}</ul><p>${T('mcp.step3.other', { allow: say(w.allow) })}</p>`),
+    step(2, `<p>${T('mcp.step2.text', { tab: say(w.tab), agree: say(w.agreeConnect), permission: chip('nativeMessaging'), allowChrome: chip('allow') })}</p>${m.interim ? `<p class="mcp-small">${T('mcp.step2.old', { old: esc(m.minVersion), on: say(w.on), agree: say(w.agree) })}</p>` : ''}`),
+    step(3, `<p>${T('mcp.step3.text')}</p><ul class="mcp-asks">${[1, 2, 3, 4, 5].map((n) => `<li>${T(`mcp.ask${n}`)}</li>`).join('')}</ul><p>${T('mcp.step3.other', { allow: say(w.allow) })}</p>`),
   ].join('\n');
   // For Claude Code users: where the install command puts the server, a new session, Claude Code's own question,
   // the confirmation on WhatsApp Web when Claude Code's panel in VS Code shows no forms, and what to do when the install
@@ -744,15 +746,19 @@ ${section('mcp-confirm', T('mcp.confirmTitle'), `        <p>${T('mcp.confirm1', 
         <p>${T('mcp.confirm3')}</p>`)}
 ${section('mcp-files', T('mcp.filesTitle'), `        <p>${T('mcp.files1', { folder: '<code>twoticks-files</code>' })}</p>
         <p>${T('mcp.files2')}</p>
-        <p>${T('mcp.files3')}</p>`)}
+        <p>${T('mcp.files3')}</p>
+        <p>${T('mcp.files4')}</p>`)}
 ${section('mcp-privacy', T('mcp.privacyTitle'), `        <p>${T('mcp.privacy1')}</p>
         <p>${T('mcp.privacy2')}</p>
         <p>${T('mcp.privacy3')}</p>
+        <p>${T('mcp.privacy4')}</p>
         <p>${privacyLink}</p>`)}
 ${section('mcp-other', T('mcp.otherTitle'), `        <p>${T('mcp.otherText')}</p>
         ${code(m.manual)}`)}
 ${section('mcp-remove', T('mcp.removeTitle'), `        <p>${T('mcp.status')}</p>
         ${code(m.status)}
+        <p>${T('mcp.update')}</p>
+        ${code(m.update)}
         <p>${T('mcp.uninstall')}</p>
         ${code(m.uninstall)}
         <p>${T('mcp.removeNote', { tab: say(w.tab) })}</p>`)}
