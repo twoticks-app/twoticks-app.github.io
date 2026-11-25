@@ -1,0 +1,113 @@
+{
+  "version": "1.4.0",
+  "texts": {
+    "en": {
+      "title": "What's new in TwoTicks 1.4.0",
+      "items": [
+        "AI programs connected through “Connection (MCP)” can now send files from your computer: a picture, a sound (as an audio file or as a voice message), a PDF or a Word document. TwoTicks shows you each file first, the picture itself, a player for the sound, a document’s first lines, and it goes only after your click.",
+        "Connecting is shorter: the install command of TwoTicks MCP now opens TwoTicks’ settings on the right tab by itself. You agree there with one button, Chrome asks once for its permission, and about half a minute later the connection is there.",
+        "Claude Code and VS Code, which the installation sets up itself, are allowed with that same agreement and work from their first question. Every other AI program, also one whose model runs on your own computer, is still asked about when it first connects.",
+        "To get both, update TwoTicks MCP once: open the Command Prompt and run npx twoticks-mcp@latest install. No new permission is needed, and every message and file still waits for your confirmation."
+      ]
+    },
+    "tr": {
+      "title": "TwoTicks 1.4.0 ile gelen yenilikler",
+      "items": [
+        "“Bağlantı (MCP)” ile bağlanan yapay zekâ programları artık bilgisayarınızdan dosya gönderebilir: resim, ses (ses dosyası ya da sesli mesaj olarak), PDF veya Word belgesi. TwoTicks her dosyayı önce size gösterir: resmin kendisini, ses için bir oynatıcıyı, belgenin ilk satırlarını. Dosya ancak siz tıkladıktan sonra gider.",
+        "Bağlanmak kısaldı: TwoTicks MCP'nin kurulum komutu artık TwoTicks'in ayarlarını doğru sekmede kendisi açar. Orada tek düğmeyle kabul edersiniz, Chrome iznini bir kez sorar ve yaklaşık yarım dakika sonra bağlantı kurulur.",
+        "Kurulumun kendi eklediği Claude Code ve VS Code aynı onayla izinlidir ve ilk sorudan itibaren çalışır. Başka her yapay zekâ programı, modeli kendi bilgisayarınızda çalışanlar da dahil, ilk bağlandığında yine size sorulur.",
+        "İkisi için de TwoTicks MCP'yi bir kez güncelleyin: Komut İstemi'ni açıp npx twoticks-mcp@latest install komutunu çalıştırın. Yeni bir izin gerekmez; her mesaj ve her dosya yine onayınızı bekler."
+      ]
+    },
+    "de": {
+      "title": "Neu in TwoTicks 1.4.0",
+      "items": [
+        "KI-Programme, die über „Verbindung (MCP)“ verbunden sind, können jetzt Dateien von Ihrem Computer senden: ein Bild, einen Ton (als Audiodatei oder als Sprachnachricht), ein PDF oder ein Word-Dokument. TwoTicks zeigt Ihnen jede Datei zuerst, das Bild selbst, einen Player für den Ton, die ersten Zeilen eines Dokuments, und sie geht erst nach Ihrem Klick hinaus.",
+        "Das Verbinden ist kürzer: Der Installationsbefehl von TwoTicks MCP öffnet die Einstellungen von TwoTicks jetzt selbst auf dem richtigen Tab. Dort stimmen Sie mit einer Schaltfläche zu, Chrome fragt einmal nach seiner Berechtigung, und etwa eine halbe Minute später steht die Verbindung.",
+        "Claude Code und VS Code, die die Installation selbst einrichtet, sind mit derselben Zustimmung zugelassen und funktionieren ab der ersten Frage. Bei jedem anderen KI-Programm, auch einem mit einem Modell auf Ihrem eigenen Computer, werden Sie weiterhin gefragt, wenn es sich zum ersten Mal verbindet.",
+        "Für beides aktualisieren Sie TwoTicks MCP einmal: Öffnen Sie die Eingabeaufforderung und führen Sie npx twoticks-mcp@latest install aus. Eine neue Berechtigung ist nicht nötig, und jede Nachricht und jede Datei wartet weiterhin auf Ihre Bestätigung."
+      ]
+    },
+    "es": {
+      "title": "Novedades de TwoTicks 1.4.0",
+      "items": [
+        "Los programas de IA conectados mediante «Conexión (MCP)» ya pueden enviar archivos de tu ordenador: una imagen, un sonido (como archivo de audio o como mensaje de voz), un PDF o un documento Word. TwoTicks te muestra primero cada archivo, la imagen misma, un reproductor para el sonido, las primeras líneas de un documento, y solo sale después de tu clic.",
+        "Conectarse es más corto: el comando de instalación de TwoTicks MCP abre ahora por sí mismo los ajustes de TwoTicks en la pestaña correcta. Allí aceptas con un solo botón, Chrome pide su permiso una vez y, aproximadamente medio minuto después, la conexión está lista.",
+        "Claude Code y VS Code, que la propia instalación configura, quedan autorizados con esa misma aceptación y funcionan desde la primera pregunta. Por cualquier otro programa de IA, también uno cuyo modelo funcione en tu propio ordenador, se te sigue preguntando cuando se conecta por primera vez.",
+        "Para tener ambas cosas, actualiza TwoTicks MCP una vez: abre el Símbolo del sistema y ejecuta npx twoticks-mcp@latest install. No hace falta ningún permiso nuevo, y cada mensaje y cada archivo siguen esperando tu confirmación."
+      ]
+    },
+    "fr": {
+      "title": "Nouveautés de TwoTicks 1.4.0",
+      "items": [
+        "Les programmes d’IA connectés par « Connexion (MCP) » peuvent maintenant envoyer des fichiers de votre ordinateur : une image, un son (comme fichier audio ou comme message vocal), un PDF ou un document Word. TwoTicks vous montre d’abord chaque fichier, l’image elle-même, un lecteur pour le son, les premières lignes d’un document, et il ne part qu’après votre clic.",
+        "La connexion est plus courte : la commande d’installation de TwoTicks MCP ouvre désormais elle-même les paramètres de TwoTicks sur le bon onglet. Vous y consentez avec un seul bouton, Chrome demande une fois son autorisation et, environ une demi-minute plus tard, la connexion est établie.",
+        "Claude Code et VS Code, que l’installation configure elle-même, sont autorisés par ce même consentement et fonctionnent dès la première question. Pour tout autre programme d’IA, y compris un programme dont le modèle tourne sur votre propre ordinateur, la question vous est toujours posée à sa première connexion.",
+        "Pour profiter des deux, mettez TwoTicks MCP à jour une fois : ouvrez l’Invite de commandes et lancez npx twoticks-mcp@latest install. Aucune nouvelle autorisation n’est nécessaire, et chaque message et chaque fichier attendent toujours votre confirmation."
+      ]
+    },
+    "it": {
+      "title": "Novità di TwoTicks 1.4.0",
+      "items": [
+        "I programmi di IA collegati tramite «Connessione (MCP)» ora possono inviare file dal tuo computer: un’immagine, un suono (come file audio o come messaggio vocale), un PDF o un documento Word. TwoTicks ti mostra prima ogni file, l’immagine stessa, un lettore per il suono, le prime righe di un documento, e il file parte solo dopo il tuo clic.",
+        "Collegarsi è più breve: il comando di installazione di TwoTicks MCP ora apre da sé le impostazioni di TwoTicks sulla scheda giusta. Lì accetti con un solo pulsante, Chrome chiede una volta la sua autorizzazione e, circa mezzo minuto dopo, la connessione è pronta.",
+        "Claude Code e VS Code, che l’installazione configura da sé, sono autorizzati con quella stessa accettazione e funzionano dalla prima domanda. Per ogni altro programma di IA, anche uno il cui modello gira sul tuo computer, ti viene ancora chiesto quando si collega per la prima volta.",
+        "Per avere entrambe le cose, aggiorna TwoTicks MCP una volta: apri il Prompt dei comandi ed esegui npx twoticks-mcp@latest install. Non serve alcuna nuova autorizzazione, e ogni messaggio e ogni file attendono ancora la tua conferma."
+      ]
+    },
+    "pt-BR": {
+      "title": "Novidades do TwoTicks 1.4.0",
+      "items": [
+        "Os programas de IA conectados por “Conexão (MCP)” agora podem enviar arquivos do seu computador: uma imagem, um som (como arquivo de áudio ou como mensagem de voz), um PDF ou um documento Word. O TwoTicks mostra cada arquivo a você primeiro, a própria imagem, um player para o som, as primeiras linhas de um documento, e ele só é enviado depois do seu clique.",
+        "Conectar ficou mais curto: o comando de instalação do TwoTicks MCP agora abre sozinho as configurações do TwoTicks na aba certa. Ali você concorda com um único botão, o Chrome pede a permissão dele uma vez e, cerca de meio minuto depois, a conexão está pronta.",
+        "O Claude Code e o VS Code, que a própria instalação configura, ficam autorizados com essa mesma concordância e funcionam desde a primeira pergunta. Sobre qualquer outro programa de IA, inclusive um cujo modelo roda no seu próprio computador, o TwoTicks continua perguntando quando ele se conecta pela primeira vez.",
+        "Para ter as duas coisas, atualize o TwoTicks MCP uma vez: abra o Prompt de Comando e execute npx twoticks-mcp@latest install. Nenhuma permissão nova é necessária, e cada mensagem e cada arquivo continuam aguardando a sua confirmação."
+      ]
+    },
+    "pt-PT": {
+      "title": "Novidades do TwoTicks 1.4.0",
+      "items": [
+        "Os programas de IA ligados através de “Conexão (MCP)” já podem enviar ficheiros do seu computador: uma imagem, um som (como ficheiro de áudio ou como mensagem de voz), um PDF ou um documento Word. O TwoTicks mostra-lhe primeiro cada ficheiro, a própria imagem, um leitor para o som, as primeiras linhas de um documento, e este só é enviado depois do seu clique.",
+        "Ligar ficou mais curto: o comando de instalação do TwoTicks MCP abre agora, por si, as definições do TwoTicks no separador certo. Aí aceita com um único botão, o Chrome pede a sua autorização uma vez e, cerca de meio minuto depois, a ligação está estabelecida.",
+        "O Claude Code e o VS Code, que a própria instalação configura, ficam autorizados com essa mesma aceitação e funcionam desde a primeira pergunta. Sobre qualquer outro programa de IA, incluindo um cujo modelo funcione no seu próprio computador, continua a ser-lhe perguntado quando se liga pela primeira vez.",
+        "Para ter as duas coisas, atualize o TwoTicks MCP uma vez: abra a Linha de Comandos e execute npx twoticks-mcp@latest install. Não é necessária nenhuma autorização nova, e cada mensagem e cada ficheiro continuam a aguardar a sua confirmação."
+      ]
+    },
+    "ru": {
+      "title": "Что нового в TwoTicks 1.4.0",
+      "items": [
+        "ИИ-программы, подключённые через «Подключение (MCP)», теперь могут отправлять файлы с вашего компьютера: изображение, звук (как аудиофайл или как голосовое сообщение), PDF или документ Word. TwoTicks сначала показывает вам каждый файл: само изображение, проигрыватель для звука, первые строки документа, и файл уходит только после вашего нажатия.",
+        "Подключение стало короче: команда установки TwoTicks MCP теперь сама открывает настройки TwoTicks на нужной вкладке. Там вы даёте согласие одной кнопкой, Chrome один раз спрашивает разрешение, и примерно через полминуты подключение готово.",
+        "Claude Code и VS Code, которые установка настраивает сама, получают разрешение вместе с этим согласием и работают с первого вопроса. О любой другой ИИ-программе, в том числе с моделью на вашем собственном компьютере, TwoTicks по-прежнему спрашивает при её первом подключении.",
+        "Чтобы получить и то и другое, один раз обновите TwoTicks MCP: откройте Командную строку и выполните npx twoticks-mcp@latest install. Новое разрешение не требуется, а каждое сообщение и каждый файл по-прежнему ждут вашего подтверждения."
+      ]
+    },
+    "ar": {
+      "title": "الجديد في TwoTicks 1.4.0",
+      "items": [
+        "برامج الذكاء الاصطناعي المتصلة عبر «الاتصال (MCP)» تستطيع الآن إرسال ملفات من جهازك: صورة، أو صوت (كملف صوتي أو كرسالة صوتية)، أو ملف PDF، أو مستند Word. يعرض TwoTicks عليك كل ملف أولًا: الصورة نفسها، ومشغّلًا للصوت، والأسطر الأولى من المستند، ولا يُرسل الملف إلا بعد نقرتك.",
+        "صار الاتصال أقصر: أمر تثبيت TwoTicks MCP يفتح الآن بنفسه إعدادات TwoTicks على التبويب الصحيح. هناك توافق بزر واحد، ويطلب Chrome إذنه مرة واحدة، وبعد نحو نصف دقيقة يكون الاتصال جاهزًا.",
+        "Claude Code وVS Code، اللذان يعدّهما التثبيت بنفسه، مسموح بهما بهذه الموافقة نفسها ويعملان من أول سؤال. أما أي برنامج ذكاء اصطناعي آخر، ومنه ما يعمل نموذجه على جهازك، فما زلت تُسأل عنه عند أول اتصال له.",
+        "للحصول على الأمرين، حدّث TwoTicks MCP مرة واحدة: افتح موجه الأوامر وشغّل npx twoticks-mcp@latest install. لا حاجة إلى إذن جديد، وكل رسالة وكل ملف ما زالا ينتظران تأكيدك."
+      ]
+    },
+    "hi": {
+      "title": "TwoTicks 1.4.0 में नया क्या है",
+      "items": [
+        "“कनेक्शन (MCP)” से जुड़े एआई प्रोग्राम अब आपके कंप्यूटर से फ़ाइलें भेज सकते हैं: तस्वीर, आवाज़ (ऑडियो फ़ाइल या वॉइस मैसेज के रूप में), PDF या Word दस्तावेज़। TwoTicks हर फ़ाइल पहले आपको दिखाता है: खुद तस्वीर, आवाज़ के लिए प्लेयर, दस्तावेज़ की पहली पंक्तियाँ, और फ़ाइल आपके क्लिक के बाद ही जाती है।",
+        "कनेक्ट करना छोटा हो गया है: TwoTicks MCP का इंस्टॉल कमांड अब TwoTicks की सेटिंग्स सही टैब पर खुद खोलता है। वहाँ आप एक बटन से सहमति देते हैं, Chrome एक बार अपनी अनुमति माँगता है, और लगभग आधे मिनट बाद कनेक्शन तैयार होता है।",
+        "Claude Code और VS Code, जिन्हें इंस्टॉलेशन खुद जोड़ता है, उसी सहमति से अनुमति पा जाते हैं और पहले सवाल से काम करते हैं। किसी भी दूसरे एआई प्रोग्राम के बारे में, उसके भी जिसका मॉडल आपके अपने कंप्यूटर पर चलता है, पहली बार कनेक्ट होने पर आपसे अब भी पूछा जाता है।",
+        "दोनों पाने के लिए TwoTicks MCP को एक बार अपडेट करें: कमांड प्रॉम्प्ट खोलें और npx twoticks-mcp@latest install चलाएँ। कोई नई अनुमति नहीं चाहिए, और हर मैसेज और हर फ़ाइल अब भी आपकी पुष्टि का इंतज़ार करती है।"
+      ]
+    },
+    "id": {
+      "title": "Yang baru di TwoTicks 1.4.0",
+      "items": [
+        "Program AI yang terhubung lewat “Koneksi (MCP)” kini dapat mengirim berkas dari komputer Anda: gambar, suara (sebagai berkas audio atau sebagai pesan suara), PDF, atau dokumen Word. TwoTicks lebih dulu menampilkan setiap berkas kepada Anda: gambarnya sendiri, pemutar untuk suara, baris-baris pertama dokumen, dan berkas baru terkirim setelah Anda mengeklik.",
+        "Menghubungkan kini lebih singkat: perintah instalasi TwoTicks MCP sekarang membuka sendiri setelan TwoTicks pada tab yang tepat. Di sana Anda menyetujui dengan satu tombol, Chrome meminta izinnya satu kali, dan sekitar setengah menit kemudian koneksi siap.",
+        "Claude Code dan VS Code, yang disiapkan sendiri oleh instalasi, diizinkan dengan persetujuan yang sama dan berfungsi sejak pertanyaan pertama. Untuk setiap program AI lain, termasuk yang modelnya berjalan di komputer Anda sendiri, Anda tetap ditanya saat program itu pertama kali terhubung.",
+        "Untuk mendapatkan keduanya, perbarui TwoTicks MCP satu kali: buka Command Prompt dan jalankan npx twoticks-mcp@latest install. Tidak perlu izin baru, dan setiap pesan serta setiap berkas tetap menunggu konfirmasi Anda."
+      ]
+    }
+  }
+}
