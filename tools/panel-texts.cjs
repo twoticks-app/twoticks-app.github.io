@@ -57,7 +57,7 @@ if (fs.existsSync(mcpFile)) vm.runInContext(fs.readFileSync(mcpFile, 'utf8'), bo
 const mcpTools = (box.TT_MCP_TOOLS || []).filter((t) => t.group).map((t) => ({ name: t.name, group: t.group, confirm: !!t.confirm }));
 const mcpGroups = (box.TT_MCP_GROUPS || []).map((g) => ({ id: g.id, on: !!g.on }));
 const MCP_WORDS = {
-  tab: 'opt.tabMcp', on: 'opt.mcp.on', agree: 'opt.mcp.agree', allow: 'opt.mcp.allow', confirmHere: 'opt.mcp.confirmHere', withYou: 'opt.mcp.withYou',
+  tab: 'opt.tabMcp', on: 'opt.mcp.on', agree: 'opt.mcp.agree', agreeConnect: 'opt.mcp.agreeConnect', allow: 'opt.mcp.allow', confirmHere: 'opt.mcp.confirmHere', withYou: 'opt.mcp.withYou',
   // How the list of allowed AI programs marks one that is connected (the part for Claude Code users).
   connectedNow: 'opt.mcp.connectedNow',
   // The confirmation window of a message (bridge.js): its header, its question, its two labels and its two buttons.

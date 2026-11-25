@@ -610,7 +610,8 @@ ${blocks}
 // --- TwoTicks MCP ------------------------------------------------------------------------------------------------
 // The page of TwoTicks MCP (mcp/), the optional, separate program for Windows that lets AI programs on the user's
 // computer use TwoTicks' tools (since TwoTicks 1.3.0, whose settings open this page): how it works, what it needs, its
-// setup in four steps, the tools in their groups, what waits for the user's confirmation, attachments, privacy and
+// setup in three steps (since TwoTicks 1.4.0 the install command opens the settings itself and the programs it sets
+// up are allowed with the user's agreement), the tools in their groups, what waits for the user's confirmation, attachments, privacy and
 // removal; below the hero, an example in Claude Code (a terminal box with a request and the confirmation). `mcp` = { cfg: "mcp" of site.config.json (versions and commands), groups and tools (the extension's
 // mcp-tools.js: each tool's group and whether it waits for the user's confirmation), words: the extension's own words
 // in this language (its settings' tab, switch and buttons, the groups' and the tools' names; content/panel.json) }.
@@ -642,10 +643,9 @@ ${body}
   ].map((s) => `<li>${s}</li>`).join('');
   const step = (n, body) => `<li class="mcp-step"><h3><span class="mcp-no" aria-hidden="true">${n}</span>${T(`mcp.step${n}.title`)}</h3>${body}</li>`;
   const steps = [
-    step(1, `<p>${T('mcp.step1.text')}</p>${code(m.install)}<p>${T('mcp.step1.npx', { ask: '<code dir="ltr" lang="en">Ok to proceed?</code>', y: '<kbd dir="ltr">y</kbd>' })}</p><p>${T('mcp.step1.after')}</p><p class="mcp-small">${T('mcp.step1.ps', { npxcmd: '<code>npx.cmd</code>', npx: '<code>npx</code>' })}</p>`),
-    step(2, `<p>${T('mcp.step2.text', { tab: say(w.tab), on: say(w.on), agree: say(w.agree), permission: chip('nativeMessaging'), allowChrome: chip('allow') })}</p>`),
-    step(3, `<p>${T('mcp.step3.text', { allow: say(w.allow) })}</p>`),
-    step(4, `<p>${T('mcp.step4.text')}</p><ul class="mcp-asks">${[1, 2, 3, 4].map((n) => `<li>${T(`mcp.ask${n}`)}</li>`).join('')}</ul>`),
+    step(1, `<p>${T('mcp.step1.text')}</p>${code(m.install)}<p>${T('mcp.step1.npx', { ask: '<code dir="ltr" lang="en">Ok to proceed?</code>', y: '<kbd dir="ltr">y</kbd>' })}</p><p>${T('mcp.step1.after')}</p><p>${T('mcp.step1.opens', { tab: say(w.tab) })}</p><p class="mcp-small">${T('mcp.step1.ps', { npxcmd: '<code>npx.cmd</code>', npx: '<code>npx</code>' })}</p>`),
+    step(2, `<p>${T('mcp.step2.text', { tab: say(w.tab), agree: say(w.agreeConnect), permission: chip('nativeMessaging'), allowChrome: chip('allow') })}</p>`),
+    step(3, `<p>${T('mcp.step3.text')}</p><ul class="mcp-asks">${[1, 2, 3, 4].map((n) => `<li>${T(`mcp.ask${n}`)}</li>`).join('')}</ul><p>${T('mcp.step3.other', { allow: say(w.allow) })}</p>`),
   ].join('\n');
   // For Claude Code users: where the install command puts the server, a new session, Claude Code's own question,
   // the confirmation on WhatsApp Web when Claude Code's panel in VS Code shows no forms, and what to do when the install
@@ -739,6 +739,7 @@ ${groups}
         </div>`)}
 ${section('mcp-confirm', T('mcp.confirmTitle'), `        <p>${T('mcp.confirm1', { confirmHere: say(w.confirmHere) })}</p>
         <p>${T('mcp.confirm4')}</p>
+        <p>${T('mcp.confirm5')}</p>
         <p>${T('mcp.confirm2')}</p>
         <p>${T('mcp.confirm3')}</p>`)}
 ${section('mcp-files', T('mcp.filesTitle'), `        <p>${T('mcp.files1', { folder: '<code>twoticks-files</code>' })}</p>

@@ -1,6 +1,6 @@
 {
   "read": "2026-11-25",
-  "extensionVersion": "1.3.0",
+  "extensionVersion": "1.4.0",
   "tools": [
     {
       "slug": "privacy-screen",
@@ -820,6 +820,11 @@
         "confirm": true
       },
       {
+        "name": "send_file",
+        "group": "act",
+        "confirm": true
+      },
+      {
         "name": "send_to_several",
         "group": "act",
         "confirm": true
@@ -910,6 +915,7 @@
         "tab": "Connection (MCP)",
         "on": "Allow AI programs to use TwoTicks",
         "agree": "Agree and switch on",
+        "agreeConnect": "Agree and connect",
         "allow": "Allow",
         "confirmHere": "Always confirm on WhatsApp Web",
         "withYou": "with your confirmation",
@@ -927,7 +933,7 @@
           },
           "act": {
             "title": "Sending and planning",
-            "sub": "Sending a message, sending to several chats, scheduling messages, compliments, quick replies"
+            "sub": "Sending a message or a file, sending to several chats, scheduling messages, compliments, quick replies"
           },
           "files": {
             "title": "Files",
@@ -957,6 +963,7 @@
           "list_quick_replies": "Quick replies",
           "bulk_status": "Progress of sending to several chats",
           "send_message": "Sending a message",
+          "send_file": "Sending a file",
           "send_to_several": "Sending to several chats",
           "send_messages": "Sending several messages at once",
           "schedule_message": "Scheduling a message",
@@ -980,6 +987,7 @@
         "tab": "Verbindung (MCP)",
         "on": "KI-Programmen erlauben, TwoTicks zu verwenden",
         "agree": "Zustimmen und einschalten",
+        "agreeConnect": "Zustimmen und verbinden",
         "allow": "Erlauben",
         "confirmHere": "Immer in WhatsApp Web bestätigen",
         "withYou": "mit Ihrer Bestätigung",
@@ -997,7 +1005,7 @@
           },
           "act": {
             "title": "Senden und Planen",
-            "sub": "Eine Nachricht senden, an mehrere Chats senden, Nachrichten planen, Komplimente, Schnellantworten"
+            "sub": "Eine Nachricht oder Datei senden, an mehrere Chats senden, Nachrichten planen, Komplimente, Schnellantworten"
           },
           "files": {
             "title": "Dateien",
@@ -1027,6 +1035,7 @@
           "list_quick_replies": "Schnellantworten",
           "bulk_status": "Fortschritt beim Senden an mehrere Chats",
           "send_message": "Nachricht senden",
+          "send_file": "Datei senden",
           "send_to_several": "An mehrere Chats senden",
           "send_messages": "Mehrere Nachrichten auf einmal senden",
           "schedule_message": "Nachricht planen",
@@ -1050,6 +1059,7 @@
         "tab": "Conexión (MCP)",
         "on": "Permitir que los programas de IA usen TwoTicks",
         "agree": "Aceptar y activar",
+        "agreeConnect": "Aceptar y conectar",
         "allow": "Permitir",
         "confirmHere": "Confirmar siempre en WhatsApp Web",
         "withYou": "con tu confirmación",
@@ -1067,7 +1077,7 @@
           },
           "act": {
             "title": "Envío y planificación",
-            "sub": "Enviar un mensaje, enviar a varios chats, programar mensajes, cumplidos, respuestas rápidas"
+            "sub": "Enviar un mensaje o un archivo, enviar a varios chats, programar mensajes, cumplidos, respuestas rápidas"
           },
           "files": {
             "title": "Archivos",
@@ -1097,6 +1107,7 @@
           "list_quick_replies": "Respuestas rápidas",
           "bulk_status": "Progreso del envío a varios chats",
           "send_message": "Enviar un mensaje",
+          "send_file": "Enviar un archivo",
           "send_to_several": "Enviar a varios chats",
           "send_messages": "Enviar varios mensajes a la vez",
           "schedule_message": "Programar un mensaje",
@@ -1120,6 +1131,7 @@
         "tab": "Connexion (MCP)",
         "on": "Autoriser les programmes d’IA à utiliser TwoTicks",
         "agree": "Accepter et activer",
+        "agreeConnect": "Accepter et connecter",
         "allow": "Autoriser",
         "confirmHere": "Toujours confirmer sur WhatsApp Web",
         "withYou": "avec votre confirmation",
@@ -1137,7 +1149,7 @@
           },
           "act": {
             "title": "Envoi et planification",
-            "sub": "Envoyer un message, envoyer à plusieurs discussions, programmer des messages, compliments, réponses rapides"
+            "sub": "Envoyer un message ou un fichier, envoyer à plusieurs discussions, programmer des messages, compliments, réponses rapides"
           },
           "files": {
             "title": "Fichiers",
@@ -1167,6 +1179,7 @@
           "list_quick_replies": "Réponses rapides",
           "bulk_status": "Progression de l’envoi à plusieurs discussions",
           "send_message": "Envoi d’un message",
+          "send_file": "Envoi d’un fichier",
           "send_to_several": "Envoi à plusieurs discussions",
           "send_messages": "Envoi de plusieurs messages à la fois",
           "schedule_message": "Programmation d’un message",
@@ -1190,6 +1203,7 @@
         "tab": "Connessione (MCP)",
         "on": "Consenti ai programmi di IA di usare TwoTicks",
         "agree": "Accetta e attiva",
+        "agreeConnect": "Accetta e connetti",
         "allow": "Consenti",
         "confirmHere": "Conferma sempre su WhatsApp Web",
         "withYou": "con la tua conferma",
@@ -1207,7 +1221,7 @@
           },
           "act": {
             "title": "Invio e pianificazione",
-            "sub": "Inviare un messaggio, inviare a più chat, programmare messaggi, complimenti, risposte rapide"
+            "sub": "Inviare un messaggio o un file, inviare a più chat, programmare messaggi, complimenti, risposte rapide"
           },
           "files": {
             "title": "File",
@@ -1237,6 +1251,7 @@
           "list_quick_replies": "Risposte rapide",
           "bulk_status": "Avanzamento dell’invio a più chat",
           "send_message": "Invio di un messaggio",
+          "send_file": "Invio di un file",
           "send_to_several": "Invio a più chat",
           "send_messages": "Invio di più messaggi insieme",
           "schedule_message": "Programmazione di un messaggio",
@@ -1260,6 +1275,7 @@
         "tab": "Conexão (MCP)",
         "on": "Permitir que programas de IA usem o TwoTicks",
         "agree": "Concordar e ativar",
+        "agreeConnect": "Concordar e conectar",
         "allow": "Permitir",
         "confirmHere": "Sempre confirmar no WhatsApp Web",
         "withYou": "com sua confirmação",
@@ -1277,7 +1293,7 @@
           },
           "act": {
             "title": "Envio e planejamento",
-            "sub": "Enviar uma mensagem, enviar para várias conversas, agendar mensagens, elogios, respostas rápidas"
+            "sub": "Enviar uma mensagem ou um arquivo, enviar para várias conversas, agendar mensagens, elogios, respostas rápidas"
           },
           "files": {
             "title": "Arquivos",
@@ -1307,6 +1323,7 @@
           "list_quick_replies": "Respostas rápidas",
           "bulk_status": "Progresso do envio para várias conversas",
           "send_message": "Enviar uma mensagem",
+          "send_file": "Enviar um arquivo",
           "send_to_several": "Enviar para várias conversas",
           "send_messages": "Enviar várias mensagens de uma vez",
           "schedule_message": "Agendar uma mensagem",
@@ -1330,6 +1347,7 @@
         "tab": "Conexão (MCP)",
         "on": "Permitir que programas de IA usem o TwoTicks",
         "agree": "Concordar e ativar",
+        "agreeConnect": "Concordar e conectar",
         "allow": "Permitir",
         "confirmHere": "Sempre confirmar no WhatsApp Web",
         "withYou": "com sua confirmação",
@@ -1347,7 +1365,7 @@
           },
           "act": {
             "title": "Envio e planejamento",
-            "sub": "Enviar uma mensagem, enviar para várias conversas, agendar mensagens, elogios, respostas rápidas"
+            "sub": "Enviar uma mensagem ou um arquivo, enviar para várias conversas, agendar mensagens, elogios, respostas rápidas"
           },
           "files": {
             "title": "Arquivos",
@@ -1377,6 +1395,7 @@
           "list_quick_replies": "Respostas rápidas",
           "bulk_status": "Progresso do envio para várias conversas",
           "send_message": "Enviar uma mensagem",
+          "send_file": "Enviar um arquivo",
           "send_to_several": "Enviar para várias conversas",
           "send_messages": "Enviar várias mensagens de uma vez",
           "schedule_message": "Agendar uma mensagem",
@@ -1400,6 +1419,7 @@
         "tab": "Bağlantı (MCP)",
         "on": "Yapay zekâ programlarının TwoTicks’i kullanmasına izin ver",
         "agree": "Kabul ediyorum, aç",
+        "agreeConnect": "Kabul ediyorum, bağla",
         "allow": "İzin ver",
         "confirmHere": "Onayı her zaman WhatsApp Web’de iste",
         "withYou": "onayınızla",
@@ -1417,7 +1437,7 @@
           },
           "act": {
             "title": "Gönderme ve planlama",
-            "sub": "Mesaj gönderme, birkaç sohbete gönderme, mesaj zamanlama, iltifatlar, hızlı yanıtlar"
+            "sub": "Mesaj ve dosya gönderme, birkaç sohbete gönderme, mesaj zamanlama, iltifatlar, hızlı yanıtlar"
           },
           "files": {
             "title": "Dosyalar",
@@ -1447,6 +1467,7 @@
           "list_quick_replies": "Hızlı yanıtlar",
           "bulk_status": "Birkaç sohbete gönderimin durumu",
           "send_message": "Mesaj gönderme",
+          "send_file": "Dosya gönderme",
           "send_to_several": "Birkaç sohbete gönderme",
           "send_messages": "Birkaç mesajı tek onayla gönderme",
           "schedule_message": "Mesaj zamanlama",
@@ -1470,6 +1491,7 @@
         "tab": "Подключение (MCP)",
         "on": "Разрешить ИИ-программам использовать TwoTicks",
         "agree": "Согласиться и включить",
+        "agreeConnect": "Согласиться и подключить",
         "allow": "Разрешить",
         "confirmHere": "Всегда подтверждать в WhatsApp Web",
         "withYou": "с вашим подтверждением",
@@ -1487,7 +1509,7 @@
           },
           "act": {
             "title": "Отправка и планирование",
-            "sub": "Отправка сообщения, отправка в несколько чатов, планирование сообщений, комплименты, быстрые ответы"
+            "sub": "Отправка сообщения или файла, отправка в несколько чатов, планирование сообщений, комплименты, быстрые ответы"
           },
           "files": {
             "title": "Файлы",
@@ -1517,6 +1539,7 @@
           "list_quick_replies": "Быстрые ответы",
           "bulk_status": "Ход отправки в несколько чатов",
           "send_message": "Отправка сообщения",
+          "send_file": "Отправка файла",
           "send_to_several": "Отправка в несколько чатов",
           "send_messages": "Отправка нескольких сообщений сразу",
           "schedule_message": "Планирование сообщения",
@@ -1540,6 +1563,7 @@
         "tab": "الاتصال (MCP)",
         "on": "السماح لبرامج الذكاء الاصطناعي باستخدام TwoTicks",
         "agree": "الموافقة والتفعيل",
+        "agreeConnect": "الموافقة والاتصال",
         "allow": "السماح",
         "confirmHere": "التأكيد دائمًا في WhatsApp Web",
         "withYou": "بتأكيدك",
@@ -1557,7 +1581,7 @@
           },
           "act": {
             "title": "الإرسال والتخطيط",
-            "sub": "إرسال رسالة، والإرسال إلى عدة دردشات، وجدولة الرسائل، والكلمات الطيبة، والردود السريعة"
+            "sub": "إرسال رسالة أو ملف، والإرسال إلى عدة دردشات، وجدولة الرسائل، والكلمات الطيبة، والردود السريعة"
           },
           "files": {
             "title": "الملفات",
@@ -1587,6 +1611,7 @@
           "list_quick_replies": "الردود السريعة",
           "bulk_status": "تقدّم الإرسال إلى عدة دردشات",
           "send_message": "إرسال رسالة",
+          "send_file": "إرسال ملف",
           "send_to_several": "الإرسال إلى عدة دردشات",
           "send_messages": "إرسال عدة رسائل دفعة واحدة",
           "schedule_message": "جدولة رسالة",
@@ -1610,6 +1635,7 @@
         "tab": "कनेक्शन (MCP)",
         "on": "एआई प्रोग्राम को TwoTicks इस्तेमाल करने की अनुमति दें",
         "agree": "सहमत हूँ, चालू करें",
+        "agreeConnect": "सहमत हूँ, कनेक्ट करें",
         "allow": "अनुमति दें",
         "confirmHere": "हमेशा WhatsApp Web पर पुष्टि करें",
         "withYou": "आपकी पुष्टि के साथ",
@@ -1627,7 +1653,7 @@
           },
           "act": {
             "title": "भेजना और प्लान करना",
-            "sub": "मैसेज भेजना, कई चैट को भेजना, मैसेज शेड्यूल करना, तारीफ़ें, झटपट जवाब"
+            "sub": "मैसेज या फ़ाइल भेजना, कई चैट को भेजना, मैसेज शेड्यूल करना, तारीफ़ें, झटपट जवाब"
           },
           "files": {
             "title": "फ़ाइलें",
@@ -1657,6 +1683,7 @@
           "list_quick_replies": "झटपट जवाब",
           "bulk_status": "कई चैट को भेजने की प्रगति",
           "send_message": "मैसेज भेजना",
+          "send_file": "फ़ाइल भेजना",
           "send_to_several": "कई चैट को भेजना",
           "send_messages": "एक साथ कई मैसेज भेजना",
           "schedule_message": "मैसेज शेड्यूल करना",
@@ -1680,6 +1707,7 @@
         "tab": "Koneksi (MCP)",
         "on": "Izinkan program AI menggunakan TwoTicks",
         "agree": "Setuju dan aktifkan",
+        "agreeConnect": "Setuju dan hubungkan",
         "allow": "Izinkan",
         "confirmHere": "Selalu konfirmasi di WhatsApp Web",
         "withYou": "dengan konfirmasi Anda",
@@ -1697,7 +1725,7 @@
           },
           "act": {
             "title": "Mengirim dan merencanakan",
-            "sub": "Mengirim pesan, mengirim ke beberapa chat, menjadwalkan pesan, pujian, balasan cepat"
+            "sub": "Mengirim pesan atau file, mengirim ke beberapa chat, menjadwalkan pesan, pujian, balasan cepat"
           },
           "files": {
             "title": "File",
@@ -1727,6 +1755,7 @@
           "list_quick_replies": "Balasan cepat",
           "bulk_status": "Progres pengiriman ke beberapa chat",
           "send_message": "Mengirim pesan",
+          "send_file": "Mengirim file",
           "send_to_several": "Mengirim ke beberapa chat",
           "send_messages": "Mengirim beberapa pesan sekaligus",
           "schedule_message": "Menjadwalkan pesan",
