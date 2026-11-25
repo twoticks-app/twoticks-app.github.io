@@ -160,7 +160,7 @@
   "mcp.offByDefault": "Siz açana kadar kapalı.",
   "mcp.confirmTitle": "Yapay zekâ hazırlar, siz onaylarsınız",
   "mcp.confirm1": "Bir şey gönderilmeden, planlanmadan, silinmeden, değiştirilmeden veya dışa aktarılmadan önce tam olarak ne olacağını görürsünüz ve tıklamanız olmadan hiçbir şey olmaz: yapay zekâ programınız size kendisi sorabiliyorsa onda, sormuyorsa TwoTicks'in WhatsApp Web'deki kendi penceresinde. Ayarlarda {confirmHere} açıksa TwoTicks her zaman WhatsApp Web'de sorar.",
-  "mcp.confirm2": "TwoTicks'in sınırları geçerli kalır: iki mesaj arasında 15 ila 60 saniye ve 24 saatte en çok 30 mesaj. Bir mesaj birden çok sohbete gitmeden önce, listedeki herkesin sizden mesaj almayı kabul ettiğini onaylarsınız.",
+  "mcp.confirm2": "TwoTicks'in sınırları geçerli kalır: iki mesaj arasında 15 ila 60 saniye ve 24 saatte birkaç sohbete birlikte giden en çok 30 mesaj. TwoTicks 1.4.1'den itibaren tek tek onayladığınız mesajların kendi tavanı vardır (24 saatte 100); daha önce onlar da 30'a sayılır. Bir mesaj birden çok sohbete gitmeden önce, listedeki herkesin sizden mesaj almayı kabul ettiğini onaylarsınız.",
   "mcp.confirm3": "Tek seferlik fotoğraf ve videolar hiçbir zaman aktarılmaz; içinde birinin WhatsApp'ın Gelişmiş sohbet gizliliğini açtığı sohbetler de.",
   "mcp.confirm4": "Bu onayda mesajın metnini gitmeden önce düzeltebilir, birkaç mesaj birlikte beklediğinde istemediklerinizi dışarıda bırakabilirsiniz.",
   "mcp.confirm5": "Bilgisayarınızdaki bir dosya gitmeden önce size gösterilir: resmin kendisi, ses için bir oynatıcı, PDF ya da Word belgesi için adı, klasörü ve ilk satırları.",

@@ -160,7 +160,7 @@
   "mcp.offByDefault": "Off until you switch it on.",
   "mcp.confirmTitle": "The AI prepares, you confirm",
   "mcp.confirm1": "Before anything is sent, scheduled, deleted, changed or exported, you see exactly what will happen, and nothing happens without your click: in your AI program where it can ask you itself, otherwise in TwoTicks' own window on WhatsApp Web. With {confirmHere} switched on in the settings, TwoTicks always asks on WhatsApp Web.",
-  "mcp.confirm2": "TwoTicks' limits stay: 15 to 60 seconds between two messages and at most 30 messages in 24 hours. Before a message goes to several chats, you confirm that everyone on the list has agreed to receive messages from you.",
+  "mcp.confirm2": "TwoTicks' limits stay: 15 to 60 seconds between two messages, and in 24 hours at most 30 messages that go out together to several chats. From TwoTicks 1.4.1 on, messages you confirm one at a time have a ceiling of their own (100 in 24 hours); before that they count among the 30. Before a message goes to several chats, you confirm that everyone on the list has agreed to receive messages from you.",
   "mcp.confirm3": "View-once photos and videos are never passed on, and neither are chats in which someone switched on WhatsApp's Advanced chat privacy.",
   "mcp.confirm4": "In that confirmation you can correct a message’s text before it goes, and when several messages wait together you can leave single ones out.",
   "mcp.confirm5": "A file from your computer is shown to you before it goes: the picture itself, a player for a sound, and for a PDF or Word document its name, its folder and its first lines.",

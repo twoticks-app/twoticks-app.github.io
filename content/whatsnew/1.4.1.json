@@ -1,0 +1,113 @@
+{
+  "version": "1.4.1",
+  "texts": {
+    "en": {
+      "title": "What's new in TwoTicks 1.4.1",
+      "items": [
+        "A message or file that an AI program sends through “Connection (MCP)” one at a time, each confirmed by you on its own, no longer takes one of the 30 messages in 24 hours. Such messages now have a ceiling of their own, 100 in 24 hours, so that a program caught in a loop comes to an end.",
+        "Messages that go out together to several chats keep their limit of 30 in 24 hours, and at least 15 seconds still pass between two messages. Every message and every file still waits for your confirmation.",
+        "In the settings, an AI program that waits to be allowed is listed once, however many of its sessions are open. Three open sessions of Claude Code used to show three identical rows.",
+        "No new permission is needed, and TwoTicks MCP needs no update."
+      ]
+    },
+    "tr": {
+      "title": "TwoTicks 1.4.1 ile gelen yenilikler",
+      "items": [
+        "Bir yapay zekâ programının “Bağlantı (MCP)” üzerinden tek tek gönderdiği ve her birini sizin ayrı ayrı onayladığınız mesajlar ve dosyalar artık 24 saatteki 30 mesajlık sınırdan düşmez. Bu mesajların artık kendi tavanı var: 24 saatte 100. Böylece döngüye girmiş bir program da bir yerde durur.",
+        "Birkaç sohbete birlikte giden mesajlar için 24 saatte 30 sınırı aynen duruyor; iki mesaj arasında yine en az 15 saniye geçer. Her mesaj ve her dosya yine onayınızı bekler.",
+        "Ayarlarda, izin bekleyen bir yapay zekâ programı kaç oturumu açık olursa olsun bir kez listelenir. Eskiden Claude Code'un üç açık oturumu üç aynı satır gösteriyordu.",
+        "Yeni bir izin gerekmez; TwoTicks MCP'yi güncellemeniz de gerekmez."
+      ]
+    },
+    "de": {
+      "title": "Neu in TwoTicks 1.4.1",
+      "items": [
+        "Eine Nachricht oder Datei, die ein KI-Programm über „Verbindung (MCP)“ einzeln sendet und die Sie jeweils für sich bestätigen, zählt nicht mehr zu den 30 Nachrichten in 24 Stunden. Solche Nachrichten haben jetzt eine eigene Obergrenze von 100 in 24 Stunden, damit ein Programm, das in einer Schleife hängt, ein Ende findet.",
+        "Für Nachrichten, die zusammen an mehrere Chats gehen, bleibt die Grenze von 30 in 24 Stunden, und zwischen zwei Nachrichten vergehen weiterhin mindestens 15 Sekunden. Jede Nachricht und jede Datei wartet weiterhin auf Ihre Bestätigung.",
+        "In den Einstellungen wird ein KI-Programm, das auf Ihre Erlaubnis wartet, nur einmal aufgeführt, egal wie viele seiner Sitzungen geöffnet sind. Bisher zeigten drei offene Sitzungen von Claude Code drei gleiche Zeilen.",
+        "Eine neue Berechtigung ist nicht nötig, und TwoTicks MCP muss nicht aktualisiert werden."
+      ]
+    },
+    "es": {
+      "title": "Novedades de TwoTicks 1.4.1",
+      "items": [
+        "Un mensaje o un archivo que un programa de IA envía de uno en uno a través de «Conexión (MCP)», y que confirmas por separado, ya no cuenta entre los 30 mensajes en 24 horas. Estos mensajes tienen ahora un tope propio, 100 en 24 horas, para que un programa atrapado en un bucle termine en algún momento.",
+        "Los mensajes que salen juntos a varios chats mantienen su límite de 30 en 24 horas, y entre dos mensajes siguen pasando al menos 15 segundos. Cada mensaje y cada archivo siguen esperando tu confirmación.",
+        "En la configuración, un programa de IA que espera tu permiso aparece una sola vez, por muchas sesiones suyas que haya abiertas. Antes, tres sesiones abiertas de Claude Code mostraban tres filas iguales.",
+        "No hace falta ningún permiso nuevo ni actualizar TwoTicks MCP."
+      ]
+    },
+    "fr": {
+      "title": "Nouveautés de TwoTicks 1.4.1",
+      "items": [
+        "Un message ou un fichier qu’un programme d’IA envoie un par un via « Connexion (MCP) », et que vous confirmez séparément, ne compte plus parmi les 30 messages en 24 heures. Ces messages ont désormais leur propre plafond, 100 en 24 heures, pour qu’un programme pris dans une boucle finisse par s’arrêter.",
+        "Les messages envoyés ensemble à plusieurs discussions gardent leur limite de 30 en 24 heures, et au moins 15 secondes s’écoulent toujours entre deux messages. Chaque message et chaque fichier attendent toujours votre confirmation.",
+        "Dans les paramètres, un programme d’IA qui attend votre autorisation n’apparaît qu’une fois, quel que soit le nombre de ses sessions ouvertes. Auparavant, trois sessions ouvertes de Claude Code affichaient trois lignes identiques.",
+        "Aucune nouvelle autorisation n’est nécessaire, et TwoTicks MCP n’a pas besoin d’être mis à jour."
+      ]
+    },
+    "it": {
+      "title": "Novità di TwoTicks 1.4.1",
+      "items": [
+        "Un messaggio o un file che un programma di IA invia uno alla volta tramite «Connessione (MCP)», e che confermi singolarmente, non rientra più nei 30 messaggi in 24 ore. Questi messaggi hanno ora un limite proprio, 100 in 24 ore, così un programma bloccato in un ciclo prima o poi si ferma.",
+        "I messaggi inviati insieme a più chat mantengono il limite di 30 in 24 ore, e tra due messaggi passano ancora almeno 15 secondi. Ogni messaggio e ogni file attendono ancora la tua conferma.",
+        "Nelle impostazioni, un programma di IA in attesa del tuo permesso compare una sola volta, per quante sessioni abbia aperte. Prima, tre sessioni aperte di Claude Code mostravano tre righe identiche.",
+        "Non serve alcuna nuova autorizzazione e non occorre aggiornare TwoTicks MCP."
+      ]
+    },
+    "pt-BR": {
+      "title": "Novidades do TwoTicks 1.4.1",
+      "items": [
+        "Uma mensagem ou um arquivo que um programa de IA envia um a um por “Conexão (MCP)”, e que você confirma separadamente, não conta mais entre as 30 mensagens em 24 horas. Essas mensagens agora têm um limite próprio, 100 em 24 horas, para que um programa preso em um laço acabe parando.",
+        "As mensagens enviadas juntas para várias conversas mantêm o limite de 30 em 24 horas, e continuam passando pelo menos 15 segundos entre duas mensagens. Cada mensagem e cada arquivo continuam aguardando a sua confirmação.",
+        "Nas configurações, um programa de IA que aguarda a sua permissão aparece uma única vez, não importa quantas sessões dele estejam abertas. Antes, três sessões abertas do Claude Code mostravam três linhas iguais.",
+        "Nenhuma permissão nova é necessária, e não é preciso atualizar o TwoTicks MCP."
+      ]
+    },
+    "pt-PT": {
+      "title": "Novidades do TwoTicks 1.4.1",
+      "items": [
+        "Uma mensagem ou um ficheiro que um programa de IA envia um a um através de “Conexão (MCP)”, e que confirma separadamente, já não conta entre as 30 mensagens em 24 horas. Estas mensagens têm agora um limite próprio, 100 em 24 horas, para que um programa preso num ciclo acabe por parar.",
+        "As mensagens enviadas em conjunto para várias conversas mantêm o limite de 30 em 24 horas, e continuam a passar pelo menos 15 segundos entre duas mensagens. Cada mensagem e cada ficheiro continuam a aguardar a sua confirmação.",
+        "Nas definições, um programa de IA que aguarda a sua autorização aparece uma única vez, independentemente de quantas sessões tenha abertas. Antes, três sessões abertas do Claude Code mostravam três linhas iguais.",
+        "Não é necessária nenhuma autorização nova, nem é preciso atualizar o TwoTicks MCP."
+      ]
+    },
+    "ru": {
+      "title": "Что нового в TwoTicks 1.4.1",
+      "items": [
+        "Сообщение или файл, которые ИИ-программа отправляет через «Подключение (MCP)» по одному и которые вы подтверждаете по отдельности, больше не входят в 30 сообщений за 24 часа. У таких сообщений теперь свой предел, 100 за 24 часа, чтобы программа, попавшая в цикл, когда-нибудь остановилась.",
+        "Для сообщений, которые уходят вместе в несколько чатов, остаётся ограничение в 30 за 24 часа, а между двумя сообщениями по-прежнему проходит не меньше 15 секунд. Каждое сообщение и каждый файл по-прежнему ждут вашего подтверждения.",
+        "В настройках ИИ-программа, ожидающая разрешения, показывается один раз, сколько бы её сеансов ни было открыто. Раньше три открытых сеанса Claude Code давали три одинаковые строки.",
+        "Новое разрешение не требуется, и обновлять TwoTicks MCP не нужно."
+      ]
+    },
+    "ar": {
+      "title": "الجديد في TwoTicks 1.4.1",
+      "items": [
+        "الرسالة أو الملف الذي يرسله برنامج ذكاء اصطناعي عبر «الاتصال (MCP)» واحدًا تلو الآخر، وتؤكده أنت على حدة، لم يعد يُحتسب ضمن الـ30 رسالة في 24 ساعة. صار لهذه الرسائل حدٌّ خاص بها، 100 في 24 ساعة، حتى يتوقف في النهاية أي برنامج علِق في حلقة.",
+        "الرسائل التي تُرسل معًا إلى عدة دردشات تحتفظ بحدّها، 30 في 24 ساعة، وما زالت تمرّ 15 ثانية على الأقل بين رسالتين. وكل رسالة وكل ملف ما زالا ينتظران تأكيدك.",
+        "في الإعدادات، يظهر برنامج الذكاء الاصطناعي الذي ينتظر السماح له مرة واحدة فقط، مهما كان عدد جلساته المفتوحة. في السابق كانت ثلاث جلسات مفتوحة من Claude Code تُظهر ثلاثة صفوف متطابقة.",
+        "لا حاجة إلى إذن جديد، ولا إلى تحديث TwoTicks MCP."
+      ]
+    },
+    "hi": {
+      "title": "TwoTicks 1.4.1 में नया क्या है",
+      "items": [
+        "जो मैसेज या फ़ाइल कोई एआई प्रोग्राम “कनेक्शन (MCP)” के ज़रिए एक-एक करके भेजता है और जिसकी पुष्टि आप अलग से करते हैं, वह अब 24 घंटे के 30 मैसेज में नहीं गिनी जाती। ऐसे मैसेज की अब अपनी सीमा है, 24 घंटे में 100, ताकि लूप में फँसा कोई प्रोग्राम कहीं जाकर रुक जाए।",
+        "कई चैट को एक साथ जाने वाले मैसेज के लिए 24 घंटे में 30 की सीमा बनी रहती है, और दो मैसेज के बीच अब भी कम से कम 15 सेकंड का अंतर रहता है। हर मैसेज और हर फ़ाइल अब भी आपकी पुष्टि का इंतज़ार करती है।",
+        "सेटिंग्स में, अनुमति का इंतज़ार कर रहा एआई प्रोग्राम एक ही बार दिखता है, चाहे उसके कितने भी सेशन खुले हों। पहले Claude Code के तीन खुले सेशन तीन एक जैसी पंक्तियाँ दिखाते थे।",
+        "कोई नई अनुमति नहीं चाहिए, और TwoTicks MCP को अपडेट करने की ज़रूरत नहीं है।"
+      ]
+    },
+    "id": {
+      "title": "Yang baru di TwoTicks 1.4.1",
+      "items": [
+        "Pesan atau berkas yang dikirim program AI satu per satu melalui “Koneksi (MCP)”, dan yang Anda konfirmasi sendiri-sendiri, tidak lagi dihitung dalam 30 pesan dalam 24 jam. Pesan seperti ini kini punya batas sendiri, 100 dalam 24 jam, agar program yang terjebak dalam pengulangan pada akhirnya berhenti.",
+        "Pesan yang dikirim bersama ke beberapa chat tetap dibatasi 30 dalam 24 jam, dan jeda di antara dua pesan tetap paling sedikit 15 detik. Setiap pesan dan setiap berkas tetap menunggu konfirmasi Anda.",
+        "Di pengaturan, program AI yang menunggu izin Anda hanya ditampilkan satu kali, berapa pun sesinya yang terbuka. Sebelumnya, tiga sesi Claude Code yang terbuka menampilkan tiga baris yang sama.",
+        "Tidak perlu izin baru, dan TwoTicks MCP tidak perlu diperbarui."
+      ]
+    }
+  }
+}

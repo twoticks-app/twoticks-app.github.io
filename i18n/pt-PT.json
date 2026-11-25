@@ -160,7 +160,7 @@
   "mcp.offByDefault": "Desativado até o ativar.",
   "mcp.confirmTitle": "A IA prepara, você confirma",
   "mcp.confirm1": "Antes de algo ser enviado, agendado, eliminado, alterado ou exportado, vê exatamente o que vai acontecer, e nada acontece sem o seu clique: no seu programa de IA, onde ele próprio lhe consegue perguntar, ou então na janela própria do TwoTicks no WhatsApp Web. Com {confirmHere} ativado nas definições, o TwoTicks pergunta sempre no WhatsApp Web.",
-  "mcp.confirm2": "Os limites do TwoTicks mantêm-se: de 15 a 60 segundos entre duas mensagens e no máximo 30 mensagens em 24 horas. Antes de uma mensagem ir para várias conversas, confirma que todas as pessoas da lista aceitaram receber mensagens suas.",
+  "mcp.confirm2": "Os limites do TwoTicks mantêm-se: de 15 a 60 segundos entre duas mensagens e, em 24 horas, no máximo 30 mensagens enviadas em conjunto para várias conversas. A partir do TwoTicks 1.4.1, as mensagens que confirma uma a uma têm um limite próprio (100 em 24 horas); antes dessa versão, contam entre as 30. Antes de uma mensagem ir para várias conversas, confirma que todas as pessoas da lista aceitaram receber mensagens suas.",
   "mcp.confirm3": "As fotos e os vídeos de visualização única nunca são transmitidos, nem as conversas em que alguém ativou a privacidade avançada da conversa do WhatsApp.",
   "mcp.confirm4": "Nessa confirmação pode corrigir o texto de uma mensagem antes de ela sair e, quando várias mensagens aguardam juntas, deixar de fora as que não quiser.",
   "mcp.confirm5": "Um ficheiro do seu computador é-lhe mostrado antes de ser enviado: a própria imagem, um leitor para um som e, no caso de um documento PDF ou Word, o nome, a pasta e as primeiras linhas.",
