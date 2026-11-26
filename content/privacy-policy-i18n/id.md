@@ -1,7 +1,7 @@
-<!-- en: Last updated: 25 November 2026 -->
+<!-- en: Last updated: 26 November 2026 -->
 # Kebijakan Privasi TwoTicks
 
-Terakhir diperbarui: 25 November 2026
+Terakhir diperbarui: 26 November 2026
 
 TwoTicks (“ekstensi ini”) disediakan oleh Osman Bodur, seorang individu yang tinggal di Austria (“saya”). Ekstensi ini menambahkan fitur-fitur ke WhatsApp Web (web.whatsapp.com) di peramban Chrome Anda. Kebijakan ini menjelaskan data apa saja yang diproses oleh ekstensi ini, ke mana data tersebut dikirim, dan apa yang saya terima. Ekstensi ini tidak berafiliasi dengan, didukung oleh, atau disponsori oleh WhatsApp atau Meta.
 

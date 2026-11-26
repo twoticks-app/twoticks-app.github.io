@@ -1,7 +1,7 @@
-<!-- en: Last updated: 25 November 2026 -->
+<!-- en: Last updated: 26 November 2026 -->
 # Datenschutzerklärung für TwoTicks
 
-Zuletzt aktualisiert: 25. November 2026
+Zuletzt aktualisiert: 26. November 2026
 
 TwoTicks („die Erweiterung“) wird von Osman Bodur, einer in Österreich lebenden Privatperson („ich“, „mich“), bereitgestellt. Sie erweitert WhatsApp Web (web.whatsapp.com) in Ihrem Chrome-Browser um zusätzliche Funktionen. In dieser Erklärung wird dargelegt, welche Daten die Erweiterung verarbeitet, wohin diese Daten gelangen und welche Informationen ich erhalte. Die Erweiterung steht in keiner Verbindung zu WhatsApp oder Meta und wird von diesen weder unterstützt noch gesponsert.
 

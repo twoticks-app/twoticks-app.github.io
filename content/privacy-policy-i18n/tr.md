@@ -1,7 +1,7 @@
-<!-- en: Last updated: 25 November 2026 -->
+<!-- en: Last updated: 26 November 2026 -->
 # TwoTicks Gizlilik Politikası
 
-Son güncelleme tarihi: 25 Kasım 2026
+Son güncelleme tarihi: 26 Kasım 2026
 
 TwoTicks (“uzantı”), Avusturya’da yaşayan bir şahıs olan Osman Bodur (“ben”) tarafından sunulmaktadır. Bu uzantı, Chrome tarayıcınızdaki WhatsApp Web’e (web.whatsapp.com) çeşitli araçlar ekler. Bu politika, uzantının hangi verileri işlediğini, bu verilerin nereye aktarıldığını ve benim hangi bilgileri aldığımı açıklamaktadır. Uzantı, WhatsApp veya Meta ile herhangi bir bağlantısı bulunmamakta, bu şirketler tarafından onaylanmamakta veya desteklenmemektedir.
 
